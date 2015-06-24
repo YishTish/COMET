@@ -1,0 +1,145 @@
+mysql> describe j34_users;
++---------------+---------------+------+-----+---------------------+----------------+
+| Field         | Type          | Null | Key | Default             | Extra          |
++---------------+---------------+------+-----+---------------------+----------------+
+| id            | int(11)       | NO   | PRI | NULL                | auto_increment |
+| name          | varchar(255)  | NO   | MUL |                     |                |
+| username      | varchar(150)  | NO   | MUL |                     |                |
+| email         | varchar(100)  | NO   | MUL |                     |                |
+| password      | varchar(100)  | NO   |     |                     |                |
+| block         | tinyint(4)    | NO   | MUL | 0                   |                |
+| sendEmail     | tinyint(4)    | YES  |     | 0                   |                |
+| registerDate  | datetime      | NO   |     | 0000-00-00 00:00:00 |                |
+| lastvisitDate | datetime      | NO   |     | 0000-00-00 00:00:00 |                |
+| activation    | varchar(100)  | NO   |     |                     |                |
+| params        | text          | NO   |     | NULL                |                |
+| lastResetTime | datetime      | NO   |     | 0000-00-00 00:00:00 |                |
+| resetCount    | int(11)       | NO   |     | 0                   |                |
+| otpKey        | varchar(1000) | NO   |     |                     |                |
+| otep          | varchar(1000) | NO   |     |                     |                |
+| requireReset  | tinyint(4)    | NO   |     | 0                   |                |
++---------------+---------------+------+-----+---------------------+----------------+
+
+{
+    "form": {
+        "meta": {
+            "action": "updateUser.php",
+            "method": "post",
+            "on_submit": "checkServer(user)" #-->suggested concept only. To be implemented in second stage
+        },
+        "fields": [
+            "id": {
+                "type": "int",
+                "required": "false",
+                "default": "",
+                "min_value": 1,
+                "hidden": "true" #-->Notice, we add the"hidden" attribute only when a field is hidden.Otherwise,
+                                   system assumes field should be visible.
+            },
+            "name": {
+                "type": "string",
+                "max_length": "255",
+                "required": "false",
+                "default": ""
+            },
+            "username": {
+                "type": "string",
+                "max_length": "150",
+                "min_length": "6",
+                "required": "false"
+            },
+            "email": {
+                "type": "email",
+                "max_length": 100,
+                "required": "false",
+                "default": ""
+            },
+            "password": {
+                "type": "password",
+                "max_length": 100,
+                "min_length": 8,
+                "#validate_regep": "^A-Z|a-z|0-9$",   #-->would not implement in stage 1,
+                                                     but worth thinking about 
+                "required": "false",
+                "default": ""
+            },
+            "block": {
+                "type": "int",
+                "required": "false",
+                "default": 0,
+                "min_value": 0,
+                "max_value": 255
+            },
+            "send_email": {
+                "type": "int",
+                "required": "false",
+                "default": 0,
+                "min_value": 0,
+                "max_value": 255,
+                "enabled": "false", #-->Notice: this field can beset to all,
+                                        expecting true/false.However,
+                                         default is true so not required at all times
+            },
+            "registerDate": {
+                "type": "datetime",
+                "required": "false",
+                "default": now(),  #-->Not sure this is exactly how it will be sent,
+                                       but basically there should be a way to send a variable 
+                "min_value": 01/01/1970,
+                "max_value": now()
+            },
+            "lastvisitDate": {
+                "type": "datetime",
+                "required": "false",
+                "default": now(),
+                "min_value": 01/01/1970,
+                "max_value": now()
+            },
+            "activation": {
+                "type": "string",
+                "max_length": "100",
+                "default": "",
+                "required": "false"
+            },
+            "params"{
+                "type": "textarea",
+                "max_length": "4000",
+                "default": "",
+                "required": "false"
+            },
+            "lastResetTime": {
+                "type": "datetime",
+                "required": "false",
+                "default": now(),
+                "min_value": 01/01/1970,
+                "max_value": now()
+            },
+            "resetCount": {
+                "type": "int",
+                "required": "false",
+                "min_value": 0,
+                "max_value": 2147483648,
+                "hidden": "true"
+            },
+            "otpKey": {
+                "type": "textarea",
+                "max_length": "1000",
+                "default": "",
+                "required": "false"
+            },
+            "otep": {
+                "type": "textarea",
+                "max_length": "1000",
+                "default": "",
+                "required": "false"
+            },
+            "requireReset": {
+                "type": "int",
+                "required": "false",
+                "default": 0,
+                "min_value": 0,
+                "max_value: 255
+            }
+        ]
+    }
+}

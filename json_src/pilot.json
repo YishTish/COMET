@@ -1,0 +1,181 @@
+{
+
+    "form": {
+
+        "id": "WAT0001",
+
+        "title": "Demographic Information",
+
+        "disabled": false
+
+    },
+
+    "resources": [],
+
+    "fields": [
+
+        {
+
+            "id": "ID",
+
+            "type": "input",
+
+            "label": "ID",
+
+            "required": true,
+
+            "show": true,
+
+            "disabled": false,
+
+            "tabIndex": 1,
+
+            "size": 10,
+
+            "maxlength": 10,
+
+            "value": "30001",
+
+            "data-Format": "text"
+
+        },
+
+        {
+
+            "id": "LASTNAME",
+
+            "type": "input",
+
+            "label": "Last Name",
+
+            "required": true,
+
+            "show": true,
+
+            "disabled": false,
+
+            "tabIndex": 2,
+
+            "maxlength": 30,
+
+            "value": "Washington",
+
+            "data-Format": "text"
+
+        },
+
+        {
+
+            "id": "FIRSTNAM",
+
+            "type": "input",
+
+            "label": "First Name",
+
+            "required": true,
+
+            "show": true,
+
+            "disabled": false,
+
+            "tabIndex": 3,
+
+            "maxlength": 25,
+
+            "value": "George",
+
+            "data-Format": "text"
+
+        },
+
+        {
+
+            "id": "SEX",
+
+            "type": "radio",
+
+            "label": "Gender",
+
+            "required": true,
+
+            "show": true,
+
+            "disabled": true,
+
+            "tabIndex": 4,
+
+            "value": "M",
+
+            "options": [
+
+                {
+
+                    "value": "M",
+
+                    "description": "Male"
+
+                },
+
+                {
+
+                    "value": "F",
+
+                    "description": "Female"
+
+                }
+
+            ]
+
+        },
+
+        {
+
+            "id": "BIRTHDAT",
+
+            "type": "input",
+
+            "label": "Date of Borth",
+
+            "required": true,
+
+            "show": true,
+
+            "disabled": true,
+
+            "tabIndex": 5,
+
+            "value": "01/01/1921",
+
+            "data-Format": "date"
+
+        },
+
+        {
+
+            "id": "NOTES",
+
+            "type": "textarea",
+
+            "label": "Notes",
+
+            "required": false,
+
+            "show": true,
+
+            "disabled": true,
+
+            "tabIndex": 6,
+
+            "text-area-width": 50,
+
+            "text-area-length": 3,
+
+            "value": ""
+
+        }
+
+    ],
+
+    "actions": []
+
+}
