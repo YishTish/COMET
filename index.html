@@ -19,11 +19,7 @@
 	    			<input type="hidden" name="id" value="{{formData.form.id}}">
 	    			<ul class="container">
 	    				<li ng-repeat="field in formData.fields" class="item">
-	    					<md-input-container>
-	    						<label>{{field.label}}</label>
-	    						<input type="{{field.type}}" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.value"/>
-	    					</md-input-container>
-	    					
+	    					<comet-text field="field" type="{{field.type}}"></comet-text>
 	    				</li>
 	    			 </ul>
 	    			</div>
