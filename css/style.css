@@ -18,9 +18,16 @@
 
 .container{
 	display: flex;
-	flex-direction: row;
-	max-height: 600;
-	padding: 0 5% 5% 0;
+	flex-direction: column;
+	flex-wrap: wrap;
+	/*max-height: 600;
+	padding: 0 5% 5% 0; */
+	list-style: none;
+}
+
+.item{
+	flex: 1 1 auto;
+	padding: 10px;
 }
 
 .item-left{

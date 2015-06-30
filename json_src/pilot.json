@@ -18,7 +18,7 @@
 
             "id": "ID",
 
-            "type": "input",
+            "type": "int",
 
             "label": "ID",
 
@@ -44,7 +44,7 @@
 
             "id": "LASTNAME",
 
-            "type": "input",
+            "type": "text",
 
             "label": "Last Name",
 
@@ -68,7 +68,7 @@
 
             "id": "FIRSTNAM",
 
-            "type": "input",
+            "type": "text",
 
             "label": "First Name",
 
@@ -132,9 +132,9 @@
 
             "id": "BIRTHDAT",
 
-            "type": "input",
+            "type": "date",
 
-            "label": "Date of Borth",
+            "label": "Date of Birth",
 
             "required": true,
 
@@ -173,7 +173,6 @@
             "value": ""
 
         }
-
     ],
 
     "actions": []
