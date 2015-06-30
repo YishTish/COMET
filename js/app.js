@@ -14,11 +14,6 @@ app.controller('appCtrl', ['$scope', '$mdSidenav', '$http', function ($scope, $m
   $mdThemingProvider.theme('altTheme')
     .primaryPalette('purple')
 })
-.directive('cometInt', function(){
-	return {
-		template: "<input type='text' ng-minlength='1' ng-maxlength='3' name='ACBX' value='' />"
-	}
-})
 .directive('cometText', [function () {
 	return {
 		restrict: 'E',
@@ -30,5 +25,4 @@ app.controller('appCtrl', ['$scope', '$mdSidenav', '$http', function ($scope, $m
 		}
 	};
 }])
-
 ;
