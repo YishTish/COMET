@@ -1,0 +1,9 @@
+<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="menu"  md-is-locked-open="$mdMedia('gt-md')" flex>
+  <md-content layout-padding>
+  	<md-list>
+       <md-list-item ng-repeat="file in files">
+       		<md-button ng-click="loadFile(file)">{{ file }}</md-button>
+       </md-list-item>
+    </md-list>
+  </md-content>
+</md-sidenav>

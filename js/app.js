@@ -1,6 +1,6 @@
 var app = angular.module('COMET', ['ngMaterial']);
 
-app.controller('appCtrl', ['$scope', '$mdSidenav', '$http', function ($scope, $mdSidenav, $http) {
+app.controller('appCtrl', ['$scope', '$mdSidenav', '$http', 'jsonServices', function ($scope, $mdSidenav, $http, jsonServices) {
 	$http.get("json_src/pilot.json").then(function fileLoaded(res){
 		$scope.formData = res.data;
 	});
@@ -8,6 +8,11 @@ app.controller('appCtrl', ['$scope', '$mdSidenav', '$http', function ($scope, $m
 		$mdSidenav(menuId).toggle();
 	}
 	$scope.title = "COMET";
+	$scope.files = ["Json_order14-524","pilot"];
+
+	$scope.loadFile = function(fileName){
+		jsonServices.loadFile(fileName, $scope);
+	}
 }])
 
 .config(function($mdThemingProvider) {
@@ -24,5 +29,4 @@ app.controller('appCtrl', ['$scope', '$mdSidenav', '$http', function ($scope, $m
 			return 'tpl/input_tpl.html';
 		}
 	};
-}])
-;
+}]);
