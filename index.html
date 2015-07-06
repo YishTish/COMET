@@ -24,7 +24,7 @@
 		</md-sidenav>
     <md-content layout-padding class="main-content md-padding">
 	    <h3>{{formData.form.title}}</h3>
-    		<md-whiteframe class="md-whiteframe-z1" layout layout-align="left" style="padding-left:10%;border-radius:20px">
+    		<div layout layout-align="left" style="padding-left:10%;border-radius:20px">
 	    		<form name="testForm" novalidate>
 	    			<input type="hidden" name="id" value="{{formData.form.id}}">
 	    			<!--<md-list>-->
@@ -36,10 +36,9 @@
 	    				<button type="submit" class="btn btn-primary" ng-disabled="!loginFrorm.$valid">send data</button>
 	    			</div>
 	    		</form>
-	    	</md-whiteframe>
+	    	</div>
       </md-content>
       </div>
-	
 	      <!-- Angular Material Dependencies -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
