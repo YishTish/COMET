@@ -1,4 +1,6 @@
 <md-input-container>
 	<label>{{formField.label}}</label>
-	<input type="text" size="{{formField.maxlength}}" name="{{formField.id}}" ng-model="formField.value"/>
+	<input type="text" name="{{formField.id}}" ng-model="formField.value" maxlength="{{formField.maxlength}}" ng-disabled="{{formField.disabled}}" />
+  <p ng-show="formField.$invalid && !formField.$pristine" class="help-block">Maximum number of characters is {{ formField.maxlength }}</p>
+
 </md-input-container>

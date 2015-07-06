@@ -25,18 +25,18 @@
     <md-content layout-padding class="main-content md-padding">
 	    <h3>{{formData.form.title}}</h3>
     		<md-whiteframe class="md-whiteframe-z1" layout layout-align="left" style="padding-left:10%;border-radius:20px">
-	    		<form action="" method="">
+	    		<form name="testForm" novalidate>
 	    			<input type="hidden" name="id" value="{{formData.form.id}}">
-	    			<md-list>
-	    				<form>
-	    				<list-item ng-repeat="field in formData.fields" class="item">
-	    					<comet-text field="field"></comet-text>
-	    				</list-item>
-	    			 </md-list>
-	    			<input type="submit" value="send data"/>
+	    			<!--<md-list>-->
+	    				<div ng-repeat="field in formData.fields" class="item">
+	    					<comet-text field="field" class="form-group" ng-class="{'has-error' : testForm.field.$invalid}"></comet-text>
+	    				</div>
+	    			 <!--</md-list>-->
+	    			 <div>
+	    				<button type="submit" class="btn btn-primary" ng-disabled="!loginFrorm.$valid">send data</button>
+	    			</div>
 	    		</form>
 	    	</md-whiteframe>
-
       </md-content>
       </div>
 	
