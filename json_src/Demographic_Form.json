@@ -1,0 +1,801 @@
+{
+    "session": [
+        {
+            "dateFormat": "MDY",
+            "timeFormat": "12",
+            "resources": "",
+            "COMETURL": "",
+            "COMETAjax": "&SERVICE=AJAX"
+        }
+    ],
+    "form": [
+        {
+            "id": "WAT0001",
+            "title": "",
+            "external": [
+                {
+                    "script": "another.js",
+                    "stylesheet": "another.css"
+                }
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "id": "NEWID",
+            "type": "text",
+            "label": "ID",
+            "value": "",
+            "required": "true",
+            "tabIndex": "1",
+            "disabled": "false",
+            "maxlength": "10",
+            "data-ServerValidation": "AID^WAT0001",
+            "data-ServerValidationParameters": ""
+        },
+        {
+            "id": "LASTNAME",
+            "type": "text",
+            "label": "Last Name",
+            "value": "",
+            "required": "true",
+            "tabIndex": "2",
+            "disabled": "false",
+            "maxlength": "20"
+        },
+        {
+            "id": "MARITAL",
+            "type": "select",
+            "label": "Marital Status",
+            "value": "",
+            "tabIndex": "11",
+            "disabled": "false",
+            "options": [
+                {
+                    "value": "D",
+                    "description": "Divorced"
+                },
+                {
+                    "value": "M",
+                    "description": "Married"
+                },
+                {
+                    "value": "N",
+                    "description": "Never Married"
+                },
+                {
+                    "value": "O",
+                    "description": "Other"
+                },
+                {
+                    "value": "S",
+                    "description": "Single"
+                },
+                {
+                    "value": "SE",
+                    "description": "Separated"
+                },
+                {
+                    "value": "U",
+                    "description": "Unknown"
+                },
+                {
+                    "value": "W",
+                    "description": "Widow/Widower"
+                }
+            ]
+        },
+        {
+            "id": "FIRSTNAM",
+            "type": "text",
+            "label": "First Name",
+            "value": "",
+            "required": "true",
+            "tabIndex": "3",
+            "disabled": "false",
+            "maxlength": "15"
+        },
+        {
+            "id": "ETHNIC",
+            "type": "select",
+            "label": "Ethnic Group",
+            "value": "",
+            "tabIndex": "12",
+            "disabled": "false",
+            "options": [
+                {
+                    "value": "AI",
+                    "description": "Asian/Pacific Island/Hispanic"
+                },
+                {
+                    "value": "AP",
+                    "description": "Asian or Pacific Island"
+                },
+                {
+                    "value": "BI",
+                    "description": "Black/Hispanic"
+                },
+                {
+                    "value": "BL",
+                    "description": "Black"
+                },
+                {
+                    "value": "NA",
+                    "description": "Native American/Alaskan"
+                },
+                {
+                    "value": "NI",
+                    "description": "Native American/Alaskan/Hisp"
+                },
+                {
+                    "value": "OT",
+                    "description": "Other"
+                },
+                {
+                    "value": "WH",
+                    "description": "White"
+                },
+                {
+                    "value": "WI",
+                    "description": "White/Hispanic"
+                }
+            ]
+        },
+        {
+            "id": "MIDINIT",
+            "type": "text",
+            "label": "Middle Name",
+            "value": "",
+            "validate": "07",
+            "tabIndex": "4",
+            "disabled": "false",
+            "maxlength": "9"
+        },
+        {
+            "id": "RELIGION",
+            "type": "select",
+            "label": "Religion",
+            "value": "",
+            "tabIndex": "13",
+            "disabled": "false",
+            "options": [
+                {
+                    "value": "AG",
+                    "description": "Assemblies of God"
+                },
+                {
+                    "value": "BA",
+                    "description": "Baptist"
+                },
+                {
+                    "value": "CA",
+                    "description": "Catholic"
+                },
+                {
+                    "value": "EP",
+                    "description": "Episcopal"
+                },
+                {
+                    "value": "GO",
+                    "description": "Greek Orthodox"
+                },
+                {
+                    "value": "HI",
+                    "description": "Hindu"
+                },
+                {
+                    "value": "JE",
+                    "description": "Jewish"
+                },
+                {
+                    "value": "JW",
+                    "description": "Jehovah's Witness"
+                },
+                {
+                    "value": "LD",
+                    "description": "Latter Day Saints"
+                },
+                {
+                    "value": "LU",
+                    "description": "Lutheran"
+                },
+                {
+                    "value": "MA",
+                    "description": "Masonic"
+                },
+                {
+                    "value": "ME",
+                    "description": "Methodist"
+                },
+                {
+                    "value": "MO",
+                    "description": "Moslem"
+                },
+                {
+                    "value": "ND",
+                    "description": "Non-Denominational"
+                },
+                {
+                    "value": "NP",
+                    "description": "Non Practicing"
+                },
+                {
+                    "value": "OT",
+                    "description": "Other"
+                },
+                {
+                    "value": "PR",
+                    "description": "Protestant"
+                },
+                {
+                    "value": "PY",
+                    "description": "Presbyterian"
+                },
+                {
+                    "value": "SD",
+                    "description": "Seventh Day Adventist"
+                },
+                {
+                    "value": "UN",
+                    "description": "Unknown"
+                },
+                {
+                    "value": "UT",
+                    "description": "Unitarian"
+                }
+            ]
+        },
+        {
+            "id": "MAIDEN",
+            "type": "text",
+            "label": "Maiden Name",
+            "value": "",
+            "tabIndex": "5",
+            "disabled": "false",
+            "maxlength": "15",
+            "data-ServerValidation": "AMAIDEN^WAT0001",
+            "data-ServerValidationParameters": "SEX"
+        },
+        {
+            "id": "LANGUAGE",
+            "type": "select",
+            "label": "Preferred language",
+            "value": "",
+            "validate": "08",
+            "tabIndex": "14",
+            "disabled": "false",
+            "options": [
+                {
+                    "value": "AM",
+                    "description": "American"
+                },
+                {
+                    "value": "AU",
+                    "description": "Australian"
+                },
+                {
+                    "value": "CH",
+                    "description": "Chinese"
+                },
+                {
+                    "value": "CM",
+                    "description": "Mandarin Chinese"
+                },
+                {
+                    "value": "CU",
+                    "description": "Cuban"
+                },
+                {
+                    "value": "EN",
+                    "description": "English"
+                },
+                {
+                    "value": "FR",
+                    "description": "French"
+                },
+                {
+                    "value": "GE",
+                    "description": "German"
+                },
+                {
+                    "value": "GR",
+                    "description": "Greek"
+                },
+                {
+                    "value": "HB",
+                    "description": "Hebrew"
+                },
+                {
+                    "value": "IT",
+                    "description": "Italian"
+                },
+                {
+                    "value": "JA",
+                    "description": "Japanese"
+                },
+                {
+                    "value": "KO",
+                    "description": "Korean"
+                },
+                {
+                    "value": "PO",
+                    "description": "Polish"
+                },
+                {
+                    "value": "RS",
+                    "description": "Russian"
+                },
+                {
+                    "value": "SP",
+                    "description": "Spanish"
+                },
+                {
+                    "value": "SW",
+                    "description": "Swedish"
+                }
+            ]
+        },
+        {
+            "id": "SUFFIX",
+            "type": "text",
+            "label": "Suffix",
+            "value": "",
+            "tabIndex": "6",
+            "disabled": "false",
+            "maxlength": "3"
+        },
+        {
+            "id": "ENGLSKL",
+            "type": "select",
+            "label": "English Lang.",
+            "value": "",
+            "tabIndex": "15",
+            "disabled": "false",
+            "options": [
+                {
+                    "value": "N",
+                    "description": "No"
+                },
+                {
+                    "value": "P",
+                    "description": "Partial"
+                },
+                {
+                    "value": "Y",
+                    "description": "Yes"
+                }
+            ]
+        },
+        {
+            "id": "PREFNAME",
+            "type": "text",
+            "label": "Preferred Name",
+            "value": "",
+            "tabIndex": "7",
+            "disabled": "false",
+            "maxlength": "15"
+        },
+        {
+            "id": "AGE",
+            "type": "browse",
+            "label": "Age",
+            "value": "",
+            "tabIndex": "-1",
+            "disabled": "false"
+        },
+        {
+            "id": "SEX",
+            "type": "radio",
+            "label": "Sex",
+            "value": "",
+            "required": "true",
+            "tabIndex": "8",
+            "disabled": "false",
+            "options": "",
+            "data-ServerValidation": "ASEX^WAT0001",
+            "data-ServerValidationParameters": "MAIDEN"
+        },
+        {
+            "id": "STATUS",
+            "type": "select",
+            "label": "Status",
+            "value": "",
+            "tabIndex": "16",
+            "disabled": "false",
+            "options": [
+                {
+                    "value": "ACC",
+                    "description": "Accepted"
+                },
+                {
+                    "value": "CNL",
+                    "description": "QBEC Special"
+                },
+                {
+                    "value": "DEN",
+                    "description": "Denied"
+                },
+                {
+                    "value": "EMR",
+                    "description": "Emergency Room"
+                },
+                {
+                    "value": "EXP",
+                    "description": "Expired"
+                },
+                {
+                    "value": "HOS",
+                    "description": "Hospital"
+                },
+                {
+                    "value": "INH",
+                    "description": "In-House"
+                },
+                {
+                    "value": "LOA",
+                    "description": "Leave Of Absence"
+                },
+                {
+                    "value": "MED",
+                    "description": "Medical Leave"
+                },
+                {
+                    "value": "NSH",
+                    "description": "No Show"
+                },
+                {
+                    "value": "OP",
+                    "description": "OutPatient"
+                },
+                {
+                    "value": "PDS",
+                    "description": "Permanently Discharg"
+                },
+                {
+                    "value": "PEN",
+                    "description": "Pending"
+                },
+                {
+                    "value": "REF",
+                    "description": "Referred"
+                },
+                {
+                    "value": "REG",
+                    "description": "Registered"
+                },
+                {
+                    "value": "WTL",
+                    "description": "Waiting List"
+                }
+            ]
+        },
+        {
+            "id": "BIRTHDAT",
+            "type": "Date",
+            "label": "Birth Date",
+            "value": "",
+            "data-DateInFuture": "false",
+            "tabIndex": "9",
+            "disabled": "false",
+            "maxlength": "10",
+            "data-ServerValidation": "ADOB^WAT0001",
+            "data-ServerValidationParameters": ""
+        },
+        {
+            "id": "SSNUMBER",
+            "type": "SocialSecurityNumber",
+            "label": "Soc. Security",
+            "value": "",
+            "tabIndex": "10",
+            "disabled": "false",
+            "maxlength": "11",
+            "data-ServerValidation": "ASSN^WAT0001",
+            "data-ServerValidationParameters": "NEW"
+        },
+        {
+            "id": "ADDRESS1",
+            "type": "text",
+            "label": "Address 1",
+            "value": "",
+            "tabIndex": "17",
+            "disabled": "false",
+            "maxlength": "30"
+        },
+        {
+            "id": "CITY",
+            "type": "text",
+            "label": "City",
+            "value": "",
+            "tabIndex": "19",
+            "disabled": "false",
+            "maxlength": "25",
+            "data-search": "^WSY1005",
+            "data-searchParameters": "COUNTY;STATE;ZIP"
+        },
+        {
+            "id": "ADDRESS2",
+            "type": "text",
+            "label": "Address 2",
+            "value": "",
+            "tabIndex": "18",
+            "disabled": "false",
+            "maxlength": "30"
+        },
+        {
+            "id": "COUNTY",
+            "type": "select",
+            "label": "County",
+            "value": "",
+            "tabIndex": "20",
+            "disabled": "false",
+            "options": [
+                {
+                    "value": "",
+                    "description": "Select ..."
+                }
+            ]
+        },
+        {
+            "id": "STATE",
+            "type": "select",
+            "label": "State / Zip",
+            "value": "",
+            "tabIndex": "21",
+            "disabled": "false",
+            "options": [
+                {
+                    "value": "AK",
+                    "description": "Alaska"
+                },
+                {
+                    "value": "AL",
+                    "description": "Alabama"
+                },
+                {
+                    "value": "AR",
+                    "description": "Arkansas"
+                },
+                {
+                    "value": "AZ",
+                    "description": "Arizona"
+                },
+                {
+                    "value": "CA",
+                    "description": "California"
+                },
+                {
+                    "value": "CN",
+                    "description": "CANADA"
+                },
+                {
+                    "value": "CO",
+                    "description": "Colorado"
+                },
+                {
+                    "value": "CT",
+                    "description": "Connecticut"
+                },
+                {
+                    "value": "DC",
+                    "description": "DC"
+                },
+                {
+                    "value": "DE",
+                    "description": "Delaware"
+                },
+                {
+                    "value": "EN",
+                    "description": "England"
+                },
+                {
+                    "value": "FL",
+                    "description": "Florida"
+                },
+                {
+                    "value": "GA",
+                    "description": "Georgia"
+                },
+                {
+                    "value": "HI",
+                    "description": "Hawaii"
+                },
+                {
+                    "value": "IA",
+                    "description": "Iowa"
+                },
+                {
+                    "value": "ID",
+                    "description": "Idaho"
+                },
+                {
+                    "value": "IL",
+                    "description": "Illinois"
+                },
+                {
+                    "value": "IN",
+                    "description": "Indiana"
+                },
+                {
+                    "value": "KS",
+                    "description": "Kansas"
+                },
+                {
+                    "value": "KY",
+                    "description": "Kentucky"
+                },
+                {
+                    "value": "LA",
+                    "description": "Lousiana"
+                },
+                {
+                    "value": "MA",
+                    "description": "Massachusetts"
+                },
+                {
+                    "value": "MD",
+                    "description": "Maryland"
+                },
+                {
+                    "value": "ME",
+                    "description": "Maine"
+                },
+                {
+                    "value": "MI",
+                    "description": "Michigan"
+                },
+                {
+                    "value": "MN",
+                    "description": "Minnesota"
+                },
+                {
+                    "value": "MO",
+                    "description": "Missouri"
+                },
+                {
+                    "value": "MS",
+                    "description": "Mississippi"
+                },
+                {
+                    "value": "MT",
+                    "description": "Montana"
+                },
+                {
+                    "value": "NC",
+                    "description": "North Carolina"
+                },
+                {
+                    "value": "ND",
+                    "description": "North Dakota"
+                },
+                {
+                    "value": "NE",
+                    "description": "Nebraska"
+                },
+                {
+                    "value": "NH",
+                    "description": "New Hampshire"
+                },
+                {
+                    "value": "NJ",
+                    "description": "New Jersey"
+                },
+                {
+                    "value": "NM",
+                    "description": "New Mexico"
+                },
+                {
+                    "value": "NV",
+                    "description": "Nevada"
+                },
+                {
+                    "value": "NY",
+                    "description": "New York"
+                },
+                {
+                    "value": "OH",
+                    "description": "Ohio"
+                },
+                {
+                    "value": "OK",
+                    "description": "Oklahoma"
+                },
+                {
+                    "value": "ON",
+                    "description": "Ontario"
+                },
+                {
+                    "value": "OR",
+                    "description": "Oregon"
+                },
+                {
+                    "value": "PA",
+                    "description": "Pennsylvania"
+                },
+                {
+                    "value": "RI",
+                    "description": "Rhode Island"
+                },
+                {
+                    "value": "SC",
+                    "description": "South Carolina"
+                },
+                {
+                    "value": "SD",
+                    "description": "South Dakota"
+                },
+                {
+                    "value": "TN",
+                    "description": "Tennessee"
+                },
+                {
+                    "value": "TX",
+                    "description": "Texas"
+                },
+                {
+                    "value": "UN",
+                    "description": "Unknown"
+                },
+                {
+                    "value": "UT",
+                    "description": "Utah"
+                },
+                {
+                    "value": "VA",
+                    "description": "Virginia"
+                },
+                {
+                    "value": "VT",
+                    "description": "Vermont"
+                },
+                {
+                    "value": "WA",
+                    "description": "Washington"
+                },
+                {
+                    "value": "WI",
+                    "description": "Wisconsin"
+                },
+                {
+                    "value": "WV",
+                    "description": "West Virginia"
+                },
+                {
+                    "value": "WY",
+                    "description": "Wyoming"
+                }
+            ]
+        },
+        {
+            "id": "ZIP",
+            "type": "text",
+            "label": "Zip Code",
+            "value": "",
+            "tabIndex": "22",
+            "disabled": "false",
+            "maxlength": "10"
+        },
+        {
+            "id": "PHONE",
+            "type": "PhoneNumber",
+            "label": "Phone",
+            "value": "",
+            "tabIndex": "23",
+            "disabled": "false",
+            "maxlength": "19"
+        },
+        {
+            "id": "DEMONOTE",
+            "type": "textarea",
+            "label": "Notes",
+            "value": "",
+            "tabIndex": "24",
+            "disabled": "false"
+        },
+        {
+            "id": "NEW",
+            "type": "hidden",
+            "label": "",
+            "value": ""
+        }
+    ]
+}
