@@ -1,0 +1,13 @@
+<div>
+	<form name="testForm" novalidate>
+			<div ng-repeat="field in formCtrl.formData.fields" class="item">
+				<div>
+					<ng-include src="formCtrl.getTemplate(field)" formField="field"></ng-include>
+				</div>
+				<!-- <comet-text field="field" class="form-group" ng-class="{'has-error' : testForm.field.$invalid}"></comet-text> -->
+			</div>
+		 <div>
+			<button type="submit" class="btn btn-primary" ng-disabled="!loginFrorm.$valid">send data</button>
+		</div>
+	</form>
+</div>

@@ -19,8 +19,8 @@ var gulp = require('gulp');
 //var EXPRESS_PORT = 4000;
 var EXPRESS_PORT = 5000;
 var EXPRESS_ROOT = __dirname;
-//var LIVERELOAD_PORT = 35729;
-var LIVERELOAD_PORT = 35730;
+var LIVERELOAD_PORT = 35729;
+//var LIVERELOAD_PORT = 35730;
 
 function startExpress() {
  
@@ -55,5 +55,5 @@ gulp.task('default', function () {
   console.log('Gulp and running lintech_software!');
   startExpress();
   startLivereload();
-  gulp.watch('*.html', notifyLiveReload);
+  gulp.watch(['*.html', 'js/*.js', 'css/*.css'], notifyLiveReload);
 });

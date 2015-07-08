@@ -25,17 +25,7 @@
     <md-content layout-padding class="main-content md-padding">
 	    <h3>{{formData.form.title}}</h3>
     		<div layout layout-align="left" style="padding-left:10%;border-radius:20px">
-	    		<form name="testForm" novalidate>
-	    			<input type="hidden" name="id" value="{{formData.form.id}}">
-	    			<!--<md-list>-->
-	    				<div ng-repeat="field in formData.fields" class="item">
-	    					<comet-text field="field" class="form-group" ng-class="{'has-error' : testForm.field.$invalid}"></comet-text>
-	    				</div>
-	    			 <!--</md-list>-->
-	    			 <div>
-	    				<button type="submit" class="btn btn-primary" ng-disabled="!loginFrorm.$valid">send data</button>
-	    			</div>
-	    		</form>
+	    		<comet-form form-data="formData"></comet-form>
 	    	</div>
       </md-content>
       </div>
@@ -47,6 +37,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/services.js"></script>
+    <script src="js/directives.js"></script>
 
 </section>
   </body>
