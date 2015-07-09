@@ -16,6 +16,28 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 				}
 			}
 			return jsonObject;
-		}
+		},
 	};
+}])
+.factory('ajaxServices', ['$q', '$http', '$templateCache', function ($q, $http, $templateCache) {
+
+	return {
+		httpPromise: function(url){
+			console.log(url);
+			var data = $templateCache.get(url);
+
+		    if (data) {
+		         return $q.when(data);
+		    } else {
+		        var deferred = $q.defer();
+
+		        $http.get(url, { cache: true }).success(function (html) {
+		            $templateCache.put(url, html);
+
+		            deferred.resolve(html);
+		    	});
+	        	return deferred.promise;
+		    }
+		}
+ 	} 
 }]);

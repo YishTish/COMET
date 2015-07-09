@@ -2,7 +2,9 @@
 	<form name="testForm" novalidate>
 			<div ng-repeat="field in formCtrl.formData.fields" class="item">
 				<div>
-					<ng-include src="formCtrl.getTemplate(field)" formField="field"></ng-include>
+					<!-- <ng-include src="formCtrl.getTemplate(field)" field="field"></ng-include> -->
+					<comet-field field="field"></comet-field>
+
 				</div>
 				<!-- <comet-text field="field" class="form-group" ng-class="{'has-error' : testForm.field.$invalid}"></comet-text> -->
 			</div>

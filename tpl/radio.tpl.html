@@ -1,6 +1,6 @@
-<md-radio-group ng-model="formField.id">
-	<label>{{ formField.label}}</label>
-	<md-radio-button ng-repeat="option in formField.options" ng-value="option.value" aria-label="{{ option.description }}">
+<md-radio-group ng-model="field.id">
+	<label>{{ field.label}}</label>
+	<md-radio-button ng-repeat="option in field.options" ng-value="option.value" aria-label="{{ option.description }}">
 		{{ option.description}}
 	</md-radio-button>
 </md-radio-group>	

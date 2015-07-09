@@ -54,14 +54,62 @@ app.directive('cometText', [function () {
 		restrict: 'EA',
 		transclude: true,
 		scope: {
-			abc: '@'
+			field: '@'
 		},
 		// template: '<span>test</span>'
 		// controller: ['$scope', function($scope) {
 		// 	alert('1')
 		// }]
 		template: function(elem, attr){
-			return	'<span>{{abc}}</span>'
+			return	'<span>123</span>'
 		}
 	}
 }])
+
+.directive('cometField',[ '$compile','ajaxServices', function( $compile, ajaxServices ){
+	var getTemplate = function(type){
+			return 'tpl/'+type+'.tpl.html';
+		};
+	var linker = function(scope, element, attr){
+			//fieldJson = JSON.parse(scope.field);
+
+			var url = "tpl/"+scope.field.type+".tpl.html";
+			ajaxServices.httpPromise(url).then(function(result){
+				var elem = $compile(result)(scope);	
+				element.append(elem[0]);
+			});
+			
+
+		};
+
+	return{
+		restrict: 'EA',
+		scope: {
+			field: '=',
+		},
+		// controller: ['$scope', function($scope) {
+		// 	var test = '<span>test</span>'
+		// 	console.log($scope.field);
+		// }]
+		// controller: [ '$scope',function($scope){
+		// 	self = this;
+		// 	self.getTpl = function(){
+		// 		return 'tpl/browse.tpl.html'
+		// 	}
+		// }],
+		
+		//controllerAs: 'fieldCtrl',
+		// templateUrl: function(elem, attr){
+		// 	console.log(this.scope)
+		// 	return this.controller.getTpl
+		// },
+		link: linker
+		// templateUrl: function(elem, attr){
+		// 	// f = JSON.parse(attr.field);
+		// 	console.log(attr);
+		//  	return getTemplate(attr.type);
+		// }
+	}
+}])
+
+
