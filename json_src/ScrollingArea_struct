@@ -1,0 +1,82 @@
+{
+	"session": [{
+		"dateFormat": "MDY",
+		"timeFormat": "12",
+		"resources": "",
+		"COMETURL": "",
+		"COMETAjax": "&SERVICE=AJAX"
+	}],
+	"form": [{
+		"id": "FORM_ID",
+		"title": " ()",
+		"type": "ScrollingArea",
+		"external": [{
+			"script": "first.js",
+			"script": "another.js",
+			"stylesheet": "first.css",
+			"stylesheet": "another.css"
+		}]
+	}],
+	"dataRows": [[{
+		"id": "???",
+		"type": "Image",
+		"class": "removeBorder",
+		"onclick": "deleteTableRow(this)",
+		"src": "delete.gif"
+	},
+	{
+		"id": "FIELD_1_ID",
+		"value": "",
+		"scrline": "1"
+	},
+	{
+		"id": "FIELD_2_ID",
+		"value": "",
+		"scrline": "1"
+	},
+	{
+		"id": "FIELD_3_ID",
+		"value": "",
+		"scrline": "1"
+	}],
+	[{
+		"id": "???",
+		"type": "Image",
+		"class": "removeBorder",
+		"onclick": "deleteTableRow(this)",
+		"src": "delete.gif"
+	},
+	{
+		"id": "FIELD_1_ID",
+		"value": "",
+		"scrline": "2"
+	},
+	{
+		"id": "FIELD_2_ID",
+		"value": "",
+		"scrline": "2"
+	},
+	{
+		"id": "FIELD_3_ID",
+		"value": "",
+		"scrline": "2"
+	}]],
+	"fields": [{
+		"id": "FIELD_1_ID",
+		"type": "text",
+		"label": "Scale (to)",
+		"class": ""
+	},
+	{
+		"id": "FIELD_2_ID",
+		"type": "text",
+		"label": "Units",
+		"class": ""
+	},
+	{
+		"id": "FIELD_3_ID",
+		"type": "checkbox",
+		"label": "Call MD",
+		"class": ""
+	}]
+}
