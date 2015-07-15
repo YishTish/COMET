@@ -8,9 +8,21 @@ app.directive('cometForm', [function() {
 			var self = this;
 			self.element = undefined;
 			self.formScope = undefined;
+			self.submitVal = "Send Form";
 			
 			self.getTemplate= function(field)  {
 				return "tpl/"+field.type+".tpl.html";
+			};
+
+			self.sendForm = function(){
+				console.log(self.formData.fields);
+			};
+
+			self.getFieldDisplay = function(field){
+				if(field.visible=="false" || field.type=="hidden"){
+					return "item-hidden";
+				}
+				return "item";
 			};
 
 			self.initForm = function initForm(){
@@ -24,9 +36,6 @@ app.directive('cometForm', [function() {
 			return 'tpl/form.tpl.html';
 		},
 		link: function(scope, elem, attr,ctrl){
-			elem.bind('keyup', function(){
-				console.log(elem);
-			})
 		}
 	}
 
@@ -61,6 +70,17 @@ app.directive('cometForm', [function() {
 		link: linker,
 		require: '?testForm',
 	}
+}])
+
+.directive('directFunc',[ function(){
+	return{
+		restrict: 'E',
+		link: function(scope, element, attr,ctrl){
+			console.log(element);
+			return true;
+		}
+	}
+
 }])
 
 

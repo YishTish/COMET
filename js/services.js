@@ -13,6 +13,10 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 				if(field.type.toUpperCase() == "date".toUpperCase()){
 					field.dateObject = Date(field.value);
 				}
+				if(field.type.toUpperCase() =="numeric".toUpperCase() ||
+					field.type.toUpperCase() =="float".toUpperCase()){
+					field.value= + field.value;
+				}
 				
 			}
 			return jsonObject;

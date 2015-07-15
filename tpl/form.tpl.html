@@ -1,7 +1,7 @@
 <div>
 	<form name="testForm" novalidate>
-			<div ng-repeat="field in formCtrl.formData.fields" class="item">
-				<div ng-if="field.visible!='false'">
+			<div ng-repeat="field in formCtrl.formData.fields">
+				<div class="{{formCtrl.getFieldDisplay(field)}}">
 					<!-- <ng-include src="formCtrl.getTemplate(field)" field="field"></ng-include> -->
 					<!--  <comet-field field="field"></comet-field>   -->
 
@@ -53,7 +53,12 @@
 					<div ng-if="field.type=='Float'">
 						<md-input-container>
 							<label>{{field.label}}</label>
-							<input type="text" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.value"/>
+							<input type="number" size="{{field.maxlength}}" name="{{field.id}}" test-func ng-model="field.value"/>
+							<div ng-messages="testForm.{{field.id}}.$error" role="alert">
+									<div ng-message="required">{{field.label}} is a required field</div>
+									<div ng-message="test-func">testFunc faild</div>
+									 <div ng-message="number">{{field.label}} must be numeric</div>
+							</div>
 						</md-input-container>
 					</div>
 
@@ -62,7 +67,7 @@
 					<div ng-if="field.type=='Float1'">
 						<md-input-container>
 							<label>{{field.label}}</label>
-							<input type="text" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.value"/>
+							<input type="number" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.value"/>
 						</md-input-container>
 					</div>
 
@@ -70,21 +75,15 @@
 					<div ng-if="field.type=='Float4'">
 						<md-input-container>
 							<label>{{field.label}}</label>
-							<input type="text" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.value"/>
+							<input type="number" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.value"/>
 						</md-input-container>
 					</div>
 
-
-					<div ng-if="field.type=='hidden'">
-						<md-input-container>
-							<input type="hidden" name="{{field.id}}" ng-model="field.value"/>
-						</md-input-container>
-					</div>
 
 					<div ng-if="field.type=='Numeric'">
 						<md-input-container>
 							<label>{{field.label}}</label>
-							<input type="text" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.value" max="10"/>
+							<input type="number" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.value" max="10"/>
 							<div ng-messages="testForm.{{field.id}}.$error" role="alert">
 									<div ng-message="required">{{field.label}} is a required field</div>
 							</div>
@@ -129,12 +128,11 @@
 
 				</div>
 				<!-- <comet-text field="field" class="form-group" ng-class="{'has-error' : testForm.field.$invalid}"></comet-text> -->
-			</div>
-			
-		 <div>
-			<button class="btn btn-primary" ng-disabled="testForm.$invalid">send</button>
-
-
+		</div>
+		 <md-input-container>
+			<md-button class="md-raised md-primary" ng-disabled="testForm.$invalid" ng-click="formCtrl.sendForm()">{{ formCtrl.submitVal }}</md-button>
+		</md-input-container>
+		<div>{{ someVal}}</div>
 			<div layout="column" layout-fill style="padding: 32px;" ng-if="testForm.$invalid">
 				<h4 class="md-title">For testing purposes only</h4>
 				<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
@@ -147,7 +145,5 @@
 					</ul>		
 		  		</md-whiteframe>
 		  	</div>
-			
-		</div>
 	</form>
 </div>

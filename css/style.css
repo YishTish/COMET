@@ -30,6 +30,10 @@
 	padding: 10px;
 }
 
+.item-hidden{
+	display: none;
+}
+
 .item-left{
 	order: 1;
 	flex-grow: 1;
