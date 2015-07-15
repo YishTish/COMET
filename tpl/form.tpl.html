@@ -1,13 +1,140 @@
 <div>
 	<form name="testForm" novalidate>
+
 			<div ng-repeat="field in formCtrl.formData.fields" class="item">
-				<div>
+				<div ng-if="field.visible!='false'">
 					<!-- <ng-include src="formCtrl.getTemplate(field)" field="field"></ng-include> -->
-					<comet-field field="field"></comet-field>
+					<!--  <comet-field field="field"></comet-field>   -->
+
+					<!-- Plain text -->
+					<div ng-if="field.type=='browse'">
+						<span>{{ field.value }} </span>
+					</div>
+
+
+					<!-- general text input -->
+					<div ng-if="field.type=='text'">
+						<md-input-container>
+							<div ng-if="field.required=='true'">
+								<span>111</span>
+							</div>
+							<label>{{::field.label}}</label>
+							<input type="text" name="{{::field.id}}" required="false" ng-model="field.value" md-maxlength="{{::field.maxlength}}" ng-disabled="{{::field.disabled}}" />
+							<div ng-messages="testForm.{{field.id}}.$error" role="alert">
+									<div ng-message="required">{{field.label}} is a required field</div>
+							</div>
+						</md-input-container>
+					</div>
+
+
+					<!-- Input button -->
+					<div ng-if="field.type=='button'">
+						<md-input-container>
+							<md-button>{{field.label}}</md-button>
+						</md-input-container>
+					</div>
+
+
+					<!-- Checkboxes -->
+					<div ng-if="field.type=='checkbox'">
+						<md-input-container>
+							<label>{{field.label}}</label>
+							<input type="checkbox" name="{{field.id}}" ng-model="field.value"/>
+						</md-input-container>
+					</div>
+
+
+					<!--Date -->
+					<div ng-if="field.type=='Date'">
+						<md-input-container>
+							<label>{{field.label}}</label>
+							<input type="date" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.dateObject"/>
+						</md-input-container>
+					</div>
+
+
+					<!-- Float -->
+					<div ng-if="field.type=='Float'">
+						<md-input-container>
+							<label>{{field.label}}</label>
+							<input type="text" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.value"/>
+						</md-input-container>
+					</div>
+
+
+					<!-- float1 -->
+					<div ng-if="field.type=='Float1'">
+						<md-input-container>
+							<label>{{field.label}}</label>
+							<input type="text" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.value"/>
+						</md-input-container>
+					</div>
+
+
+					<div ng-if="field.type=='Float4'">
+						<md-input-container>
+							<label>{{field.label}}</label>
+							<input type="text" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.value"/>
+						</md-input-container>
+					</div>
+
+
+					<div ng-if="field.type=='hidden'">
+						<md-input-container>
+							<input type="hidden" name="{{field.id}}" ng-model="field.value"/>
+						</md-input-container>
+					</div>
+
+					<div ng-if="field.type=='Numeric'">
+						<md-input-container>
+							<label>{{field.label}}</label>
+							<input type="text" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.value" max="10"/>
+							<div ng-messages="testForm.{{field.id}}.$error" role="alert">
+									<div ng-message="required">{{field.label}} is a required field</div>
+							</div>
+						</md-input-container>
+					</div>
+
+
+					<div ng-if="field.type=='radio'">
+						<md-radio-group ng-model="field.id">
+							<label>{{ field.label}}</label>
+							<md-radio-button ng-repeat="option in field.options" ng-value="option.value" aria-label="{{ option.description }}">
+								{{ option.description}}
+							</md-radio-button>
+						</md-radio-group>	
+					</div>
+
+
+					<div ng-if="field.type=='select'">
+						<md-select ng-model="field.value" placeholder="{{field.label}}">
+								<md-option ng-repeat="option in field.options" value="{{option.value}}">{{option.description}}</md-option>
+						</md-select>
+					</div>
+
+
+					<div ng-if="field.type=='textarea'">
+						<md-input-container>
+							<label>{{field.label}}</label>
+							<textarea  name="{{field.id}}" ng-model="field.value"></textarea>
+						</md-input-container>
+					</div>
+
+					
+					<div ng-if="field.type=='time'">
+						<md-input-container>
+							<label>{{field.label}}</label>
+							<input type="time" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.value"/>
+						</md-input-container>
+					</div>
+
+	
+
 
 				</div>
 				<!-- <comet-text field="field" class="form-group" ng-class="{'has-error' : testForm.field.$invalid}"></comet-text> -->
 			</div>
+			
 		 <div>
 			<button type="submit" class="btn btn-primary" ng-disabled="!loginFrorm.$valid">send data</button>
 		</div>

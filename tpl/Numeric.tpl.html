@@ -1,4 +1,7 @@
 <md-input-container>
 	<label>{{field.label}}</label>
-	<input type="text" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.value"/>
+	<input type="text" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.value" max="10"/>
+	<div ng-messages="testForm.{{field.id}}.$error" role="alert">
+			<div ng-message="required">{{field.label}} is a required field</div>
+	</div>
 </md-input-container>

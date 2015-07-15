@@ -10,10 +10,14 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 		parseJson: function(jsonObject){
 			for(field in jsonObject.fields){
 				var field = jsonObject.fields[field];
-				if(field.type == "date"){
-					var newDate = new Date(field.value);
-					field.dateObject = newDate;
+				if(field.type.toUpperCase() == "date".toUpperCase()){
+					field.dateObject = Date(field.value);
 				}
+				if(field.required==undefined){
+					field.required=false;
+				}
+				console.log(field.id +": "+field.required);
+
 			}
 			return jsonObject;
 		},
@@ -23,7 +27,6 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 
 	return {
 		httpPromise: function(url){
-			console.log(url);
 			var data = $templateCache.get(url);
 
 		    if (data) {

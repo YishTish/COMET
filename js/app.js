@@ -1,4 +1,4 @@
-var app = angular.module('COMET', ['ngMaterial']);
+var app = angular.module('COMET', ['ngMaterial', 'ngMessages']);
 
 app.controller('appCtrl', ['$scope', '$mdSidenav', '$http', 'jsonServices', function ($scope, $mdSidenav, $http, jsonServices) {
 	$http.get("json_src/pilot.json").then(function fileLoaded(res){
@@ -8,7 +8,7 @@ app.controller('appCtrl', ['$scope', '$mdSidenav', '$http', 'jsonServices', func
 	$scope.toggleSidenav = function(menuId){
 		$mdSidenav(menuId).toggle();
 	}
-	$scope.title = "COMET";
+	$scope.title = "COMET Form Generator";
 	$scope.files = ["Json_order14-524","pilot"];
 
 	$scope.loadFile = function(fileName){
