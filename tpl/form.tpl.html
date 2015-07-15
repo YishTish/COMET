@@ -1,6 +1,5 @@
 <div>
 	<form name="testForm" novalidate>
-
 			<div ng-repeat="field in formCtrl.formData.fields" class="item">
 				<div ng-if="field.visible!='false'">
 					<!-- <ng-include src="formCtrl.getTemplate(field)" field="field"></ng-include> -->
@@ -15,11 +14,8 @@
 					<!-- general text input -->
 					<div ng-if="field.type=='text'">
 						<md-input-container>
-							<div ng-if="field.required=='true'">
-								<span>111</span>
-							</div>
 							<label>{{::field.label}}</label>
-							<input type="text" name="{{::field.id}}" required="false" ng-model="field.value" md-maxlength="{{::field.maxlength}}" ng-disabled="{{::field.disabled}}" />
+							<input type="text" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" md-maxlength="{{::field.maxlength}}" ng-disabled="{{::field.disabled}}" />
 							<div ng-messages="testForm.{{field.id}}.$error" role="alert">
 									<div ng-message="required">{{field.label}} is a required field</div>
 							</div>
@@ -136,7 +132,22 @@
 			</div>
 			
 		 <div>
-			<button type="submit" class="btn btn-primary" ng-disabled="!loginFrorm.$valid">send data</button>
+			<button class="btn btn-primary" ng-disabled="testForm.$invalid">send</button>
+
+
+			<div layout="column" layout-fill style="padding: 32px;" ng-if="testForm.$invalid">
+				<h4 class="md-title">For testing purposes only</h4>
+				<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
+    				<ul>
+			  			<li ng-repeat="(key, errors) in testForm.$error track by $index"> <strong>{{ key }}</strong> errors
+						  	<ul>
+						      <li ng-repeat="e in errors">{{ e.$name }} has an error: <strong>{{ key }}</strong>.</li>
+						    </ul>
+						</li>
+					</ul>		
+		  		</md-whiteframe>
+		  	</div>
+			
 		</div>
 	</form>
 </div>

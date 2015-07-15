@@ -64,7 +64,7 @@
             "value": "14/000524",
             "required": "true",
             "tabIndex": "3",
-            "disabled": "true",
+            "disabled": "false",
             "maxlength": "12"
         },
         {

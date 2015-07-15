@@ -13,11 +13,7 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 				if(field.type.toUpperCase() == "date".toUpperCase()){
 					field.dateObject = Date(field.value);
 				}
-				if(field.required==undefined){
-					field.required=false;
-				}
-				console.log(field.id +": "+field.required);
-
+				
 			}
 			return jsonObject;
 		},

@@ -18,7 +18,6 @@ app.controller('appCtrl', ['$scope', '$mdSidenav', '$http', 'jsonServices', func
 	$scope.parseJson = function(jsonData){
 		return jsonServices.parseJson(jsonData);
 	}
-	$scope.validForm = true;
 }])
 
 .config(function($mdThemingProvider) {
