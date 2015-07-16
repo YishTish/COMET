@@ -1,4 +1,4 @@
-app.directive('cometForm', [function() {
+app.directive('cometForm', ['jsonServices', function(jsonServices) {
 	return{
 		restrict: 'E',
 		scope: {
@@ -9,6 +9,7 @@ app.directive('cometForm', [function() {
 			self.element = undefined;
 			self.formScope = undefined;
 			self.submitVal = "Send Form";
+			require: 'form';
 			
 			self.getTemplate= function(field)  {
 				return "tpl/"+field.type+".tpl.html";
@@ -25,6 +26,10 @@ app.directive('cometForm', [function() {
 				return "item";
 			};
 
+			self.getDateField = function(fieldVal){
+				return Date(fieldVal);
+			}
+
 			self.initForm = function initForm(){
 				self.formScope = self.element.find('form').scope();
 			};
@@ -36,6 +41,7 @@ app.directive('cometForm', [function() {
 			return 'tpl/form.tpl.html';
 		},
 		link: function(scope, elem, attr,ctrl){
+		
 		}
 	}
 
