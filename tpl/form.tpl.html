@@ -57,7 +57,10 @@
 							<div ng-messages="testForm.{{field.id}}.$error" role="alert">
 									<div ng-message="required">{{field.label}} is a required field</div>
 									<div ng-message="test-func">testFunc faild</div>
-									 <div ng-message="number">{{field.label}} must be numeric</div>
+									<div ng-message="number">{{field.label}} must be numeric</div>
+									<div ng-message="max">{{field.label}} must be less than {{}}</div>
+									<div ng-message="min">{{field.label}} must be higher than</div>
+
 							</div>
 						</md-input-container>
 					</div>
@@ -84,8 +87,13 @@
 						<md-input-container>
 							<label>{{field.label}}</label>
 							<input type="number" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.value" max="10"/>
-							<div ng-messages="testForm.{{field.id}}.$error" role="alert">
+								<div ng-messages="testForm.{{field.id}}.$error" role="alert">
 									<div ng-message="required">{{field.label}} is a required field</div>
+									<div ng-message="test-func">testFunc faild</div>
+									<div ng-message="number">{{field.label}} must be numeric</div>
+									<div ng-message="max">{{field.label}} must be less than </div>
+									<div ng-message="min">{{field.label}} must be higher than</div>
+
 							</div>
 						</md-input-container>
 					</div>
