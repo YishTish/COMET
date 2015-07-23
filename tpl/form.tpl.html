@@ -1,25 +1,40 @@
 <div>
-	<form name="testForm" novalidate>
+	<form name="testForm" class="split-form" novalidate>
 			<div ng-repeat="field in formCtrl.formData.fields">
 				<div class="{{formCtrl.getFieldDisplay(field)}}">
-					<!-- <ng-include src="formCtrl.getTemplate(field)" field="field"></ng-include> -->
-					<!--  <comet-field field="field"></comet-field>   -->
-
+				
 					<!-- Plain text -->
 					<div ng-if="field.type=='browse'">
 						<span>{{ field.value }} </span>
 					</div>
 
-
 					<!-- general text input -->
-					<div ng-if="field.type=='text'">
-						<md-input-container>
-							<label>{{::field.label}}</label>
-							<input type="text" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" md-maxlength="{{::field.maxlength}}" ng-disabled="{{::field.disabled}}" />
-							<div ng-messages="testForm.{{field.id}}.$error" role="alert">
-									<div ng-message="required">{{field.label}} is a required field</div>
-							</div>
-						</md-input-container>
+					<div ng-if="field.type=='text'" class="form-group">
+								<label>{{::field.label}} ({{::field.dataFormat}} -- {{::field.value}})</label>
+								<input type="text" class="form-control" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{::field.disabled}}"  comet-text-field="{{::field.dataFormat}}"  />
+								<div ng-messages="testForm.{{field.id}}.$error" role="alert">
+										<div ng-message="required">{{field.label}} is a required field</div>
+								</div>
+
+					</div>
+
+
+					<div ng-if="field.type=='date'" class="form-group">
+								<label>{{::field.label}}</label>
+								<input type="date" class="form-control" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{::field.disabled}}"  />
+								<div ng-messages="testForm.{{field.id}}.$error" role="alert">
+										<div ng-message="required">{{field.label}} is a required field</div>
+								</div>
+
+					</div>
+
+					<div ng-if="field.type=='time'" class="form-group">
+								<label>{{::field.label}} ({{::field.dataFormat}} -- {{::field.value}})</label>
+								<input type="time" class="form-control" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{::field.disabled}}"  />
+								<div ng-messages="testForm.{{field.id}}.$error" role="alert">
+										<div ng-message="required">{{field.label}} is a required field</div>
+								</div>
+
 					</div>
 
 
@@ -35,23 +50,16 @@
 					<div ng-if="field.type=='checkbox'">
 						<md-input-container>
 							<label>{{field.label}}</label>
-							<input type="checkbox" name="{{field.id}}" ng-model="field.value"/>
+							<input type="checkbox" name="{{field.id}}" ng-model="field.value" ng-checked="{{::field.checked}}"/>
 						</md-input-container>
 					</div>
 
 
-					<!--Date -->
-					<div ng-if="field.type=='Date'">
-						<md-input-container>
-							<label>{{field.label}}</label>
-							<input type="date" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.dateObject"/>
-						</md-input-container>
-					</div>
-
+				
 
 					<!-- Float -->
 					<div ng-if="field.type=='Float'">
-						<md-input-container>
+						<md-input-container style="width:150px">
 							<label>{{field.label}}</label>
 							<input type="number" size="{{field.maxlength}}" name="{{field.id}}" test-func ng-model="field.value"/>
 							<div ng-messages="testForm.{{field.id}}.$error" role="alert">
@@ -84,7 +92,7 @@
 
 
 					<div ng-if="field.type=='Numeric'">
-						<md-input-container>
+						<md-input-container style="width:150px">
 							<label>{{field.label}}</label>
 							<input type="number" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.value" max="10"/>
 								<div ng-messages="testForm.{{field.id}}.$error" role="alert">
@@ -94,7 +102,7 @@
 									<div ng-message="max">{{field.label}} must be less than </div>
 									<div ng-message="min">{{field.label}} must be higher than</div>
 
-							</div>
+								</div>
 						</md-input-container>
 					</div>
 
@@ -110,9 +118,12 @@
 
 
 					<div ng-if="field.type=='select'">
-						<md-select ng-model="field.value" placeholder="{{field.label}}">
-								<md-option ng-repeat="option in field.options" value="{{option.value}}">{{option.description}}</md-option>
-						</md-select>
+						<div class="form-group">
+							<label for="{{::field.id}}">{{field.label}}</label>
+							<select name="{{::field.id}}" ng-model="field.value" class="form-control">
+									<option ng-repeat="option in field.options" value="{{option.value}}">{{option.description}}</option>
+							</select>
+						</div>
 					</div>
 
 
@@ -133,14 +144,12 @@
 
 	
 
-
 				</div>
 				<!-- <comet-text field="field" class="form-group" ng-class="{'has-error' : testForm.field.$invalid}"></comet-text> -->
 		</div>
 		 <md-input-container>
 			<md-button class="md-raised md-primary" ng-disabled="testForm.$invalid" ng-click="formCtrl.sendForm()">{{ formCtrl.submitVal }}</md-button>
 		</md-input-container>
-		<div>{{ someVal}}</div>
 			<div layout="column" layout-fill style="padding: 32px;" ng-if="testForm.$invalid">
 				<h4 class="md-title">For testing purposes only</h4>
 				<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">

@@ -14,7 +14,7 @@ app.controller('appCtrl', ['$scope', '$mdSidenav', 'ajaxServices', 'jsonServices
 		$mdSidenav(menuId).toggle();
 	}
 	$scope.title = "COMET Form Generator";
-	$scope.files = ["Json_order14-524","pilot"];
+	$scope.files = ["pilot", "Order15-000252","Json_order14-524"];
 	
 	$scope.prepareData = function(fileName){
 		$scope.showLoadingMessage = true;

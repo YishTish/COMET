@@ -41,7 +41,9 @@
             "required": "true",
             "tabIndex": "2",
             "disabled": "false",
-            "maxlength": "20"
+            "maxlength": "20",
+            "format":"CapitalLetters"
+
         },
         {
             "id": "MARITAL",

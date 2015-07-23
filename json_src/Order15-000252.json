@@ -3,15 +3,16 @@
         {
             "dateFormat": "MDY",
             "timeFormat": "12",
-            "resources": "",
-            "COMETURL": "",
+            "resources": "Development13",
+            "COMETURL": "/comet.icsp?MGWLPN=iCOMET&COMETSID=6375421628&COMETMode=",
             "COMETAjax": "&SERVICE=AJAX"
         }
     ],
     "form": [
         {
             "id": "WRX2002",
-            "title": "aaa",
+            "title": "Medication Order (WRX2002)",
+            "type": "DataForm",
             "external": [
                 {
                     "script": "another.js",
@@ -61,7 +62,7 @@
             "id": "RXORD",
             "type": "text",
             "label": "Order #",
-            "value": "14/000524",
+            "value": "15/000252",
             "required": "true",
             "tabIndex": "3",
             "disabled": "false",
@@ -71,11 +72,12 @@
             "id": "DRUGCODE",
             "type": "text",
             "label": "Medication",
-            "value": "213157",
+            "value": "213442",
             "required": "true",
             "tabIndex": "5",
-            "disabled": "true",
+            "disabled": "false",
             "maxlength": "",
+            "dataFormat": "Numeric",
             "data-search": "^WSY1018",
             "data-searchParameters": "DRUGNAM1;RXODOSE;RXOROA;RXOSDT",
             "data-ServerValidation": "ADRUG^WRX2002",
@@ -95,19 +97,19 @@
             "id": "DRUGNAM1",
             "type": "browse",
             "label": "",
-            "value": "ROBITUSSIN (Oral Liquid)",
+            "value": "NovoLIN (Injectable)",
             "tabIndex": "99",
             "disabled": "false",
-            "data-resetTo": "ROBITUSSIN (Oral Liquid)"
+            "data-resetTo": "NovoLIN (Injectable)"
         },
         {
             "id": "RXODOSE",
             "type": "text",
             "label": "Dose",
-            "value": "100",
+            "value": "70-30",
             "required": "true",
             "tabIndex": "7",
-            "disabled": "true",
+            "disabled": "false",
             "maxlength": "20",
             "data-ServerValidation": "ADOSE^WRX2002",
             "data-ServerValidationParameters": "DRUGCODE;RXOROA;RXOFREQ;RXOQUOM"
@@ -116,19 +118,20 @@
             "id": "HDRUNIT",
             "type": "browse",
             "label": "",
-            "value": "MG/5ML",
+            "value": "UNT/ML",
             "tabIndex": "91",
             "disabled": "false",
-            "data-resetTo": "MG/5ML"
+            "data-resetTo": "UNT/ML"
         },
         {
             "id": "RXOQTY",
             "type": "text",
             "label": "Quantity",
-            "value": "1.0",
+            "value": "1.00",
+            "dataFormat": "Float",
             "required": "true",
             "tabIndex": "8",
-            "disabled": "true",
+            "disabled": "false",
             "maxlength": "4",
             "data-ServerValidation": "AQTY^WRX2002",
             "data-ServerValidationParameters": "DRUGCODE;RXOROA;RXOFREQ;RXOQUOM"
@@ -482,15 +485,14 @@
             "id": "RXOROA",
             "type": "select",
             "label": "Route",
-            "value": "C28161",
+            "value": "C38299",
             "required": "true",
             "tabIndex": "9",
             "disabled": "true",
             "options": [
                 {
                     "value": "C28161",
-                    "description": "Intramuscular",
-                    "selected": "true"
+                    "description": "Intramuscular"
                 },
                 {
                     "value": "C38192",
@@ -862,7 +864,8 @@
                 },
                 {
                     "value": "C38299",
-                    "description": "Subcutaneous"
+                    "description": "Subcutaneous",
+                    "selected": "true"
                 },
                 {
                     "value": "C38300",
@@ -964,7 +967,7 @@
             "id": "RXOFREQ",
             "type": "select",
             "label": "Frequency",
-            "value": "",
+            "value": "A0020",
             "required": "true",
             "tabIndex": "10",
             "disabled": "true",
@@ -975,7 +978,8 @@
                 },
                 {
                     "value": "A0020",
-                    "description": "BID - Twice a Day"
+                    "description": "BID - Twice a Day",
+                    "selected": "true"
                 },
                 {
                     "value": "A0030",
@@ -1215,16 +1219,17 @@
             "id": "SIGNOTE",
             "type": "browse",
             "label": "",
-            "value": "",
+            "value": "At 6:00a, 4:30p",
             "tabIndex": "12",
-            "disabled": "false"
+            "disabled": "false",
+            "data-resetTo": "At 6:00a, 4:30p"
         },
         {
             "id": "RXOPRN",
             "type": "checkbox",
             "label": "PRN/Frequency",
-            "value": "1",
-            "checked": "true",
+            "value": "",
+            "checked": "false",
             "tabIndex": "13",
             "disabled": "true",
             "data-ServerValidation": "APRN^WRX2002",
@@ -1234,15 +1239,14 @@
             "id": "RXOPRNF",
             "type": "select",
             "label": "PRN Frequency",
-            "value": "A0010",
+            "value": "",
             "required": "true",
             "tabIndex": "14",
             "disabled": "true",
             "options": [
                 {
                     "value": "A0010",
-                    "description": "As needed",
-                    "selected": "true"
+                    "description": "As needed"
                 },
                 {
                     "value": "D0010",
@@ -1322,30 +1326,33 @@
             "id": "RXOPRNR",
             "type": "text",
             "label": "Reason",
-            "value": "Use for headache",
+            "value": "",
             "required": "true",
             "tabIndex": "15",
-            "disabled": "true",
+            "disabled": "false",
+            "dataFormat": "CapitalLetters",
             "maxlength": "50"
         },
         {
             "id": "RXOSDT",
             "type": "text",
             "label": "Start Date & Time",
-            "value": "12/01/2014",
+            "value": "03/31/2015",
+            "dataFormat": "Date",
             "required": "true",
             "tabIndex": "16",
-            "disabled": "true",
+            "disabled": "false",
             "maxlength": "10"
         },
         {
             "id": "RXOSTM",
             "type": "text",
             "label": "Start Time",
-            "value": "2:51",
+            "value": "5:44",
+            "dataFormat": "Time",
             "required": "true",
             "tabIndex": "17",
-            "disabled": "true",
+            "disabled": "false",
             "maxlength": "5"
         },
         {
@@ -1364,8 +1371,9 @@
             "type": "text",
             "label": "Duration",
             "value": "",
+            "dataFormat": "Numeric",
             "tabIndex": "19",
-            "disabled": "true",
+            "disabled": "false",
             "maxlength": "3",
             "data-ServerValidation": "ADUR^WRX2002",
             "data-ServerValidationParameters": ""
@@ -1375,8 +1383,9 @@
             "type": "text",
             "label": "Stop Date & Time",
             "value": "",
+            "dataFormat": "Date",
             "tabIndex": "20",
-            "disabled": "true",
+            "disabled": "false",
             "maxlength": "10",
             "data-ServerValidation": "AEDT^WRX2002",
             "data-ServerValidationParameters": "RXOSDT;DRUGCODE"
@@ -1386,6 +1395,7 @@
             "type": "text",
             "label": "Stop Time",
             "value": "",
+            "dataFormat": "Time",
             "tabIndex": "21",
             "disabled": "true",
             "maxlength": "5"
@@ -1410,9 +1420,10 @@
         },
         {
             "id": "RXOODT",
-            "type": "Date",
+            "type": "text",
             "label": "Order Date",
-            "value": "12/01/2014",
+            "value": "",
+            "dataFormat": "Date",
             "tabIndex": "23",
             "disabled": "true",
             "maxlength": "10"
@@ -1507,7 +1518,8 @@
             "label": "Indication",
             "value": "",
             "tabIndex": "28",
-            "disabled": "true",
+            "dataFormat": "AlphaNumeric",
+            "disabled": "false",
             "maxlength": "",
             "data-search": "^WSY1022",
             "data-searchParameters": "RSNDESC"
@@ -1551,7 +1563,7 @@
             "id": "RXODOCTB",
             "type": "select",
             "label": "Document Before",
-            "value": "",
+            "value": "30",
             "tabIndex": "32",
             "disabled": "true",
             "options": [
@@ -1573,7 +1585,8 @@
                 },
                 {
                     "value": "30",
-                    "description": "Blood Glucose"
+                    "description": "Blood Glucose",
+                    "selected": "true"
                 },
                 {
                     "value": "40",
@@ -1615,7 +1628,7 @@
             "label": "Sliding Scale",
             "value": "",
             "tabIndex": "33",
-            "disabled": "true",
+            "disabled": "false",
             "data-search": "^WRX2023",
             "data-searchParameters": "RXORD;SCALE1;SCALEQ1;SCALEC1;SCALE2;SCALEQ2;SCALEC2;SCALE3;SCALEQ3;SCALEC3;SCALE4;SCALEQ4;SCALEC4;SCALE5;SCALEQ5;SCALEC5;SCALE6;SCALEQ6;SCALEC6;SCALE7;SCALEQ7;SCALEC7;SCALE8;SCALEQ8;SCALEC8;SCALE9;SCALEQ9;SCALEC9;SCALE10;SCALEQ10;SCALEC10;"
         },
@@ -1623,20 +1636,20 @@
             "id": "SCALENOT",
             "type": "browse",
             "label": "",
-            "value": "",
+            "value": "< 130: 0 Units, 131-240: 4 Units and call MD, 241-300: 10 Units, 301-400: 12 Units, > 400: 20 Units",
             "tabIndex": "92",
-            "disabled": "true"
+            "disabled": "true",
+            "data-resetTo": "< 130: 0 Units, 131-240: 4 Units and call MD, 241-300: 10 Units, 301-400: 12 Units, > 400: 20 Units"
         },
         {
             "id": "RXOINST",
             "type": "text",
             "label": "Administration Directions",
-            "value": "Test PRN with units and switch sites for ServIT",
+            "value": "YM is testing Notification after changing an order",
             "required": "true",
             "tabIndex": "34",
             "disabled": "false",
-            "maxlength": "140",
-            "format": "CapitalLetters"
+            "maxlength": "140"
         },
         {
             "id": "RXONDIR",
@@ -1722,7 +1735,7 @@
             "id": "RXOPHARM",
             "type": "select",
             "label": "Order From",
-            "value": "PHT",
+            "value": "PH2",
             "required": "true",
             "tabIndex": "36",
             "disabled": "true",
@@ -1737,16 +1750,20 @@
                 },
                 {
                     "value": "PH2",
-                    "description": "OmniCare Dx Test"
+                    "description": "OmniCare Dx Test",
+                    "selected": "true"
                 },
                 {
                     "value": "PHT",
-                    "description": "Internal Pharmacy (No HL7)",
-                    "selected": "true"
+                    "description": "Internal Pharmacy (No HL7)"
                 },
                 {
                     "value": "PHTEST",
                     "description": "Test Pharmacy for SCRIPT"
+                },
+                {
+                    "value": "SNNEWRX",
+                    "description": "SN New Pharmacy"
                 },
                 {
                     "value": "SUSAN",
@@ -1794,7 +1811,7 @@
             "id": "RXOINSTP",
             "type": "text",
             "label": "Dispense Instructions",
-            "value": "",
+            "value": "YM is testing Notification after changing an order",
             "tabIndex": "38",
             "disabled": "true",
             "maxlength": ""
@@ -1839,7 +1856,7 @@
             "id": "RXOHRS",
             "type": "hidden",
             "label": "",
-            "value": ""
+            "value": "6:00"
         },
         {
             "id": "RXOSFT",
@@ -1851,13 +1868,13 @@
             "id": "SCALE1",
             "type": "hidden",
             "label": "",
-            "value": ""
+            "value": "130"
         },
         {
             "id": "SCALEQ1",
             "type": "hidden",
             "label": "",
-            "value": ""
+            "value": "0"
         },
         {
             "id": "SCALEC1",
@@ -1869,31 +1886,31 @@
             "id": "SCALE2",
             "type": "hidden",
             "label": "",
-            "value": ""
+            "value": "240"
         },
         {
             "id": "SCALEQ2",
             "type": "hidden",
             "label": "",
-            "value": ""
+            "value": "4"
         },
         {
             "id": "SCALEC2",
             "type": "hidden",
             "label": "",
-            "value": ""
+            "value": "1"
         },
         {
             "id": "SCALE3",
             "type": "hidden",
             "label": "",
-            "value": ""
+            "value": "300"
         },
         {
             "id": "SCALEQ3",
             "type": "hidden",
             "label": "",
-            "value": ""
+            "value": "10"
         },
         {
             "id": "SCALEC3",
@@ -1905,13 +1922,13 @@
             "id": "SCALE4",
             "type": "hidden",
             "label": "",
-            "value": ""
+            "value": "400"
         },
         {
             "id": "SCALEQ4",
             "type": "hidden",
             "label": "",
-            "value": ""
+            "value": "12"
         },
         {
             "id": "SCALEC4",
@@ -1923,13 +1940,13 @@
             "id": "SCALE5",
             "type": "hidden",
             "label": "",
-            "value": ""
+            "value": "9999"
         },
         {
             "id": "SCALEQ5",
             "type": "hidden",
             "label": "",
-            "value": ""
+            "value": "20"
         },
         {
             "id": "SCALEC5",

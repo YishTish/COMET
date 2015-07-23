@@ -11,12 +11,33 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 			parseJson: function(jsonObject){
 				for(field in jsonObject.fields){
 					var field = jsonObject.fields[field];
-					if(field.type.toUpperCase() == "date".toUpperCase()){
-						field.dateObject = new Date(field.value);
+					if(field.type.toUpperCase() == "text".toUpperCase() && field.dataFormat!=undefined){
+						switch(field.dataFormat.toLowerCase()){
+							case "date":
+								if(field.value == undefined || field.value == ""){
+									field.value = null;
+								}
+								else{
+									field.value = new Date(field.value);
+								}
+								field.type = "date";
+								break;
+							case "time":
+								field.type = "time"
+								break;
+						}
 					}
+					
 					if(field.type.toUpperCase() =="numeric".toUpperCase() ||
 						field.type.toUpperCase() =="float".toUpperCase()){
 						field.value= + field.value;
+					}
+					if(field.value!=null && field.value!="" && angular.isString(field.value)){
+							field.size = field.value.length * 10;
+						
+					}
+					else{
+						field.size=100;
 					}
 				}
 				return jsonObject;

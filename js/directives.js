@@ -78,15 +78,45 @@ app.directive('cometForm', ['jsonServices', function(jsonServices) {
 	}
 }])
 
-.directive('directFunc',[ function(){
+.directive('cometTextField', [function(){
 	return{
-		restrict: 'E',
-		link: function(scope, element, attr,ctrl){
-			console.log(element);
-			return true;
+		restrict: 'AE',
+		link: function(scope, elem, attr, ctrl){
+			elem.bind('keyup', function(){
+				console.log("keyup");
+				if(attr.formatField=="CapitalLetters"){
+					console.log(elem);
+				}
+			})
+		},
+		compile: function(){
+			return{
+				pre: function(scope, elem, attr, ctrl, transcludeFn){
+					//console.log(scope.$parent.field.dateObject);
+					switch(attr.cometTextField){
+						case "Numeric":
+							elem[0].type="number";
+							scope.$parent.field.value = +scope.$parent.field.value;
+							
+							break;
+						/*case "Date":
+							elem[0].type="date";
+							break;*/
+						case "Time":
+							elem[0].type="time";
+							break;
+					}
+					if(attr.formatField=="CapitalLetters"){
+						elem.css('text-transform','uppercase');
+					}
+				},
+				post: function(scope, elem, attr, ctrl, transcludeFn){
+
+					
+				}
+			}
 		}
 	}
-
 }])
 
 
