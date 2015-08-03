@@ -61,7 +61,7 @@
             "id": "RXORD",
             "type": "text",
             "label": "Order #",
-            "value": "14/000524",
+            "value": "",
             "required": "true",
             "tabIndex": "3",
             "disabled": "false",
@@ -1335,7 +1335,7 @@
             "value": "12/01/2014",
             "required": "true",
             "tabIndex": "16",
-            "disabled": "true",
+            "disabled": "false",
             "maxlength": "10"
         },
         {

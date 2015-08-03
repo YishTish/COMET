@@ -34,6 +34,18 @@ app.directive('cometForm', ['jsonServices', function(jsonServices) {
 				self.formScope = self.element.find('form').scope();
 			};
 
+			self.save = function() {
+				$scope.$broadcast('show-errors-check-validity');
+
+				if($scope.cometForm.$invalid) {
+					return;
+				}
+			}
+
+			self.reset = function() {
+				console.log("reset");
+				$scope.$broadcast('show-errors-reset');
+			}
 		}],
 		controllerAs: 'formCtrl',
 		bindToController: true,
@@ -117,6 +129,37 @@ app.directive('cometForm', ['jsonServices', function(jsonServices) {
 			}
 		}
 	}
+}])
+
+.directive('showErrors', ['$timeout', function ($timeout) {
+	return {
+		restrict: 'A',
+		require: '^form',
+		link: function (scope, element, attr, formCtrl) {
+			var inputEl = element[0].querySelector("[name]");
+			var inputNgEl = angular.element(inputEl);
+
+			scope.$on('show-errors-check-validity', function(){
+				var inputName = inputNgEl.attr('name');
+				if(inputName != undefined){
+					element.toggleClass('has-error', formCtrl[inputName].$invalid);
+				}
+			});
+
+			scope.$on('show-errors-reset', function() {
+  				$timeout(function() {
+    				element.removeClass('has-error');
+  				}, 0, false);
+			});
+			
+
+			inputNgEl.bind('blur', function(){
+				var inputName = inputNgEl.attr('name');
+				element.toggleClass('has-error', formCtrl[inputName].$invalid);
+			})
+			
+		}
+	};
 }])
 
 

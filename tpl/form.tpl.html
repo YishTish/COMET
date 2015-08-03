@@ -1,5 +1,5 @@
 <div>
-	<form name="testForm" class="split-form" novalidate>
+	<form name="cometForm" class="split-form" novalidate>
 			<div ng-repeat="field in formCtrl.formData.fields">
 				<div class="{{formCtrl.getFieldDisplay(field)}}">
 				
@@ -9,29 +9,28 @@
 					</div>
 
 					<!-- general text input -->
-					<div ng-if="field.type=='text'" class="form-group">
-								<label>{{::field.label}} ({{::field.dataFormat}} -- {{::field.value}})</label>
-								<input type="text" class="form-control" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{::field.disabled}}"  comet-text-field="{{::field.dataFormat}}"  />
-								<div ng-messages="testForm.{{field.id}}.$error" role="alert">
-										<div ng-message="required">{{field.label}} is a required field</div>
+					<div ng-if="field.type=='text'" class="form-group" show-errors>
+								<label class="control-label">{{::field.label}}</label><span style="color:red;" ng-show="field.required"> *</span>
+								<input type="text" class="form-control inline" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{::field.disabled}}"  comet-text-field="{{::field.dataFormat}}"  show-errors/>
+								<div ng-messages="cometForm.{{field.id}}.$error" role="alert">
+									<div ng-message="required" role="alert"class="help-block alert alert-danger">{{field.label}} is a required field</div>
 								</div>
-
 					</div>
 
 
 					<div ng-if="field.type=='date'" class="form-group">
 								<label>{{::field.label}}</label>
 								<input type="date" class="form-control" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{::field.disabled}}"  />
-								<div ng-messages="testForm.{{field.id}}.$error" role="alert">
+								<div ng-messages="cometForm.{{field.id}}.$error" role="alert">
 										<div ng-message="required">{{field.label}} is a required field</div>
 								</div>
 
 					</div>
 
 					<div ng-if="field.type=='time'" class="form-group">
-								<label>{{::field.label}} ({{::field.dataFormat}} -- {{::field.value}})</label>
+								<label>{{::field.label}} </label>
 								<input type="time" class="form-control" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{::field.disabled}}"  />
-								<div ng-messages="testForm.{{field.id}}.$error" role="alert">
+								<div ng-messages="cometForm.{{field.id}}.$error" role="alert">
 										<div ng-message="required">{{field.label}} is a required field</div>
 								</div>
 
@@ -62,7 +61,7 @@
 						<md-input-container style="width:150px">
 							<label>{{field.label}}</label>
 							<input type="number" size="{{field.maxlength}}" name="{{field.id}}" test-func ng-model="field.value"/>
-							<div ng-messages="testForm.{{field.id}}.$error" role="alert">
+							<div ng-messages="cometForm.{{field.id}}.$error" role="alert">
 									<div ng-message="required">{{field.label}} is a required field</div>
 									<div ng-message="test-func">testFunc faild</div>
 									<div ng-message="number">{{field.label}} must be numeric</div>
@@ -95,7 +94,7 @@
 						<md-input-container style="width:150px">
 							<label>{{field.label}}</label>
 							<input type="number" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.value" max="10"/>
-								<div ng-messages="testForm.{{field.id}}.$error" role="alert">
+								<div ng-messages="cometForm.{{field.id}}.$error" role="alert">
 									<div ng-message="required">{{field.label}} is a required field</div>
 									<div ng-message="test-func">testFunc faild</div>
 									<div ng-message="number">{{field.label}} must be numeric</div>
@@ -135,26 +134,18 @@
 					</div>
 
 					
-					<div ng-if="field.type=='time'">
-						<md-input-container>
-							<label>{{field.label}}</label>
-							<input type="time" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.value"/>
-						</md-input-container>
-					</div>
-
-	
-
 				</div>
-				<!-- <comet-text field="field" class="form-group" ng-class="{'has-error' : testForm.field.$invalid}"></comet-text> -->
+				<!-- <comet-text field="field" class="form-group" ng-class="{'has-error' : cometForm.field.$invalid}"></comet-text> -->
 		</div>
 		 <md-input-container>
-			<md-button class="md-raised md-primary" ng-disabled="testForm.$invalid" ng-click="formCtrl.sendForm()">{{ formCtrl.submitVal }}</md-button>
+			<button class="btn  btn-primary" ng-click="formCtrl.save()">{{ formCtrl.submitVal }}</button>
+			<button class="btn btn-link" ng-click="formCtrl.reset()">Reset</button>
 		</md-input-container>
-			<div layout="column" layout-fill style="padding: 32px;" ng-if="testForm.$invalid">
+			<div layout="column" layout-fill style="padding: 32px;" ng-if="cometForm.$invalid">
 				<h4 class="md-title">For testing purposes only</h4>
 				<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
     				<ul>
-			  			<li ng-repeat="(key, errors) in testForm.$error track by $index"> <strong>{{ key }}</strong> errors
+			  			<li ng-repeat="(key, errors) in cometForm.$error track by $index"> <strong>{{ key }}</strong> errors
 						  	<ul>
 						      <li ng-repeat="e in errors">{{ e.$name }} has an error: <strong>{{ key }}</strong>.</li>
 						    </ul>
