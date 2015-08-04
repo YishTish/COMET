@@ -1,4 +1,4 @@
-app.directive('cometForm', ['jsonServices', function(jsonServices) {
+app.directive('cometForm', ['jsonServices','$filter', function(jsonServices, $filter) {
 	return{
 		restrict: 'E',
 		scope: {
@@ -45,6 +45,16 @@ app.directive('cometForm', ['jsonServices', function(jsonServices) {
 			self.reset = function() {
 				console.log("reset");
 				$scope.$broadcast('show-errors-reset');
+			}
+
+			self.getElementLabel = function(elemntId){
+
+				var result = $filter('filter')(self.formData.fields, function(res){
+					if(res.id == elemntId){
+						return res.label;
+					}
+				});
+				return result[0].label;
 			}
 		}],
 		controllerAs: 'formCtrl',
@@ -153,9 +163,52 @@ app.directive('cometForm', ['jsonServices', function(jsonServices) {
 			});
 			
 
-			inputNgEl.bind('blur', function(){
+			inputNgEl.bind('keyup', function(){
 				var inputName = inputNgEl.attr('name');
-				element.toggleClass('has-error', formCtrl[inputName].$invalid);
+				var dataFormat = inputNgEl.attr('dataformat');
+				if(dataFormat){
+					switch(dataFormat.toLowerCase()){
+						case "alphanumeric":
+							if(formCtrl[inputName].$viewValue === undefined || formCtrl[inputName].$viewValue == ""){
+								formCtrl[inputName].$setValidity("alphanumeric", 1);
+								return;
+							}
+							formCtrl[inputName].$setValidity("alphanumeric", is.alphaNumeric(formCtrl[inputName].$viewValue));
+						break;
+						case "capitalletters":
+							inputNgEl.addClass("text-uppercase");
+						break;
+						case "PhoneNumber":
+						break;
+					}
+				}
+				//element.toggleClass('has-error', formCtrl[inputName].$invalid);
+			});
+
+			 inputNgEl.bind('blur', function(){
+			 	var inputName = inputNgEl.attr('name');
+			 	element.toggleClass('has-error', formCtrl[inputName].$invalid);
+			 });
+			
+		}
+	};
+}])
+
+.directive('validateText', [function () {
+	return {
+		restrict: 'A',
+		require: '^form',
+		link: function (scope, element, attr, formCtrl) {
+			var inputEl = element[0].querySelector("[name]");
+			var inputNgEl = angular.element(inputEl);
+
+			inputNgEl.bind('blur', function(){
+				console.log(inputNgEl);
+				var dataFormat = inputNgEl.attr('dataformat');
+				if(dataFormat){
+					console.log(dataFormat);
+				}
+				var inputName = inputNgEl.attr('name');
 			})
 			
 		}

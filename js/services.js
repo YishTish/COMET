@@ -15,7 +15,7 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 						switch(field.dataFormat.toLowerCase()){
 							case "date":
 								if(field.value == undefined || field.value == ""){
-									field.value = null;
+									field.value = new Date();
 								}
 								else{
 									field.value = new Date(field.value);
@@ -25,13 +25,19 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 							case "time":
 								field.type = "time"
 								break;
+							case "browse":
+								field.required = "false"
+								break;
+							case "float":
+							case "float1":
+							case "numeric":
+								field.value= + field.value;
+								field.type = "number";
+								break;
 						}
 					}
 					
-					if(field.type.toUpperCase() =="numeric".toUpperCase() ||
-						field.type.toUpperCase() =="float".toUpperCase()){
-						field.value= + field.value;
-					}
+					
 					if(field.value!=null && field.value!="" && angular.isString(field.value)){
 							field.size = field.value.length * 10;
 						
