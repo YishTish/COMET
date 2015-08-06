@@ -11,15 +11,37 @@
 					<!-- general text input -->
 					<div ng-if="field.type=='text'" class="form-group" show-errors>
 								<label class="control-label">{{::field.label}}</label><span style="color:red;" ng-show="field.required"> *</span>
-								<input type="text" dataformat="{{::field.dataFormat}}" class="form-control inline" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{::field.disabled}}"  show-errors/>
+								<input type="text" dataformat="{{::field.dataFormat}}" maxlength="{{::field.maxlength}}" class="form-control inline" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{::field.disabled}}"  validate-text show-errors/>
 								
 									<div ng-show="cometForm.{{field.id}}.$error.required" role="alert"class="help-block alert alert-danger">{{field.label}} is a required field</div>
 									<div ng-show="cometForm.{{field.id}}.$error.alphanumeric" role="alert" class="help-block alert alert-danger">{{field.label}} must be an Alphanumeric entry</div>
-
-								
-								
+									<div ng-show="cometForm.{{field.id}}.$error.phonenumber" role="alert" class="help-block alert alert-danger">{{field.label}} must be a valid phone number entry</div>
+									<div ng-show="cometForm.{{field.id}}.$error.socialsecurity" role="alert" class="help-block alert alert-danger">{{field.label}} must be a valid Social-Security number</div>
+									<div ng-show="cometForm.{{field.id}}.$error.zipcode" role="alert" class="help-block alert alert-danger">{{field.label}} must be an American valid Zipcode entry</div>
 					</div>
 
+					<!-- Float -->
+					<div ng-if="field.type=='number'" class="form-group" validate-text show-errors>
+							<div class="control-label">{{field.label}}</div>
+							<input type="number" dataformat="{{::field.dataFormat}}"
+							 class="form-control" min="{{field.min}}" max="{{field.max}}" name="{{field.id}}" test-func ng-model="field.value"/>
+							<div ng-messages="cometForm.{{field.id}}.$error" role="alert">
+									<div ng-message="required">{{field.label}} is a required field</div>
+									<div ng-message="test-func">testFunc faild</div>
+									<div ng-message="number">{{field.label}} must be numeric</div>
+									<div ng-message="max">{{field.label}} must be less than {{}}</div>
+									<div ng-message="min">{{field.label}} must be higher than</div>
+
+							</div>
+							<div ng-messages="cometForm.{{field.id}}.$error" role="alert">
+									<div ng-message="required" role="alert"class="help-block alert alert-danger">{{field.label}} is a required field</div>
+									<div ng-message="test-func"  role="alert"class="help-block alert alert-danger">testFunc faild</div>
+									<div ng-message="number"  role="alert"class="help-block alert alert-danger">{{field.label}} must be numeric</div>
+									<div ng-message="max"  role="alert"class="help-block alert alert-danger">{{field.label}} must be less than {{}}</div>
+									<div ng-message="min"  role="alert"class="help-block alert alert-danger">{{field.label}} must be higher than</div>
+							</div>
+						
+					</div>
 
 					<div ng-if="field.type=='date'" class="form-group">
 								<label>{{::field.label}}</label>
@@ -34,8 +56,8 @@
 								<label>{{::field.label}} </label>
 								<input type="time" class="form-control" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{::field.disabled}}"  />
 								<div ng-messages="cometForm.{{field.id}}.$error" role="alert">
-								</div>
 									<div ng-message="required" role="alert"class="help-block alert alert-danger">{{field.label}} is a required field</div>
+								</div>
 
 					</div>
 
@@ -53,30 +75,6 @@
 						
 					</div>
 
-
-				
-
-					<!-- Float -->
-					<div ng-if="field.type=='number'" class="form-group" show-errors>
-						
-							<div class="control-label">{{field.label}}</div>
-							<input type="number" class="form-control" size="{{field.maxlength}}" name="{{field.id}}" test-func ng-model="field.value"/>
-							<div ng-messages="cometForm.{{field.id}}.$error" role="alert">
-									<div ng-message="required">{{field.label}} is a required field</div>
-									<div ng-message="test-func">testFunc faild</div>
-									<div ng-message="number">{{field.label}} must be numeric</div>
-									<div ng-message="max">{{field.label}} must be less than {{}}</div>
-									<div ng-message="min">{{field.label}} must be higher than</div>
-
-							</div><div ng-messages="cometForm.{{field.id}}.$error" role="alert">
-									<div ng-message="required" role="alert"class="help-block alert alert-danger">{{field.label}} is a required field</div>
-									<div ng-message="test-func"  role="alert"class="help-block alert alert-danger">testFunc faild</div>
-									<div ng-message="number"  role="alert"class="help-block alert alert-danger">{{field.label}} must be numeric</div>
-									<div ng-message="max"  role="alert"class="help-block alert alert-danger">{{field.label}} must be less than {{}}</div>
-									<div ng-message="min"  role="alert"class="help-block alert alert-danger">{{field.label}} must be higher than</div>
-								</div>
-						
-					</div>
 
 					<div ng-if="field.type=='radio'">
 						<md-radio-group ng-model="field.id">
@@ -102,44 +100,9 @@
 							<label>{{field.label}}</label>
 							<textarea  name="{{field.id}}" ng-model="field.value" class="form-control"></textarea>
 					</div>
-
-					<!-- float1 
-					<div ng-if="field.type=='Float1'">
-						<md-input-container>
-							<label>{{field.label}}</label>
-							<input type="number" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.value"/>
-						</md-input-container>
-					</div>
-
-
-					<div ng-if="field.type=='Float4'">
-						<md-input-container>
-							<label>{{field.label}}</label>
-							<input type="number" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.value"/>
-						</md-input-container>
-					</div>
-
-
-					<div ng-if="field.type=='Numeric'">
-						<md-input-container style="width:150px">
-							<label>{{field.label}}</label>
-							<input type="number" size="{{field.maxlength}}" name="{{field.id}}" ng-model="field.value" max="10"/>
-								<div ng-messages="cometForm.{{field.id}}.$error" role="alert">
-									<div ng-message="required">{{field.label}} is a required field</div>
-									<div ng-message="test-func">testFunc faild</div>
-									<div ng-message="number">{{field.label}} must be numeric</div>
-									<div ng-message="max">{{field.label}} must be less than </div>
-									<div ng-message="min">{{field.label}} must be higher than</div>
-
-								</div>
-						</md-input-container>
-					</div>-->
-
-
-					
-					
+				
 				</div>
-				<!-- <comet-text field="field" class="form-group" ng-class="{'has-error' : cometForm.field.$invalid}"></comet-text> -->
+
 		</div>
 		 <md-input-container>
 			<button class="btn  btn-primary" ng-click="formCtrl.save()">{{ formCtrl.submitVal }}</button>

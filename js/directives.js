@@ -163,32 +163,12 @@ app.directive('cometForm', ['jsonServices','$filter', function(jsonServices, $fi
 			});
 			
 
-			inputNgEl.bind('keyup', function(){
-				var inputName = inputNgEl.attr('name');
-				var dataFormat = inputNgEl.attr('dataformat');
-				if(dataFormat){
-					switch(dataFormat.toLowerCase()){
-						case "alphanumeric":
-							if(formCtrl[inputName].$viewValue === undefined || formCtrl[inputName].$viewValue == ""){
-								formCtrl[inputName].$setValidity("alphanumeric", 1);
-								return;
-							}
-							formCtrl[inputName].$setValidity("alphanumeric", is.alphaNumeric(formCtrl[inputName].$viewValue));
-						break;
-						case "capitalletters":
-							inputNgEl.addClass("text-uppercase");
-						break;
-						case "PhoneNumber":
-						break;
-					}
-				}
-				//element.toggleClass('has-error', formCtrl[inputName].$invalid);
-			});
+			
 
-			 inputNgEl.bind('blur', function(){
+			inputNgEl.bind('blur', function(){
 			 	var inputName = inputNgEl.attr('name');
 			 	element.toggleClass('has-error', formCtrl[inputName].$invalid);
-			 });
+			});
 			
 		}
 	};
@@ -199,17 +179,39 @@ app.directive('cometForm', ['jsonServices','$filter', function(jsonServices, $fi
 		restrict: 'A',
 		require: '^form',
 		link: function (scope, element, attr, formCtrl) {
-			var inputEl = element[0].querySelector("[name]");
-			var inputNgEl = angular.element(inputEl);
+			
+			
 
-			inputNgEl.bind('blur', function(){
-				console.log(inputNgEl);
-				var dataFormat = inputNgEl.attr('dataformat');
+			element.bind('keyup', function(){
+				var inputName = element.attr('name');
+				var dataFormat = element.attr('dataformat');
+				var valid = true;
 				if(dataFormat){
-					console.log(dataFormat);
+					switch(dataFormat.toLowerCase()){
+						case "alphanumeric":
+							formCtrl[inputName].$setValidity("alphanumeric",is.alphaNumeric(element[0].value));
+						break;
+						case "phonenumber":
+							formCtrl[inputName].$setValidity("phonenumber",is.nanpPhone(element[0].value));
+						break;
+						case "socialsecuritynumber":
+							formCtrl[inputName].$setValidity("socialsecurity",is.socialSecurityNumber(element[0].value));
+						break;
+						case "zipcode":
+							formCtrl[inputName].$setValidity("zipcode",is.usZipCode(element[0].value));
+						break;
+
+					}
 				}
-				var inputName = inputNgEl.attr('name');
-			})
+				element.toggleClass('has-error', formCtrl[inputName].$invalid);
+			});
+
+			element.bind('blur', function(){
+				if(element.attr('dataformat') != undefined && element.attr('dataformat').toLowerCase() == "capitalletters"){
+					console.log("fff");
+					element.addClass("text-uppercase");				
+				}
+			});
 			
 		}
 	};
