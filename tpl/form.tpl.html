@@ -20,6 +20,13 @@
 								
 					</div>
 
+					<div ng-if="field.type=='password'" class="form-group" show-errors>
+								<label class="control-label">{{::field.label}}</label><span style="color:red;" ng-show="field.required"> *</span>
+								<input type="password" class="form-control inline" name="{{::field.id}}" ng-model="field.value" show-errors />
+					</div>
+
+
+
 
 					<div ng-if="field.type=='date'" class="form-group">
 								<label>{{::field.label}}</label>

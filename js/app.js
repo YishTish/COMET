@@ -19,7 +19,8 @@ app.controller('appCtrl', ['$scope', '$mdSidenav', 'ajaxServices', 'jsonServices
 	$scope.prepareData = function(fileName){
 		$scope.showLoadingMessage = true;
 		$scope.formData="";
-		var url = "json_src/"+fileName+".json";
+		//var url = "json_src/"+fileName+".json";
+		var url = "http://www.lintechhq.com:3757/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST=WSY1001&STAGE=REQUEST";
 		ajaxServices.httpPromise(url).then(function(res){
 			$scope.formData = jsonServices.parseJson(res);
 			$scope.showLoadingMessage = false;
