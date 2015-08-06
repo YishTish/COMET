@@ -35,6 +35,16 @@ app.directive('cometForm', ['jsonServices','$filter', function(jsonServices, $fi
 			};
 
 			self.save = function() {
+				console.log("Saving form");
+				var currentForm = "WSY1001";
+				var url = "http://www.lintechhq.com:3757/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+currentForm+"&STAGE=SAVE"
+				var sessionId = self.formData.session[0].COMETSID;
+				var vars ="";
+				for(field in self.formData.fields){
+					vars = vars +"&"+self.formData.fields[field].id+"="+self.formData.fields[field].value;	
+				}
+				url = url + "&COMETSID="+sessionId + vars;
+				console.log(url);
 				$scope.$broadcast('show-errors-check-validity');
 
 				if($scope.cometForm.$invalid) {

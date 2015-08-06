@@ -23,6 +23,9 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 								field.type = "date";
 								break;
 							case "time":
+								if(field.value=""){
+								//	field.value = "00:00:00";
+								}
 								field.type = "time"
 								break;
 							case "browse":
