@@ -77,9 +77,9 @@ form.split-form {
     -webkit-column-rule-style: dotted;
     -webkit-column-rule-width: 1px;
     -webkit-column-rule-color: gray;
-    -moz-column-count: 2; /* Firefox */
     width: 75%;
     padding: 12%;
+    -moz-column-count: 2; /* Firefox */
     -moz-column-gap: 25px; 
     -moz-column-rule-style: solid;
     column-count: 2;

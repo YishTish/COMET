@@ -1,4 +1,4 @@
-app.directive('cometForm', ['jsonServices','$filter', function(jsonServices, $filter) {
+app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(jsonServices, $filter, ajaxServices) {
 	return{
 		restrict: 'E',
 		scope: {
@@ -35,7 +35,15 @@ app.directive('cometForm', ['jsonServices','$filter', function(jsonServices, $fi
 			};
 
 			self.save = function() {
+				var queryString = jsonServices.buildQueryString(self.formData);
 				console.log("Saving form");
+				newString = queryString.substring(12,queryString.length);
+				console.log(newString);
+				ajaxServices.httpPromise(queryString).then(function(res){
+						console.log(res);
+				})
+
+				return;
 				var currentForm = "WSY1001";
 				var url = "http://www.lintechhq.com:3757/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+currentForm+"&STAGE=SAVE"
 				var sessionId = self.formData.session[0].COMETSID;
@@ -57,13 +65,18 @@ app.directive('cometForm', ['jsonServices','$filter', function(jsonServices, $fi
 				$scope.$broadcast('show-errors-reset');
 			}
 
-			self.getElementLabel = function(elemntId){
-
-				var result = $filter('filter')(self.formData.fields, function(res){
-					if(res.id == elemntId){
-						return res.label;
+			self.getElementLabel = function(elementId){
+				result = "";
+				for(field in self.formData.fields){
+					result = $filter('filter')(self.formData.fields[field], function(res){
+						if(res.id == elementId){
+							return res;
+						}
+					});
+					if(result != ""){
+						break;
 					}
-				});
+				}
 				return result[0].label;
 			}
 		}],
@@ -73,7 +86,6 @@ app.directive('cometForm', ['jsonServices','$filter', function(jsonServices, $fi
 			return 'tpl/form.tpl.html';
 		},
 		link: function(scope, elem, attr,ctrl){
-		
 		}
 	}
 
@@ -189,9 +201,6 @@ app.directive('cometForm', ['jsonServices','$filter', function(jsonServices, $fi
 		restrict: 'A',
 		require: '^form',
 		link: function (scope, element, attr, formCtrl) {
-			
-			
-
 			element.bind('keyup', function(){
 				var inputName = element.attr('name');
 				var dataFormat = element.attr('dataformat');

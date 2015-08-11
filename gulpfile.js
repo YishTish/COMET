@@ -15,12 +15,9 @@ var gulp = require('gulp');
  
 // `gulp.task()` defines task that can be run calling `gulp xyz` from the command line
 // The `default` task gets called when no task name is provided to Gulp
-
-//var EXPRESS_PORT = 4000;
 var EXPRESS_PORT = 5000;
 var EXPRESS_ROOT = __dirname;
 var LIVERELOAD_PORT = 35729;
-//var LIVERELOAD_PORT = 35730;
 
 function startExpress() {
  
@@ -29,6 +26,48 @@ function startExpress() {
   app.use(require('connect-livereload')());
   app.use(express.static(__dirname));
   app.listen(EXPRESS_PORT);
+  app.get('/comet.icsp',function(req,res){
+      curlGet(req, res, function(resToPublish){
+                          res.send(resToPublish);
+                        });
+  });
+}
+
+
+function curlGet(req, res, callback){
+  var http =  require('http');
+  var queryString = "/comet.icsp?"
+  for(key in req.query){
+    queryString = queryString + key+"="+req.query[key]+"&";
+  }
+  console.log(queryString);
+  var options = {
+    host: 'lintechhq.com',
+    method: 'GET',
+    path: queryString,
+    port: "3757"
+  };
+  var serverResponse = http.request(options, function(res){
+    console.log("code: "+res.statusCode);
+    var serverOutput = "";
+
+    res.on('data',function(d){
+      serverOutput += d;
+    });
+
+    res.on('error', function(e){
+      callback("Got an error. fixing");
+    });
+
+    res.on('end',function(){
+      callback(serverOutput);
+    })
+
+  });
+  serverResponse.end();       
+    serverResponse.on('error',function(e){
+      console.error(e);
+    });
 }
 
 var lr;
