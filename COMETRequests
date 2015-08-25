@@ -1,0 +1,38 @@
+BASE URL (for all requests)
+"http://www.lintechhq.com:3757/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&callback=JSON_CALLBACK"
+
+GENERAL URL
+"http://www.lintechhq.com:3757/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&callback=JSON_CALLBACK&COMETSID=" + CometSID + "&SERVICE=" + Service + "&REQUEST=" + Request + "&STAGE=" + Stage
+
+LOAD MENU
+Service    = "APPMENU"
+Request    =  MenuCode
+Stage      = "REQUEST"
+
+
+LOAD FORM
+Service    = "DATAFORM"
+Request    =  FormCode
+Stage      = "REQUEST"
+for example: "http://www.lintechhq.com:3757/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&callback=JSON_CALLBACK&COMETSID=6378919492&SERVICE=DATAFORM&REQUEST=WRX2002&STAGE=REQUEST"
+
+
+SUBMIT SCREEN
+Service    = "DATAFORM"
+Request    =  FormCode
+Stage      = "SAVE"
+for example: "http://www.lintechhq.com:3757/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&callback=JSON_CALLBACK&COMETSID=6378919492&SERVICE=DATAFORM&REQUEST=WRX2002&STAGE=SAVE"
+
+
+AFTER FIELD
+Service    = "AFTERFLD"
+Stage      = "REQUEST"
+Request    =  data-ServerValidation
+Mode       = "0"
+Formcode   =  FormCode
+Field      =  FieldID
+Data       =  data-ServerValidationParameters (list of fields with their values delimited by carret (^))
+ScrollLine = Scrln
+for example : http://www.lintechhq.com:3757/comet.icsp?MGWLPN=iCOMET&COMETSID=6375326330&COMETMode=JS
+&SERVICE=AFTERFLD&STAGE=REQUEST&MODE=0&FORMCODE=WRX2002&FIELD=DRUGCODE&REQUEST=ADRUG^WRX2002
+&DATA=^DRUGCODE=205023^RXORD=^RXOSDT=07/20/2015^RXOSTM=7:31^RXOFREQ=&SCRLN=
