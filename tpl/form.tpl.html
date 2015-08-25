@@ -15,7 +15,7 @@
 					<!-- general text input -->
 					<div ng-if="field.type=='text'" show-errors>
 								<label class="control-label">{{::field.label}}</label><span style="color:red;" ng-show="field.required"> *</span>
-								<input type="text" dataformat="{{::field.dataFormat}}" maxlength="{{::field.maxlength}}" class="form-control inline" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{::field.disabled}}"  validate-text show-errors/>
+								<input type="text" dataformat="{{::field.dataFormat}}" maxlength="{{::field.maxlength}}" class="form-control inline" name="{{::field.id}}" ng-required="field.required" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}" ng-model="field.value" ng-disabled="{{::field.disabled}}"  validate-text show-errors/>
 								
 									<div ng-show="cometForm.{{field.id}}.$error.required" role="alert"class="help-block alert alert-danger">{{field.label}} is a required field</div>
 									<div ng-show="cometForm.{{field.id}}.$error.alphanumeric" role="alert" class="help-block alert alert-danger">{{field.label}} must be an Alphanumeric entry</div>

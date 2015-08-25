@@ -37,6 +37,10 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 				self.formScope = self.element.find('form').scope();
 			};
 
+			self.getSomeValue = function(){
+				return "sdsdsds";
+			}
+
 			self.save = function() {
 				var queryString = jsonServices.buildQueryString(self.formData);
 				console.log("Saving form");
@@ -85,9 +89,9 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 			}
 
 			self.getDefaultForm = function(){
-				var currentForm = "WRX2002";
-				var residentId = "12404";
-				var url = "/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+currentForm+"&STAGE=REQUEST&COMETSID="+self.sessionId+"&ID="+residentId;
+				var curForm = "WRX2002";
+				var resId = "12404";
+				var url = "/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+curForm+"&STAGE=REQUEST&COMETSID="+self.sessionId+"&ID="+resId;
 
 				ajaxServices.httpPromise(url).then(function(newData){
 					if(newData.error){
@@ -100,6 +104,8 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 					}
 					else{
 						console.log(newData);
+						self.sessionId = newData.session[0].COMETSID;
+						self.currentForm = newData.form[0].id;
 						self.formTitle = newData.form[0].title;
 						self.formData = jsonServices.parseJson(newData);
 					}
@@ -247,10 +253,10 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 	};
 }])
 
-.directive('validateText', [function () {
+.directive('validateText', ['ajaxServices', function (ajaxServices) {
 	return {
 		restrict: 'A',
-		require: '^form',
+		require: '^cometForm',
 		link: function (scope, element, attr, formCtrl) {
 			element.bind('keyup', function(){
 				var inputName = element.attr('name');
@@ -281,6 +287,12 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 					console.log("fff");
 					element.addClass("text-uppercase");				
 				}
+				if(attr.afterTextValidation != undefined && attr.afterTextParams != undefined){
+					validateUrl = "/comet.icsp?MGWLPN=iCOMET&COMETSID="+formCtrl.sessionId+"&COMETMode=JS&SERVICE=AFTERFLD&STAGE=REQUEST&MODE=0&FORMCODE="+formCtrl.currentForm+"&FIELD="+scope.$parent.field.id+"&REQUEST="+attr.afterTextValidation+"&DATA=^"+scope.$parent.field.id+"="+scope.$parent.field.value;
+					ajaxServices.httpPromise(validateUrl).then(function(resp){
+						console.log(resp);
+					})
+				}
 			});
 			
 		}
@@ -288,3 +300,15 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 }])
 
 
+// AFTER FIELD
+// Service    = "AFTERFLD"
+// Stage      = "REQUEST"
+// Request    =  data-ServerValidation
+// Mode       = "0"
+// Formcode   =  FormCode
+// Field      =  FieldID
+// Data       =  data-ServerValidationParameters (list of fields with their values delimited by carret (^))
+// ScrollLine = Scrln
+// for example : http://www.lintechhq.com:3757/comet.icsp?MGWLPN=iCOMET&COMETSID=6375326330&COMETMode=JS
+// &SERVICE=AFTERFLD&STAGE=REQUEST&MODE=0&FORMCODE=WRX2002&FIELD=DRUGCODE&REQUEST=ADRUG^WRX2002
+// &DATA=^DRUGCODE=205023^RXORD=^RXOSDT=07/20/2015^RXOSTM=7:31^RXOFREQ=&SCRLN=
