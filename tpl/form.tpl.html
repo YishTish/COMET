@@ -1,6 +1,7 @@
 <div>
+	<h1>{{formCtrl.formTitle}}</h1>
 	<form name="cometForm" class="split-form" novalidate>
-			<div ng-repeat="row in formCtrl.formData.fields">
+			<div ng-repeat="row in formCtrl.formData.fields" class="form-group">
 				<div ng-repeat="field in row">
 					
 				
@@ -8,11 +9,11 @@
 				
 					<!-- Plain text -->
 					<div ng-if="field.type=='browse'">
-						<span>{{ field.value }} </span>
+						<span>Field Id: {{ field.id }}</span><span style="font-weight: bold">{{ field.label }}</span>:<span>{{ field.value }} </span>
 					</div>
 
 					<!-- general text input -->
-					<div ng-if="field.type=='text'" class="form-group" show-errors>
+					<div ng-if="field.type=='text'" show-errors>
 								<label class="control-label">{{::field.label}}</label><span style="color:red;" ng-show="field.required"> *</span>
 								<input type="text" dataformat="{{::field.dataFormat}}" maxlength="{{::field.maxlength}}" class="form-control inline" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{::field.disabled}}"  validate-text show-errors/>
 								
@@ -24,7 +25,7 @@
 					</div>
 
 					<!-- Float -->
-					<div ng-if="field.type=='number'" class="form-group" validate-text show-errors>
+					<div ng-if="field.type=='number'" validate-text show-errors>
 							<div class="control-label">{{field.label}}</div>
 							<input type="number" dataformat="{{::field.dataFormat}}"
 							 class="form-control"  ng-required="field.required" min="{{field.min}}" max="{{field.max}}" name="{{field.id}}" test-func ng-model="field.value"/>
@@ -38,7 +39,7 @@
 						
 					</div>
 
-					<div ng-if="field.type=='password'" class="form-group" show-errors>
+					<div ng-if="field.type=='password'" show-errors>
 								<label class="control-label">{{::field.label}}</label><span style="color:red;" ng-show="field.required"> *</span>
 								<input type="password" class="form-control inline"  ng-required="field.required" name="{{::field.id}}" ng-model="field.value"  validate-text show-errors />
 								<div ng-show="cometForm.{{field.id}}.$error.required" role="alert"class="help-block alert alert-danger">{{field.label}} is a required field</div>
@@ -46,7 +47,7 @@
 
 
 
-					<div ng-if="field.type=='date'" class="form-group">
+					<div ng-if="field.type=='date'">
 								<label>{{::field.label}}</label>
 								<input type="date" class="form-control" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{::field.disabled}}"  />
 								<div ng-messages="cometForm.{{field.id}}.$error" role="alert">
@@ -55,7 +56,7 @@
 
 					</div>
 
-					<div ng-if="field.type=='time'" class="form-group">
+					<div ng-if="field.type=='time'">
 								<label>{{::field.label}} </label>
 								<input type="time" class="form-control" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{::field.disabled}}"  />
 								<div ng-messages="cometForm.{{field.id}}.$error" role="alert">
@@ -66,13 +67,13 @@
 
 
 					<!-- Input button -->
-					<div ng-if="field.type=='button'" class="form-group">
+					<div ng-if="field.type=='button'">
 						<button class="btn btn-link">{{field.label}}</button>
 					</div>
 
 
 					<!-- Checkboxes -->
-					<div class="form-group" ng-if="field.type=='checkbox'" show-errors>
+					<div ng-if="field.type=='checkbox'" show-errors>
 							<label>{{field.label}}</label>
 							<input type="checkbox" name="{{field.id}}" ng-model="field.value" ng-checked="{{::field.checked}}"/>
 						
@@ -99,11 +100,12 @@
 					</div>
 
 
-					<div ng-if="field.type=='textarea'" class="form-group">
+					<div ng-if="field.type=='textarea'" >
 							<label>{{field.label}}</label>
 							<textarea  name="{{field.id}}" ng-model="field.value" class="form-control"></textarea>
 					</div>
-				
+
+
 				</div>
 			</div>		
 		</div>

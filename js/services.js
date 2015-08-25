@@ -1,13 +1,5 @@
 app.factory('jsonServices', [ '$http' , function ($http) {
 	return {
-		 // loadFile: function(filename, dataToReturn){
-		 // 	var self = this;
-			// $http.get("json_src/"+filename+".json").then(function(res){
-			// 	//res.data = self.parseJson(res.data);
-			// 	dataToReturn = self.parseJson(res.data);
-			// 	//console.log(dataToReturn);
-			// });
-		//},
 			parseJson: function(jsonObject){
 				for(row in jsonObject.fields){
 					for(singleField in jsonObject.fields[row]){
@@ -34,6 +26,7 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 									break;
 								case "float":
 								case "float1":
+								case "float4":
 								case "numeric":
 									field.value= + field.value;
 									field.type = "number";
@@ -66,9 +59,6 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 				}
 				queryString +="&STAGE=SAVE"
 				return queryString;
-
-
-
 			}
 	};
 }])

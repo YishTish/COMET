@@ -3,6 +3,7 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 		restrict: 'E',
 		scope: {
 			formData: '=formData',
+			formTitle: '=formTitle',
 		},
 		controller: ['$scope', function($scope){
 			var self = this;
@@ -10,6 +11,8 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 			self.formScope = undefined;
 			self.submitVal = "Send Form";
 			require: 'form';
+
+			self.sessionId ="";
 			
 			self.getTemplate= function(field)  {
 				return "tpl/"+field.type+".tpl.html";
@@ -40,24 +43,67 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 				newString = queryString.substring(12,queryString.length);
 				console.log(newString);
 				ajaxServices.httpPromise(queryString).then(function(res){
-						console.log(res);
+						self.handleResponse(res);
 				})
 
-				return;
-				var currentForm = "WSY1001";
-				var url = "http://www.lintechhq.com:3757/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+currentForm+"&STAGE=SAVE"
-				var sessionId = self.formData.session[0].COMETSID;
-				var vars ="";
-				for(field in self.formData.fields){
-					vars = vars +"&"+self.formData.fields[field].id+"="+self.formData.fields[field].value;	
-				}
-				url = url + "&COMETSID="+sessionId + vars;
-				console.log(url);
-				$scope.$broadcast('show-errors-check-validity');
+				//return;
+				// var currentForm = "WSY1001";
+				// var url = "http://www.lintechhq.com:3757/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+currentForm+"&STAGE=SAVE"
+				// var sessionId = self.formData.session[0].COMETSID;
+				// var vars ="";
+				// for(field in self.formData.fields){
+				// 	vars = vars +"&"+self.formData.fields[field].id+"="+self.formData.fields[field].value;	
+				// }
+				// url = url + "&COMETSID="+sessionId + vars;
+				// console.log(url);
+				// $scope.$broadcast('show-errors-check-validity');
 
-				if($scope.cometForm.$invalid) {
-					return;
+				// if($scope.cometForm.$invalid) {
+				// 	return;
+				// }
+			}
+
+			self.handleResponse = function(res){
+				console.log(res);
+				if(res.error){
+					alert(res.error);
+					console.log(res.error);
 				}
+				else{
+					self.sessionId = res.session[0].COMETSID;
+					var currentForm = "WRX2002";
+					var residentId = "12404";
+					var url = "/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+currentForm+"&STAGE=REQUEST&COMETSID="+sessionId+"&ID="+residentId;
+
+					ajaxServices.httpPromise(url).then(function(newData){
+						console.log(newData);
+						self.formTitle = newData.form[0].title;
+						self.formData = jsonServices.parseJson(newData);
+					})
+					//console.log(res.instructions[0].COMETMainLocation);
+				}
+			}
+
+			self.getDefaultForm = function(){
+				var currentForm = "WRX2002";
+				var residentId = "12404";
+				var url = "/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+currentForm+"&STAGE=REQUEST&COMETSID="+self.sessionId+"&ID="+residentId;
+
+				ajaxServices.httpPromise(url).then(function(newData){
+					if(newData.error){
+						console.log(newData.error);
+						loginUrl ="/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST=WSY1001&STAGE=REQUEST";
+						ajaxServices.httpPromise(loginUrl).then(function(loginData){
+							self.formTitle = "Login Form";
+							self.formData = jsonServices.parseJson(loginData);
+						});
+					}
+					else{
+						console.log(newData);
+						self.formTitle = newData.form[0].title;
+						self.formData = jsonServices.parseJson(newData);
+					}
+				})
 			}
 
 			self.reset = function() {
@@ -79,6 +125,8 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 				}
 				return result[0].label;
 			}
+
+			self.getDefaultForm();
 		}],
 		controllerAs: 'formCtrl',
 		bindToController: true,
@@ -86,6 +134,9 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 			return 'tpl/form.tpl.html';
 		},
 		link: function(scope, elem, attr,ctrl){
+			elem.bind('blur', function(val){
+				console.log(val);
+			});
 		}
 	}
 
