@@ -32,6 +32,7 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 									field.type = "number";
 									break;
 							}
+							outputMap[field.id] = "\""+row+"-"+singleField;
 						}
 
 					
@@ -47,6 +48,27 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 			}
 				return jsonObject;
 			},
+
+			mapJson: function(jsonObject){
+				jsonMap = [];
+				for(row in jsonObject.fields){
+					for(singleField in jsonObject.fields[row]){
+						var field = jsonObject.fields[row][singleField];
+						jsonMap[field.id] = ""+row+"-"+singleField;
+					}
+				}
+				return jsonMap;
+			},
+
+			getDataValue: function(jsonObject, key){
+				if(key == undefined){
+					return "";
+				}
+				var row = key.substring(0, key.indexOf("-"));
+				var field = key.substring(key.indexOf("-")+1);
+				return jsonObject.fields[row][field];
+			},
+
 
 			buildQueryString: function(formData){
 				queryString = formData.session[0].COMETURL;
