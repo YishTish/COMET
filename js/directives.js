@@ -50,21 +50,6 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 						self.handleResponse(res);
 				})
 
-				//return;
-				// var currentForm = "WSY1001";
-				// var url = "http://www.lintechhq.com:3757/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+currentForm+"&STAGE=SAVE"
-				// var sessionId = self.formData.session[0].COMETSID;
-				// var vars ="";
-				// for(field in self.formData.fields){
-				// 	vars = vars +"&"+self.formData.fields[field].id+"="+self.formData.fields[field].value;	
-				// }
-				// url = url + "&COMETSID="+sessionId + vars;
-				// console.log(url);
-				// $scope.$broadcast('show-errors-check-validity');
-
-				// if($scope.cometForm.$invalid) {
-				// 	return;
-				// }
 			}
 
 			self.handleResponse = function(res){
@@ -74,17 +59,7 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 					console.log(res.error);
 				}
 				else{
-					self.sessionId = res.session[0].COMETSID;
-					var currentForm = "WRX2002";
-					var residentId = "12404";
-					var url = "/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+currentForm+"&STAGE=REQUEST&COMETSID="+sessionId+"&ID="+residentId;
-
-					ajaxServices.httpPromise(url).then(function(newData){
-						console.log(newData);
-						self.formTitle = newData.form[0].title;
-						self.formData = jsonServices.parseJson(newData);
-					})
-					//console.log(res.instructions[0].COMETMainLocation);
+					self.getDefaultForm();
 				}
 			}
 
@@ -95,21 +70,23 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 
 				ajaxServices.httpPromise(url).then(function(newData){
 					if(newData.error){
-						console.log(newData.error);
 						loginUrl ="/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST=WSY1001&STAGE=REQUEST";
 						ajaxServices.httpPromise(loginUrl).then(function(loginData){
-							self.formTitle = "Login Form";
-							self.formData = jsonServices.parseJson(loginData);
+							self.setupForm(loginData);
 						});
 					}
 					else{
-						console.log(newData);
-						self.sessionId = newData.session[0].COMETSID;
-						self.currentForm = newData.form[0].id;
-						self.formTitle = newData.form[0].title;
-						self.formData = jsonServices.parseJson(newData);
+						self.setupForm(newData);
 					}
 				})
+			}
+
+			self.setupForm = function(serverData){
+				self.sessionId = serverData.session[0].COMETSID;
+				self.currentForm = serverData.form[0].id;
+				self.formTitle = serverData.form[0].title;
+				self.formData = jsonServices.parseJson(serverData);
+				self.dataMap = jsonServices.mapJson(serverData);
 			}
 
 			self.reset = function() {
@@ -253,10 +230,14 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 	};
 }])
 
-.directive('validateText', ['ajaxServices', function (ajaxServices) {
+.directive('validateText', ['ajaxServices', 'jsonServices', function (ajaxServices, jsonServices) {
 	return {
 		restrict: 'A',
 		require: '^cometForm',
+		controller: ['$scope', function($scope) {
+				
+		}],
+		
 		link: function (scope, element, attr, formCtrl) {
 			element.bind('keyup', function(){
 				var inputName = element.attr('name');
@@ -265,36 +246,72 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 				if(dataFormat){
 					switch(dataFormat.toLowerCase()){
 						case "alphanumeric":
-							formCtrl[inputName].$setValidity("alphanumeric",is.alphaNumeric(element[0].value));
+							element[0].$setValidity("alphanumeric",is.alphaNumeric(element[0].value));
 						break;
 						case "phonenumber":
-							formCtrl[inputName].$setValidity("phonenumber",is.nanpPhone(element[0].value));
+							element[0].$setValidity("phonenumber",is.nanpPhone(element[0].value));
 						break;
 						case "socialsecuritynumber":
-							formCtrl[inputName].$setValidity("socialsecurity",is.socialSecurityNumber(element[0].value));
+							element[0].$setValidity("socialsecurity",is.socialSecurityNumber(element[0].value));
 						break;
 						case "zipcode":
-							formCtrl[inputName].$setValidity("zipcode",is.usZipCode(element[0].value));
+							element[0].$setValidity("zipcode",is.usZipCode(element[0].value));
 						break;
 
 					}
 				}
-				element.toggleClass('has-error', formCtrl[inputName].$invalid);
+				element.toggleClass('has-error', element[0].$invalid);
 			});
 
 			element.bind('blur', function(){
 				if(element.attr('dataformat') != undefined && element.attr('dataformat').toLowerCase() == "capitalletters"){
-					console.log("fff");
 					element.addClass("text-uppercase");				
 				}
 				if(attr.afterTextValidation != undefined && attr.afterTextParams != undefined){
+					sendAfterFieldRequest(scope.$parent.field.id, attr.afterTextValidation, attr.afterTextParams);
 					validateUrl = "/comet.icsp?MGWLPN=iCOMET&COMETSID="+formCtrl.sessionId+"&COMETMode=JS&SERVICE=AFTERFLD&STAGE=REQUEST&MODE=0&FORMCODE="+formCtrl.currentForm+"&FIELD="+scope.$parent.field.id+"&REQUEST="+attr.afterTextValidation+"&DATA=^"+scope.$parent.field.id+"="+scope.$parent.field.value;
 					ajaxServices.httpPromise(validateUrl).then(function(resp){
-						console.log(resp);
+						//scope.handleAfterFieldResponse(resp);
 					})
 				}
 			});
 			
+			sendAfterFieldRequest =  function(fieldId, request, data){
+					dataArr = data.split(";");
+					validateUrl = "/comet.icsp?MGWLPN=iCOMET&COMETSID="+formCtrl.sessionId+"&COMETMode=JS&SERVICE=AFTERFLD&STAGE=REQUEST&MODE=0&\
+					FORMCODE="+formCtrl.currentForm+"&FIELD="+fieldId+"&REQUEST="+request+"&DATA=^"+fieldId+"="+scope.$parent.field.value;
+					for(element in dataArr){
+						elementValue = jsonServices.getDataValue(formCtrl.formData, formCtrl.dataMap[dataArr[element]]).value;
+						validateUrl += "^"+dataArr[element]+"="+elementValue;
+					}
+					ajaxServices.httpPromise(validateUrl).then(function(res){
+						handleAfterFieldResponse(res);
+					})
+					
+
+
+			};
+
+			self.handleAfterFieldResponse = function(responseJson){
+				fields = responseJson.fields
+				for(field in fields){
+					if( formCtrl.dataMap[fields[field].id] == undefined){
+						console.log("An unrecognized attribute was received: "+fields[field].id + "("+fields[field].value+")");
+					}
+					else{
+						console.log(fields[field]);
+						console.log(fields[field].id+": "+fields[field].value);
+						fieldToChange = jsonServices.getDataValue(formCtrl.formData, formCtrl.dataMap[fields[field].id])
+						for(attr in fields[field]){
+							console.log("before: "+attr+": "+fieldToChange[attr]);
+							fieldToChange[attr] = fields[field][attr];
+							console.log("after: "+attr+": "+fieldToChange[attr]);
+						}
+						
+					}
+				console.log("==================");
+				}
+			}
 		}
 	};
 }])
