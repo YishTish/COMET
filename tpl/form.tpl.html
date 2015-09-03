@@ -1,11 +1,12 @@
 <div>
 	<h1>{{formCtrl.formTitle}}</h1>
+	<h3> Session Id: {{formCtrl.sessionId}}</h3>
 	<form name="cometForm" class="split-form" novalidate>
-			<div ng-repeat="row in formCtrl.formData.fields" class="form-group">
-				<div ng-repeat="field in row">
+			<div ng-repeat="row in formCtrl.formData.fields" class="form-group row">
+				<div ng-repeat="field in row" >
 					
 				
-				<div class="{{formCtrl.getFieldDisplay(field)}}">
+				<div class="{{formCtrl.getFieldDisplay(field, row)}}">
 				
 					<!-- Plain text -->
 					<div ng-if="field.type=='browse'">

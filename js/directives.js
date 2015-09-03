@@ -22,11 +22,13 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 				console.log(self.formData.fields);
 			};
 
-			self.getFieldDisplay = function(field){
+			self.getFieldDisplay = function(field, row){
 				if(field.visible=="false" || field.type=="hidden"){
 					return "item-hidden";
 				}
-				return "item";
+				var columnWidth = "col-md-"+Math.round(12/row.length);
+
+				return "item "+columnWidth;
 			};
 
 			self.getDateField = function(fieldVal){
