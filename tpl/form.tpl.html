@@ -1,6 +1,25 @@
 <div>
+<div class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Form Error</h4>
+      </div>
+      <div class="modal-body">
+        <p>{{errorMessage}}</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
 	<h1>{{formCtrl.formTitle}}</h1>
 	<h3> Session Id: {{formCtrl.sessionId}}</h3>
+	<div class="alert alert-danger" id="formError" ng-show="formCtrl.hasError()" role="alert">{{ formCtrl.errorMessage }} </div>
 	<form name="cometForm" class="split-form" novalidate>
 			<div ng-repeat="row in formCtrl.formData.fields" class="form-group row">
 				<div ng-repeat="field in row" >

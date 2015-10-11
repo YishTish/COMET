@@ -71,7 +71,7 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 
 			buildQueryString: function(formData){
 				queryString = formData.session[0].COMETURL;
-				queryString += "&REQEST="+formData.form[0].id;
+				queryString += "&REQUEST="+formData.form[0].id;
 				for(row in formData.fields){
 					for(field in formData.fields[row]){
 						if(angular.isObject(formData.fields[row][field]))

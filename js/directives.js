@@ -13,13 +13,18 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 			require: 'form';
 
 			self.sessionId ="";
+			self.errorMessage="";
+
+			self.hasError = function(){
+				return self.errorMessage!="";
+			}
 			
 			self.getTemplate= function(field)  {
 				return "tpl/"+field.type+".tpl.html";
 			};
 
 			self.sendForm = function(){
-				console.log(self.formData.fields);
+				//console.log(self.formData.fields);
 			};
 
 			self.getFieldDisplay = function(field, row){
@@ -41,23 +46,21 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 
 			self.save = function() {
 				var queryString = jsonServices.buildQueryString(self.formData);
-				console.log("Saving form");
-				newString = queryString.substring(12,queryString.length);
-				console.log(newString);
 				ajaxServices.httpPromise(queryString).then(function(res){
-						self.handleResponse(res);
+					//newString = queryString.substring(12,queryString.length);
+					self.handleResponse(res);
 				})
 
 			}
 
 			self.handleResponse = function(res){
-				console.log(res);
 				if(res.error){
-					alert(res.error);
-					console.log(res.error);
+					self.errorMessage = res.error;
+					//console.log(res.error);
 				}
 				else{
 					self.getDefaultForm();
+					self.errorMessage="";
 				}
 			}
 
@@ -67,11 +70,21 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 				var url = "/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+curForm+"&STAGE=REQUEST&COMETSID="+self.sessionId+"&ID="+resId;
 
 				ajaxServices.httpPromise(url).then(function(newData){
+//					console.log(newData);
+					if(newData.error){
+								self.errorMessage = newData.error;
+						}
+					else {
+						self.errorMessage="";
+					}
 					if(newData.instructions){
 						newPath = newData.instructions[0].COMETMainLocation;
-						console.log(newPath);
+//						console.log(newPath);
 						ajaxServices.httpPromise(newPath).then(function(loginData){
-							console.log(loginData);
+							if(loginData.error){
+								self.errorMessage = loginData.error;
+							}
+//							console.log(loginData);
 							self.serverData = loginData;
 							self.setupForm();
 						});
@@ -92,7 +105,7 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 
 			self.setupForm = function(){
 				serverData = self.serverData;
-				console.log(serverData);
+				//console.log(serverData);
 				self.sessionId = serverData.session[0].COMETSID;
 				self.currentForm = serverData.form[0].id;
 				self.formTitle = serverData.form[0].title;
@@ -121,9 +134,11 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 					if(data != ""){
 						dataArr = data.split(";");
 					}
+					console.log("AFTER FIELD");
 					validateUrl = "/comet.icsp?MGWLPN=iCOMET&COMETSID="+self.sessionId+"&COMETMode=JS&SERVICE=AFTERFLD&STAGE=REQUEST&MODE=0&\
 FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&REQUEST="+request+"&DATA=^"+fieldId+"="+fieldValue;
 					if(dataArr.length){
+						console.log(dataArr);
 						for(element in dataArr){
 							elementValue = jsonServices.getDataValue(self.formData, self.dataMap[dataArr[element]]);
 							if(elementValue.type=="date"){
@@ -136,6 +151,7 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&REQUEST="+request+"&DATA=^"+fiel
 							validateUrl += "^"+dataArr[element]+"="+elementStringValue;
 						}
 					}
+					console.log(validateUrl);
 					ajaxServices.httpPromise(validateUrl).then(function(res){
 						self.handleAfterFieldResponse(res);
 					})
@@ -145,6 +161,7 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&REQUEST="+request+"&DATA=^"+fiel
 			};
 
 			self.handleAfterFieldResponse = function(responseJson){
+				console.log(responseJson);
 				fields = responseJson.fields
 				for(field in fields){
 					if( self.dataMap[fields[field].id] == undefined){
@@ -152,6 +169,21 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&REQUEST="+request+"&DATA=^"+fiel
 					}
 					else{
 						fieldToChange = jsonServices.getDataValue(self.formData, self.dataMap[fields[field].id]);
+						switch(fieldToChange.type){
+							case "number":
+								fields[field].value = parseInt(fields[field].value);
+								break;
+							case "date":
+								console.log(fields[field]);
+								fields[field].value = new Date(fields[field].value);
+								break;
+							case "time":
+								var timeArray = fields[field].value.split(":");
+								var inputDate = new Date();
+								inputDate.setHours(timeArray[0]);
+								inputDate.setMinutes(timeArray[1]);
+								fields[field].value = inputDate;
+						}
 						for(attr in fields[field]){
 							fieldToChange[attr] = fields[field][attr];
 							if(attr == "disabled"){
@@ -178,7 +210,7 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&REQUEST="+request+"&DATA=^"+fiel
 		link: function(scope, elem, attr,ctrl){
 			elem.bind('blur', function(val){
 				console.log(val);
-			});
+			});	
 		}
 	} // close return from first line of directive
 }])
@@ -197,7 +229,6 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&REQUEST="+request+"&DATA=^"+fiel
 			});
 
 			element.bind('keyup', function(){
-				console.log(ctrl[0]);
 				//console.log(form)
 			})
 			
@@ -292,7 +323,7 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&REQUEST="+request+"&DATA=^"+fiel
 				if(element.attr('dataformat') != undefined && element.attr('dataformat').toLowerCase() == "capitalletters"){
 					element.addClass("text-uppercase");				
 				}
-				if(attr.afterTextValidation != undefined && attr.afterTextParams != undefined){
+				if(attr.afterTextValidation){
 					formCtrl.sendAfterFieldRequest(element[0].name, element[0].value, attr.afterTextValidation, attr.afterTextParams);
 				}
 			});
