@@ -4,8 +4,11 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 				for(row in jsonObject.fields){
 					for(singleField in jsonObject.fields[row]){
 						var field = jsonObject.fields[row][singleField];
-						if(field.type.toLowerCase() == "text" && field.dataFormat!=undefined){
-							switch(field.dataFormat.toLowerCase()){
+						if(field.type == undefined){
+							continue;
+						}
+						if(field.type.toLowerCase() == "text" && field.Format!=undefined){
+							switch(field.Format.toLowerCase()){
 								case "date":
 									if(field.value == undefined || field.value == ""){
 										field.value = new Date();
@@ -19,10 +22,10 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 									if(field.value=""){
 									//	field.value = "00:00:00";
 									}
-									field.type = "time"
+									field.type = "time";
 									break;
 								case "browse":
-									field.required = "false"
+									field.required = "false";
 									break;
 								case "float":
 								case "float1":
@@ -32,11 +35,7 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 									field.type = "number";
 									break;
 							}
-							outputMap[field.id] = "\""+row+"-"+singleField;
 						}
-
-					
-					
 					if(field.value!=null && field.value!="" && angular.isString(field.value)){
 							field.size = field.value.length * 10;
 						
