@@ -5,7 +5,7 @@ npm install gulp
 npm install express
 npm install connect-livereload
 npm install tiny-lr
-
+When running Ubuntu - install nodejs and add symling to node: sud ln -s /usr/bin/nodejs /usr/bin
 */
 
 
@@ -48,6 +48,7 @@ function curlGet(req, res, callback){
     port: "3757"
   };
   var serverResponse = http.request(options, function(res){
+    console.log("response: "+res);
     console.log("code: "+res.statusCode);
     var serverOutput = "";
 

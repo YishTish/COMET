@@ -67,21 +67,32 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 				var url = "/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+curForm+"&STAGE=REQUEST&COMETSID="+self.sessionId+"&ID="+resId;
 
 				ajaxServices.httpPromise(url).then(function(newData){
-					if(newData.error){
-						loginUrl ="/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST=WSY1001&STAGE=REQUEST";
-						ajaxServices.httpPromise(loginUrl).then(function(loginData){
+					if(newData.instructions){
+						newPath = newData.instructions[0].COMETMainLocation;
+						console.log(newPath);
+						ajaxServices.httpPromise(newPath).then(function(loginData){
+							console.log(loginData);
 							self.serverData = loginData;
+							self.setupForm();
 						});
 					}
+					// if(newData.error){
+					// 	loginUrl ="/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST=WSY1001&STAGE=REQUEST";
+					// 	ajaxServices.httpPromise(loginUrl).then(function(loginData){
+					// 		console.log(loginData);
+					// 		self.serverData = loginData;
+					// 	});
+					// }
 					else{
 						self.serverData = newData;
+						self.setupForm();
 					}
-					self.setupForm();
 				})
 			}
 
 			self.setupForm = function(){
 				serverData = self.serverData;
+				console.log(serverData);
 				self.sessionId = serverData.session[0].COMETSID;
 				self.currentForm = serverData.form[0].id;
 				self.formTitle = serverData.form[0].title;
