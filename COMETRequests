@@ -50,7 +50,6 @@ ScrollLine = Scrln
 SrchPrm    = cometrtnsearchpar
 OptFld     = Option Field
 OptFld2    = Option field2
-Data       =  cometrtnsearchpar (list of fields with their values delimited by carret (^))
 for example : http://www.lintechhq.com:3757/comet.icsp?MGWLPN=iCOMET&COMETSID=6383916981&COMETMode=JS
 &SERVICE=AFTERFLD&REQUEST=^WSY1018&STAGE=REQUEST&SRCHFLD=TYLENO&MODE=0&FORM=WRX2002&FIELD=DRUGCODE
 &FLDDSCR=DRUGNAM1&SCRLN=undefined&SRCHPRM=&OPTFLD=RXODOSE&OPTFLD2=RXOROA
