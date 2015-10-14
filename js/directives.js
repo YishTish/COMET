@@ -198,6 +198,19 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&REQUEST="+request+"&DATA=^"+fiel
 				//self.setupForm();
 			};
 
+			self.sendQuickSearchRequest =  function(fieldId, fieldValue, request){
+					console.log("Quick Search");
+					searchUrl = "/comet.icsp?MGWLPN=iCOMET&COMETSID="+self.sessionId+"&COMETMode=JS&SERVICE=SRCHFLD&STAGE=REQUEST&MODE=0&\
+FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+request+"&SRCHFLD="+fieldValue;
+					ajaxServices.httpPromise(searchUrl).then(function(res){
+						//self.handleAfterFieldResponse(res);
+						console.log(res);
+					})
+					
+
+
+			};
+
 			self.getDefaultForm();
 
 		}], //close controller
@@ -316,6 +329,9 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&REQUEST="+request+"&DATA=^"+fiel
 
 					}
 				}
+				if(element.attr('key-up-search')!=undefined && element.attr('key-up-search')!=""){
+						formCtrl.sendQuickSearchRequest(element[0].name, element[0].value, element.attr('key-up-search'));
+				}
 				element.toggleClass('has-error', element[0].$invalid);
 			});
 
@@ -345,15 +361,3 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&REQUEST="+request+"&DATA=^"+fiel
 		}
 	}
 }])
-// AFTER FIELD
-// Service    = "AFTERFLD"
-// Stage      = "REQUEST"
-// Request    =  data-ServerValidation
-// Mode       = "0"
-// Formcode   =  FormCode
-// Field      =  FieldID
-// Data       =  data-ServerValidationParameters (list of fields with their values delimited by carret (^))
-// ScrollLine = Scrln
-// for example : http://www.lintechhq.com:3757/comet.icsp?MGWLPN=iCOMET&COMETSID=6375326330&COMETMode=JS
-// &SERVICE=AFTERFLD&STAGE=REQUEST&MODE=0&FORMCODE=WRX2002&FIELD=DRUGCODE&REQUEST=ADRUG^WRX2002
-// &DATA=^DRUGCODE=205023^RXORD=^RXOSDT=07/20/2015^RXOSTM=7:31^RXOFREQ=&SCRLN=
