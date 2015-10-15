@@ -87,17 +87,17 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 
 .factory('ajaxServices', ['$q', '$http', '$templateCache', function ($q, $http, $templateCache) {
 	return {
-		httpPromise: function(url){
+		httpPromise: function(url_prefix, url){
 			$http.defaults.useXDomain = true;
+			var fullUrl = url_prefix+url;
 			delete $http.defaults.headers.common['X-Requested-with'];
-			var data = $templateCache.get(url);
+			var data = $templateCache.get(fullUrl);
 
 		    if (data) {
 		         return $q.when(data);
 		    } else {
 		        var deferred = $q.defer();
-
-		        $http.get(url, { cache: true }).success(function (html) {
+		        $http.get(fullUrl, { cache: true}).success(function (html) {
 		            $templateCache.put(url, html);
 
 		            deferred.resolve(html);

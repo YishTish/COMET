@@ -9,7 +9,7 @@ app.controller('appCtrl', ['$scope', '$mdSidenav', 'ajaxServices', 'jsonServices
 // 	});
 
 	var self = this;
-
+	
 	$scope.toggleSidenav = function(menuId){
 		$mdSidenav(menuId).toggle();
 	}

@@ -14,6 +14,7 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 
 			self.sessionId ="";
 			self.errorMessage="";
+			self.urlPrefix = config.base_url+":"+config.port;
 
 			self.hasError = function(){
 				return self.errorMessage!="";
@@ -46,7 +47,7 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 
 			self.save = function() {
 				var queryString = jsonServices.buildQueryString(self.formData);
-				ajaxServices.httpPromise(queryString).then(function(res){
+				ajaxServices.httpPromise(self.urlPrefix, queryString).then(function(res){
 					//newString = queryString.substring(12,queryString.length);
 					self.handleResponse(res);
 				})
@@ -69,7 +70,7 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 				var resId = "12404";
 				var url = "/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+curForm+"&STAGE=REQUEST&COMETSID="+self.sessionId+"&ID="+resId;
 
-				ajaxServices.httpPromise(url).then(function(newData){
+				ajaxServices.httpPromise(self.urlPrefix, url).then(function(newData){
 //					console.log(newData);
 					if(newData.error){
 								self.errorMessage = newData.error;
@@ -80,7 +81,7 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 					if(newData.instructions){
 						newPath = newData.instructions[0].COMETMainLocation;
 //						console.log(newPath);
-						ajaxServices.httpPromise(newPath).then(function(loginData){
+						ajaxServices.httpPromise(self.urlPrefix, newPath).then(function(loginData){
 							if(loginData.error){
 								self.errorMessage = loginData.error;
 							}
@@ -152,7 +153,7 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&REQUEST="+request+"&DATA=^"+fiel
 						}
 					}
 					console.log(validateUrl);
-					ajaxServices.httpPromise(validateUrl).then(function(res){
+					ajaxServices.httpPromise(self.urlPrefix, validateUrl).then(function(res){
 						self.handleAfterFieldResponse(res);
 					})
 					
@@ -202,7 +203,7 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&REQUEST="+request+"&DATA=^"+fiel
 					console.log("Quick Search");
 					searchUrl = "/comet.icsp?MGWLPN=iCOMET&COMETSID="+self.sessionId+"&COMETMode=JS&SERVICE=SRCHFLD&STAGE=REQUEST&MODE=0&\
 FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+request+"&SRCHFLD="+fieldValue;
-					ajaxServices.httpPromise(searchUrl).then(function(res){
+					ajaxServices.httpPromise(self.urlPrefix, searchUrl).then(function(res){
 						//self.handleAfterFieldResponse(res);
 						console.log(res);
 					})
@@ -236,7 +237,7 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 			//fieldJson = JSON.parse(scope.field);
 
 			var url = "tpl/"+scope.field.type+".tpl.html";
-			ajaxServices.httpPromise(url).then(function(result){
+			ajaxServices.httpPromise(self.urlPrefix, url).then(function(result){
 				var elem = $compile(result)(scope);	
 				element.append(elem[0]);
 			});
