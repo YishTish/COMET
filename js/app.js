@@ -1,4 +1,4 @@
-var app = angular.module('COMET', ['ngMaterial', 'ngMessages']);
+var app = angular.module('COMET', ['ngMaterial', 'angularModalService', "angucomplete-alt"]);
 
 app.controller('appCtrl', ['$scope', '$mdSidenav', 'ajaxServices', 'jsonServices', function ($scope, $mdSidenav, ajaxServices, jsonServices) {
 	

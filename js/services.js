@@ -104,6 +104,12 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 		    	});
 	        	return deferred.promise;
 		    }
-		}
+		},
+		httpDebounce: _.debounce(function(prefix, url, callback){
+			this.httpPromise(prefix,url).then(function(res){
+				callback(res);
+			
+			})
+		}, 500, false)
  	} 
 }]);

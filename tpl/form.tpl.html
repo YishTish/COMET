@@ -1,22 +1,4 @@
 <div>
-<div class="modal fade">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Form Error</h4>
-      </div>
-      <div class="modal-body">
-        <p>{{errorMessage}}</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-
 	<h1>{{formCtrl.formTitle}}</h1>
 	<h3> Session Id: {{formCtrl.sessionId}}</h3>
 	<div class="alert alert-danger" id="formError" ng-show="formCtrl.hasError()" role="alert">{{ formCtrl.errorMessage }} </div>
@@ -49,13 +31,6 @@
 							<div class="control-label">{{field.label}}</div>
 							<input type="number" id="{{::field.id}}" dataformat="{{::field.dataFormat}}"
 							 class="form-control" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}" ng-required="field.required" min="{{field.min}}" max="{{field.max}}" name="{{field.id}}" test-func ng-model="field.value" ng-disabled="{{field.disabled}}" />
-							<!-- <div ng-messages="cometForm.{{field.id}}.$error" role="alert">
-									<div ng-message="required">{{field.label}} is a required field</div>
-									<div ng-message="test-func">testFunc faild</div>
-									<div ng-message="number">{{field.label}} must be numeric</div>
-									<div ng-message="max">{{field.label}} must be less than {{}}</div>
-									<div ng-message="min">{{field.label}} must be higher than</div>
-							</div>  -->
 						
 					</div> 
 
@@ -70,10 +45,7 @@
 					<div ng-if="field.type=='date'">
 								<label>{{::field.label}}</label>
 								<input type="date" id="{{::field.id}}" class="form-control" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{field.disabled}}" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}"  validate-text/>
-								<!-- <div ng-messages="cometForm.{{field.id}}.$error" role="alert">
-									<div ng-message="required" role="alert"class="help-block alert alert-danger">{{field.label}} is a required field</div>
-								</div> -->
-
+						
 					</div> 
 
 
@@ -81,10 +53,7 @@
 					<div ng-if="field.type=='time'">
 								<label>{{::field.label}} </label>
 								<input type="time" id="{{::field.id}}" class="form-control" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{field.disabled}}" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}"  validate-text/>
-								<!-- <div ng-messages="cometForm.{{field.id}}.$error" role="alert">
-									<div ng-message="required" role="alert"class="help-block alert alert-danger">{{field.label}} is a required field</div>
-								</div> -->
-
+							
 					</div>
 
 
@@ -127,14 +96,15 @@
 							<textarea  id="{{::field.id}}" name="{{field.id}}" ng-model="field.value" class="form-control" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}" ></textarea>
 					</div>
 
-
 				</div>
 			</div>		
 		</div>
+
 		 <md-input-container>
 			<button class="btn  btn-primary" ng-click="formCtrl.save()">{{ formCtrl.submitVal }}</button>
 			<button class="btn btn-link" ng-click="formCtrl.reset()">Reset</button>
 		</md-input-container>
+		<angucomplete-alt id="testAutoComplete" placeholder="test auto complete" pause="100" selected-object="name" local-data="formCtrl.formData.fields" search-fields="name" title-field="name" minlength="1" input-class="form-control" />
 			<div layout="column"  style="padding: 32px;" ng-if="cometForm.$invalid">
 				<h4 class="md-title">The following fields need attention:</h4>
 				<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">

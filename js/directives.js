@@ -1,4 +1,4 @@
-app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(jsonServices, $filter, ajaxServices) {
+app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', 'ModalService', function(jsonServices, $filter, ajaxServices, ModalService) {
 	return{
 		restrict: 'E',
 		scope: {
@@ -55,8 +55,20 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 			}
 
 			self.handleResponse = function(res){
+				console.log("received response");
 				if(res.error){
+					console.log(res);
 					self.errorMessage = res.error;
+					ModalService.showModal({
+						templateUrl: "/tpl/modal.html",
+						controller: "modalController",
+						inputs: { msg: res.error }
+					}).then(function(modal){
+						modal.element.modal();
+						modal.close.then(function(res){
+							console.log(res);
+						})
+					})
 					//console.log(res.error);
 				}
 				else{
@@ -90,13 +102,6 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', function(j
 							self.setupForm();
 						});
 					}
-					// if(newData.error){
-					// 	loginUrl ="/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST=WSY1001&STAGE=REQUEST";
-					// 	ajaxServices.httpPromise(loginUrl).then(function(loginData){
-					// 		console.log(loginData);
-					// 		self.serverData = loginData;
-					// 	});
-					// }
 					else{
 						self.serverData = newData;
 						self.setupForm();
@@ -145,10 +150,22 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&REQUEST="+request+"&DATA=^"+fiel
 							if(elementValue.type=="date"){
 								elementDateValue = elementValue.value;
 								elementStringValue = elementDateValue.getFullYear()+'-'+elementDateValue.getMonth()+'-'+elementDateValue.getDate();
+							}
+							else if(elementValue.type=="time"){
+								elementTimeValue = elementValue.value;
+								if(elementTimeValue != "")
+								{
+									var hr = elementTimeValue.getHours();
+									if(hr < 10) hr = "0"+hr;
+									var mn = elementTimeValue.getMinutes();
+									if(mn < 10) mn = "0"+mn;
+									elementStringValue = hr+':'+mn;
+								}
 							}	
 							else {
 								elementStringValue = elementValue.value;	
 							}
+							console.log(dataArr[element]+" = "+elementStringValue);
 							validateUrl += "^"+dataArr[element]+"="+elementStringValue;
 						}
 					}
@@ -199,19 +216,17 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&REQUEST="+request+"&DATA=^"+fiel
 				//self.setupForm();
 			};
 
+			self.handleQuickSearchResponse = function(res){
+				console.log(res.results[0]);
+			}
+
 			self.sendQuickSearchRequest =  function(fieldId, fieldValue, request){
-					console.log("Quick Search");
-					searchUrl = "/comet.icsp?MGWLPN=iCOMET&COMETSID="+self.sessionId+"&COMETMode=JS&SERVICE=SRCHFLD&STAGE=REQUEST&MODE=0&\
+					url = "/comet.icsp?MGWLPN=iCOMET&COMETSID="+self.sessionId+"&COMETMode=JS&SERVICE=SRCHFLD&STAGE=REQUEST&MODE=0&\
 FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+request+"&SRCHFLD="+fieldValue;
-					ajaxServices.httpPromise(self.urlPrefix, searchUrl).then(function(res){
-						//self.handleAfterFieldResponse(res);
-						console.log(res);
-					})
-					
-
-
+					//self.debounceRequest(url);
+					ajaxServices.httpDebounce(self.urlPrefix, url, self.handleQuickSearchResponse);
 			};
-
+			
 			self.getDefaultForm();
 
 		}], //close controller
@@ -313,6 +328,7 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 				var inputName = element.attr('name');
 				var dataFormat = element.attr('dataformat');
 				var valid = true;
+				var callquickSearch = _.debounce(formCtrl.sendQuickSearchRequest,1500,false);
 				if(dataFormat){
 					switch(dataFormat.toLowerCase()){
 						case "alphanumeric":
@@ -331,11 +347,15 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 					}
 				}
 				if(element.attr('key-up-search')!=undefined && element.attr('key-up-search')!=""){
-						formCtrl.sendQuickSearchRequest(element[0].name, element[0].value, element.attr('key-up-search'));
+						//_.debounce(formCtrl.sendQuickSearchRequest(element[0].name, element[0].value, element.attr('key-up-search')),500);
+						if(element[0].value.length>2)
+							formCtrl.sendQuickSearchRequest(element[0].name, element[0].value, element.attr('key-up-search'));
+
 				}
 				element.toggleClass('has-error', element[0].$invalid);
+				
 			});
-
+			
 			element.bind('blur', function(){
 				if(element.attr('dataformat') != undefined && element.attr('dataformat').toLowerCase() == "capitalletters"){
 					element.addClass("text-uppercase");				
