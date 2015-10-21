@@ -7,7 +7,11 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 						if(field.type == undefined){
 							continue;
 						}
-						if(field.type.toLowerCase() == "text" && field.Format!=undefined){
+						if(field.type.toLowerCase() == "text"){
+							if(field.search){
+								field.type = "autocomplete";
+							}
+							if(field.Format!=undefined){
 							switch(field.Format.toLowerCase()){
 								case "date":
 									if(field.value == undefined || field.value == ""){
@@ -36,6 +40,7 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 									break;
 							}
 						}
+					}
 					if(field.value!=null && field.value!="" && angular.isString(field.value)){
 							field.size = field.value.length * 10;
 						

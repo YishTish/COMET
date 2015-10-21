@@ -96,6 +96,22 @@
 							<textarea  id="{{::field.id}}" name="{{field.id}}" ng-model="field.value" class="form-control" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}" ></textarea>
 					</div>
 
+					<div ng-if="field.type=='autocomplete'">
+						<label>{{field.label}}</label>
+						<div ng-show="field.value">{{field.value}}</div>
+						<angucomplete-alt id="{{field.id}}" 
+							pause="400" 
+							selected-object="formCtrl.handleAutoCompleteResult"  
+							remote-url="{{ formCtrl.buildAutoCompleteQuery(field.id, field.search) }}"
+							remote-url-data-field="results"
+							title-field="finalDisplay"
+							remote-url-response-formatter="formCtrl.formatAutoCompleteResponse"
+							minlength="1" 
+							input-class="form-control"
+							match-class="highlight"
+							clear-selected="true"></angucomplete-alt>
+					</div>
+
 				</div>
 			</div>		
 		</div>
@@ -104,8 +120,8 @@
 			<button class="btn  btn-primary" ng-click="formCtrl.save()">{{ formCtrl.submitVal }}</button>
 			<button class="btn btn-link" ng-click="formCtrl.reset()">Reset</button>
 		</md-input-container>
-		<angucomplete-alt id="testAutoComplete" placeholder="test auto complete" pause="100" selected-object="name" local-data="formCtrl.formData.fields" search-fields="name" title-field="name" minlength="1" input-class="form-control" />
-			<div layout="column"  style="padding: 32px;" ng-if="cometForm.$invalid">
+		
+		<div layout="column"  style="padding: 32px;" ng-if="cometForm.$invalid">
 				<h4 class="md-title">The following fields need attention:</h4>
 				<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
     				<ul>

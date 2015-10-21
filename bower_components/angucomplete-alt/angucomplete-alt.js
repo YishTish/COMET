@@ -200,7 +200,7 @@
           .map(function(field) {
             return extractValue(data, field);
           })
-          .join(' ');
+          .join('');
       }
 
       function extractValue(obj, key) {

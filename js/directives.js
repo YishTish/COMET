@@ -11,11 +11,16 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', 'ModalServ
 			self.formScope = undefined;
 			self.submitVal = "Send Form";
 			require: 'form';
-
 			self.sessionId ="";
 			self.errorMessage="";
 			self.urlPrefix = config.base_url+":"+config.port;
 
+			self.getFormData = function(){
+				if(self.formData == undefined){
+					return [];
+				}
+				return self.formData.fields;
+			}
 			self.hasError = function(){
 				return self.errorMessage!="";
 			}
@@ -28,12 +33,42 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', 'ModalServ
 				//console.log(self.formData.fields);
 			};
 
+
+			self.buildAutoCompleteQuery = function(fieldId, request){
+				if(self.formData != undefined){
+					var queryString = self.urlPrefix+"/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=SRCHFLD&STAGE=REQUEST&MODE=0&";
+					formCode=self.formData.form[0].id;
+					field=fieldId;
+					cometSid=self.sessionId
+					queryString += "FORMCODE="+formCode+"&FIELD="+field+"&COMETSID="+cometSid+"&REQUEST="+request+"&SRCHFLD="
+					remoteUrl = queryString;
+					return remoteUrl;
+				}
+			};
+			
+			self.formatAutoCompleteResponse = function(result){
+				if(result){
+					for(line in result.results){
+						disp = result.results[line].display;
+						result.results[line].finalDisplay = disp.data1+" | "+disp.data2+" | "+disp.data3+" | "+disp.data4;
+					}
+					return result;
+				}
+			};
+
+			self.handleAutoCompleteResult = function(res){
+				var fieldsToUpdate = res.originalObject.update;
+				for(field in fieldsToUpdate){
+					element = jsonServices.getDataValue(self.formData, self.dataMap[field]);
+					element.value = fieldsToUpdate[field];
+				}
+			}
+
 			self.getFieldDisplay = function(field, row){
 				if(field.visible=="false" || field.type=="hidden"){
 					return "item-hidden";
 				}
 				var columnWidth = "col-md-"+Math.round(12/row.length);
-
 				return "item "+columnWidth;
 			};
 
@@ -59,17 +94,17 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', 'ModalServ
 				if(res.error){
 					console.log(res);
 					self.errorMessage = res.error;
-					ModalService.showModal({
-						templateUrl: "/tpl/modal.html",
-						controller: "modalController",
-						inputs: { msg: res.error }
-					}).then(function(modal){
-						modal.element.modal();
-						modal.close.then(function(res){
-							console.log(res);
-						})
-					})
-					//console.log(res.error);
+					// ModalService.showModal({
+					// 	templateUrl: "/tpl/modal.html",
+					// 	controller: "modalController",
+					// 	inputs: { msg: res.error }
+					// }).then(function(modal){
+					// 	modal.element.modal();
+					// 	modal.close.then(function(res){
+					// 		console.log(res);
+					// 	})
+					// })
+					// //console.log(res.error);
 				}
 				else{
 					self.getDefaultForm();
@@ -378,6 +413,30 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 			elem.bind('change', function(){
 				numericVal = elem[0].checked ? 1 : 0;
 				formCtrl.sendAfterFieldRequest(attr.name, numericVal, attr.afterTextValidation, attr.afterTextParams);
+			});
+		}
+	}
+}])
+
+.directive('cometAutoComplete', [function(){
+	return{
+		restrict: 'A',
+		require: '^cometForm',
+		
+		link: function(scope, elem, attr, formCtrl){
+			elem.bind('blur', function(){
+				console.log("zx");
+				// var queryString = formCtrl.urlPrefix+"comet.icsp?MGWPL=iCOMET&COMETMode=JS&SERVICE=SRCHFLD&STAGE=REQUEST&MODE=0&";
+				// formCode=formCtrl.formData.form[0].id;
+				// field=attr.id;
+				// cometSid=formCtrl.sessionId
+				// request=attr['request']
+				// queryString += "FORMCODE="+formCode+"&FIELD="+field+"&COMETSID="+cometSid+"&REQUEST="+request+"&SRCHFLD="
+				// remoteUrl = queryString;
+				// console.log(elem[0].attributes);
+				// console.log(queryString);
+				// console.log(attr['remote-url']);
+				// console.log(elem);
 			});
 		}
 	}
