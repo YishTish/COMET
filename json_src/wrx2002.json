@@ -1,0 +1,2105 @@
+{
+  "session": [
+    {
+      "dateFormat": "MDY",
+      "timeFormat": "12",
+      "resources": "Development13",
+      "COMETURL": "/comet.icsp?MGWLPN=iCOMET&COMETSID=6385033012&COMETMode=JS",
+      "COMETAjax": "&SERVICE=AJAX",
+      "COMETSID": "6385033012"
+    }
+  ],
+  "form": [
+    {
+      "id": "WRX2002",
+      "title": "Medication Order (WRX2002)",
+      "type": "DataForm",
+      "external": [
+        {
+          "script": "another.js",
+          "stylesheet": "another.css"
+        }
+      ]
+    }
+  ],
+  "fields": [
+    [
+      {
+        "id": "WEIGHT",
+        "type": "browse",
+        "label": "Weight",
+        "value": "120 (05/07/2012)",
+        "class": "info",
+        "tabIndex": "1",
+        "disabled": "false",
+        "resetTo": "120 (05/07/2012)"
+      }
+    ],
+    [
+      {
+        "id": "ALERGY",
+        "type": "browse",
+        "label": "Allergies",
+        "value": "",
+        "class": "info",
+        "tabIndex": "2",
+        "disabled": "false"
+      }
+    ],
+    [
+      {
+        "id": "RXORD",
+        "type": "text",
+        "label": "Order #",
+        "value": "",
+        "required": "true",
+        "tabIndex": "3",
+        "disabled": "true",
+        "maxLength": "12"
+      }
+    ],
+    [
+      {
+        "id": "DRUGCODE",
+        "type": "text",
+        "label": "Medication",
+        "value": "",
+        "required": "true",
+        "tabIndex": "5",
+        "disabled": "false",
+        "maxLength": "",
+        "search": "^WSY1018",
+        "searchParameters": "DRUGNAM1;RXODOSE;RXOROA;RXOSDT",
+        "ServerValidation": "ADRUG^WRX2002",
+        "ServerValidationParameters": "RXORD;RXOSDT;RXOSTM;RXOFREQ;RXOPRN;RXOPRNF"
+      },
+      {
+        "id": "CPDDESC",
+        "type": "text",
+        "label": "",
+        "value": "",
+        "visible": "false",
+        "tabIndex": "6",
+        "disabled": "false",
+        "maxLength": "105"
+      },
+      {
+        "id": "DRUGNAM1",
+        "type": "browse",
+        "label": "",
+        "value": "",
+        "tabIndex": "99",
+        "disabled": "false"
+      }
+    ],
+    [
+      {
+        "id": "RXODOSE",
+        "type": "text",
+        "label": "Dose",
+        "value": "",
+        "required": "true",
+        "tabIndex": "7",
+        "disabled": "false",
+        "maxLength": "20",
+        "ServerValidation": "ADOSE^WRX2002",
+        "ServerValidationParameters": "DRUGCODE;RXOROA;RXOFREQ;RXOQUOM;RXOPRN;RXOPRNF"
+      },
+      {
+        "id": "HDRUNIT",
+        "type": "browse",
+        "label": "",
+        "value": "",
+        "tabIndex": "91",
+        "disabled": "false"
+      }
+    ],
+    [
+      {
+        "id": "RXOQTY",
+        "type": "text",
+        "label": "Quantity/UoM",
+        "value": "",
+        "Format": "Float",
+        "required": "true",
+        "tabIndex": "8",
+        "disabled": "true",
+        "maxLength": "4",
+        "ServerValidation": "AQTY^WRX2002",
+        "ServerValidationParameters": "DRUGCODE;RXOROA;RXOFREQ;RXOQUOM;RXOPRN;RXOPRNF"
+      },
+      {
+        "id": "RXOQUOM",
+        "type": "select",
+        "label": "Unit of Measure",
+        "value": "",
+        "required": "true",
+        "tabIndex": "9",
+        "disabled": "true",
+        "options": [
+          {
+            "value": "C48473",
+            "description": "Ampule"
+          },
+          {
+            "value": "C62412",
+            "description": "Applicator"
+          },
+          {
+            "value": "C78783",
+            "description": "Applicatorful"
+          },
+          {
+            "value": "C48474",
+            "description": "Bag"
+          },
+          {
+            "value": "C48475",
+            "description": "Bar"
+          },
+          {
+            "value": "C53495",
+            "description": "Bead"
+          },
+          {
+            "value": "C54564",
+            "description": "Blister"
+          },
+          {
+            "value": "C53498",
+            "description": "Block"
+          },
+          {
+            "value": "C48476",
+            "description": "Bolus"
+          },
+          {
+            "value": "C48477",
+            "description": "Bottle"
+          },
+          {
+            "value": "C48478",
+            "description": "Box"
+          },
+          {
+            "value": "C48479",
+            "description": "Can"
+          },
+          {
+            "value": "C62413",
+            "description": "Canister"
+          },
+          {
+            "value": "C64696",
+            "description": "Caplet"
+          },
+          {
+            "value": "C48480",
+            "description": "Capsule"
+          },
+          {
+            "value": "C54702",
+            "description": "Carton"
+          },
+          {
+            "value": "C48481",
+            "description": "Cartridge"
+          },
+          {
+            "value": "C62414",
+            "description": "Case"
+          },
+          {
+            "value": "C69093",
+            "description": "Cassette"
+          },
+          {
+            "value": "C48484",
+            "description": "Container"
+          },
+          {
+            "value": "C48489",
+            "description": "Cylinder"
+          },
+          {
+            "value": "C48490",
+            "description": "Disk"
+          },
+          {
+            "value": "C62417",
+            "description": "Dose Pack"
+          },
+          {
+            "value": "C96265",
+            "description": "Dual Pack"
+          },
+          {
+            "value": "C64933",
+            "description": "Each"
+          },
+          {
+            "value": "C53499",
+            "description": "Film"
+          },
+          {
+            "value": "C48494",
+            "description": "Fluid Ounce"
+          },
+          {
+            "value": "C101680",
+            "description": "French"
+          },
+          {
+            "value": "C48580",
+            "description": "Gallon"
+          },
+          {
+            "value": "C48155",
+            "description": "Gram"
+          },
+          {
+            "value": "C69124",
+            "description": "Gum"
+          },
+          {
+            "value": "C48499",
+            "description": "Implant"
+          },
+          {
+            "value": "C48501",
+            "description": "Inhalation"
+          },
+          {
+            "value": "C62275",
+            "description": "Inhaler"
+          },
+          {
+            "value": "C62418",
+            "description": "Inhaler Refill"
+          },
+          {
+            "value": "C62276",
+            "description": "Insert"
+          },
+          {
+            "value": "C67283",
+            "description": "Intravenous Bag"
+          },
+          {
+            "value": "C28252",
+            "description": "Kilogram"
+          },
+          {
+            "value": "C48504",
+            "description": "Kit"
+          },
+          {
+            "value": "C48505",
+            "description": "Liter"
+          },
+          {
+            "value": "C48506",
+            "description": "Lozenge"
+          },
+          {
+            "value": "C48491",
+            "description": "Metric Drop"
+          },
+          {
+            "value": "C48512",
+            "description": "Milliequivalent"
+          },
+          {
+            "value": "C28253",
+            "description": "Milligram"
+          },
+          {
+            "value": "C28254",
+            "description": "Milliliter"
+          },
+          {
+            "value": "C28251",
+            "description": "Millimeter"
+          },
+          {
+            "value": "C71204",
+            "description": "Nebule"
+          },
+          {
+            "value": "C100052",
+            "description": "Needle Free Injection"
+          },
+          {
+            "value": "C69086",
+            "description": "Ocular System"
+          },
+          {
+            "value": "C48519",
+            "description": "Ounce"
+          },
+          {
+            "value": "C48520",
+            "description": "Package"
+          },
+          {
+            "value": "C48521",
+            "description": "Packet"
+          },
+          {
+            "value": "C65032",
+            "description": "Pad"
+          },
+          {
+            "value": "C82484",
+            "description": "Paper"
+          },
+          {
+            "value": "C48524",
+            "description": "Patch"
+          },
+          {
+            "value": "C48529",
+            "description": "Pint"
+          },
+          {
+            "value": "C48530",
+            "description": "Pouch"
+          },
+          {
+            "value": "C48531",
+            "description": "Pound"
+          },
+          {
+            "value": "C97717",
+            "description": "Pre-filled Pen Syringe"
+          },
+          {
+            "value": "C65060",
+            "description": "Puff"
+          },
+          {
+            "value": "C111984",
+            "description": "Pump"
+          },
+          {
+            "value": "C48534",
+            "description": "Quart"
+          },
+          {
+            "value": "C62609",
+            "description": "Ring"
+          },
+          {
+            "value": "C71324",
+            "description": "Sachet"
+          },
+          {
+            "value": "C48536",
+            "description": "Scoopful"
+          },
+          {
+            "value": "C53502",
+            "description": "Sponge"
+          },
+          {
+            "value": "C48537",
+            "description": "Spray"
+          },
+          {
+            "value": "C53503",
+            "description": "Stick"
+          },
+          {
+            "value": "C48538",
+            "description": "Strip"
+          },
+          {
+            "value": "C48539",
+            "description": "Suppository"
+          },
+          {
+            "value": "C53504",
+            "description": "Swab"
+          },
+          {
+            "value": "C48540",
+            "description": "Syringe"
+          },
+          {
+            "value": "C48541",
+            "description": "Tablespoon"
+          },
+          {
+            "value": "C48542",
+            "description": "Tablet"
+          },
+          {
+            "value": "C62421",
+            "description": "Tabminder"
+          },
+          {
+            "value": "C48543",
+            "description": "Tampon"
+          },
+          {
+            "value": "C48544",
+            "description": "Teaspoon"
+          },
+          {
+            "value": "C54704",
+            "description": "Tray"
+          },
+          {
+            "value": "C48548",
+            "description": "Troche"
+          },
+          {
+            "value": "C48549",
+            "description": "Tube"
+          },
+          {
+            "value": "C38046",
+            "description": "Unspecified"
+          },
+          {
+            "value": "C48551",
+            "description": "Vial"
+          },
+          {
+            "value": "C48552",
+            "description": "Wafer"
+          }
+        ],
+        "ServerValidation": "AQUOM^WRX2002",
+        "ServerValidationParameters": "RXOROA;RXOQTY;RXODOSE;DRUGCODE;RXOFREQ;RXOPRN;RXOPRNF"
+      }
+    ],
+    [
+      {
+        "id": "RXOROA",
+        "type": "select",
+        "label": "Route",
+        "value": "",
+        "required": "true",
+        "tabIndex": "9",
+        "disabled": "false",
+        "options": [
+          {
+            "value": "C28161",
+            "description": "Intramuscular"
+          },
+          {
+            "value": "C38192",
+            "description": "Auricular (Otic)"
+          },
+          {
+            "value": "C38193",
+            "description": "Buccal"
+          },
+          {
+            "value": "C38194",
+            "description": "Conjunctival"
+          },
+          {
+            "value": "C38197",
+            "description": "Dental"
+          },
+          {
+            "value": "C38198",
+            "description": "Soft Tissue"
+          },
+          {
+            "value": "C38200",
+            "description": "Hemodialysis"
+          },
+          {
+            "value": "C38203",
+            "description": "Iontophoresis"
+          },
+          {
+            "value": "C38205",
+            "description": "Endocervical"
+          },
+          {
+            "value": "C38206",
+            "description": "Endosinusial"
+          },
+          {
+            "value": "C38207",
+            "description": "Intrathoracic"
+          },
+          {
+            "value": "C38208",
+            "description": "Endotracheal"
+          },
+          {
+            "value": "C38209",
+            "description": "Enteral"
+          },
+          {
+            "value": "C38210",
+            "description": "Epidural"
+          },
+          {
+            "value": "C38211",
+            "description": "Extra-Amniotic"
+          },
+          {
+            "value": "C38212",
+            "description": "Extracorporeal"
+          },
+          {
+            "value": "C38215",
+            "description": "Infiltration"
+          },
+          {
+            "value": "C38216",
+            "description": "Respiratory (Inhalation)"
+          },
+          {
+            "value": "C38217",
+            "description": "Intracoronal, Dental"
+          },
+          {
+            "value": "C38218",
+            "description": "Intracoronary"
+          },
+          {
+            "value": "C38219",
+            "description": "Interstitial"
+          },
+          {
+            "value": "C38220",
+            "description": "Intra-Abdominal"
+          },
+          {
+            "value": "C38221",
+            "description": "Intra-Amniotic"
+          },
+          {
+            "value": "C38222",
+            "description": "Intra-Arterial"
+          },
+          {
+            "value": "C38223",
+            "description": "Intra-Articular"
+          },
+          {
+            "value": "C38224",
+            "description": "Intrabiliary"
+          },
+          {
+            "value": "C38225",
+            "description": "Intrabronchial"
+          },
+          {
+            "value": "C38226",
+            "description": "Intrabursal"
+          },
+          {
+            "value": "C38227",
+            "description": "Intracardiac"
+          },
+          {
+            "value": "C38228",
+            "description": "Intracartilaginous"
+          },
+          {
+            "value": "C38229",
+            "description": "Intracaudal"
+          },
+          {
+            "value": "C38230",
+            "description": "Intracavernous"
+          },
+          {
+            "value": "C38231",
+            "description": "Intracavitary"
+          },
+          {
+            "value": "C38232",
+            "description": "Intracerebral"
+          },
+          {
+            "value": "C38233",
+            "description": "Intracisternal"
+          },
+          {
+            "value": "C38234",
+            "description": "Intracorneal"
+          },
+          {
+            "value": "C38235",
+            "description": "Intracorporus Cavernosum"
+          },
+          {
+            "value": "C38238",
+            "description": "Intradermal"
+          },
+          {
+            "value": "C38239",
+            "description": "Intradiscal"
+          },
+          {
+            "value": "C38240",
+            "description": "Intraductal"
+          },
+          {
+            "value": "C38241",
+            "description": "Intraduodenal"
+          },
+          {
+            "value": "C38242",
+            "description": "Intradural"
+          },
+          {
+            "value": "C38243",
+            "description": "Intraepidermal"
+          },
+          {
+            "value": "C38245",
+            "description": "Intraesophageal"
+          },
+          {
+            "value": "C38246",
+            "description": "Intragastric"
+          },
+          {
+            "value": "C38247",
+            "description": "Intragingival"
+          },
+          {
+            "value": "C38248",
+            "description": "Intrahepatic"
+          },
+          {
+            "value": "C38249",
+            "description": "Intraileal"
+          },
+          {
+            "value": "C38250",
+            "description": "Intralesional"
+          },
+          {
+            "value": "C38251",
+            "description": "Intraluminal"
+          },
+          {
+            "value": "C38252",
+            "description": "Intralymphatic"
+          },
+          {
+            "value": "C38253",
+            "description": "Intramedullary"
+          },
+          {
+            "value": "C38254",
+            "description": "Intrameningeal"
+          },
+          {
+            "value": "C38255",
+            "description": "Intraocular"
+          },
+          {
+            "value": "C38256",
+            "description": "Intraovarian"
+          },
+          {
+            "value": "C38257",
+            "description": "Intrapericardial"
+          },
+          {
+            "value": "C38258",
+            "description": "Intraperitoneal"
+          },
+          {
+            "value": "C38259",
+            "description": "Intrapleural"
+          },
+          {
+            "value": "C38260",
+            "description": "Intraprostatic"
+          },
+          {
+            "value": "C38261",
+            "description": "Intrapulmonary"
+          },
+          {
+            "value": "C38262",
+            "description": "Intrasinal"
+          },
+          {
+            "value": "C38263",
+            "description": "Intraspinal"
+          },
+          {
+            "value": "C38264",
+            "description": "Intrasynovial"
+          },
+          {
+            "value": "C38265",
+            "description": "Intratendinous"
+          },
+          {
+            "value": "C38266",
+            "description": "Intratesticular"
+          },
+          {
+            "value": "C38267",
+            "description": "Intrathecal"
+          },
+          {
+            "value": "C38268",
+            "description": "Intratubular"
+          },
+          {
+            "value": "C38269",
+            "description": "Intratumor"
+          },
+          {
+            "value": "C38270",
+            "description": "Intratympanic"
+          },
+          {
+            "value": "C38271",
+            "description": "Urethral"
+          },
+          {
+            "value": "C38272",
+            "description": "Intrauterine"
+          },
+          {
+            "value": "C38273",
+            "description": "Intravascular"
+          },
+          {
+            "value": "C38276",
+            "description": "Intravenous"
+          },
+          {
+            "value": "C38277",
+            "description": "Intraventricular"
+          },
+          {
+            "value": "C38278",
+            "description": "Intravesical"
+          },
+          {
+            "value": "C38280",
+            "description": "Intravitreal"
+          },
+          {
+            "value": "C38281",
+            "description": "Irrigation"
+          },
+          {
+            "value": "C38282",
+            "description": "Laryngeal"
+          },
+          {
+            "value": "C38283",
+            "description": "Transmucosal"
+          },
+          {
+            "value": "C38284",
+            "description": "Nasal"
+          },
+          {
+            "value": "C38285",
+            "description": "Nasogastric"
+          },
+          {
+            "value": "C38286",
+            "description": "Occlusive Dressing Technique"
+          },
+          {
+            "value": "C38287",
+            "description": "Ophthalmic"
+          },
+          {
+            "value": "C38288",
+            "description": "Oral"
+          },
+          {
+            "value": "C38289",
+            "description": "Oropharyngeal"
+          },
+          {
+            "value": "C38291",
+            "description": "Parenteral"
+          },
+          {
+            "value": "C38292",
+            "description": "Periarticular"
+          },
+          {
+            "value": "C38293",
+            "description": "Perineural"
+          },
+          {
+            "value": "C38294",
+            "description": "Periodontal"
+          },
+          {
+            "value": "C38295",
+            "description": "Rectal"
+          },
+          {
+            "value": "C38296",
+            "description": "Retrobulbar"
+          },
+          {
+            "value": "C38297",
+            "description": "Subarachnoid"
+          },
+          {
+            "value": "C38298",
+            "description": "Subconjunctival"
+          },
+          {
+            "value": "C38299",
+            "description": "Subcutaneous"
+          },
+          {
+            "value": "C38300",
+            "description": "Sublingual"
+          },
+          {
+            "value": "C38301",
+            "description": "Submucosal"
+          },
+          {
+            "value": "C38304",
+            "description": "Topical"
+          },
+          {
+            "value": "C38305",
+            "description": "Transdermal"
+          },
+          {
+            "value": "C38307",
+            "description": "Transplacental"
+          },
+          {
+            "value": "C38308",
+            "description": "Transtracheal"
+          },
+          {
+            "value": "C38309",
+            "description": "Transtympanic"
+          },
+          {
+            "value": "C38312",
+            "description": "Ureteral"
+          },
+          {
+            "value": "C38313",
+            "description": "Vaginal"
+          },
+          {
+            "value": "C38633",
+            "description": "Electro-Osmosis"
+          },
+          {
+            "value": "C38675",
+            "description": "Cutaneous"
+          },
+          {
+            "value": "C38676",
+            "description": "Percutaneous"
+          },
+          {
+            "value": "C38677",
+            "description": "Peridural"
+          },
+          {
+            "value": "C48623",
+            "description": "Not Applicable"
+          },
+          {
+            "value": "C65103",
+            "description": "Subgingival"
+          },
+          {
+            "value": "C79137",
+            "description": "Intramammary"
+          },
+          {
+            "value": "C79138",
+            "description": "Intralingual"
+          },
+          {
+            "value": "C79139",
+            "description": "Intraruminal"
+          },
+          {
+            "value": "C79141",
+            "description": "Intranodal"
+          },
+          {
+            "value": "C79142",
+            "description": "Intraomentum"
+          },
+          {
+            "value": "C79143",
+            "description": "Subretinal"
+          },
+          {
+            "value": "C79144",
+            "description": "Intraepicardial"
+          },
+          {
+            "value": "C79145",
+            "description": "Transendocardial"
+          }
+        ],
+        "ServerValidation": "AROA^WRX2002",
+        "ServerValidationParameters": "RXODOSE;RXOQTY;DRUGCODE;RXOFREQ;RXOQUOM;RXOPRN;RXOPRNF"
+      }
+    ],
+    [
+      {
+        "id": "RXOFREQ",
+        "type": "select",
+        "label": "Frequency",
+        "value": "",
+        "required": "true",
+        "tabIndex": "10",
+        "disabled": "false",
+        "options": [
+          {
+            "value": "A0010",
+            "description": "ONCE - One Time"
+          },
+          {
+            "value": "A0020",
+            "description": "BID - Twice a Day"
+          },
+          {
+            "value": "A0030",
+            "description": "TID - Three Times a Day"
+          },
+          {
+            "value": "A0040",
+            "description": "QID - Four Times a Day"
+          },
+          {
+            "value": "A0050",
+            "description": "QS - Every Shift"
+          },
+          {
+            "value": "A0070",
+            "description": "QD - Daily"
+          },
+          {
+            "value": "A0071",
+            "description": "QD - Daily at Noon"
+          },
+          {
+            "value": "A0080",
+            "description": "Q1 - Every Hour"
+          },
+          {
+            "value": "A0090",
+            "description": "Q2 - Every 2 Hours"
+          },
+          {
+            "value": "A0100",
+            "description": "Q3 - Every 3 Hours"
+          },
+          {
+            "value": "A0110",
+            "description": "Q4 - Every 4 Hours"
+          },
+          {
+            "value": "A0120",
+            "description": "Q6 - Every 6 Hours"
+          },
+          {
+            "value": "A0130",
+            "description": "Q8 - Every 8 Hours"
+          },
+          {
+            "value": "A0140",
+            "description": "Q12 - Every 12 Hours"
+          },
+          {
+            "value": "A0150",
+            "description": "STAT"
+          },
+          {
+            "value": "A0160",
+            "description": "Once a Week"
+          },
+          {
+            "value": "A0170",
+            "description": "2 Days a Week"
+          },
+          {
+            "value": "A0180",
+            "description": "3 Days a Week"
+          },
+          {
+            "value": "A0190",
+            "description": "4 Days a Week"
+          },
+          {
+            "value": "A0200",
+            "description": "5 Days a Week"
+          },
+          {
+            "value": "A0210",
+            "description": "6 Days a Week"
+          },
+          {
+            "value": "A0220",
+            "description": "OOB - Out of Bed"
+          },
+          {
+            "value": "A0230",
+            "description": "WIB - While in Bed"
+          },
+          {
+            "value": "A0240",
+            "description": "QHS - At bedtime"
+          },
+          {
+            "value": "A0250",
+            "description": "MEALS"
+          },
+          {
+            "value": "A0260",
+            "description": "AC - Before Meals"
+          },
+          {
+            "value": "A0270",
+            "description": "AC+HS - Before Meals and at Bedtime"
+          },
+          {
+            "value": "A0280",
+            "description": "PC - After Meals"
+          },
+          {
+            "value": "A0290",
+            "description": "QOD - Every Other Day"
+          },
+          {
+            "value": "A0300",
+            "description": "Every 3 Days"
+          },
+          {
+            "value": "A0310",
+            "description": "Every 4 Days"
+          },
+          {
+            "value": "A0320",
+            "description": "Every Week"
+          },
+          {
+            "value": "A0330",
+            "description": "Every 2 Weeks"
+          },
+          {
+            "value": "A0335",
+            "description": "Twice a Month"
+          },
+          {
+            "value": "A0340",
+            "description": "Every 3 Weeks"
+          },
+          {
+            "value": "A0350",
+            "description": "Every 4 Weeks"
+          },
+          {
+            "value": "A0360",
+            "description": "Every Month"
+          },
+          {
+            "value": "A0370",
+            "description": "Every 6 Weeks"
+          },
+          {
+            "value": "A0380",
+            "description": "Every 2 Months"
+          },
+          {
+            "value": "A0390",
+            "description": "Every 3 Months"
+          },
+          {
+            "value": "A0400",
+            "description": "Every 4 Months"
+          },
+          {
+            "value": "A0410",
+            "description": "Every 6 Months"
+          },
+          {
+            "value": "A0420",
+            "description": "Every Year"
+          },
+          {
+            "value": "A0430",
+            "description": "Once a Year"
+          },
+          {
+            "value": "A0435",
+            "description": "3 Times a Year"
+          },
+          {
+            "value": "A0900",
+            "description": "Certification"
+          },
+          {
+            "value": "A0910",
+            "description": "Information only"
+          },
+          {
+            "value": "A0920",
+            "description": "As Directed"
+          },
+          {
+            "value": "A1200",
+            "description": "Breakfast and Bedtime"
+          },
+          {
+            "value": "A1210",
+            "description": "After Lunch and Dinner"
+          },
+          {
+            "value": "A1220",
+            "description": "Breakfast, Lunhc and Bedtime"
+          },
+          {
+            "value": "A1230",
+            "description": "Breakfast"
+          },
+          {
+            "value": "A1240",
+            "description": "QAM - In the Morning"
+          },
+          {
+            "value": "A1250",
+            "description": "QPM - In the Afternoon"
+          },
+          {
+            "value": "A310",
+            "description": "Split Dose"
+          },
+          {
+            "value": "ONCET",
+            "description": "One Time Only"
+          },
+          {
+            "value": "Pack2",
+            "description": "Per Package Instructions"
+          }
+        ],
+        "ServerValidation": "AFREQ^WRX2002",
+        "ServerValidationParameters": "DRUGCODE;RXODOSE;RXOQTY;RXOROA;RXOQUOM;RXOPRN;RXOPRNF"
+      }
+    ],
+    [
+      {
+        "id": "SIGBTN",
+        "type": "button",
+        "label": "Details",
+        "value": "",
+        "tabIndex": "11",
+        "disabled": "false",
+        "modalForm": "WRX2026",
+        "modalFormParameters": "PARRTN;RXOFREQ;RXODYS;RXOHRS;RXODTS;RXOSFT"
+      },
+      {
+        "id": "SIGNOTE",
+        "type": "browse",
+        "label": "",
+        "value": "",
+        "tabIndex": "12",
+        "disabled": "false"
+      }
+    ],
+    [
+      {
+        "id": "RXOPRN",
+        "type": "checkbox",
+        "label": "PRN/Frequency",
+        "value": "",
+        "checked": "false",
+        "tabIndex": "13",
+        "disabled": "false",
+        "ServerValidation": "APRN^WRX2002",
+        "ServerValidationParameters": "RXOPRNF;DRUGCODE;RXOQTY;RXODOSE;RXOROA;RXOFREQ;RXOQUOM"
+      },
+      {
+        "id": "RXOPRNF",
+        "type": "select",
+        "label": "PRN Frequency",
+        "value": "",
+        "required": "true",
+        "tabIndex": "14",
+        "disabled": "true",
+        "options": [
+          {
+            "value": "A0010",
+            "description": "As needed"
+          },
+          {
+            "value": "D0010",
+            "description": "Daily, PRN"
+          },
+          {
+            "value": "D0020",
+            "description": "Twice a Day, PRN"
+          },
+          {
+            "value": "D0030",
+            "description": "Three Times a Day, PRN"
+          },
+          {
+            "value": "D0040",
+            "description": "Four Times a Day, PRN"
+          },
+          {
+            "value": "M0010",
+            "description": "Before Meals, PRN"
+          },
+          {
+            "value": "M0020",
+            "description": "With Meals, PRN"
+          },
+          {
+            "value": "M0030",
+            "description": "After Meals, PRN"
+          },
+          {
+            "value": "Q0010",
+            "description": "Ever hour, PRN"
+          },
+          {
+            "value": "Q0020",
+            "description": "Every 2 hours, PRN"
+          },
+          {
+            "value": "Q0030",
+            "description": "Every 3 hours, PRN"
+          },
+          {
+            "value": "Q0040",
+            "description": "Every 4 hours, PRN"
+          },
+          {
+            "value": "Q0050",
+            "description": "Every 6 hours, PRN"
+          },
+          {
+            "value": "Q0060",
+            "description": "Every 8 hours, PRN"
+          },
+          {
+            "value": "Q0070",
+            "description": "Every 12 hours, PRN"
+          },
+          {
+            "value": "Q0100",
+            "description": "Before Bed, PRN"
+          },
+          {
+            "value": "Q0200",
+            "description": "Every Other Day, PRN"
+          },
+          {
+            "value": "S0010",
+            "description": "Every Shift, PRN"
+          },
+          {
+            "value": "W0010",
+            "description": "Every Week, PRN"
+          }
+        ],
+        "ServerValidation": "APRNF^WRX2002",
+        "ServerValidationParameters": "DRUGCODE;RXOQTY;RXODOSE;RXOROA;RXOQUOM;RXOPRN"
+      }
+    ],
+    [
+      {
+        "id": "RXOPRNR",
+        "type": "text",
+        "label": "Reason",
+        "value": "",
+        "required": "true",
+        "tabIndex": "15",
+        "disabled": "true",
+        "maxLength": "50"
+      }
+    ],
+    [
+      {
+        "id": "RXOSDT",
+        "type": "text",
+        "label": "Start Date & Time",
+        "value": "10/25/2015",
+        "Format": "Date",
+        "required": "true",
+        "tabIndex": "16",
+        "disabled": "false",
+        "maxLength": "10"
+      },
+      {
+        "id": "RXOSTM",
+        "type": "text",
+        "label": "Start Time",
+        "value": "9:10",
+        "Format": "Time",
+        "required": "true",
+        "tabIndex": "17",
+        "disabled": "false",
+        "maxLength": "5"
+      }
+    ],
+    [
+      {
+        "id": "RXOUDIS",
+        "type": "checkbox",
+        "label": "Until Discontinued",
+        "value": "",
+        "checked": "false",
+        "tabIndex": "18",
+        "disabled": "false",
+        "ServerValidation": "AUDIS^WRX2002",
+        "ServerValidationParameters": ""
+      }
+    ],
+    [
+      {
+        "id": "RXODUR",
+        "type": "text",
+        "label": "Duration",
+        "value": "",
+        "Format": "Numeric",
+        "tabIndex": "19",
+        "disabled": "false",
+        "maxLength": "3",
+        "ServerValidation": "ADUR^WRX2002",
+        "ServerValidationParameters": ""
+      }
+    ],
+    [
+      {
+        "id": "RXOEDT",
+        "type": "text",
+        "label": "Stop Date & Time",
+        "value": "",
+        "Format": "Date",
+        "tabIndex": "20",
+        "disabled": "false",
+        "maxLength": "10",
+        "ServerValidation": "AEDT^WRX2002",
+        "ServerValidationParameters": "RXOSDT;DRUGCODE"
+      },
+      {
+        "id": "RXOETM",
+        "type": "text",
+        "label": "Stop Time",
+        "value": "",
+        "Format": "Time",
+        "tabIndex": "21",
+        "disabled": "false",
+        "maxLength": "5"
+      }
+    ],
+    [
+      {
+        "id": "SCHEDBTN",
+        "type": "button",
+        "label": "Additional Schedule",
+        "value": "",
+        "tabIndex": "22",
+        "disabled": "false",
+        "modalForm": "WRX2009",
+        "modalFormParameters": "PARRTN;RXORD;RXOSDT;RXOSTM;RXODUR;DRUGCODE"
+      },
+      {
+        "id": "ASCHDESC",
+        "type": "browse",
+        "label": "",
+        "value": "",
+        "tabIndex": "22",
+        "disabled": "false"
+      }
+    ],
+    [
+      {
+        "id": "RXOODT",
+        "type": "text",
+        "label": "Order Date",
+        "value": "",
+        "Format": "Date",
+        "tabIndex": "23",
+        "disabled": "false",
+        "maxLength": "10"
+      }
+    ],
+    [
+      {
+        "id": "RXOOB",
+        "type": "select",
+        "label": "Ordered By",
+        "value": "tATTMD",
+        "required": "true",
+        "tabIndex": "24",
+        "disabled": "false",
+        "options": [
+          {
+            "value": "AM",
+            "description": "Anakin Morgan"
+          },
+          {
+            "value": "BEG",
+            "description": "Bob Goldstein"
+          },
+          {
+            "value": "DFS",
+            "description": "Mark Berry"
+          },
+          {
+            "value": "MCHP",
+            "description": "Doctor MCH"
+          },
+          {
+            "value": "MD0018",
+            "description": "Henry Levin"
+          },
+          {
+            "value": "RR",
+            "description": "Russell Rowe"
+          },
+          {
+            "value": "SMITH",
+            "description": "JANE SMITH"
+          },
+          {
+            "value": "VLADA",
+            "description": "VLADA MICELI"
+          },
+          {
+            "value": "VM",
+            "description": "Nurse Vlada"
+          },
+          {
+            "value": "ZYM1",
+            "description": "Skywalker Ian"
+          },
+          {
+            "value": "tATTMD",
+            "description": "Doctor Attending",
+            "selected": "true"
+          },
+          {
+            "value": "vNU",
+            "description": "Virtual Nursing Management"
+          }
+        ]
+      },
+      {
+        "id": "RXOMETHD",
+        "type": "radio",
+        "label": "Ordered By Method",
+        "value": "",
+        "required": "true",
+        "tabIndex": "25",
+        "disabled": "true",
+        "options": ""
+      }
+    ],
+    [
+      {
+        "id": "RXODIAG",
+        "type": "select",
+        "label": "Diagnosis",
+        "value": "",
+        "tabIndex": "27",
+        "disabled": "false",
+        "options": [
+          {
+            "value": "",
+            "description": "Select ..."
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "id": "RXORSN",
+        "type": "text",
+        "label": "Indication",
+        "value": "",
+        "tabIndex": "28",
+        "disabled": "false",
+        "maxLength": "",
+        "search": "^WSY1022",
+        "searchParameters": "RSNDESC"
+      },
+      {
+        "id": "RSNDESC",
+        "type": "browse",
+        "label": "",
+        "value": "",
+        "tabIndex": "93",
+        "disabled": "false"
+      }
+    ],
+    [
+      {
+        "id": "RXOTRMT",
+        "type": "checkbox",
+        "label": "Treatment",
+        "value": "",
+        "checked": "false",
+        "tabIndex": "29",
+        "disabled": "false"
+      }
+    ],
+    [
+      {
+        "id": "RXOSELF",
+        "type": "checkbox",
+        "label": "Self",
+        "value": "",
+        "checked": "false",
+        "tabIndex": "30",
+        "disabled": "false"
+      }
+    ],
+    [
+      {
+        "id": "RXOREQU",
+        "type": "checkbox",
+        "label": "Require Units",
+        "value": "",
+        "checked": "false",
+        "tabIndex": "31",
+        "disabled": "false"
+      }
+    ],
+    [
+      {
+        "id": "RXODOCTB",
+        "type": "select",
+        "label": "Document Before",
+        "value": "",
+        "tabIndex": "32",
+        "disabled": "false",
+        "options": [
+          {
+            "value": "10",
+            "description": "Blood Pressure"
+          },
+          {
+            "value": "11",
+            "description": "BP & Pulse"
+          },
+          {
+            "value": "12",
+            "description": "BP & Pulse & Temperature"
+          },
+          {
+            "value": "20",
+            "description": "Pulse"
+          },
+          {
+            "value": "30",
+            "description": "Blood Glucose"
+          },
+          {
+            "value": "40",
+            "description": "Respirations"
+          },
+          {
+            "value": "41",
+            "description": "Respirations & O2 & Lung Sounds"
+          },
+          {
+            "value": "50",
+            "description": "Pain"
+          },
+          {
+            "value": "51",
+            "description": "Pain & Pulse"
+          },
+          {
+            "value": "60",
+            "description": "Temperature"
+          },
+          {
+            "value": "70",
+            "description": "Oxygen Saturation"
+          },
+          {
+            "value": "80",
+            "description": "Lung Sounds"
+          },
+          {
+            "value": "90",
+            "description": "Pitting Edema"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "id": "SCALEBTN",
+        "type": "button",
+        "label": "Sliding Scale",
+        "value": "",
+        "tabIndex": "33",
+        "disabled": "true",
+        "modalForm": "WRX2023",
+        "modalFormParameters": "RXORD;SCALE1;SCALEQ1;SCALEC1;SCALE2;SCALEQ2;SCALEC2;SCALE3;SCALEQ3;SCALEC3;SCALE4;SCALEQ4;SCALEC4;SCALE5;SCALEQ5;SCALEC5;SCALE6;SCALEQ6;SCALEC6;SCALE7;SCALEQ7;SCALEC7;SCALE8;SCALEQ8;SCALEC8;SCALE9;SCALEQ9;SCALEC9;SCALE10;SCALEQ10;SCALEC10;"
+      },
+      {
+        "id": "SCALENOT",
+        "type": "browse",
+        "label": "",
+        "value": "",
+        "tabIndex": "92",
+        "disabled": "false"
+      }
+    ],
+    [
+      {
+        "id": "RXOINST",
+        "type": "text",
+        "label": "Administration Directions",
+        "value": "",
+        "required": "true",
+        "tabIndex": "34",
+        "disabled": "false",
+        "maxLength": "140"
+      }
+    ],
+    [
+      {
+        "id": "RXONDIR",
+        "type": "text",
+        "label": "Nursing Directives",
+        "value": "",
+        "tabIndex": "35",
+        "disabled": "false",
+        "maxLength": ""
+      }
+    ],
+    [
+      {
+        "id": "RXODOCTA",
+        "type": "select",
+        "label": "Document After",
+        "value": "",
+        "tabIndex": "35",
+        "disabled": "false",
+        "options": [
+          {
+            "value": "10",
+            "description": "Blood Pressure"
+          },
+          {
+            "value": "11",
+            "description": "BP & Pulse"
+          },
+          {
+            "value": "12",
+            "description": "BP & Pulse & Temperature"
+          },
+          {
+            "value": "20",
+            "description": "Pulse"
+          },
+          {
+            "value": "30",
+            "description": "Blood Glucose"
+          },
+          {
+            "value": "40",
+            "description": "Respirations"
+          },
+          {
+            "value": "41",
+            "description": "Respirations & O2 & Lung Sounds"
+          },
+          {
+            "value": "50",
+            "description": "Pain"
+          },
+          {
+            "value": "51",
+            "description": "Pain & Pulse"
+          },
+          {
+            "value": "60",
+            "description": "Temperature"
+          },
+          {
+            "value": "70",
+            "description": "Oxygen Saturation"
+          },
+          {
+            "value": "80",
+            "description": "Lung Sounds"
+          },
+          {
+            "value": "90",
+            "description": "Pitting Edema"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "id": "HDRPHARM",
+        "type": "browse",
+        "label": "",
+        "value": "Pharmacy",
+        "class": "info",
+        "tabIndex": "-2",
+        "disabled": "false"
+      }
+    ],
+    [
+      {
+        "id": "RXOPHARM",
+        "type": "select",
+        "label": "Order From",
+        "value": "PH1",
+        "required": "true",
+        "tabIndex": "36",
+        "disabled": "false",
+        "options": [
+          {
+            "value": "PC1",
+            "description": "PresConn Pharmacy #1"
+          },
+          {
+            "value": "PH1",
+            "description": "OmniCare Oasis Test",
+            "selected": "true"
+          },
+          {
+            "value": "PH2",
+            "description": "OmniCare Dx Test"
+          },
+          {
+            "value": "PHT",
+            "description": "Internal Pharmacy (No HL7)"
+          },
+          {
+            "value": "PHTEST",
+            "description": "Test Pharmacy for SCRIPT"
+          },
+          {
+            "value": "SNNEWRX",
+            "description": "SN New Pharmacy"
+          },
+          {
+            "value": "SUSAN",
+            "description": "SUSAN's Retail Pharmacy"
+          },
+          {
+            "value": "VA",
+            "description": "VA Pharamcy"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "id": "RXODSPTP",
+        "type": "select",
+        "label": "Dispense Type",
+        "value": "",
+        "required": "true",
+        "tabIndex": "37",
+        "disabled": "false",
+        "options": [
+          {
+            "value": "1",
+            "description": "Regular Dispense"
+          },
+          {
+            "value": "2",
+            "description": "Floor Stock / Profile Only"
+          },
+          {
+            "value": "3",
+            "description": "Stat- Immediate disp"
+          },
+          {
+            "value": "4",
+            "description": "Take Home Medication"
+          },
+          {
+            "value": "5",
+            "description": "Own Medications"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "id": "RXOINSTP",
+        "type": "text",
+        "label": "Dispense Instructions",
+        "value": "",
+        "tabIndex": "38",
+        "disabled": "false",
+        "maxLength": ""
+      }
+    ],
+    [
+      {
+        "id": "RXONOTEP",
+        "type": "text",
+        "label": "Note",
+        "value": "",
+        "tabIndex": "39",
+        "disabled": "false",
+        "maxLength": ""
+      }
+    ],
+    [
+      {
+        "id": "RXODAW",
+        "type": "checkbox",
+        "label": "Dispense As Written",
+        "value": "",
+        "checked": "false",
+        "tabIndex": "40",
+        "disabled": "false"
+      }
+    ],
+    [
+      {
+        "id": "PARRTN",
+        "type": "hidden",
+        "label": "",
+        "value": "WRX2002"
+      },
+      {
+        "id": "RXODYS",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "RXODTS",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "RXOHRS",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "RXOSFT",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      }
+    ],
+    [
+      {
+        "id": "SCALE1",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALEQ1",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALEC1",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALE2",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALEQ2",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALEC2",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALE3",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALEQ3",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALEC3",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALE4",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALEQ4",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALEC4",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALE5",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALEQ5",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALEC5",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALE6",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALEQ6",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALEC6",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALE7",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALEQ7",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALEC7",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALE8",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALEQ8",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALEC8",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALE9",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALEQ9",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALEC9",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALE10",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALEQ10",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      },
+      {
+        "id": "SCALEC10",
+        "type": "hidden",
+        "label": "",
+        "value": ""
+      }
+    ]
+  ],
+  "buttons": [
+    {
+      "id": "btnSubmit",
+      "type": "button",
+      "label": "Medication Orders Summary ( WRX2001 )",
+      "onclick": "parent.COMETMain.location.href='/comet.icsp?MGWLPN=iCOMET&COMETSID=6385033012&COMETMode=JS&SERVICE=DATAFORM&REQUEST=WRX2001&STAGE=REQUEST",
+      "tabIndex": "5",
+      "disabled": "false"
+    }
+  ]
+}

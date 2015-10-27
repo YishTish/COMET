@@ -5,7 +5,6 @@
 	<form name="cometForm" class="split-form" novalidate>
 			<div ng-repeat="row in formCtrl.formData.fields" class="form-group row">
 				<div ng-repeat="field in row" >
-					
 				
 				<div class="{{formCtrl.getFieldDisplay(field, row)}}">
 				
@@ -59,7 +58,7 @@
 
 					<!-- Input button -->
 					<div ng-if="field.type=='button'">
-						<button class="btn btn-link" id="{{::field.id}}">{{field.label}}</button>
+						<button class="btn btn-link" id="{{::field.id}}" modal-form="{{:: field.modalForm }}"  modal-form-params="{{:: field.modalFormParameters }}" modal-form-button>{{field.label}}</button>
 					</div>
 
 
@@ -98,10 +97,18 @@
 
 					<div ng-if="field.type=='autocomplete'">
 						<label>{{field.label}}</label>
-						<div ng-show="field.value">{{field.value}}</div>
+						<div 
+							name="{{:: field.id }}"
+							after-text-validation="{{:: field.ServerValidation }}" 
+							after-text-params="{{::field.ServerValidationParameters }}"
+							>
+								{{field.value}}
+						</div>
 						<angucomplete-alt id="{{field.id}}" 
 							pause="400" 
 							selected-object="formCtrl.handleAutoCompleteResult"  
+							after-text-validation="{{:: field.ServerValidation }}" 
+							after-text-params="{{::field.ServerValidationParameters }}"
 							remote-url="{{ formCtrl.buildAutoCompleteQuery(field.id, field.search) }}"
 							remote-url-data-field="results"
 							title-field="finalDisplay"
