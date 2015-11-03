@@ -1,4 +1,4 @@
-app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', 'ModalService', function(jsonServices, $filter, ajaxServices, ModalService) {
+app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', 'ModalService','autoCompleteServices', 'cometServices', 'afterFieldServices', function(jsonServices, $filter, ajaxServices, ModalService, autoCompleteServices, cometServices, afterFieldServices) {
 	return{
 		restrict: 'E',
 		scope: {
@@ -25,70 +25,51 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', 'ModalServ
 				return self.errorMessage!="";
 			}
 			
-			self.getTemplate= function(field)  {
-				return "tpl/"+field.type+".tpl.html";
-			};
+			// self.getTemplate= function(field)  {
+			// 	return "tpl/"+field.type+".tpl.html";
+			// };
 
 			self.sendForm = function(){
 			};
 
 
 			self.buildAutoCompleteQuery = function(fieldId, request){
-				if(self.formData != undefined){
-					var queryString = self.urlPrefix+"/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=SRCHFLD&STAGE=REQUEST&MODE=0&";
-					formCode=self.formData.form[0].id;
-					field=fieldId;
-					cometSid=self.sessionId
-					queryString += "FORMCODE="+formCode+"&FIELD="+field+"&COMETSID="+cometSid+"&REQUEST="+request+"&SRCHFLD="
-					remoteUrl = queryString;
-					return remoteUrl;
-				}
+				return autoCompleteServices.buildAutoCompleteQuery(self.formData.form[0].id, fieldId, request, self.sessionId);
 			};
 			
 			self.formatAutoCompleteResponse = function(result){
 				if(result){
-					for(line in result.results){
-						disp = result.results[line].display;
-						displayList = "<ul style='list-style-type:none'>";
-						for(element in disp){
-							displayList+= "<li>"+disp[element]+"</li>";
-						}
-						displayList+= "</ul>";
-						result.results[line].finalDisplay = displayList;//"<ul  style='font-size:11px'><li>"+disp.data2+"</li><li>"+disp.data1+" - "+disp.data3+"</li></ul>";
-						//result.results[line].finalDisplay = disp.data2+" ("+disp.data1+")";
-					}
-					return result;
+					return autoCompleteServices.formatAutoCompleteResponse(result);
 				}
 			};
 
 			self.handleAutoCompleteResult = function(res){
-				var fieldsToUpdate = res.originalObject.update;
-				for(field in fieldsToUpdate){
-					element = jsonServices.getDataValue(self.formData, self.dataMap[field]);
-					element.value = fieldsToUpdate[field];
-				}
+				self.formData = autoCompleteServices.handleAutoCompleteResult(res, self.formData, self.dataMap);
+				
+				// var fieldsToUpdate = res.originalObject.update;
+				// for(field in fieldsToUpdate){
+				// 	element = jsonServices.getDataValue(self.formData, self.dataMap[field]);
+				// 	element.value = fieldsToUpdate[field];
+				// }
 				//Call After-field server request if relevant
 				elementToValidate = jsonServices.getDataValue(self.formData, self.dataMap[this.id]);
 				if(elementToValidate.ServerValidation){
-					self.sendAfterFieldRequest(this.id, elementToValidate.value, elementToValidate.ServerValidation, elementToValidate.ServerValidationParameters);
+					afterFieldServices.sendAfterFieldRequest(self.formData, self.dataMap, elementToValidate.id, elementToValidate.value, elementToValidate.ServerValidation, elementToValidate.ServerValidationParameters);
 				}
 			}
 
 			self.loadModalForm = function (modalForm, modalFormParameters){
-				console.log(modalFormParameters);
 				modalUrl = "/comet.icsp?MGWLPN=iCOMET&COMETSID="+self.sessionId+"&COMETMode=JS&SERVICE=DATAFORM&STAGE=REQUEST&MODE=0&\
 FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
-					dataQueryString = self.buildRequestQueryString(modalFormParameters);
-					modalQueryUrl = modalUrl+dataQueryString;
-					ajaxServices.httpPromise(self.urlPrefix, modalQueryUrl).then(function(res){
-						//self.handleAfterFieldResponse(res);
-						console.log(res);
-				
+				dataQueryString = cometServices.buildRequestQueryString(modalFormParameters, self.formData, self.dataMap);
+				modalQueryUrl = modalUrl+dataQueryString;
+				ajaxServices.httpPromise(self.urlPrefix, modalQueryUrl).then(function(res){
+					console.log(res);
 					ModalService.showModal({
 						templateUrl: "/tpl/form.tpl.html",
-						controller: "modalController",
+				//		controller: "modalController",
 						inputs: { data: res }
-					}).then(function(modal){
+				}).then(function(modal){
 						modal.element.modal();
 						modal.close.then(function(modalRes){
 							console.log(modalRes);
@@ -186,82 +167,17 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 					return "";
 			}
 
-
 			self.buildRequestQueryString = function(fieldsStr){
-				var dataArr = [];
-				var queryString = "";
-				if(fieldsStr != ""){
-					dataArr = fieldsStr.split(";");
-				}
-				if(dataArr.length){
-					for(element in dataArr){
-						elementValue = jsonServices.getDataValue(self.formData, self.dataMap[dataArr[element]]);
-						if(elementValue.type=="date"){
-							elementDateValue = elementValue.value;
-							elementStringValue = elementDateValue.getFullYear()+'-'+elementDateValue.getMonth()+'-'+elementDateValue.getDate();
-						}
-						else if(elementValue.type=="time"){
-							elementTimeValue = elementValue.value;
-							if(elementTimeValue != "")
-							{
-								var hr = elementTimeValue.getHours();
-								if(hr < 10) hr = "0"+hr;
-								var mn = elementTimeValue.getMinutes();
-								if(mn < 10) mn = "0"+mn;
-								elementStringValue = hr+':'+mn;
-							}
-						}	
-						else {
-							elementStringValue = elementValue.value;	
-						}
-						queryString += "^"+dataArr[element]+"="+elementStringValue;
-					}
-				}
-				return queryString;
+				console.log(self.dataMap);
+				return cometServices.buildRequestQueryString(fieldStr, self.formData, self.dataMap);
 			}
 
 			self.sendAfterFieldRequest =  function(fieldId, fieldValue, request, data){
-					validateUrl = "/comet.icsp?MGWLPN=iCOMET&COMETSID="+self.sessionId+"&COMETMode=JS&SERVICE=AFTERFLD&STAGE=REQUEST&MODE=0&\
-FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&REQUEST="+request+"&DATA=^"+fieldId+"="+fieldValue;
-					dataQueryString = self.buildRequestQueryString(data);
-					validateUrl = validateUrl+dataQueryString;
-					ajaxServices.httpPromise(self.urlPrefix, validateUrl).then(function(res){
-						self.handleAfterFieldResponse(res);
-					})
+				afterFieldServices.sendAfterFieldRequest(self.formData, self.dataMap, fieldId, fieldValue, request, data);
 			};
 
 			self.handleAfterFieldResponse = function(responseJson){
-				fields = responseJson.fields
-				for(field in fields){
-					if( self.dataMap[fields[field].id] == undefined){
-						console.log("An unrecognized attribute was received: "+fields[field].id + "("+fields[field].value+")");
-					}
-					else{
-						fieldToChange = jsonServices.getDataValue(self.formData, self.dataMap[fields[field].id]);
-						switch(fieldToChange.type){
-							case "number":
-								fields[field].value = parseInt(fields[field].value);
-								break;
-							case "date":
-								fields[field].value = new Date(fields[field].value);
-								break;
-							case "time":
-								var timeArray = fields[field].value.split(":");
-								var inputDate = new Date();
-								inputDate.setHours(timeArray[0]);
-								inputDate.setMinutes(timeArray[1]);
-								fields[field].value = inputDate;
-						}
-						for(attr in fields[field]){
-							fieldToChange[attr] = fields[field][attr];
-							if(attr == "disabled"){
-								toDisable = fields[field][attr] == "true" ? true : false
-									document.querySelector("#"+fields[field].id).disabled=toDisable;					
-							}
-						}
-						
-					}
-				}
+				self.formData = afterFieldServices.handleAfterFieldResponse(responseJson, self.formData, self.dataMap);
 				$scope.$evalAsync();
 				//self.setupForm();
 			};
@@ -288,7 +204,6 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 		},
 		link: function(scope, elem, attr,ctrl){
 			elem.bind('blur', function(val){
-				console.log(val);
 			});	
 		}
 	} // close return from first line of directive
@@ -378,7 +293,7 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 				var inputName = element.attr('name');
 				var dataFormat = element.attr('dataformat');
 				var valid = true;
-				var callquickSearch = _.debounce(formCtrl.sendQuickSearchRequest,1500,false);
+			//	var callquickSearch = _.debounce(formCtrl.sendQuickSearchRequest,1500,false);
 				if(dataFormat){
 					switch(dataFormat.toLowerCase()){
 						case "alphanumeric":
@@ -433,7 +348,6 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 		require: '^cometForm',
 		link: function(scope, elem, attr, formCtrl){
 			elem.bind('click', function(){
-				console.log(attr);
 				formCtrl.loadModalForm(attr.modalForm, attr.modalFormParams)
 			});
 		}
