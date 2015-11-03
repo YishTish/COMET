@@ -170,13 +170,27 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 			self.buildRequestQueryString = function(fieldsStr){
 				console.log(self.dataMap);
 				return cometServices.buildRequestQueryString(fieldStr, self.formData, self.dataMap);
+
 			}
 
 			self.sendAfterFieldRequest =  function(fieldId, fieldValue, request, data){
 				afterFieldServices.sendAfterFieldRequest(self.formData, self.dataMap, fieldId, fieldValue, request, data);
+
 			};
 
 			self.handleAfterFieldResponse = function(responseJson){
+				console.log("after field request sent");
+// 					validateUrl = "/comet.icsp?MGWLPN=iCOMET&COMETSID="+self.sessionId+"&COMETMode=JS&SERVICE=AFTERFLD&STAGE=REQUEST&MODE=0&\
+// FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&REQUEST="+request+"&DATA=^"+fieldId+"="+fieldValue;
+// 					dataQueryString = self.buildRequestQueryString(data);
+// 					validateUrl = validateUrl+dataQueryString;
+// 					ajaxServices.httpPromise(self.urlPrefix, validateUrl).then(function(res){
+// 						self.handleAfterFieldResponse(res);
+// 					})
+			};
+
+			self.handleAfterFieldResponse = function(responseJson){
+
 				self.formData = afterFieldServices.handleAfterFieldResponse(responseJson, self.formData, self.dataMap);
 				$scope.$evalAsync();
 				//self.setupForm();
