@@ -117,4 +117,140 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 			})
 		}, 500, false)
  	} 
+}])
+
+.factory('cometServices', ['jsonServices',function (jsonServices) {
+	return {
+		getUrlPrefix: function(){
+			return config.base_url+":"+config.port;
+		},
+
+		buildRequestQueryString: function(fieldsStr, formData, dataMap){
+			var dataArr = [];
+			var queryString = "";
+			if(fieldsStr != ""){
+				dataArr = fieldsStr.split(";");
+			}
+			if(dataArr.length){
+				for(element in dataArr){
+					elementValue = jsonServices.getDataValue(formData, dataMap[dataArr[element]]);
+					if(elementValue.type=="date"){
+						elementDateValue = elementValue.value;
+						elementStringValue = elementDateValue.getFullYear()+'-'+elementDateValue.getMonth()+'-'+elementDateValue.getDate();
+					}
+					else if(elementValue.type=="time"){
+						elementTimeValue = elementValue.value;
+						if(elementTimeValue != "")
+						{
+							var hr = elementTimeValue.getHours();
+							if(hr < 10) hr = "0"+hr;
+							var mn = elementTimeValue.getMinutes();
+							if(mn < 10) mn = "0"+mn;
+							elementStringValue = hr+':'+mn;
+						}
+					}	
+					else {
+						elementStringValue = elementValue.value;	
+					}
+					queryString += "^"+dataArr[element]+"="+elementStringValue;
+				}
+			}
+			return queryString;
+		}
+	}
+}])
+
+.factory('autoCompleteServices', ['cometServices', 'jsonServices', function(cometServices, jsonServices){
+	return{
+		buildAutoCompleteQuery: function(formId, fieldId, request, sessionId){
+			var queryString = cometServices.getUrlPrefix()+"/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=SRCHFLD&STAGE=REQUEST&MODE=0&";
+			queryString += "FORMCODE="+formId+"&FIELD="+fieldId+"&COMETSID="+sessionId+"&REQUEST="+request+"&SRCHFLD=";
+			return queryString;
+		},
+
+		formatAutoCompleteResponse: function(result){
+			for(line in result.results){
+				disp = result.results[line].display;
+				displayList = "<ul class=\"list-unstyled\">";
+				for(element in disp){
+					displayList+= "<li>"+disp[element]+"</li>";
+				}
+				displayList+= "</ul>";
+				result.results[line].finalDisplay = displayList;//"<ul  style='font-size:11px'><li>"+disp.data2+"</li><li>"+disp.data1+" - "+disp.data3+"</li></ul>";
+				//result.results[line].finalDisplay = disp.data2+" ("+disp.data1+")";
+			}
+			return result;
+		},
+
+		handleAutoCompleteResult: function(res, formData, dataMap){
+			var fieldsToUpdate = res.originalObject.update;
+			for(field in fieldsToUpdate){
+				element = jsonServices.getDataValue(formData, dataMap[field]);
+				element.value = fieldsToUpdate[field];
+			}
+			return formData;
+			//Call After-field server request if relevant
+			// elementToValidate = jsonServices.getDataValue(self.formData, self.dataMap[this.id]);
+			// if(elementToValidate.ServerValidation){
+			// 	self.sendAfterFieldRequest(this.id, elementToValidate.value, elementToValidate.ServerValidation, elementToValidate.ServerValidationParameters);
+			// }
+		}
+	}
+}])
+
+.factory('afterFieldServices', ['cometServices', 'jsonServices', 'ajaxServices', function(cometServices, jsonServices, ajaxServices){
+	return{
+		handleAfterFieldResponse: function(responseJson, formData, dataMap){
+			fields = responseJson.fields;
+			for(field in fields){
+				if( dataMap[fields[field].id] == undefined){
+					console.log("An unrecognized attribute was received: "+fields[field].id + "("+fields[field].value+")");
+				}
+				else{
+					fieldToChange = jsonServices.getDataValue(formData, dataMap[fields[field].id]);
+					switch(fieldToChange.type){
+						case "number":
+							fields[field].value = parseInt(fields[field].value);
+							break;
+						case "date":
+							fields[field].value = new Date(fields[field].value);
+							break;
+						case "time":
+							var timeArray = fields[field].value.split(":");
+							var inputDate = new Date();
+							inputDate.setHours(timeArray[0]);
+							inputDate.setMinutes(timeArray[1]);
+							fields[field].value = inputDate;
+					}
+					for(attr in fields[field]){
+						fieldToChange[attr] = fields[field][attr];
+						if(attr == "disabled"){
+							toDisable = fields[field][attr] == "true" ? true : false
+								document.querySelector("#"+fields[field].id).disabled=toDisable;					
+						}
+					}
+					
+				}
+			}
+		return formData;
+		//self.setupForm();
+		},
+
+		sendAfterFieldRequest: function(formData, dataMap, fieldId, fieldValue, request, data){
+			var self = this;
+			sessionId = formData.session[0].COMETSID;
+			formId = formData.form[0].id;
+			validateUrl = "/comet.icsp?MGWLPN=iCOMET&COMETSID="+sessionId+"&COMETMode=JS&SERVICE=AFTERFLD&STAGE=REQUEST&MODE=0&\
+FORMCODE="+formId+"&FIELD="+fieldId+"&REQUEST="+request+"&DATA=^"+fieldId+"="+fieldValue;
+			dataQueryString = cometServices.buildRequestQueryString(data, formData, dataMap);
+			validateUrl = validateUrl+dataQueryString;
+			ajaxServices.httpPromise(cometServices.getUrlPrefix(), validateUrl).then(function(res){
+				formData = self.handleAfterFieldResponse(res, formData, dataMap);
+			})
+		}
+
+	}
 }]);
+
+
+
