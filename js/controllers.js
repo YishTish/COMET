@@ -1,10 +1,11 @@
-app.controller('modalController',['$scope','close','data', function($scope, close, data){
+app.controller('modalController',['$scope','close','loadPath', 'formTitle', function($scope, close, loadPath, formTitle){
 	
-	$scope.data = data;
-	$scope.formElements = data.form[0];
-	$scope.fields = data.fields;
+	$scope.loadPath = loadPath;
+	//$scope.formElements = data.form[0];
+	$scope.title = formTitle;
+
 	$scope.dismissModal = function(result){
 		close(result, 200);
 	}
-	console.log(data);
+
 }]);
