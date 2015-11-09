@@ -1,520 +1,659 @@
 {
-  "session": [
-    {
-      "dateFormat": "MDY",
-      "timeFormat": "12",
-      "resources": "",
-      "COMETURL": "",
-      "COMETAjax": "&SERVICE=AJAX",
-      "COMETSID": ""
-    }
-  ],
-  "form": [
-    {
-      "id": "WRX2001",
-      "title": " History ()",
-      "type": "DataForm",
-      "external": [
+    "session": [
         {
-          "script1": "FormUpdate.js",
-          "script2": "another.js",
-          "stylesheet1": "first.css",
-          "stylesheet2": "another.css"
+            "dateFormat": "MDY",
+            "timeFormat": "12",
+            "resources": "",
+            "COMETURL": "",
+            "COMETAjax": "&SERVICE=AJAX",
+            "COMETSID": ""
         }
-      ]
-    }
-  ],
-  "fields": [
-    [
-      {
-        "id": "RXORD",
-        "type": "text",
-        "label": "Order #"
-      },
-      {
-        "id": "RXOPRESC",
-        "type": "text",
-        "label": "Description"
-      },
-      {
-        "id": "RXOSTAT",
-        "type": "text",
-        "label": "Status"
-      },
-      {
-        "id": "DURTEXT",
-        "type": "text",
-        "label": "Duration"
-      },
-      {
-        "id": "RXEXPIRE",
-        "type": "text",
-        "label": "Expired"
-      }
+    ],
+    "form": [
+        {
+            "id": "WRX2001",
+            "title": " ()",
+            "type": "Summary",
+            "external": [
+                {
+                    "script1": "FormUpdate.js",
+                    "script2": "another.js",
+                    "stylesheet1": "first.css",
+                    "stylesheet2": "another.css"
+                }
+            ]
+        }
+    ],
+    "columnDefs": [
+        {
+            "name": "Order#",
+            "field": "RXORD",
+            "type": "text",
+            "enableColumnResizing": "true"
+        },
+        {
+            "name": "Description",
+            "field": "RXOPRESC",
+            "type": "text",
+            "enableColumnResizing": "true"
+        },
+        {
+            "name": "Status",
+            "field": "RXOSTAT",
+            "type": "text",
+            "enableColumnResizing": "true"
+        },
+        {
+            "name": "Duration",
+            "field": "DURTEXT",
+            "type": "text",
+            "enableColumnResizing": "true"
+        },
+        {
+            "name": "Expired",
+            "field": "RXEXPIRE",
+            "type": "text",
+            "enableColumnResizing": "true"
+        }
+    ],
+    "data": [
+        {
+            "RXORD": "Add New",
+            "RXOPRESC": "&nbsp;",
+            "RXOSTAT": "&nbsp;",
+            "DURTEXT": "&nbsp;",
+            "RXEXPIRE": "&nbsp;"
+        },
+        {
+            "RXORD": "14/000524",
+            "RXOPRESC": "ROBITUSSIN (Oral Liquid) 100 MG/5ML, As needed [1.0]",
+            "RXOSTAT": "Active",
+            "DURTEXT": "Until D/C",
+            "RXEXPIRE": "&nbsp;",
+            "lineOptions": {
+                "list": [
+                    {
+                        "code": "VW"
+                    },
+                    {
+                        "code": "HY"
+                    },
+                    {
+                        "code": "-RR"
+                    },
+                    {
+                        "code": "F"
+                    },
+                    {
+                        "code": "RN"
+                    },
+                    {
+                        "code": "DC"
+                    },
+                    {
+                        "code": "H"
+                    },
+                    {
+                        "code": "-UH"
+                    },
+                    {
+                        "code": "DI"
+                    },
+                    {
+                        "code": "C"
+                    },
+                    {
+                        "code": "-D"
+                    },
+                    {
+                        "code": "-SC"
+                    },
+                    {
+                        "code": "S"
+                    }
+                ],
+                "params": "&RXORD=14/000524"
+            }
+        },
+        {
+            "RXORD": "14/000538",
+            "RXOPRESC": "CORZIDE (Oral Pill) 5-40 MG, BID - Twice a Day [1.00]",
+            "RXOSTAT": "Active",
+            "DURTEXT": "Until D/C",
+            "RXEXPIRE": "&nbsp;",
+            "lineOptions": {
+                "list": [
+                    {
+                        "code": "VW"
+                    },
+                    {
+                        "code": "HY"
+                    },
+                    {
+                        "code": "-RR"
+                    },
+                    {
+                        "code": "F"
+                    },
+                    {
+                        "code": "RN"
+                    },
+                    {
+                        "code": "DC"
+                    },
+                    {
+                        "code": "H"
+                    },
+                    {
+                        "code": "-UH"
+                    },
+                    {
+                        "code": "DI"
+                    },
+                    {
+                        "code": "C"
+                    },
+                    {
+                        "code": "-D"
+                    },
+                    {
+                        "code": "-SC"
+                    },
+                    {
+                        "code": "S"
+                    }
+                ],
+                "params": "&RXORD=14/000538"
+            }
+        },
+        {
+            "RXORD": "15/000076",
+            "RXOPRESC": "Insulin analog, Aspart Mixed (Injectable) 70-30 UNT/ML, As needed [1.00]",
+            "RXOSTAT": "Active",
+            "DURTEXT": "Until D/C",
+            "RXEXPIRE": "&nbsp;",
+            "lineOptions": {
+                "list": [
+                    {
+                        "code": "VW"
+                    },
+                    {
+                        "code": "HY"
+                    },
+                    {
+                        "code": "-RR"
+                    },
+                    {
+                        "code": "F"
+                    },
+                    {
+                        "code": "RN"
+                    },
+                    {
+                        "code": "DC"
+                    },
+                    {
+                        "code": "H"
+                    },
+                    {
+                        "code": "-UH"
+                    },
+                    {
+                        "code": "-DI"
+                    },
+                    {
+                        "code": "C"
+                    },
+                    {
+                        "code": "-D"
+                    },
+                    {
+                        "code": "-SC"
+                    },
+                    {
+                        "code": "S"
+                    }
+                ],
+                "params": "&RXORD=15/000076"
+            }
+        },
+        {
+            "RXORD": "15/000142",
+            "RXOPRESC": "VICODIN (Oral Pill) 300-7.5 MG, TID - Three Times a Day [1.00]",
+            "RXOSTAT": "Active",
+            "DURTEXT": "Until D/C",
+            "RXEXPIRE": "&nbsp;",
+            "lineOptions": {
+                "list": [
+                    {
+                        "code": "VW"
+                    },
+                    {
+                        "code": "HY"
+                    },
+                    {
+                        "code": "-RR"
+                    },
+                    {
+                        "code": "F"
+                    },
+                    {
+                        "code": "RN"
+                    },
+                    {
+                        "code": "DC"
+                    },
+                    {
+                        "code": "H"
+                    },
+                    {
+                        "code": "-UH"
+                    },
+                    {
+                        "code": "DI"
+                    },
+                    {
+                        "code": "C"
+                    },
+                    {
+                        "code": "-D"
+                    },
+                    {
+                        "code": "-SC"
+                    },
+                    {
+                        "code": "S"
+                    }
+                ],
+                "params": "&RXORD=15/000142"
+            }
+        },
+        {
+            "RXORD": "15/000186",
+            "RXOPRESC": "LASIX (Oral Pill) 20 MG, TID - Three Times a Day",
+            "RXOSTAT": "Active",
+            "DURTEXT": "Until D/C",
+            "RXEXPIRE": "&nbsp;",
+            "lineOptions": {
+                "list": [
+                    {
+                        "code": "VW"
+                    },
+                    {
+                        "code": "HY"
+                    },
+                    {
+                        "code": "-RR"
+                    },
+                    {
+                        "code": "F"
+                    },
+                    {
+                        "code": "RN"
+                    },
+                    {
+                        "code": "DC"
+                    },
+                    {
+                        "code": "H"
+                    },
+                    {
+                        "code": "-UH"
+                    },
+                    {
+                        "code": "DI"
+                    },
+                    {
+                        "code": "C"
+                    },
+                    {
+                        "code": "-D"
+                    },
+                    {
+                        "code": "-SC"
+                    },
+                    {
+                        "code": "S"
+                    }
+                ],
+                "params": "&RXORD=15/000186"
+            }
+        },
+        {
+            "RXORD": "15/000225",
+            "RXOPRESC": "NovoLIN (Injectable) 70-30 UNT/ML, Split Dose [1]",
+            "RXOSTAT": "Active",
+            "DURTEXT": "Until D/C",
+            "RXEXPIRE": "&nbsp;",
+            "lineOptions": {
+                "list": [
+                    {
+                        "code": "VW"
+                    },
+                    {
+                        "code": "HY"
+                    },
+                    {
+                        "code": "-RR"
+                    },
+                    {
+                        "code": "F"
+                    },
+                    {
+                        "code": "RN"
+                    },
+                    {
+                        "code": "DC"
+                    },
+                    {
+                        "code": "H"
+                    },
+                    {
+                        "code": "-UH"
+                    },
+                    {
+                        "code": "DI"
+                    },
+                    {
+                        "code": "C"
+                    },
+                    {
+                        "code": "-D"
+                    },
+                    {
+                        "code": "-SC"
+                    },
+                    {
+                        "code": "S"
+                    }
+                ],
+                "params": "&RXORD=15/000225"
+            }
+        },
+        {
+            "RXORD": "15/000241",
+            "RXOPRESC": "Acitretin (Oral Pill) 10 MG, Per Package Instructions",
+            "RXOSTAT": "Active",
+            "DURTEXT": "Until D/C",
+            "RXEXPIRE": "&nbsp;",
+            "lineOptions": {
+                "list": [
+                    {
+                        "code": "VW"
+                    },
+                    {
+                        "code": "HY"
+                    },
+                    {
+                        "code": "-RR"
+                    },
+                    {
+                        "code": "F"
+                    },
+                    {
+                        "code": "RN"
+                    },
+                    {
+                        "code": "DC"
+                    },
+                    {
+                        "code": "H"
+                    },
+                    {
+                        "code": "-UH"
+                    },
+                    {
+                        "code": "-DI"
+                    },
+                    {
+                        "code": "C"
+                    },
+                    {
+                        "code": "-D"
+                    },
+                    {
+                        "code": "-SC"
+                    },
+                    {
+                        "code": "S"
+                    }
+                ],
+                "params": "&RXORD=15/000241"
+            }
+        },
+        {
+            "RXORD": "15/000351",
+            "RXOPRESC": "MEDROL DOSEPAK (Pack) mixed , Per Package Instructions [1]",
+            "RXOSTAT": "Active",
+            "DURTEXT": "07/30/2015 9:59",
+            "RXEXPIRE": "&nbsp;",
+            "lineOptions": {
+                "list": [
+                    {
+                        "code": "VW"
+                    },
+                    {
+                        "code": "HY"
+                    },
+                    {
+                        "code": "-RR"
+                    },
+                    {
+                        "code": "F"
+                    },
+                    {
+                        "code": "-RN"
+                    },
+                    {
+                        "code": "DC"
+                    },
+                    {
+                        "code": "H"
+                    },
+                    {
+                        "code": "-UH"
+                    },
+                    {
+                        "code": "DI"
+                    },
+                    {
+                        "code": "C"
+                    },
+                    {
+                        "code": "-D"
+                    },
+                    {
+                        "code": "-SC"
+                    },
+                    {
+                        "code": "S"
+                    }
+                ],
+                "params": "&RXORD=15/000351"
+            }
+        },
+        {
+            "RXORD": "15/000252",
+            "RXOPRESC": "NovoLIN (Injectable) 70-30 UNT/ML, BID - Twice a Day [1.00]",
+            "RXOSTAT": "Waiting to be Filled",
+            "DURTEXT": "Until D/C",
+            "RXEXPIRE": "&nbsp;",
+            "lineOptions": {
+                "list": [
+                    {
+                        "code": "VW"
+                    },
+                    {
+                        "code": "HY"
+                    },
+                    {
+                        "code": "-RR"
+                    },
+                    {
+                        "code": "F"
+                    },
+                    {
+                        "code": "RN"
+                    },
+                    {
+                        "code": "DC"
+                    },
+                    {
+                        "code": "H"
+                    },
+                    {
+                        "code": "-UH"
+                    },
+                    {
+                        "code": "DI"
+                    },
+                    {
+                        "code": "C"
+                    },
+                    {
+                        "code": "-D"
+                    },
+                    {
+                        "code": "-SC"
+                    },
+                    {
+                        "code": "S"
+                    }
+                ],
+                "params": "&RXORD=15/000252"
+            }
+        },
+        {
+            "RXORD": "15/000424",
+            "RXOPRESC": "Acetaminophen (Chewable) 120 MG, BID - Twice a Day",
+            "RXOSTAT": "Waiting to be Sent",
+            "DURTEXT": "Until D/C",
+            "RXEXPIRE": "&nbsp;",
+            "lineOptions": {
+                "list": [
+                    {
+                        "code": "VW"
+                    },
+                    {
+                        "code": "HY"
+                    },
+                    {
+                        "code": "-RR"
+                    },
+                    {
+                        "code": "F"
+                    },
+                    {
+                        "code": "RN"
+                    },
+                    {
+                        "code": "DC"
+                    },
+                    {
+                        "code": "H"
+                    },
+                    {
+                        "code": "-UH"
+                    },
+                    {
+                        "code": "DI"
+                    },
+                    {
+                        "code": "C"
+                    },
+                    {
+                        "code": "-D"
+                    },
+                    {
+                        "code": "-SC"
+                    },
+                    {
+                        "code": "S"
+                    }
+                ],
+                "params": "&RXORD=15/000424"
+            }
+        }
+    ],
+    "buttons": "",
+    "menuOptions": [
+        {
+            "id": "VW",
+            "url": ";VIEW",
+            "dialog": "",
+            "header": "View"
+        },
+        {
+            "id": "RR",
+            "url": ";REFILL",
+            "dialog": "",
+            "header": "Request Refill"
+        },
+        {
+            "id": "F",
+            "url": ";FILL",
+            "dialog": "",
+            "header": "Fill"
+        },
+        {
+            "id": "S",
+            "url": ";SCHED",
+            "dialog": "",
+            "header": "Schedules"
+        },
+        {
+            "id": "RN",
+            "url": ";RENEW",
+            "dialog": "",
+            "header": "Renew"
+        },
+        {
+            "id": "DC",
+            "url": ";DISCON",
+            "dialog": "",
+            "header": "Discontinue"
+        },
+        {
+            "id": "H",
+            "url": ";HOLD",
+            "dialog": "",
+            "header": "Hold"
+        },
+        {
+            "id": "UH",
+            "url": ";UNHOLD",
+            "dialog": "",
+            "header": "Unhold"
+        },
+        {
+            "id": "DI",
+            "url": ";DINFO",
+            "dialog": "",
+            "header": "Drug Information"
+        },
+        {
+            "id": "C",
+            "url": ";CHANGE",
+            "dialog": "Are you sure to change this order?",
+            "header": "Change"
+        },
+        {
+            "id": "D",
+            "url": ";DELETE",
+            "dialog": "Are you sure to delete this order?",
+            "header": "Delete"
+        },
+        {
+            "id": "HY",
+            "url": ";HISTORY",
+            "dialog": "",
+            "header": "History"
+        },
+        {
+            "id": "SC",
+            "url": ";SCHEDULE",
+            "dialog": "",
+            "header": "Schedules (New)"
+        }
     ]
-  ],
-  "data": [
-    [
-      {
-        "id": "RXORD",
-        "type": "text",
-        "value": "Add New",
-        "Form": "WRX2002",
-        "formService": "DATAFORM",
-        "formStage": "REQUEST",
-        "formParameters": "RXORD;"
-      },
-      {
-        "id": "RXOPRESC",
-        "type": "text",
-        "value": "&nbsp;"
-      },
-      {
-        "id": "RXOSTAT",
-        "type": "text",
-        "value": "&nbsp;"
-      },
-      {
-        "id": "DURTEXT",
-        "type": "text",
-        "value": "&nbsp;"
-      },
-      {
-        "id": "RXEXPIRE",
-        "type": "text",
-        "value": "&nbsp;"
-      }
-    ],
-    [
-      {
-        "id": "RXORD",
-        "type": "text",
-        "value": "14/000524",
-        "Form": "WRX2002",
-        "formService": "DATAFORM",
-        "formStage": "REQUEST",
-        "formParameters": "RXORD;"
-      },
-      {
-        "id": "RXOPRESC",
-        "type": "text",
-        "value": "ROBITUSSIN (Oral Liquid) 100 MG/5ML, As needed [1.0]"
-      },
-      {
-        "id": "RXOSTAT",
-        "type": "text",
-        "value": "Active"
-      },
-      {
-        "id": "DURTEXT",
-        "type": "text",
-        "value": "Until D/C"
-      },
-      {
-        "id": "RXEXPIRE",
-        "type": "text",
-        "value": "&nbsp;"
-      },
-      [
-        "",
-        "&RXORD=14/000524"
-      ]
-    ],
-    [
-      {
-        "id": "RXORD",
-        "type": "text",
-        "value": "14/000538",
-        "Form": "WRX2002",
-        "formService": "DATAFORM",
-        "formStage": "REQUEST",
-        "formParameters": "RXORD;"
-      },
-      {
-        "id": "RXOPRESC",
-        "type": "text",
-        "value": "CORZIDE (Oral Pill) 5-40 MG, BID - Twice a Day [1.00]"
-      },
-      {
-        "id": "RXOSTAT",
-        "type": "text",
-        "value": "Active"
-      },
-      {
-        "id": "DURTEXT",
-        "type": "text",
-        "value": "Until D/C"
-      },
-      {
-        "id": "RXEXPIRE",
-        "type": "text",
-        "value": "&nbsp;"
-      },
-      [
-        "",
-        "&RXORD=14/000538"
-      ]
-    ],
-    [
-      {
-        "id": "RXORD",
-        "type": "text",
-        "value": "15/000076",
-        "Form": "WRX2002",
-        "formService": "DATAFORM",
-        "formStage": "REQUEST",
-        "formParameters": "RXORD;"
-      },
-      {
-        "id": "RXOPRESC",
-        "type": "text",
-        "value": "Insulin analog, Aspart Mixed (Injectable) 70-30 UNT/ML, As needed [1.00]"
-      },
-      {
-        "id": "RXOSTAT",
-        "type": "text",
-        "value": "Active"
-      },
-      {
-        "id": "DURTEXT",
-        "type": "text",
-        "value": "Until D/C"
-      },
-      {
-        "id": "RXEXPIRE",
-        "type": "text",
-        "value": "&nbsp;"
-      },
-      [
-        "",
-        "&RXORD=15/000076"
-      ]
-    ],
-    [
-      {
-        "id": "RXORD",
-        "type": "text",
-        "value": "15/000142",
-        "Form": "WRX2002",
-        "formService": "DATAFORM",
-        "formStage": "REQUEST",
-        "formParameters": "RXORD;"
-      },
-      {
-        "id": "RXOPRESC",
-        "type": "text",
-        "value": "VICODIN (Oral Pill) 300-7.5 MG, TID - Three Times a Day [1.00]"
-      },
-      {
-        "id": "RXOSTAT",
-        "type": "text",
-        "value": "Active"
-      },
-      {
-        "id": "DURTEXT",
-        "type": "text",
-        "value": "Until D/C"
-      },
-      {
-        "id": "RXEXPIRE",
-        "type": "text",
-        "value": "&nbsp;"
-      },
-      [
-        "",
-        "&RXORD=15/000142"
-      ]
-    ],
-    [
-      {
-        "id": "RXORD",
-        "type": "text",
-        "value": "15/000186",
-        "Form": "WRX2002",
-        "formService": "DATAFORM",
-        "formStage": "REQUEST",
-        "formParameters": "RXORD;"
-      },
-      {
-        "id": "RXOPRESC",
-        "type": "text",
-        "value": "LASIX (Oral Pill) 20 MG, TID - Three Times a Day"
-      },
-      {
-        "id": "RXOSTAT",
-        "type": "text",
-        "value": "Active"
-      },
-      {
-        "id": "DURTEXT",
-        "type": "text",
-        "value": "Until D/C"
-      },
-      {
-        "id": "RXEXPIRE",
-        "type": "text",
-        "value": "&nbsp;"
-      },
-      [
-        "",
-        "&RXORD=15/000186"
-      ]
-    ],
-    [
-      {
-        "id": "RXORD",
-        "type": "text",
-        "value": "15/000225",
-        "Form": "WRX2002",
-        "formService": "DATAFORM",
-        "formStage": "REQUEST",
-        "formParameters": "RXORD;"
-      },
-      {
-        "id": "RXOPRESC",
-        "type": "text",
-        "value": "NovoLIN (Injectable) 70-30 UNT/ML, Split Dose [1]"
-      },
-      {
-        "id": "RXOSTAT",
-        "type": "text",
-        "value": "Active"
-      },
-      {
-        "id": "DURTEXT",
-        "type": "text",
-        "value": "Until D/C"
-      },
-      {
-        "id": "RXEXPIRE",
-        "type": "text",
-        "value": "&nbsp;"
-      },
-      [
-        "",
-        "&RXORD=15/000225"
-      ]
-    ],
-    [
-      {
-        "id": "RXORD",
-        "type": "text",
-        "value": "15/000241",
-        "Form": "WRX2002",
-        "formService": "DATAFORM",
-        "formStage": "REQUEST",
-        "formParameters": "RXORD;"
-      },
-      {
-        "id": "RXOPRESC",
-        "type": "text",
-        "value": "Acitretin (Oral Pill) 10 MG, Per Package Instructions"
-      },
-      {
-        "id": "RXOSTAT",
-        "type": "text",
-        "value": "Active"
-      },
-      {
-        "id": "DURTEXT",
-        "type": "text",
-        "value": "Until D/C"
-      },
-      {
-        "id": "RXEXPIRE",
-        "type": "text",
-        "value": "&nbsp;"
-      },
-      [
-        "",
-        "&RXORD=15/000241"
-      ]
-    ],
-    [
-      {
-        "id": "RXORD",
-        "type": "text",
-        "value": "15/000351",
-        "Form": "WRX2002",
-        "formService": "DATAFORM",
-        "formStage": "REQUEST",
-        "formParameters": "RXORD;"
-      },
-      {
-        "id": "RXOPRESC",
-        "type": "text",
-        "value": "MEDROL DOSEPAK (Pack) mixed , Per Package Instructions [1]"
-      },
-      {
-        "id": "RXOSTAT",
-        "type": "text",
-        "value": "Active"
-      },
-      {
-        "id": "DURTEXT",
-        "type": "text",
-        "value": "07/30/2015 9:59"
-      },
-      {
-        "id": "RXEXPIRE",
-        "type": "text",
-        "value": "&nbsp;"
-      },
-      [
-        "",
-        "&RXORD=15/000351"
-      ]
-    ],
-    [
-      {
-        "id": "RXORD",
-        "type": "text",
-        "value": "15/000252",
-        "Form": "WRX2002",
-        "formService": "DATAFORM",
-        "formStage": "REQUEST",
-        "formParameters": "RXORD;"
-      },
-      {
-        "id": "RXOPRESC",
-        "type": "text",
-        "value": "NovoLIN (Injectable) 70-30 UNT/ML, BID - Twice a Day [1.00]"
-      },
-      {
-        "id": "RXOSTAT",
-        "type": "text",
-        "value": "Waiting to be Filled"
-      },
-      {
-        "id": "DURTEXT",
-        "type": "text",
-        "value": "Until D/C"
-      },
-      {
-        "id": "RXEXPIRE",
-        "type": "text",
-        "value": "&nbsp;"
-      },
-      [
-        "",
-        "&RXORD=15/000252"
-      ]
-    ],
-    [
-      {
-        "id": "RXORD",
-        "type": "text",
-        "value": "15/000424",
-        "Form": "WRX2002",
-        "formService": "DATAFORM",
-        "formStage": "REQUEST",
-        "formParameters": "RXORD;"
-      },
-      {
-        "id": "RXOPRESC",
-        "type": "text",
-        "value": "Acetaminophen (Chewable) 120 MG, BID - Twice a Day"
-      },
-      {
-        "id": "RXOSTAT",
-        "type": "text",
-        "value": "Waiting to be Sent"
-      },
-      {
-        "id": "DURTEXT",
-        "type": "text",
-        "value": "Until D/C"
-      },
-      {
-        "id": "RXEXPIRE",
-        "type": "text",
-        "value": "&nbsp;"
-      },
-      [
-        "",
-        "&RXORD=15/000424"
-      ]
-    ]
-  ],
-  "buttons": "",
-  "menuOptions": [
-    {
-      "id": "VW",
-      "url": ";VIEW",
-      "dialog": "",
-      "header": "View"
-    },
-    {
-      "id": "RR",
-      "url": ";REFILL",
-      "dialog": "",
-      "header": "Request Refill"
-    },
-    {
-      "id": "F",
-      "url": ";FILL",
-      "dialog": "",
-      "header": "Fill"
-    },
-    {
-      "id": "S",
-      "url": ";SCHED",
-      "dialog": "",
-      "header": "Schedules"
-    },
-    {
-      "id": "RN",
-      "url": ";RENEW",
-      "dialog": "",
-      "header": "Renew"
-    },
-    {
-      "id": "DC",
-      "url": ";DISCON",
-      "dialog": "",
-      "header": "Discontinue"
-    },
-    {
-      "id": "H",
-      "url": ";HOLD",
-      "dialog": "",
-      "header": "Hold"
-    },
-    {
-      "id": "UH",
-      "url": ";UNHOLD",
-      "dialog": "",
-      "header": "Unhold"
-    },
-    {
-      "id": "DI",
-      "url": ";DINFO",
-      "dialog": "",
-      "header": "Drug Information"
-    },
-    {
-      "id": "C",
-      "url": ";CHANGE",
-      "dialog": "Are you sure to change this order?",
-      "header": "Change"
-    },
-    {
-      "id": "D",
-      "url": ";DELETE",
-      "dialog": "Are you sure to delete this order?",
-      "header": "Delete"
-    },
-    {
-      "id": "HY",
-      "url": ";HISTORY",
-      "dialog": "",
-      "header": "History"
-    },
-    {
-      "id": "SC",
-      "url": ";SCHEDULE",
-      "dialog": "",
-      "header": "Schedules (New)"
-    }
-  ]
 }
