@@ -84,7 +84,7 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 					}
 				}
 				queryString +="&STAGE=SAVE"
-				return queryString;
+				return encodeURI(queryString);
 			}
 	};
 }])
@@ -189,11 +189,6 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 				element.value = fieldsToUpdate[field];
 			}
 			return formData;
-			//Call After-field server request if relevant
-			// elementToValidate = jsonServices.getDataValue(self.formData, self.dataMap[this.id]);
-			// if(elementToValidate.ServerValidation){
-			// 	self.sendAfterFieldRequest(this.id, elementToValidate.value, elementToValidate.ServerValidation, elementToValidate.ServerValidationParameters);
-			// }
 		}
 	}
 }])

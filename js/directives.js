@@ -1,12 +1,14 @@
-app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', 'ModalService','autoCompleteServices', 'cometServices', 'afterFieldServices', function(jsonServices, $filter, ajaxServices, ModalService, autoCompleteServices, cometServices, afterFieldServices) {
+app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', 'ModalService','autoCompleteServices', 'cometServices', 'afterFieldServices', 'spinnerService',
+	function(jsonServices, $filter, ajaxServices, ModalService, autoCompleteServices, cometServices, afterFieldServices, spinnerService) {
 	return{
 		restrict: 'E',
 		scope: {
 			loadPath: '=loadPath',
 			formTitle: '=formTitle',
+			closeFunction: '&'
 
 		},
-		controller: ['$scope', function($scope){
+		controller: ['$scope', 'spinnerService', function($scope, spinnerService, elem){
 			var self = this;
 			self.element = undefined;
 			self.formScope = undefined;
@@ -15,6 +17,7 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', 'ModalServ
 			self.sessionId ="";
 			self.errorMessage="";
 			self.urlPrefix = config.base_url+":"+config.port;
+			self.modalLoaded = false;
 
 			self.getFormData = function(){
 				if(self.formData == undefined){
@@ -42,12 +45,6 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', 'ModalServ
 
 			self.handleAutoCompleteResult = function(res){
 				self.formData = autoCompleteServices.handleAutoCompleteResult(res, self.formData, self.dataMap);
-				// var fieldsToUpdate = res.originalObject.update;
-				// for(field in fieldsToUpdate){
-				// 	element = jsonServices.getDataValue(self.formData, self.dataMap[field]);
-				// 	element.value = fieldsToUpdate[field];
-				// }
-				//Call After-field server request if relevant
 				elementToValidate = jsonServices.getDataValue(self.formData, self.dataMap[this.id]);
 				if(elementToValidate.ServerValidation){
 					afterFieldServices.sendAfterFieldRequest(self.formData, self.dataMap, elementToValidate.id, elementToValidate.value, elementToValidate.ServerValidation, elementToValidate.ServerValidationParameters);
@@ -60,14 +57,17 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 				dataQueryString = cometServices.buildRequestQueryString(modalFormParameters, self.formData, self.dataMap);
 				modalQueryUrl = modalUrl+dataQueryString;
 				ModalService.showModal({
-						templateUrl: "/tpl/modal.tpl.html",
+						templateUrl: "tpl/modal.tpl.html",
 						controller: "modalController",
-						inputs: { loadPath: modalQueryUrl, formTitle: "Test Modal"}
+						inputs: { loadPath: modalQueryUrl, formTitle: "Please wait. Loading form", modal: this}
 				}).then(function(modal){
 						modal.element.modal();
+						console.log("modal open");
+						self.modalLoaded = true;
 						modal.close.then(function(modalRes){
-							console.log(modalRes);
-						})
+							afterFieldServices.handleAfterFieldResponse(modalRes, self.formData, self.dataMap);
+							self.modalLoaded = false;
+						});
 				})
 			};
 			self.getFieldDisplay = function(field, row){
@@ -87,10 +87,28 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 			};
 
 			self.save = function() {
+				if(self.modalLoaded == true){
+					var queryString = jsonServices.buildQueryString(self.formData)+"&SERVICE=DATAFORM";
+					ajaxServices.httpPromise(self.urlPrefix, queryString).then(function(response){
+						if(response.error){
+							self.errorMessage =  response.error;
+						}
+						else{
+							self.closeFunction({res: response});
+						}
+					})
+					return;
+				}
 				var queryString = jsonServices.buildQueryString(self.formData);
-				console.log(self.urlPrefix+queryString);
+				spinnerService.show('saveSpinner');
 				ajaxServices.httpPromise(self.urlPrefix, queryString).then(function(res){
-					self.handleResponse(res);
+					if(self.$modalInstance){
+						$modalInstance.close();
+					}
+					else{
+						self.handleResponse(res);
+					}
+					spinnerService.hide('saveSpinner');
 				})
 
 			}
@@ -154,25 +172,6 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 
 			}
 
-
-			self.sendAfterFieldRequest =  function(fieldId, fieldValue, request, data){
-				afterFieldServices.sendAfterFieldRequest(self.formData, self.dataMap, fieldId, fieldValue, request, data);
-
-			};
-
-			self.handleAfterFieldResponse = function(responseJson){
-				console.log("after field request sent");
- 			};
-
-			self.handleAfterFieldResponse = function(responseJson){
-				self.formData = afterFieldServices.handleAfterFieldResponse(responseJson, self.formData, self.dataMap);
-				$scope.$evalAsync();
-			};
-
-			self.handleQuickSearchResponse = function(res){
-				console.log(res.results[0]);
-			}
-
 			self.sendQuickSearchRequest =  function(fieldId, fieldValue, request){
 					url = "/comet.icsp?MGWLPN=iCOMET&COMETSID="+self.sessionId+"&COMETMode=JS&SERVICE=SRCHFLD&STAGE=REQUEST&MODE=0&\
 FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+request+"&SRCHFLD="+fieldValue;
@@ -192,6 +191,10 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 		link: function(scope, elem, attr,ctrl){
 			elem.bind('blur', function(val){
 			});	
+			if(elem[0].attributes['close-function']){
+				console.log("modal");
+				ctrl.modalLoaded = true;
+			}
 		}
 	} // close return from first line of directive
 }])
@@ -259,7 +262,8 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 	};
 }])
 
-.directive('validateText', ['ajaxServices', 'jsonServices', function (ajaxServices, jsonServices) {
+
+.directive('validateText', ['ajaxServices', 'jsonServices', 'afterFieldServices', function (ajaxServices, jsonServices, afterFieldServices) {
 	return {
 		restrict: 'A',
 		require: '^cometForm',
@@ -299,15 +303,14 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 					}
 				}
 				element.toggleClass('has-error', element[0].$invalid);
-				
 			});
-			
+
 			element.bind('blur', function(){
 				if(element.attr('dataformat') != undefined && element.attr('dataformat').toLowerCase() == "capitalletters"){
-					element.addClass("text-uppercase");				
+					element.addClass("text-uppercase");
 				}
 				if(attr.afterTextValidation){
-					formCtrl.sendAfterFieldRequest(element[0].name, element[0].value, attr.afterTextValidation, attr.afterTextParams);
+					afterFieldServices.sendAfterFieldRequest(formCtrl.formData, formCtrl.dataMap, element[0].name, element[0].value, attr.afterTextValidation, attr.afterTextParams);
 				}
 			});
 
@@ -316,14 +319,14 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 	};
 }])
 
-.directive('cometCheckbox', ['jsonServices', 'ajaxServices', function(jsonServices, ajaxServices){
+.directive('cometCheckbox', ['jsonServices', 'ajaxServices','afterFieldServices', function(jsonServices, ajaxServices,afterFieldServices){
 	return{
 		restrict: 'A',
 		require: '^cometForm',
 		link: function(scope, elem, attr, formCtrl){
 			elem.bind('change', function(){
 				numericVal = elem[0].checked ? 1 : 0;
-				formCtrl.sendAfterFieldRequest(attr.name, numericVal, attr.afterTextValidation, attr.afterTextParams);
+				afterFieldServices.sendAfterFieldRequest(formCtrl.formData, formCtrl.dataMap, attr.name, numericVal, attr.afterTextValidation, attr.afterTextParams);
 			});
 		}
 	}
@@ -336,6 +339,18 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 		link: function(scope, elem, attr, formCtrl){
 			elem.bind('click', function(){
 				formCtrl.loadModalForm(attr.modalForm, attr.modalFormParams)
+			});
+		}
+	}
+}])
+
+.directive('submitButton', [function(){
+	return{
+		restrict: 'A',
+		require: '^cometForm',
+		link: function(scope, elem, attr, formCtrl){
+			elem.bind('click', function(){
+				elem.toggleClass('active');
 			});
 		}
 	}

@@ -1,4 +1,4 @@
-<div class="modal fade">
+<div class="modal fade" id="extraFormModal">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -6,9 +6,11 @@
         <h4 class="modal-title">{{ title }}</h4>
       </div>
       <div class="modal-body">
-        	<comet-form load-path="loadPath" form-title="title"></comet-form>
+        	<comet-form load-path="loadPath" form-title="title" close-function="dismissModal(res)"></comet-form>
       </div>
       <div class="modal-footer">
+        <div ng-click="dismissModal(formData)">close</div>
+        <div ng-click="close()" data-dismiss="modal">close</div>
       </div>
     </div>
   </div>

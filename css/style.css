@@ -94,3 +94,10 @@ form.split-form {
 .form-group.has-error .help-block{
 	display: block;
 }
+
+
+.spinner{
+	margin-left: 200px;
+    position: absolute;
+    margin-top: -500px;
+}

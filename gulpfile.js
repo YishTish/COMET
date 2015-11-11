@@ -41,6 +41,7 @@ function curlGet(req, res, callback){
     queryString = queryString + key+"="+req.query[key]+"&";
   }
   console.log(queryString);
+  queryString = encodeURI(queryString);
   var options = {
     host: 'lintechhq.com',
     method: 'GET',
