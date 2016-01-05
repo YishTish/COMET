@@ -1,6 +1,6 @@
-var app = angular.module('COMET', ['ngMaterial', 'angularModalService', "angucomplete-alt" ,'angularSpinners']);
+var app = angular.module('COMET', ['angularModalService', "angucomplete-alt" ,'angularSpinners', 'ui.bootstrap']);
 
-app.controller('appCtrl', ['$scope', '$mdSidenav', 'ajaxServices', 'jsonServices', function ($scope, $mdSidenav, ajaxServices, jsonServices) {
+app.controller('appCtrl', ['$scope', 'ajaxServices', 'jsonServices', function ($scope, ajaxServices, jsonServices) {
 
 	var curForm = "WRX2002";
 	var resId = "12404";
@@ -20,7 +20,7 @@ app.controller('appCtrl', ['$scope', '$mdSidenav', 'ajaxServices', 'jsonServices
 	// };
 }])
 
-.config(function($mdThemingProvider) {
-  $mdThemingProvider.theme('altTheme')
-    .primaryPalette('purple')
-});
+// .config(function($mdThemingProvider) {
+//   // $mdThemingProvider.theme('altTheme')
+//   //   .primaryPalette('purple')
+// });

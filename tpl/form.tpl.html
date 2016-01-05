@@ -1,164 +1,151 @@
-<div>
-	<h1>{{formCtrl.formTitle}}</h1>
-	<h3> Session Id: {{formCtrl.sessionId}}</h3>
-	<div class="alert alert-danger" id="formError" ng-show="formCtrl.hasError()" role="alert">{{ formCtrl.errorMessage }} </div>
-	<form name="cometForm" class="split-form" novalidate>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">{{formCtrl.formTitle}}</h3>
+	</div>
+	<div class="panel-body">
+		<p> Session Id: {{formCtrl.sessionId}}</p>
+		<div class="alert alert-danger" id="formError" ng-show="formCtrl.hasError()" role="alert">{{ formCtrl.errorMessage }} </div>
+		<form name="cometForm" class="split-form" novalidate>
 			<div ng-repeat="row in formCtrl.formData.fields" class="form-group row">
 				<div ng-repeat="field in row" >
 				
-				<div class="{{formCtrl.getFieldDisplay(field, row)}}">
-				
-					<!-- Plain text -->
-					<div ng-if="field.type=='browse'">
-						<span style="font-weight: bold">{{ field.label }}</span><br /><span>{{ field.value }} </span>
-					</div>
+					<div class="{{formCtrl.getFieldDisplay(field, row)}}">
+					
+						<!-- Plain text -->
+						<div ng-if="field.type=='browse'">
+							<span style="font-weight: bold">{{ field.label }}</span><br /><span>{{ field.value }} </span>
+						</div>
 
-					<!-- general text input -->
-					<div ng-if="field.type=='text'" show-errors>
-								<label class="control-label">{{::field.label}}</label><span style="color:red;" ng-show="field.required"> *</span>
-								<input type="text" id="{{::field.id}}" dataformat="{{::field.dataFormat}}" maxlength="{{::field.maxlength}}" class="form-control inline" name="{{::field.id}}" ng-required="field.required" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}" key-up-search="{{:: field.search }}" ng-model="field.value" ng-model-options="{debounce: 500}" ng-disabled="{{field.disabled}}" validate-text show-errors/>
-								
-									<div ng-show="cometForm.{{field.id}}.$error.required" role="alert"class="help-block alert alert-danger">{{field.label}} is a required field</div>
-									<div ng-show="cometForm.{{field.id}}.$error.alphanumeric" role="alert" class="help-block alert alert-danger">{{field.label}} must be an Alphanumeric entry</div>
-									<div ng-show="cometForm.{{field.id}}.$error.phonenumber" role="alert" class="help-block alert alert-danger">{{field.label}} must be a valid phone number entry</div>
-									<div ng-show="cometForm.{{field.id}}.$error.socialsecurity" role="alert" class="help-block alert alert-danger">{{field.label}} must be a valid Social-Security number</div>
-									<div ng-show="cometForm.{{field.id}}.$error.zipcode" role="alert" class="help-block alert alert-danger">{{field.label}} must be an American valid Zipcode entry</div>
-					</div>
+						<!-- general text input -->
+						<div ng-if="field.type=='text'" show-errors>
+									<label class="control-label">{{::field.label}}</label><span style="color:red;" ng-show="field.required"> *</span>
+									<input type="text" id="{{::field.id}}" dataformat="{{::field.dataFormat}}" maxlength="{{::field.maxlength}}" class="form-control inline" name="{{::field.id}}" ng-required="field.required" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}" key-up-search="{{:: field.search }}" ng-model="field.value" ng-model-options="{debounce: 500}" ng-disabled="{{field.disabled}}" validate-text show-errors/>
+									
+										<div ng-show="cometForm.{{field.id}}.$error.required" role="alert"class="help-block alert alert-danger">{{field.label}} is a required field</div>
+										<div ng-show="cometForm.{{field.id}}.$error.alphanumeric" role="alert" class="help-block alert alert-danger">{{field.label}} must be an Alphanumeric entry</div>
+										<div ng-show="cometForm.{{field.id}}.$error.phonenumber" role="alert" class="help-block alert alert-danger">{{field.label}} must be a valid phone number entry</div>
+										<div ng-show="cometForm.{{field.id}}.$error.socialsecurity" role="alert" class="help-block alert alert-danger">{{field.label}} must be a valid Social-Security number</div>
+										<div ng-show="cometForm.{{field.id}}.$error.zipcode" role="alert" class="help-block alert alert-danger">{{field.label}} must be an American valid Zipcode entry</div>
+						</div>
 
-					<!-- Float -->
-				 	<div ng-if="field.type=='number'">
-							<div class="control-label">{{field.label}}</div>
-							<input type="number" id="{{::field.id}}" dataformat="{{::field.dataFormat}}"
-							 class="form-control" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}" ng-required="field.required" min="{{field.min}}" max="{{field.max}}" name="{{field.id}}" test-func ng-model="field.value" ng-disabled="{{field.disabled}}" />
-						
-					</div> 
-
-					<div ng-if="field.type=='password'" show-errors>
-								<label class="control-label">{{::field.label}}</label><span style="color:red;" ng-show="field.required"> *</span>
-								<input type="password" id="{{::field.id}}" class="form-control inline"  ng-required="field.required" name="{{::field.id}}" ng-model="field.value"  validate-text show-errors />
-								<div ng-show="cometForm.{{field.id}}.$error.required" role="alert"class="help-block alert alert-danger">{{field.label}} is a required field</div>
-					</div>
-
-
-
-					<div ng-if="field.type=='date'">
-								<label>{{::field.label}}</label>
-								<input type="date" id="{{::field.id}}" class="form-control" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{field.disabled}}" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}"  validate-text/>
-						
-					</div> 
-
-
-
-					<div ng-if="field.type=='time'">
-								<label>{{::field.label}} </label>
-								<input type="time" id="{{::field.id}}" class="form-control" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{field.disabled}}" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}"  validate-text/>
+						<!-- Float -->
+					 	<div ng-if="field.type=='number'">
+								<div class="control-label">{{field.label}}</div>
+								<input type="number" id="{{::field.id}}" dataformat="{{::field.dataFormat}}"
+								 class="form-control" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}" ng-required="field.required" min="{{field.min}}" max="{{field.max}}" name="{{field.id}}" test-func ng-model="field.value" ng-disabled="{{field.disabled}}" />
 							
-					</div>
+						</div> 
+
+						<div ng-if="field.type=='password'" show-errors>
+									<label class="control-label">{{::field.label}}</label><span style="color:red;" ng-show="field.required"> *</span>
+									<input type="password" id="{{::field.id}}" class="form-control inline"  ng-required="field.required" name="{{::field.id}}" ng-model="field.value"  validate-text show-errors />
+									<div ng-show="cometForm.{{field.id}}.$error.required" role="alert"class="help-block alert alert-danger">{{field.label}} is a required field</div>
+						</div>
 
 
-					<!-- Input button -->
-					<div ng-if="field.type=='button'">
-						<button class="btn btn-link" id="{{::field.id}}" modal-form="{{:: field.modalForm }}"  modal-form-params="{{:: field.modalFormParameters }}" modal-form-button>{{field.label}}</button>
-					</div>
+
+						<div ng-if="field.type=='date'">
+									<label>{{::field.label}}</label>
+									<input type="date" id="{{::field.id}}" class="form-control" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{field.disabled}}" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}"  validate-text/>
+							
+						</div> 
 
 
-					<!-- Checkboxes -->
-					<div ng-if="field.type=='checkbox'" show-errors>
+
+						<div ng-if="field.type=='time'">
+									<label>{{::field.label}} </label>
+									<input type="time" id="{{::field.id}}" class="form-control" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{field.disabled}}" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}"  validate-text/>
+								
+						</div>
+
+
+						<!-- Input button -->
+						<div ng-if="field.type=='button'">
+							<button class="btn btn-link" id="{{::field.id}}" modal-form="{{:: field.modalForm }}"  modal-form-params="{{:: field.modalFormParameters }}" modal-form-button>{{field.label}}</button>
+						</div>
+
+
+						<!-- Checkboxes -->
+						<div ng-if="field.type=='checkbox'" show-errors>
+								<label>{{field.label}}</label>
+								<input type="checkbox" id="{{::field.id}}" name="{{field.id}}" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}" ng-model="field.value" ng-click="formCtrl.testfunc()" ng-checked="{{::field.checked}}" comet-checkbox/>
+							
+						</div>
+
+
+						<div ng-if="field.type=='radio'">
+							<div class="input-group" ng-model="field.id">
+							<!-- <md-radio-group id="{{::field.id}}" ng-model="field.id">  -->
+								<label>
+									<input type="radio" ng-repeat="option in field.options" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}" ng-value="option.value" aria-label="{{ option.description }}"  validate-text />
+										{{ option.description}}
+										{{ field.label}}
+								</label>
+								<!-- </md-radio-button> -->
+							<!-- </md-radio-group>	-->
+						</div>
+
+
+						<div ng-if="field.type=='select'">
+							<div class="form-group">
+								<label for="{{::field.id}}">{{field.label}}</label>
+								<select name="{{::field.id}}" id="{{::field.id}}" ng-model="field.value" class="form-control" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}" validate-text >
+										<option ng-repeat="option in field.options" value="{{option.value}}">{{option.description}}</option>
+								</select>
+							</div>
+						</div>
+
+
+						<div ng-if="field.type=='textarea'" >
+								<label>{{field.label}}</label>
+								<textarea  id="{{::field.id}}" name="{{field.id}}" ng-model="field.value" class="form-control" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}" ></textarea>
+						</div>
+
+						<div ng-if="field.type=='autocomplete'">
 							<label>{{field.label}}</label>
-							<input type="checkbox" id="{{::field.id}}" name="{{field.id}}" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}" ng-model="field.value" ng-click="formCtrl.testfunc()" ng-checked="{{::field.checked}}" comet-checkbox/>
-						
-					</div>
-
-
-					<div ng-if="field.type=='radio'">
-						<md-radio-group id="{{::field.id}}" ng-model="field.id">
-							<label>{{ field.label}}</label>
-							<md-radio-button ng-repeat="option in field.options" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}" ng-value="option.value" aria-label="{{ option.description }}"  validate-text>
-								{{ option.description}}
-							</md-radio-button>
-						</md-radio-group>	
-					</div>
-
-
-					<div ng-if="field.type=='select'">
-						<div class="form-group">
-							<label for="{{::field.id}}">{{field.label}}</label>
-							<select name="{{::field.id}}" id="{{::field.id}}" ng-model="field.value" class="form-control" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}" validate-text >
-									<option ng-repeat="option in field.options" value="{{option.value}}">{{option.description}}</option>
-							</select>
+							<div 
+								name="{{:: field.id }}"
+								after-text-validation="{{:: field.ServerValidation }}" 
+								after-text-params="{{::field.ServerValidationParameters }}"
+								>
+									{{field.value}}
+							</div>
+							<angucomplete-alt id="{{field.id}}" 
+								pause="400" 
+								selected-object="formCtrl.handleAutoCompleteResult"  
+								after-text-validation="{{:: field.ServerValidation }}" 
+								after-text-params="{{::field.ServerValidationParameters }}"
+								remote-url="{{ formCtrl.buildAutoCompleteQuery(field.id, field.search) }}"
+								remote-url-data-field="results"
+								title-field="finalDisplay"
+								remote-url-response-formatter="formCtrl.formatAutoCompleteResponse"
+								minlength="1" 
+								input-class="form-control"
+								match-class="highlight"
+								clear-selected="true"></angucomplete-alt>
 						</div>
 					</div>
-
-
-					<div ng-if="field.type=='textarea'" >
-							<label>{{field.label}}</label>
-							<textarea  id="{{::field.id}}" name="{{field.id}}" ng-model="field.value" class="form-control" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}" ></textarea>
-					</div>
-
-					<div ng-if="field.type=='autocomplete'">
-						<label>{{field.label}}</label>
-						<div 
-							name="{{:: field.id }}"
-							after-text-validation="{{:: field.ServerValidation }}" 
-							after-text-params="{{::field.ServerValidationParameters }}"
-							>
-								{{field.value}}
-						</div>
-						<angucomplete-alt id="{{field.id}}" 
-							pause="400" 
-							selected-object="formCtrl.handleAutoCompleteResult"  
-							after-text-validation="{{:: field.ServerValidation }}" 
-							after-text-params="{{::field.ServerValidationParameters }}"
-							remote-url="{{ formCtrl.buildAutoCompleteQuery(field.id, field.search) }}"
-							remote-url-data-field="results"
-							title-field="finalDisplay"
-							remote-url-response-formatter="formCtrl.formatAutoCompleteResponse"
-							minlength="1" 
-							input-class="form-control"
-							match-class="highlight"
-							clear-selected="true"></angucomplete-alt>
-					</div>
-
-				</div>
-			</div>		
+				</div>		
+			</div>
 		</div>
-
-		 <md-input-container>
-			<button class="btn  btn-primary has-spinner" ng-click="formCtrl.save()">{{ formCtrl.submitVal }}</button>
-			<button class="btn btn-link" ng-click="formCtrl.reset()">Reset</button>
-		</md-input-container>
-		
-		<div layout="column"  style="padding: 32px;" ng-if="cometForm.$invalid">
-				<h4 class="md-title">The following fields need attention:</h4>
-				<md-whiteframe class="md-whiteframe-z1" layout layout-align="center center">
-    				<ul>
-			  			<li ng-repeat="(key, errors) in cometForm.$error track by $index"> <strong>{{ key }}:</strong>
-						  	<ul>
-						      <li ng-repeat="e in errors">{{ formCtrl.getElementLabel(e.$name) }}</li>
-						    </ul>
-						</li>
-					</ul>		
-		  		</md-whiteframe>
-		  	</div>
-	</form>
-
-<!-- 	<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Basic Modal</h4>
-      </div>
-      <div class="modal-body">
-        <h3>Modal Body</h3>
-        <div>{{formCtrl.formTitle}}</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div> -->
-
+		<div>
+			 <!-- <md-input-container>  -->
+				<button class="btn  btn-primary has-spinner" ng-click="formCtrl.save()">{{ formCtrl.submitVal }}</button>
+				<button class="btn btn-link" ng-click="formCtrl.reset()">Reset</button>
+			<!-- </md-input-container> -->
+		</div>
+			<div layout="column"  style="padding: 32px;" ng-if="cometForm.$invalid">
+					<h4>The following fields need attention:</h4>
+					<div class="well well-lg" layout layout-align="center center">
+	    				<ul>
+				  			<li ng-repeat="(key, errors) in cometForm.$error track by $index"> <strong>{{ key }}:</strong>
+							  	<ul>
+							      <li ng-repeat="e in errors">{{ formCtrl.getElementLabel(e.$name) }}</li>
+							    </ul>
+							</li>
+						</ul>		
+			  		</div>
+			  	</div>
+		</form>
+	</div>
 </div>

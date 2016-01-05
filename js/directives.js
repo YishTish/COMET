@@ -2,6 +2,7 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', 'ModalServ
 	function(jsonServices, $filter, ajaxServices, ModalService, autoCompleteServices, cometServices, afterFieldServices, spinnerService) {
 	return{
 		restrict: 'E',
+		transclude: true,
 		scope: {
 			loadPath: '=loadPath',
 			formTitle: '=formTitle',

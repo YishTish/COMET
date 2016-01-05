@@ -1,18 +1,9 @@
 <html lang='en' ng-app='COMET'>
 	<head>
-	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
 <link rel="manifest" href="/manifest.json">
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
@@ -25,37 +16,50 @@
 	</head>
 	<body layout="column" ng-controller="appCtrl">
 	<toast></toast>
-	<md-toolbar layout="row">
+	
+	<!-- <md-toolbar layout="row">
       <div class="md-toolbar-tools">
         <h1>{{title}}</h1>
       </div>
-	</md-toolbar>
+	</md-toolbar>  -->
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">
+	        <img alt="Brand" src="icons/favicon-32x32.png">
+	      </a>
+	    </div>
+	  </div>
+	</nav>
     
-	<div>
-		<md-content class="md-padding">
-				<comet-form load-path="loadPath" form-title="formTitle"></comet-form>
-  			</md-content>
+	
+	<div class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<comet-form load-path="loadPath" form-title="formTitle"></comet-form>
+		</div>
+		<div class="col-md-2"></div>
 	</div>
 
   
-   <!--BOOTSTRAP -->
-    	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+   <!--BOOTSTRAP 
+    	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+    	-->
     <!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-	<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
-
-
-	      <!-- Angular Material Dependencies -->
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="bower_components/Yamm3/yamm/yamm.css">
+	
+	<!-- Angular Material Dependencies -->
     <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="bower_components/angular-aria/angular-aria.min.js"></script>
 	<script src="bower_components/angular-messages/angular-messages.min.js"></script>
-    <script src="bower_components/angular-material/angular-material.min.js"></script>
-    <script src="//cdn.jsdelivr.net/is.js/0.52/is.min.js"></script>
+    <script src="bower_components/is_js/is.min.js"></script>
 	<!-- Lodash -->
 	<script src="bower_components/lodash/lodash.js"></script>
 
@@ -80,6 +84,6 @@
 </section>
   </body>
 
-<spinner class="spinner" name="saveSpinner" img-src="img/spinner.gif">Loading...</spinner>">
+<spinner class="spinner" name="saveSpinner" img-src="img/spinner.gif">Loading...</spinner>
 	</body>
 </html>
