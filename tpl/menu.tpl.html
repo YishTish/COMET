@@ -1,0 +1,21 @@
+<nav class="navbar yamm navbar-default" role="navigation">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">
+	        <img alt="Brand" src="icons/favicon-32x32.png">
+	      </a>
+	    </div>
+        <ul class="nav navbar-nav">
+        	<li class="dropdown pill" uib-dropdown ng-repeat="item in menuCtrl.menuData" style="max-width:140px;">
+                <a class="dropdown-toggle" uib-dropdown-toggle toggle-event="mouseover" href="#">{{ item.title }}<b class="caret"></b></a>
+                <ul role="menu" class="dropdown-menu">
+                    <li><a tabindex="-1" href="#"> Action </a></li>
+                    <li><a tabindex="-1" href="#"> Another action </a></li>
+                    <li><a tabindex="-1" href="#"> Something else here </a></li>
+                    <li class="divider"></li>
+                    <li><a tabindex="-1" href="#"> Separated link </a></li>
+                </ul>
+            </li>
+        </ul>
+	  </div>
+</nav>

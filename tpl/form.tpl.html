@@ -1,13 +1,15 @@
 <div class="panel panel-default">
-	<div class="panel-heading">
+	<div class="panel-heading panel-heading-transparent">
 		<h3 class="panel-title">{{formCtrl.formTitle}}</h3>
 	</div>
 	<div class="panel-body">
 		<p> Session Id: {{formCtrl.sessionId}}</p>
 		<div class="alert alert-danger" id="formError" ng-show="formCtrl.hasError()" role="alert">{{ formCtrl.errorMessage }} </div>
-		<form name="cometForm" class="split-form" novalidate>
-			<div ng-repeat="row in formCtrl.formData.fields" class="form-group row">
-				<div ng-repeat="field in row" >
+		<form class="validate" data-success="Form Sent! Thanks" data-toastr-position="top-right" name="cometForm" class="split-form"  
+		novalidate>
+		<fieldset>
+			<div ng-repeat="row in formCtrl.formData.fields" class="row">
+				<div ng-repeat="field in row" class="form-group">
 				
 					<div class="{{formCtrl.getFieldDisplay(field, row)}}">
 					
@@ -130,7 +132,7 @@
 		</div>
 		<div>
 			 <!-- <md-input-container>  -->
-				<button class="btn  btn-primary has-spinner" ng-click="formCtrl.save()">{{ formCtrl.submitVal }}</button>
+				<button class="btn  btn-3d btn-teal btn-block margin-top-30" ng-click="formCtrl.save()">{{ formCtrl.submitVal }}</button>
 				<button class="btn btn-link" ng-click="formCtrl.reset()">Reset</button>
 			<!-- </md-input-container> -->
 		</div>
@@ -146,6 +148,7 @@
 						</ul>		
 			  		</div>
 			  	</div>
+			  </fieldset>
 		</form>
 	</div>
 </div>

@@ -1,4 +1,4 @@
-var app = angular.module('COMET', ['angularModalService', "angucomplete-alt" ,'angularSpinners', 'ui.bootstrap']);
+var app = angular.module('COMET', ['angularModalService', "angucomplete-alt" ,'angularSpinners', 'ui.bootstrap','mega-menu']);
 
 app.controller('appCtrl', ['$scope', 'ajaxServices', 'jsonServices', function ($scope, ajaxServices, jsonServices) {
 
