@@ -97,8 +97,7 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 			var fullUrl = url_prefix+url;
 			delete $http.defaults.headers.common['X-Requested-with'];
 			var data = $templateCache.get(fullUrl);
-
-		    if (data) {
+			if (data) {
 		         return $q.when(data);
 		    } else {
 		        var deferred = $q.defer();

@@ -168,7 +168,10 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 
 			self.loadNextForm = function(path){
 				ajaxServices.httpPromise(self.urlPrefix, path).then(function(res){
+				//ajaxServices.httpPromise("", "json_src/wrx2002.json").then(function(res){
+					console.log(res);
 					self.handleResponse(res);
+
 				});
 			};
 
@@ -178,6 +181,7 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 				self.currentForm = serverData.form[0].id;
 				self.formTitle = serverData.form[0].title;
 				self.formData = jsonServices.parseJson(serverData);
+				console.log(self.formData);
 				self.dataMap = jsonServices.mapJson(serverData);
 			};
 
@@ -279,6 +283,10 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
     				element.removeClass('has-error');
   				}, 0, false);
 			});
+
+			scope.$on('hide-empty', function(){
+				console.log(element);
+			})
 			
 
 			
@@ -382,6 +390,19 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 			elem.bind('click', function(){
 				elem.toggleClass('active');
 			});
+		}
+	}
+}])
+
+
+.directive('hideEmpty', [function(){
+	return{
+		restrict: 'A',
+		require: '^cometForm',
+		link: function(scope, elem, attr, formCtrl){
+			if(attr.optionsCount==0){
+				elem.parent().hide();
+			}
 		}
 	}
 }])

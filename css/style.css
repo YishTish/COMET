@@ -64,11 +64,11 @@ h1.page-title{
 
 }
 
-.main-content{
+/*.main-content{
 	margin-left: 30px;
 	width: 80%;
 	overflow: auto;
-}
+}*/
 
 form.split-form {
   /*  -webkit-column-count: 2; /* Chrome, Safari, Opera */
@@ -92,6 +92,23 @@ form.split-form {
 
 .form-group.has-error .help-block{
 	display: block;
+}
+
+.required-field:after{
+    font-family: "FontAwesome";
+    font-weight: normal;
+    font-size: 8px;
+    content: " \f069";
+    vertical-align: top;
+    color: #671010;
+}
+
+.form-group, 
+.form-group label,
+.form-group input {
+    /*float: left;
+    display: inline;
+    */
 }
 
 

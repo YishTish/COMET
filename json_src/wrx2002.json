@@ -4,9 +4,9 @@
       "dateFormat": "MDY",
       "timeFormat": "12",
       "resources": "Development13",
-      "COMETURL": "/comet.icsp?MGWLPN=iCOMET&COMETSID=6385033012&COMETMode=JS",
+      "COMETURL": "/comet.icsp?MGWLPN=iCOMET&COMETSID=6394417391&COMETMode=JS",
       "COMETAjax": "&SERVICE=AJAX",
-      "COMETSID": "6385033012"
+      "COMETSID": "6394417391"
     }
   ],
   "form": [
@@ -16,8 +16,10 @@
       "type": "DataForm",
       "external": [
         {
-          "script": "another.js",
-          "stylesheet": "another.css"
+          "script1": "/Development13/script/FormUpdate.js",
+          "script2": "another.js",
+          "stylesheet1": "first.css",
+          "stylesheet2": "another.css"
         }
       ]
     }
@@ -27,7 +29,8 @@
       {
         "id": "WEIGHT",
         "type": "browse",
-        "label": "Weight",
+        "label": "",
+        "labelShow": "false",
         "value": "120 (05/07/2012)",
         "class": "info",
         "tabIndex": "1",
@@ -39,7 +42,8 @@
       {
         "id": "ALERGY",
         "type": "browse",
-        "label": "Allergies",
+        "label": "",
+        "labelShow": "false",
         "value": "",
         "class": "info",
         "tabIndex": "2",
@@ -51,6 +55,7 @@
         "id": "RXORD",
         "type": "text",
         "label": "Order #",
+        "labelShow": "true",
         "value": "",
         "required": "true",
         "tabIndex": "3",
@@ -63,12 +68,13 @@
         "id": "DRUGCODE",
         "type": "text",
         "label": "Medication",
+        "labelShow": "true",
         "value": "",
         "required": "true",
         "tabIndex": "5",
         "disabled": "false",
         "maxLength": "",
-        "search": "^WSY1018",
+        "search": "^WSY1110",
         "searchParameters": "DRUGNAM1;RXODOSE;RXOROA;RXOSDT",
         "ServerValidation": "ADRUG^WRX2002",
         "ServerValidationParameters": "RXORD;RXOSDT;RXOSTM;RXOFREQ;RXOPRN;RXOPRNF"
@@ -77,6 +83,7 @@
         "id": "CPDDESC",
         "type": "text",
         "label": "",
+        "labelShow": "false",
         "value": "",
         "visible": "false",
         "tabIndex": "6",
@@ -87,6 +94,7 @@
         "id": "DRUGNAM1",
         "type": "browse",
         "label": "",
+        "labelShow": "false",
         "value": "",
         "tabIndex": "99",
         "disabled": "false"
@@ -97,6 +105,7 @@
         "id": "RXODOSE",
         "type": "text",
         "label": "Dose",
+        "labelShow": "true",
         "value": "",
         "required": "true",
         "tabIndex": "7",
@@ -109,6 +118,7 @@
         "id": "HDRUNIT",
         "type": "browse",
         "label": "",
+        "labelShow": "false",
         "value": "",
         "tabIndex": "91",
         "disabled": "false"
@@ -119,6 +129,7 @@
         "id": "RXOQTY",
         "type": "text",
         "label": "Quantity/UoM",
+        "labelShow": "true",
         "value": "",
         "Format": "Float",
         "required": "true",
@@ -132,6 +143,7 @@
         "id": "RXOQUOM",
         "type": "select",
         "label": "Unit of Measure",
+        "labelShow": "false",
         "value": "",
         "required": "true",
         "tabIndex": "9",
@@ -479,6 +491,7 @@
         "id": "RXOROA",
         "type": "select",
         "label": "Route",
+        "labelShow": "true",
         "value": "",
         "required": "true",
         "tabIndex": "9",
@@ -962,6 +975,7 @@
         "id": "RXOFREQ",
         "type": "select",
         "label": "Frequency",
+        "labelShow": "true",
         "value": "",
         "required": "true",
         "tabIndex": "10",
@@ -1205,6 +1219,7 @@
         "id": "SIGBTN",
         "type": "button",
         "label": "Details",
+        "labelShow": "false",
         "value": "",
         "tabIndex": "11",
         "disabled": "false",
@@ -1215,6 +1230,7 @@
         "id": "SIGNOTE",
         "type": "browse",
         "label": "",
+        "labelShow": "false",
         "value": "",
         "tabIndex": "12",
         "disabled": "false"
@@ -1225,6 +1241,7 @@
         "id": "RXOPRN",
         "type": "checkbox",
         "label": "PRN/Frequency",
+        "labelShow": "true",
         "value": "",
         "checked": "false",
         "tabIndex": "13",
@@ -1236,6 +1253,7 @@
         "id": "RXOPRNF",
         "type": "select",
         "label": "PRN Frequency",
+        "labelShow": "false",
         "value": "",
         "required": "true",
         "tabIndex": "14",
@@ -1327,6 +1345,7 @@
         "id": "RXOPRNR",
         "type": "text",
         "label": "Reason",
+        "labelShow": "true",
         "value": "",
         "required": "true",
         "tabIndex": "15",
@@ -1339,7 +1358,8 @@
         "id": "RXOSDT",
         "type": "text",
         "label": "Start Date & Time",
-        "value": "10/25/2015",
+        "labelShow": "true",
+        "value": "01/27/2016",
         "Format": "Date",
         "required": "true",
         "tabIndex": "16",
@@ -1350,7 +1370,8 @@
         "id": "RXOSTM",
         "type": "text",
         "label": "Start Time",
-        "value": "9:10",
+        "labelShow": "false",
+        "value": "4:49",
         "Format": "Time",
         "required": "true",
         "tabIndex": "17",
@@ -1363,6 +1384,7 @@
         "id": "RXOUDIS",
         "type": "checkbox",
         "label": "Until Discontinued",
+        "labelShow": "true",
         "value": "",
         "checked": "false",
         "tabIndex": "18",
@@ -1376,6 +1398,7 @@
         "id": "RXODUR",
         "type": "text",
         "label": "Duration",
+        "labelShow": "true",
         "value": "",
         "Format": "Numeric",
         "tabIndex": "19",
@@ -1390,6 +1413,7 @@
         "id": "RXOEDT",
         "type": "text",
         "label": "Stop Date & Time",
+        "labelShow": "true",
         "value": "",
         "Format": "Date",
         "tabIndex": "20",
@@ -1402,6 +1426,7 @@
         "id": "RXOETM",
         "type": "text",
         "label": "Stop Time",
+        "labelShow": "false",
         "value": "",
         "Format": "Time",
         "tabIndex": "21",
@@ -1414,6 +1439,7 @@
         "id": "SCHEDBTN",
         "type": "button",
         "label": "Additional Schedule",
+        "labelShow": "false",
         "value": "",
         "tabIndex": "22",
         "disabled": "false",
@@ -1424,6 +1450,7 @@
         "id": "ASCHDESC",
         "type": "browse",
         "label": "",
+        "labelShow": "false",
         "value": "",
         "tabIndex": "22",
         "disabled": "false"
@@ -1434,6 +1461,7 @@
         "id": "RXOODT",
         "type": "text",
         "label": "Order Date",
+        "labelShow": "true",
         "value": "",
         "Format": "Date",
         "tabIndex": "23",
@@ -1446,7 +1474,8 @@
         "id": "RXOOB",
         "type": "select",
         "label": "Ordered By",
-        "value": "tATTMD",
+        "labelShow": "true",
+        "value": "vNU",
         "required": "true",
         "tabIndex": "24",
         "disabled": "false",
@@ -1472,12 +1501,24 @@
             "description": "Henry Levin"
           },
           {
+            "value": "N",
+            "description": "N N"
+          },
+          {
             "value": "RR",
             "description": "Russell Rowe"
           },
           {
             "value": "SMITH",
             "description": "JANE SMITH"
+          },
+          {
+            "value": "SNEW",
+            "description": "Susan NEW Doctor"
+          },
+          {
+            "value": "SNIE11",
+            "description": "Susan IE11one"
           },
           {
             "value": "VLADA",
@@ -1493,12 +1534,12 @@
           },
           {
             "value": "tATTMD",
-            "description": "Doctor Attending",
-            "selected": "true"
+            "description": "Doctor Attending"
           },
           {
             "value": "vNU",
-            "description": "Virtual Nursing Management"
+            "description": "Virtual Nursing Management",
+            "selected": "true"
           }
         ]
       },
@@ -1506,6 +1547,7 @@
         "id": "RXOMETHD",
         "type": "radio",
         "label": "Ordered By Method",
+        "labelShow": "false",
         "value": "",
         "required": "true",
         "tabIndex": "25",
@@ -1518,6 +1560,7 @@
         "id": "RXODIAG",
         "type": "select",
         "label": "Diagnosis",
+        "labelShow": "true",
         "value": "",
         "tabIndex": "27",
         "disabled": "false",
@@ -1534,17 +1577,19 @@
         "id": "RXORSN",
         "type": "text",
         "label": "Indication",
+        "labelShow": "true",
         "value": "",
         "tabIndex": "28",
         "disabled": "false",
         "maxLength": "",
-        "search": "^WSY1022",
+        "search": "^WSY1113",
         "searchParameters": "RSNDESC"
       },
       {
         "id": "RSNDESC",
         "type": "browse",
         "label": "",
+        "labelShow": "false",
         "value": "",
         "tabIndex": "93",
         "disabled": "false"
@@ -1555,6 +1600,7 @@
         "id": "RXOTRMT",
         "type": "checkbox",
         "label": "Treatment",
+        "labelShow": "true",
         "value": "",
         "checked": "false",
         "tabIndex": "29",
@@ -1566,6 +1612,7 @@
         "id": "RXOSELF",
         "type": "checkbox",
         "label": "Self",
+        "labelShow": "true",
         "value": "",
         "checked": "false",
         "tabIndex": "30",
@@ -1577,6 +1624,7 @@
         "id": "RXOREQU",
         "type": "checkbox",
         "label": "Require Units",
+        "labelShow": "true",
         "value": "",
         "checked": "false",
         "tabIndex": "31",
@@ -1588,6 +1636,7 @@
         "id": "RXODOCTB",
         "type": "select",
         "label": "Document Before",
+        "labelShow": "true",
         "value": "",
         "tabIndex": "32",
         "disabled": "false",
@@ -1652,6 +1701,7 @@
         "id": "SCALEBTN",
         "type": "button",
         "label": "Sliding Scale",
+        "labelShow": "false",
         "value": "",
         "tabIndex": "33",
         "disabled": "true",
@@ -1662,6 +1712,7 @@
         "id": "SCALENOT",
         "type": "browse",
         "label": "",
+        "labelShow": "false",
         "value": "",
         "tabIndex": "92",
         "disabled": "false"
@@ -1672,6 +1723,7 @@
         "id": "RXOINST",
         "type": "text",
         "label": "Administration Directions",
+        "labelShow": "true",
         "value": "",
         "required": "true",
         "tabIndex": "34",
@@ -1684,6 +1736,7 @@
         "id": "RXONDIR",
         "type": "text",
         "label": "Nursing Directives",
+        "labelShow": "true",
         "value": "",
         "tabIndex": "35",
         "disabled": "false",
@@ -1695,6 +1748,7 @@
         "id": "RXODOCTA",
         "type": "select",
         "label": "Document After",
+        "labelShow": "true",
         "value": "",
         "tabIndex": "35",
         "disabled": "false",
@@ -1759,6 +1813,7 @@
         "id": "HDRPHARM",
         "type": "browse",
         "label": "",
+        "labelShow": "false",
         "value": "Pharmacy",
         "class": "info",
         "tabIndex": "-2",
@@ -1770,15 +1825,12 @@
         "id": "RXOPHARM",
         "type": "select",
         "label": "Order From",
+        "labelShow": "true",
         "value": "PH1",
         "required": "true",
         "tabIndex": "36",
         "disabled": "false",
         "options": [
-          {
-            "value": "PC1",
-            "description": "PresConn Pharmacy #1"
-          },
           {
             "value": "PH1",
             "description": "OmniCare Oasis Test",
@@ -1816,6 +1868,7 @@
         "id": "RXODSPTP",
         "type": "select",
         "label": "Dispense Type",
+        "labelShow": "true",
         "value": "",
         "required": "true",
         "tabIndex": "37",
@@ -1849,6 +1902,7 @@
         "id": "RXOINSTP",
         "type": "text",
         "label": "Dispense Instructions",
+        "labelShow": "true",
         "value": "",
         "tabIndex": "38",
         "disabled": "false",
@@ -1860,6 +1914,7 @@
         "id": "RXONOTEP",
         "type": "text",
         "label": "Note",
+        "labelShow": "true",
         "value": "",
         "tabIndex": "39",
         "disabled": "false",
@@ -1871,6 +1926,7 @@
         "id": "RXODAW",
         "type": "checkbox",
         "label": "Dispense As Written",
+        "labelShow": "true",
         "value": "",
         "checked": "false",
         "tabIndex": "40",
@@ -1881,31 +1937,26 @@
       {
         "id": "PARRTN",
         "type": "hidden",
-        "label": "",
         "value": "WRX2002"
       },
       {
         "id": "RXODYS",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "RXODTS",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "RXOHRS",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "RXOSFT",
         "type": "hidden",
-        "label": "",
         "value": ""
       }
     ],
@@ -1913,181 +1964,151 @@
       {
         "id": "SCALE1",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALEQ1",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALEC1",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALE2",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALEQ2",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALEC2",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALE3",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALEQ3",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALEC3",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALE4",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALEQ4",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALEC4",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALE5",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALEQ5",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALEC5",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALE6",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALEQ6",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALEC6",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALE7",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALEQ7",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALEC7",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALE8",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALEQ8",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALEC8",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALE9",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALEQ9",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALEC9",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALE10",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALEQ10",
         "type": "hidden",
-        "label": "",
         "value": ""
       },
       {
         "id": "SCALEC10",
         "type": "hidden",
-        "label": "",
         "value": ""
       }
     ]
@@ -2096,8 +2117,8 @@
     {
       "id": "btnSubmit",
       "type": "button",
-      "label": "Medication Orders Summary ( WRX2001 )",
-      "onclick": "parent.COMETMain.location.href='/comet.icsp?MGWLPN=iCOMET&COMETSID=6385033012&COMETMode=JS&SERVICE=DATAFORM&REQUEST=WRX2001&STAGE=REQUEST",
+      "label": "Back to Medication Orders Summary ( WRX2001 )",
+      "onclick": "parent.COMETMain.location.href='/comet.icsp?MGWLPN=iCOMET&COMETSID=6394417391&COMETMode=JS&SERVICE=DATAFORM&REQUEST=WRX2001&STAGE=REQUEST",
       "tabIndex": "5",
       "disabled": "false"
     }
