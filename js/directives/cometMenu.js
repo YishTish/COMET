@@ -16,7 +16,6 @@ app.directive('cometMenu', ['jsonServices','$filter', 'ajaxServices', 'cometServ
 			self.getMenuData = function(){
 				ajaxServices.httpPromise("","json_src/menu.js").then(function(response){
 					self.menuData = response.menu;
-					console.log(response.menu[1].items);
 				});
 			}
 

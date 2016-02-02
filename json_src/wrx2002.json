@@ -1,12 +1,12 @@
-{
+  {
   "session": [
     {
       "dateFormat": "MDY",
       "timeFormat": "12",
       "resources": "Development13",
-      "COMETURL": "/comet.icsp?MGWLPN=iCOMET&COMETSID=6394417391&COMETMode=JS",
+      "COMETURL": "/comet.icsp?MGWLPN=iCOMET&COMETSID=6395030953&COMETMode=JS",
       "COMETAjax": "&SERVICE=AJAX",
-      "COMETSID": "6394417391"
+      "COMETSID": "6395030953"
     }
   ],
   "form": [
@@ -29,8 +29,8 @@
       {
         "id": "WEIGHT",
         "type": "browse",
-        "label": "",
-        "labelShow": "false",
+        "label": "Weight",
+        "labelShow": "true",
         "value": "120 (05/07/2012)",
         "class": "info",
         "tabIndex": "1",
@@ -42,8 +42,8 @@
       {
         "id": "ALERGY",
         "type": "browse",
-        "label": "",
-        "labelShow": "false",
+        "label": "Allergies",
+        "labelShow": "true",
         "value": "",
         "class": "info",
         "tabIndex": "2",
@@ -94,7 +94,7 @@
         "id": "DRUGNAM1",
         "type": "browse",
         "label": "",
-        "labelShow": "false",
+        "labelShow": "true",
         "value": "",
         "tabIndex": "99",
         "disabled": "false"
@@ -118,7 +118,7 @@
         "id": "HDRUNIT",
         "type": "browse",
         "label": "",
-        "labelShow": "false",
+        "labelShow": "true",
         "value": "",
         "tabIndex": "91",
         "disabled": "false"
@@ -1230,7 +1230,7 @@
         "id": "SIGNOTE",
         "type": "browse",
         "label": "",
-        "labelShow": "false",
+        "labelShow": "true",
         "value": "",
         "tabIndex": "12",
         "disabled": "false"
@@ -1359,7 +1359,7 @@
         "type": "text",
         "label": "Start Date & Time",
         "labelShow": "true",
-        "value": "01/27/2016",
+        "value": "02/02/2016",
         "Format": "Date",
         "required": "true",
         "tabIndex": "16",
@@ -1371,7 +1371,7 @@
         "type": "text",
         "label": "Start Time",
         "labelShow": "false",
-        "value": "4:49",
+        "value": "8:37",
         "Format": "Time",
         "required": "true",
         "tabIndex": "17",
@@ -1450,7 +1450,7 @@
         "id": "ASCHDESC",
         "type": "browse",
         "label": "",
-        "labelShow": "false",
+        "labelShow": "true",
         "value": "",
         "tabIndex": "22",
         "disabled": "false"
@@ -1589,7 +1589,7 @@
         "id": "RSNDESC",
         "type": "browse",
         "label": "",
-        "labelShow": "false",
+        "labelShow": "true",
         "value": "",
         "tabIndex": "93",
         "disabled": "false"
@@ -1712,7 +1712,7 @@
         "id": "SCALENOT",
         "type": "browse",
         "label": "",
-        "labelShow": "false",
+        "labelShow": "true",
         "value": "",
         "tabIndex": "92",
         "disabled": "false"
@@ -1813,7 +1813,7 @@
         "id": "HDRPHARM",
         "type": "browse",
         "label": "",
-        "labelShow": "false",
+        "labelShow": "true",
         "value": "Pharmacy",
         "class": "info",
         "tabIndex": "-2",
@@ -2118,8 +2118,8 @@
       "id": "btnSubmit",
       "type": "button",
       "label": "Back to Medication Orders Summary ( WRX2001 )",
-      "onclick": "parent.COMETMain.location.href='/comet.icsp?MGWLPN=iCOMET&COMETSID=6394417391&COMETMode=JS&SERVICE=DATAFORM&REQUEST=WRX2001&STAGE=REQUEST",
-      "tabIndex": "5",
+      "onclick": "parent.COMETMain.location.href='/comet.icsp?MGWLPN=iCOMET&COMETSID=6395030953&COMETMode=JS&SERVICE=DATAFORM&REQUEST=WRX2001&STAGE=REQUEST",
+      "tabIndex": "15",
       "disabled": "false"
     }
   ]

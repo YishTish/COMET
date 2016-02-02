@@ -170,11 +170,13 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 		formatAutoCompleteResponse: function(result){
 			for(line in result.results){
 				disp = result.results[line].display;
-				displayList = "<ul class=\"list-unstyled\">";
+				var displayList = "";
+				// displayList = "<ul class=\"list-unstyled\">";
 				for(element in disp){
-					displayList+= "<li>"+disp[element]+"</li>";
+					// displayList+= "<li>"+disp[element]+"</li>";
+					displayList+= disp[element]+" | ";
 				}
-				displayList+= "</ul>";
+				// displayList+= "</ul>";
 				result.results[line].finalDisplay = displayList;//"<ul  style='font-size:11px'><li>"+disp.data2+"</li><li>"+disp.data1+" - "+disp.data3+"</li></ul>";
 				//result.results[line].finalDisplay = disp.data2+" ("+disp.data1+")";
 			}

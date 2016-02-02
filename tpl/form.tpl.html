@@ -14,8 +14,8 @@
 
 					<div ng-repeat="field in row" class="{{ field.required ? 'required' : '' }} {{formCtrl.getFieldDisplay(field, row)}}">
 				
+						<label style="height:15px" class="{{ field.required ? 'required-field': ''}}">{{::field.label}}</label>
 						<!-- <div> ->>
-					
 						<!-- Plain text -->
 							<div ng-if="field.type=='browse' && field.value!=''">
 							<!--	<span style="font-weight: bold">{{ field.label  != "" ? field.label: field.id }}</span> -->
@@ -23,7 +23,7 @@
 							</div>
 
 
-							<label class="{{ field.required ? 'required-field': ''}}">{{::field.label}}</label>
+							
 							<!-- general text input -->
 							<div ng-if="field.type=='text'" show-errors>
 										
@@ -69,7 +69,11 @@
 
 							<!-- Checkboxes -->
 							<div ng-if="field.type=='checkbox'" show-errors>
-									<input type="checkbox" id="{{::field.id}}" name="{{field.id}}" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}" ng-model="field.value" ng-click="formCtrl.testfunc()" ng-checked="{{::field.checked}}" comet-checkbox/>
+									<label class="switch switch switch-round">
+										<input type="checkbox" id="{{::field.id}}" name="{{field.id}}" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}" ng-model="field.value" ng-click="formCtrl.testfunc()" ng-checked="{{::field.checked}}" comet-checkbox/>
+										<span class="switch-label" data-on="YES" data-off="NO"></span>
+										<span> </span>
+									</label>
 								
 							</div>
 							<div ng-if="field.type=='radio'" options-count="{{ field.options.length }}" hide-empty>
@@ -91,7 +95,7 @@
 									<textarea  id="{{::field.id}}" name="{{field.id}}" ng-model="field.value" class="form-control" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}" ></textarea>
 							</div>
 
-							<div ng-if="field.type=='autocomplete'">
+							<div ng-if="field.type=='autocomplete'" class="fancy-form">
 
 								
 								<div 
@@ -99,9 +103,10 @@
 									after-text-validation="{{:: field.ServerValidation }}" 
 									after-text-params="{{::field.ServerValidationParameters }}"
 									>
-										{{field.value}}
+										
 								</div>
-								
+
+								<i class="fa fa-search"></i>
 								<angucomplete-alt id="{{field.id}}" 
 									pause="400" 
 									selected-object="formCtrl.handleAutoCompleteResult"  
@@ -112,10 +117,13 @@
 									title-field="finalDisplay"
 									remote-url-response-formatter="formCtrl.formatAutoCompleteResponse"
 									minlength="1" 
-									input-class="form-control"
+									input-class="form-control auto-complete"
 									match-class="highlight"
-									placeholder="Auto Complete Field"
-									clear-selected="true"></angucomplete-alt>
+									placeholder= "{{field.value}}"
+									clear-selected="true"><i class="fa fa-search">d</i></angucomplete-alt>
+
+
+
 							</div>
 						<!-- </div> -->
 					</div>

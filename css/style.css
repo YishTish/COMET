@@ -117,3 +117,13 @@ form.split-form {
     position: absolute;
     margin-top: -500px;
 }
+
+.auto-complete{
+    text-indent: 22px;
+}
+
+
+.angucomplete-dropdown{
+    max-height: 300px;
+    overflow: scroll;
+}
