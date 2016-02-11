@@ -1,21 +1,34 @@
-<nav class="navbar yamm navbar-default" role="navigation">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	      <a class="navbar-brand" href="#">
-	        <img alt="Brand" src="icons/favicon-32x32.png">
-	      </a>
-	    </div>
-        <ul class="nav navbar-nav">
-        	<li class="dropdown pill" uib-dropdown ng-repeat="item in menuCtrl.menuData" style="max-width:140px;">
-                <a class="dropdown-toggle" uib-dropdown-toggle toggle-event="mouseover" href="#">{{ item.title }}<b class="caret"></b></a>
-                <ul role="menu" class="dropdown-menu">
-                    <li><a tabindex="-1" href="#"> Action </a></li>
-                    <li><a tabindex="-1" href="#"> Another action </a></li>
-                    <li><a tabindex="-1" href="#"> Something else here </a></li>
-                    <li class="divider"></li>
-                    <li><a tabindex="-1" href="#"> Separated link </a></li>
-                </ul>
-            </li>
-        </ul>
-	  </div>
-</nav>
+	<header id="topNav">
+        <div class="container">
+    	    <a class="logo pull-left" href="index.html">
+    	        <img src="icons/favicon-32x32.png">
+    	    </a>
+            <div class="navbar-collapse pull-right nav-main-collapse collapse">
+                <nav class="nav-main">
+    	           <ul id="topMain" class="nav nav-pills nav-main">
+            	       <li class="dropdown mega-menu {{$index==1 ? 'active' : '' }}" ng-repeat="category in menuCtrl.menuData">
+                            <a class="dropdown-toggle" href="#">
+                                <span class="theme-color">{{ category.title.substr(0,15) }}</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                   <div class="row">
+                                        <div class="col-md-5th" ng-repeat="group in category.groups">
+                                            <ul class="list-unstyled">
+                                                <li>
+                                                    <span>{{ group.title }}</span>
+                                                </li>
+                                                <li ng-repeat="item in group.items">
+                                                    <a href="#">{{ item.label }}</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>

@@ -1,7 +1,7 @@
 app.directive('cometMenu', ['jsonServices','$filter', 'ajaxServices', 'cometServices', 
 	function(jsonServices, $filter, ajaxServices, cometServices) {
 	return{
-		restrict: 'E',
+		restrict: 'AE',
 		scope: {
 			
 		},
@@ -16,8 +16,9 @@ app.directive('cometMenu', ['jsonServices','$filter', 'ajaxServices', 'cometServ
 			self.getMenuData = function(){
 				ajaxServices.httpPromise("","json_src/menu.js").then(function(response){
 					self.menuData = response.menu;
+					console.log(self.menuData);
 				});
-			}
+			};
 
 			
 			self.getMenuData();
@@ -26,6 +27,7 @@ app.directive('cometMenu', ['jsonServices','$filter', 'ajaxServices', 'cometServ
 
 		controllerAs: 'menuCtrl',
 		bindToController: true,
+		transclude: false,
 		templateUrl: function(elem, attr){
 			return 'tpl/menu.tpl.html';
 		},

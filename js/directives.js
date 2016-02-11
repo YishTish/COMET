@@ -167,9 +167,8 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 			};
 
 			self.loadNextForm = function(path){
-				ajaxServices.httpPromise(self.urlPrefix, path).then(function(res){
-				//ajaxServices.httpPromise("", "json_src/wrx2002.json").then(function(res){
-					console.log(res);
+				//ajaxServices.httpPromise(self.urlPrefix, path).then(function(res){
+				ajaxServices.httpPromise("", "json_src/wrx2002.json").then(function(res){
 					self.handleResponse(res);
 
 				});

@@ -16,15 +16,15 @@
 	width:17%;
 }
 
-.container{
+/*.container{
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 	/*max-height: 600;
-	padding: 0 5% 5% 0; */
+	padding: 0 5% 5% 0; 
 	list-style: none;
 }
-
+*/
 .item{
 	
 }
