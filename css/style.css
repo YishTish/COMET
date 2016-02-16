@@ -127,3 +127,9 @@ form.split-form {
     max-height: 300px;
     overflow: scroll;
 }
+
+#topMain.nav-pills>li>a:hover>span.theme-color{
+	background-color: rgba(138, 185, 51, 0.42);
+	color: #fff;
+
+}
