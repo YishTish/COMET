@@ -3,7 +3,7 @@
     	    <a class="logo pull-left" href="index.html">
     	        <img src="icons/favicon-32x32.png">
     	    </a>
-            <div class="navbar-collapse pull-right nav-main-collapse collapse submenu-dark">
+            <div class="navbar-collapse pull-right nav-main-collapse collapse">
                 <nav class="nav-main">
     	           <ul id="topMain" class="nav nav-pills nav-main">
             	       <li class="dropdown mega-menu {{$index==1 ? 'active' : '' }}" ng-repeat="category in menuCtrl.menuData">
@@ -13,7 +13,7 @@
                             <ul class="dropdown-menu">
                                 <li>
                                    <div class="row">
-                                        <div class="col-md-5th" ng-repeat="group in category.groups">
+                                        <div class="" ng-repeat="group in category.groups">
                                             <ul class="list-unstyled" ng-if="group.items.length > 0">
                                                 <li>
                                                     <span>{{ group.title }}</span>
