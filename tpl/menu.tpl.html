@@ -12,14 +12,12 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
-                                   <div class="row">
-                                        <div class="" ng-repeat="group in category.groups">
-                                            <ul class="list-unstyled" ng-if="group.items.length > 0">
-                                                <li>
-                                                    <span>{{ group.title }}</span>
-                                                </li>
-                                                <li ng-repeat="item in group.items">
-                                                    <a href="#">{{ item.label }}</a>
+                                    <div class="row">
+                                        <div class="" ng-repeat="column in category.layoutColumns">
+                                            <ul class="list-unstyled" ng-if="column.length > 0">
+                                                <li ng-repeat="row in column">
+                                                    <a ng-if="row.label" href="#">{{ row.label }}</a>
+                                                    <span ng-if="row.title" >{{ row.title }}</span>
                                                 </li>
                                             </ul>
                                         </div>
