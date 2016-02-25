@@ -14,13 +14,14 @@ app.directive('cometMenu', ['jsonServices','$filter', 'ajaxServices', 'cometServ
 			self.menuData = Array("1","2","3");
 
 			self.getMenuData = function(){
-				ajaxServices.httpPromise("","json_src/menu.js").then(function(response){
+				ajaxServices.httpPromise(self.urlPrefix, self.loadPath).then(function(response){
 					self.menuData = response.menu;
 				});
 			};
 
 			
 			self.getMenuData();
+			console.log($scope.$parent.menu);
 
 		}], //close controller
 
@@ -31,6 +32,13 @@ app.directive('cometMenu', ['jsonServices','$filter', 'ajaxServices', 'cometServ
 			return 'tpl/menu.tpl.html';
 		},
 		link: function(scope, elem, attr,ctrl){
+			scope.$watch(
+				"$scope.$parent.menu",
+				function(menu){
+					console.log("My Watch Watches");
+					self.menuData = menu;
+			})
+
 		}
 	} // close return from first line of directive
 }]);

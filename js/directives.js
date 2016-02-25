@@ -117,6 +117,7 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 			};
 
 			self.save = function() {
+				console.log("Save");
 				if(self.modalLoaded == true){
 					var queryString = jsonServices.buildQueryString(self.formData)+"&SERVICE=DATAFORM";
 					ajaxServices.httpPromise(self.urlPrefix, queryString).then(function(response){
@@ -151,6 +152,8 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 					self.errorMessage = "";
 				}
 				if(res.menu){
+					console.log(res.menu);
+					$scope.$parent.menu=res.menu;
 					var curForm = "WRX2002";
 					var resId = "12404";
 					var url = "/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+curForm+"&STAGE=REQUEST&COMETSID="+self.sessionId+"&ID="+resId;
@@ -167,8 +170,9 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 			};
 
 			self.loadNextForm = function(path){
-				//ajaxServices.httpPromise(self.urlPrefix, path).then(function(res){
-				ajaxServices.httpPromise("", "json_src/wrx2002.json").then(function(res){
+				console.log(self.urlPrefix+path);
+				ajaxServices.httpPromise(self.urlPrefix, path).then(function(res){
+				//ajaxServices.httpPromise("", "json_src/wrx2002.json").then(function(res){
 					self.handleResponse(res);
 
 				});

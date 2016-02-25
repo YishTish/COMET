@@ -8,6 +8,8 @@ app.controller('appCtrl', ['$scope', 'ajaxServices', 'jsonServices', function ($
 
 	$scope.loadPath = url;
 	
+
+	$scope.menu = {};
 }]);
 
 // .config(function($mdThemingProvider) {
