@@ -1,5 +1,5 @@
-app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', '$uibModal','autoCompleteServices', 'cometServices', 'afterFieldServices', 'spinnerService',
-	function(jsonServices, $filter, ajaxServices, $uibModal, autoCompleteServices, cometServices, afterFieldServices, spinnerService) {
+app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', '$uibModal','autoCompleteServices', 'cometServices', 'afterFieldServices', 'spinnerService', 'menuServices',
+	function(jsonServices, $filter, ajaxServices, $uibModal, autoCompleteServices, cometServices, afterFieldServices, spinnerService, menuServices) {
 	return{
 		restrict: 'E',
 		transclude: true,
@@ -9,7 +9,8 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', '$uibModal
 			closeFunction: '&'
 
 		},
-		controller: ['$scope', 'spinnerService', '$uibModal', '$log', function($scope, spinnerService, $uibModal, $log, elem){
+		controller: ['$scope', 'spinnerService', '$uibModal', '$log', 
+		function($scope, spinnerService, $uibModal, $log, elem){
 			var self = this;
 			self.element = undefined;
 			self.formScope = undefined;
@@ -73,8 +74,8 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', '$uibModal
 			    modalInstance.result.then(function (modalRes) {
 			     	afterFieldServices.handleAfterFieldResponse(modalRes, self.formData, self.dataMap);
 					self.modalLoaded = false;
-			  });
-		}
+			  	});
+			}
 
 
 
@@ -154,6 +155,7 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 					var curForm = "WRX2002";
 					var resId = "12404";
 					var url = "/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+curForm+"&STAGE=REQUEST&COMETSID="+self.sessionId+"&ID="+resId;
+					menuServices.updateMenu(res.menu);
 					self.loadNextForm(url);
 					return;
 				}
@@ -167,8 +169,8 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 			};
 
 			self.loadNextForm = function(path){
-				//ajaxServices.httpPromise(self.urlPrefix, path).then(function(res){
-				ajaxServices.httpPromise("", "json_src/wrx2002.json").then(function(res){
+				ajaxServices.httpPromise(self.urlPrefix, path).then(function(res){
+				//ajaxServices.httpPromise("", "json_src/wrx2002.json").then(function(res){
 					self.handleResponse(res);
 
 				});

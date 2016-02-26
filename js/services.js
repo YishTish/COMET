@@ -249,61 +249,75 @@ FORMCODE="+formId+"&FIELD="+fieldId+"&REQUEST="+request+"&DATA=^"+fieldId+"="+fi
 }])
 
 .factory('menuServices', [function () {
-	return {
-		columnLayout: function (data) {
+	var menu = {};
+	menu.data = {};
 
-			function layout(data) {
-				data.forEach(function(category) {
-					// change the ratio between columns and rows
-					var rows = ~~(category.divideValue * 1.67 + 2);
+	menu.updateMenu = function (data) {
+		// saves in data for each category 'divideRatio'
+		calculateDivideRatio(data);
+		// saves in data for each category 'layoutColumns'
+		generateLayout(data);
 
-					var list = [ [] ];
-					var currentColumn = 0, currentRow = 0;
+		menu.data = data;
+	}
 
-					category.groups.forEach(function (group) {
-						// we don't want to display empty groups
-						if (group.items.length > 0) {
+	function calculateDivideRatio(data) {
+		data.forEach(function(category, index) {
+			// group title should be counted as well as group items 
+			var items = category.groups.length; 
 
-							// prevent the group title to be the last item in the column
-							if (currentRow === rows - 1) nextColumn();
+			category.groups.forEach(function(group) {
+				// exclude the empty groups
+				if (group.items.length === 0) items--; 
+				
+				// add group items
+				items += group.items.length;
+			});
+			// an average value of dividing items into colums
+			category.divideRatio = ~~(Math.sqrt(items) + 1); 
+		}); 
+	}
 
-							// add group to the column
-							list[currentColumn].push(group);
-							currentRow++;
-							if (currentRow >= rows) nextColumn();
+	function generateLayout(data) {
+		data.forEach(function(category) {
+			// change the ratio between columns and rows
+			var rows = ~~(category.divideRatio * 1.67 + 2);
 
-							// add each item of the group to the column
-							group.items.forEach(function (item) {
-								list[currentColumn].push(item);
-								currentRow++;
-								if (currentRow >= rows) nextColumn();
-							});
-						};	
+			var list = [ [] ];
+			var currentColumn = 0, currentRow = 0;
+
+			category.groups.forEach(function (group) {
+				// we don't want to display empty groups
+				if (group.items.length > 0) {
+
+					// prevent the group title to be the last item in the column
+					if (currentRow === rows - 1) nextColumn();
+
+					// add group to the column
+					list[currentColumn].push(group);
+					currentRow++;
+					if (currentRow >= rows) nextColumn();
+
+					// add each item of the group to the column
+					group.items.forEach(function (item) {
+						list[currentColumn].push(item);
+						currentRow++;
+						if (currentRow >= rows) nextColumn();
 					});
+				};	
+			});
 
-					function nextColumn () {
-						currentRow = 0; 
-						currentColumn++; 
-						list.push([]); 
-					}
-
-					category.layoutColumns = list;
-				});
+			function nextColumn () {
+				currentRow = 0; 
+				currentColumn++; 
+				list.push([]); 
 			}
 
-			data.forEach(function(category, index) {
-				var items = category.groups.length; // this one for group title
-				category.groups.forEach(function(group) {
-					if (group.items.length === 0) items--;
-					items += group.items.length;
-				});
-				category.divideValue = ~~(Math.sqrt(items) + 1); // an average value of dividing items in colums
-				category.numberOfItems = items;
-			}); 
-			layout(data);
-
-		}
+			category.layoutColumns = list;
+		});
+		return data;
 	}
+	return menu;
 }]);
 
 

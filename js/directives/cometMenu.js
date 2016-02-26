@@ -1,19 +1,27 @@
-app.directive('cometMenu', ['jsonServices','$filter', 'ajaxServices', 'cometServices', 
-	function(jsonServices, $filter, ajaxServices, cometServices) {
-	return{
+app.directive('cometMenu', ['jsonServices','$filter', 'ajaxServices', 'cometServices', 'menuServices',
+function(jsonServices, $filter, ajaxServices, cometServices, menuServices
+	) {
+	return {
 		restrict: 'AE',
 		scope: {
 			
 		},
-		controller: ['$scope', 'spinnerService', 'menuServices',
-		function($scope, spinnerService, menuServices, elem){
+		controller: ['$scope', 'spinnerService', 
+		function($scope, spinnerService,  elem){
 			var self = this;
 			self.currentTopic = {};
 			self.urlPrefix = config.base_url+":"+config.port;
 			self.loadPath = "/comet.icsp?MGWLPN=iCOMET&COMETSID=&COMETMode=JS&SERVICE=DATAFORM&REQUEST=WSY1001&STAGE=REQUEST";
 			self.formTitle = "COMET Login"
-			self.menuData = Array("1","2","3");
+			self.menuData = []; 
 
+			$scope.$watch(function() {
+				return menuServices.data;
+			}, function (newValue, oldValue) {
+				self.menuData = newValue;
+			});
+
+			/*
 			self.getMenuData = function(callback){
 				ajaxServices.httpPromise("","json_src/menu.js").then(function(response){
 					self.menuData = response.menu;
@@ -23,6 +31,7 @@ app.directive('cometMenu', ['jsonServices','$filter', 'ajaxServices', 'cometServ
 				});
 			};
 			self.getMenuData(menuServices.columnLayout);
+			*/
 
 		}], //close controller
 
