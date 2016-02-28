@@ -149,20 +149,27 @@ form.split-form {
 
 
 #topNav #topMain>li.mega-menu div.row div{
-	border-left: none;
+	border-left-style: solid;
+	border-top: rgba(0,0,0,0.1) 1px solid;
+	padding-bottom: 20px;
+
 }
 
 #topNav ul.dropdown-menu li {
 	border-bottom: none;
 }
 #topNav ul.dropdown-menu li a{
-	padding: 5px 5px;
+	padding: 5px 5px 5px 15px;
 	font-weight: 200;
 	line-height: 1;
 }
 
 #topNav #topMain>li.mega-menu div.row div>ul>li>span{
 	color: #CC4737;
-	font-size: 12px;
+	font-size: 13px;
 	font-weight: 800;
+	padding: 15px 5px 0px 5px;
+}
+#topNav #topMain>li.mega-menu div.row div>ul>li:first-child>span{
+	padding: 0px 5px 0px 5px;
 }

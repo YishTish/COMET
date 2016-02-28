@@ -12,6 +12,7 @@ app.controller('appCtrl', ['$scope', 'ajaxServices', 'jsonServices', function ($
 	$scope.menu = {};
 }]);
 
+
 // .config(function($mdThemingProvider) {
 //   // $mdThemingProvider.theme('altTheme')
 //   //   .primaryPalette('purple')
