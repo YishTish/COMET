@@ -8,7 +8,8 @@
     	           <ul id="topMain" class="nav nav-pills nav-main">
             	       <li class="dropdown mega-menu {{$index==1 ? 'active' : '' }}" ng-repeat="category in menuCtrl.menuData">
                             <a class="dropdown-toggle" href="#">
-                                {{ category.title.substr(0,10) }}
+                                <span ng-if="!category.icon" class="wrapped-text">{{ category.title }}</span>
+                                <span ng-if="category.icon" class="fa {{ category.icon }} fa-2x"></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <li>
@@ -16,7 +17,7 @@
                                         <div class="" ng-repeat="column in category.layoutColumns">
                                             <ul class="list-unstyled" ng-if="column.length > 0">
                                                 <li ng-repeat="row in column">
-                                                    <a ng-if="row.label" href="#">{{ row.label }}</a>
+                                                    <a ng-if="row.label" ng-click="reloadForm(row)" href="#">{{ row.label }}</a>
                                                     <span ng-if="row.title" >{{ row.title }}</span>
                                                 </li>
                                             </ul>

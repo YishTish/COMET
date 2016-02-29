@@ -249,13 +249,14 @@ FORMCODE="+formId+"&FIELD="+fieldId+"&REQUEST="+request+"&DATA=^"+fieldId+"="+fi
 }])
 
 .factory('menuServices', [function () {
-	var menu = {};
-	menu.data = {};
+	var menu = {
+		data: {}	
+	};
 
 	menu.updateMenu = function (data) {
-		// saves in data for each category 'divideRatio'
+		// save 'divideRatio' in data for each category
 		calculateDivideRatio(data);
-		// saves in data for each category 'layoutColumns'
+		// save 'layoutColumns' in data for each category
 		generateLayout(data);
 
 		menu.data = data;
@@ -315,10 +316,18 @@ FORMCODE="+formId+"&FIELD="+fieldId+"&REQUEST="+request+"&DATA=^"+fieldId+"="+fi
 
 			category.layoutColumns = list;
 		});
-		return data;
 	}
 	return menu;
-}]);
+}])
 
+.factory("formService", function() {
+	var form = {
+		currentForm: "WRX2002"
+	};
 
+	form.updateForm = function (formCode) {
+		form.currentForm = formCode;
+	};
 
+	return form;
+});
