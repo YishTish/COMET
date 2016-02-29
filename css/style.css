@@ -177,4 +177,21 @@ form.split-form {
 #topMain.nav-pills>li>a.dropdown-toggle{
 	display: table-cell;
 	vertical-align: middle;
+	color: steelblue;
+	background-color: #fff;
+	text-transform: uppercase;
+}
+#topNav {
+	background-color: #fff;
+}
+#topMain.nav-pills>li {
+	margin-right: 1px;
+}
+#topMain.nav-pills>li>a.dropdown-toggle .wrapped-text{
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 12px;
+	max-width: 100px;
+	line-height: 130%;
 }
