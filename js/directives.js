@@ -9,8 +9,8 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', '$uibModal
 			closeFunction: '&'
 
 		},
-		controller: ['$scope', 'spinnerService', '$uibModal', '$log', 
-		function($scope, spinnerService, $uibModal, $log, elem){
+		controller: ['$scope', 'spinnerService', '$uibModal', '$log', "formService",
+		function($scope, spinnerService, $uibModal, $log, formService, elem){
 			var self = this;
 			self.element = undefined;
 			self.formScope = undefined;
@@ -215,6 +215,14 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 
 
 			self.loadNextForm(self.loadPath);
+
+			$scope.$watch(function() {
+				return formService.currentForm;
+			}, function (curForm) {
+				var url = "/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+
+				curForm + "&STAGE=REQUEST&COMETSID=" + self.sessionId;
+				self.loadNextForm(url);
+			});
 
 
 		}], //close controller

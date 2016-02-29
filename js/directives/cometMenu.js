@@ -1,13 +1,10 @@
 app.directive('cometMenu', ['jsonServices','$filter', 'ajaxServices', 'cometServices', 'menuServices',
-function(jsonServices, $filter, ajaxServices, cometServices, menuServices
-	) {
+function(jsonServices, $filter, ajaxServices, cometServices, menuServices ) {
 	return {
 		restrict: 'AE',
-		scope: {
-			
-		},
-		controller: ['$scope', 'spinnerService', 
-		function($scope, spinnerService,  elem){
+		scope: {},
+		controller: ['$scope', 'spinnerService', 'formService',
+		function($scope, spinnerService, formService, elem){
 			var self = this;
 			self.currentTopic = {};
 			self.urlPrefix = config.base_url+":"+config.port;
@@ -15,23 +12,16 @@ function(jsonServices, $filter, ajaxServices, cometServices, menuServices
 			self.formTitle = "COMET Login"
 			self.menuData = []; 
 
+			$scope.reloadForm = function (item) {
+				console.log(item.label);
+				formService.updateForm(item.request);
+			}
+
 			$scope.$watch(function() {
 				return menuServices.data;
 			}, function (newValue, oldValue) {
 				self.menuData = newValue;
 			});
-
-			/*
-			self.getMenuData = function(callback){
-				ajaxServices.httpPromise("","json_src/menu.js").then(function(response){
-					self.menuData = response.menu;
-					if (typeof(callback) === "function") {
-						callback(response.menu);
-					}
-				});
-			};
-			self.getMenuData(menuServices.columnLayout);
-			*/
 
 		}], //close controller
 
