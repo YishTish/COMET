@@ -173,3 +173,8 @@ form.split-form {
 #topNav #topMain>li.mega-menu div.row div>ul>li:first-child>span{
 	padding: 0px 5px 0px 5px;
 }
+
+#topMain.nav-pills>li>a.dropdown-toggle{
+	display: table-cell;
+	vertical-align: middle;
+}
