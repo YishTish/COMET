@@ -1,5 +1,5 @@
-app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', '$uibModal','autoCompleteServices', 'cometServices', 'afterFieldServices', 'spinnerService', 'menuServices',
-	function(jsonServices, $filter, ajaxServices, $uibModal, autoCompleteServices, cometServices, afterFieldServices, spinnerService, menuServices) {
+app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', '$uibModal','autoCompleteServices', 'cometServices', 'afterFieldServices', 'menuServices', 'spinnerServ',
+	function(jsonServices, $filter, ajaxServices, $uibModal, autoCompleteServices, cometServices, afterFieldServices, menuServices, spinnerServ) {
 	return{
 		restrict: 'E',
 		transclude: true,
@@ -9,8 +9,8 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', '$uibModal
 			closeFunction: '&'
 
 		},
-		controller: ['$scope', 'spinnerService', '$uibModal', '$log', "formService",
-		function($scope, spinnerService, $uibModal, $log, formService, elem){
+		controller: ['$scope', '$uibModal', '$log', "formService",
+		function($scope, $uibModal, $log, formService, elem){
 			var self = this;
 			self.element = undefined;
 			self.formScope = undefined;
@@ -33,7 +33,6 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', '$uibModal
 
 			self.sendForm = function(){
 			};
-
 
 			self.buildAutoCompleteQuery = function(fieldId, request){
 				return autoCompleteServices.buildAutoCompleteQuery(self.formData.form[0].id, fieldId, request, self.sessionId);
@@ -119,6 +118,7 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 
 			self.save = function() {
 				console.log("Save");
+				spinnerServ.show();
 				if(self.modalLoaded == true){
 					var queryString = jsonServices.buildQueryString(self.formData)+"&SERVICE=DATAFORM";
 					ajaxServices.httpPromise(self.urlPrefix, queryString).then(function(response){
@@ -128,11 +128,11 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 						else{
 							self.closeFunction({res: response});
 						}
-					})
+						spinnerServ.hide();
+					});
 					return;
 				}
 				var queryString = jsonServices.buildQueryString(self.formData);
-				spinnerService.show('saveSpinner');
 				ajaxServices.httpPromise(self.urlPrefix, queryString).then(function(res){
 					if(self.$modalInstance){
 						$modalInstance.close();
@@ -140,12 +140,15 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 					else{
 						self.handleResponse(res);
 					}
-					spinnerService.hide('saveSpinner');
-				})
+					spinnerServ.hide();
+				});
 
 			};
 
 			self.handleResponse = function(res){
+				if (typeof res === "string") {
+					return;
+				}
 				if(res.error){
 					self.errorMessage = res.error;
 				}
@@ -172,10 +175,11 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 			};
 
 			self.loadNextForm = function(path){
+				spinnerServ.show();
 				ajaxServices.httpPromise(self.urlPrefix, path).then(function(res){
 				//ajaxServices.httpPromise("", "json_src/wrx2002.json").then(function(res){
 					self.handleResponse(res);
-
+					spinnerServ.hide();
 				});
 			};
 
@@ -418,3 +422,25 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 		}
 	}
 }])
+
+.directive('glyphSpinner', ['spinnerServ', function (spinnerServ) {
+
+	function link(scope, elem, attr) {
+		scope.display = spinnerServ.display;
+
+		scope.$watch(function () {
+			return spinnerServ.display;
+		}, function (value) {
+			scope.display = value;
+		})
+	}
+
+
+	var template = "<div style='display: {{ display }}' class='glyph-spinner'><i class='fa fa-spinner fa-spin fa-3x'></i></div>";
+
+	return {	
+		restrict: 'E',
+		link: link,
+		template: template
+	}	
+}]);
