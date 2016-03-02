@@ -208,6 +208,12 @@ form.split-form {
 
 .glyph-spinner i {
 	position: relative;
-	left: 50%;
-	top: 50%;
+	top: calc(50% + 21px);
+	left: calc(50% - 21px);
+}
+
+.glyph-spinner span {
+	position: relative;
+	top: calc(50% + 55px);
+	left: calc(50% - 120px);
 }

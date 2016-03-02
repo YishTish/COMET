@@ -436,7 +436,7 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 	}
 
 
-	var template = "<div style='display: {{ display }}' class='glyph-spinner'><i class='fa fa-spinner fa-spin fa-3x'></i></div>";
+	var template = "<div style='display: {{ display }}' class='glyph-spinner'><i class='fa fa-spinner fa-spin fa-3x'></i><span>Please wait while loading…</span></div>";
 
 	return {	
 		restrict: 'E',
