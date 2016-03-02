@@ -10,9 +10,21 @@ When running Ubuntu - install nodejs and add symling to node: sud ln -s /usr/bin
 
 
 
-
+var browserify = require('browserify');
 var gulp = require('gulp');
- 
+var uglify = require('gulp-uglify');
+var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
+
+gulp.task('browserify', function() {
+  return browserify(['./js/app.js'])
+    .bundle()
+    .pipe(source('bundle.js')) // gives streaming vinyl file object
+    .pipe(buffer()) // <----- convert from streaming to buffered vinyl file object
+    .pipe(uglify()) // now gulp-uglify works 
+    .pipe(gulp.dest('./build'));
+});
+
 // `gulp.task()` defines task that can be run calling `gulp xyz` from the command line
 // The `default` task gets called when no task name is provided to Gulp
 var EXPRESS_PORT = 5000;
@@ -97,4 +109,5 @@ gulp.task('default', function () {
   startExpress();
   startLivereload();
   gulp.watch(['*.html', 'js/**/*.js', 'css/*.css', 'tpl/*.html'], notifyLiveReload);
+  gulp.watch(['js/**/*.js'], ['browserify']);
 });

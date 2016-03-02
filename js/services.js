@@ -1,3 +1,8 @@
+require('angular');
+
+var app = angular.module('COMET');
+var config = require('./config');
+
 app.factory('jsonServices', [ '$http' , function ($http) {
 	return {
 			parseJson: function(jsonObject){
@@ -330,25 +335,4 @@ FORMCODE="+formId+"&FIELD="+fieldId+"&REQUEST="+request+"&DATA=^"+fieldId+"="+fi
 	};
 
 	return form;
-})
-
-.factory("spinnerServ", function() {
-	var spin = 0;
-	var spinner = {
-		display: 'none'
-	};
-
-	spinner.show = function () {
-		spinner.display = 'block';
-		spin++;
-	}
-
-	spinner.hide = function () {
-		spin = spin > 0 ? spin - 1 : 0;
-
-		if (spin === 0) {
-			spinner.display = 'none';
-		}
-	}
-	return spinner;
 });
