@@ -331,6 +331,10 @@ FORMCODE="+formId+"&FIELD="+fieldId+"&REQUEST="+request+"&DATA=^"+fieldId+"="+fi
 			category.groups.forEach(function (group) {
 				// we don't want to display empty groups
 				if (group.items.length > 0 && group.column) {
+
+					// add group to the column
+					list[+group.column - 1].push(group);
+					
 					// add each item of the group to the column
 					group.items.forEach(function (item) {
 						list[+group.column - 1].push(item);
