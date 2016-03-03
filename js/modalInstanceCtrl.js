@@ -12,6 +12,9 @@
 // 	}
 
 // }]);
+
+app  = angular.module('app');
+
 app.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, loadPath) {
 
  

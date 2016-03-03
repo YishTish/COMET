@@ -103,7 +103,7 @@ function notifyLiveReload(event){
 	});
 }
 
-gulp.task('default', function () {
+gulp.task('default', ['browserify'], function () {
   
   console.log('Gulp and running lintech_software!');
   startExpress();

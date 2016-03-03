@@ -1,4 +1,9 @@
+require('jquery');
 require('angular');
+var _ = require('lodash');
+require('angular-modal-service');
+require('angucomplete-alt');
+require('angular-ui-bootstrap')
 
 var config = require('./config');
 
