@@ -49,14 +49,14 @@
 
 
 							<div ng-if="field.type=='date'">
-										<input type="date" id="{{::field.id}}" class="form-control" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{field.disabled}}" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}"  validate-text/>
+										<input type="text" id="{{::field.id}}" class="form-control masked" data-format="99/99/9999" placeholder="DD/MM/YYYY" data-placeholder="_" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{field.disabled}}" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}"  validate-text/>
 								
 							</div> 
 
 
 
 							<div ng-if="field.type=='time'">
-										<input type="time" id="{{::field.id}}" class="form-control" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{field.disabled}}" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}"  validate-text/>
+										<input type="text" id="{{::field.id}}" class="form-control masked" data-format="99:99:99" placeholder="00:00:00" data-placeholder="_" name="{{::field.id}}" ng-required="field.required" ng-model="field.value" ng-disabled="{{field.disabled}}" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}"  validate-text/>
 									
 							</div>
 

@@ -156,8 +156,6 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 					self.errorMessage = "";
 				}
 				if(res.menu){
-					console.log(res.menu);
-					$scope.$parent.menu=res.menu;
 					var curForm = "WRX2002";
 					var resId = "12404";
 					var url = "/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+curForm+"&STAGE=REQUEST&COMETSID="+self.sessionId+"&ID="+resId;
@@ -191,6 +189,7 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 				self.formData = jsonServices.parseJson(serverData);
 				console.log(self.formData);
 				self.dataMap = jsonServices.mapJson(serverData);
+				setTimeout(function () { Init(); }, 300);
 			};
 
 			self.reset = function() {
