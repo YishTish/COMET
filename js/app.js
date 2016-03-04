@@ -1,9 +1,9 @@
-require('jquery');
+window.jQuery = window.$ = require('jquery');
 require('angular');
-var _ = require('lodash');
+require('lodash');
 require('angular-modal-service');
 require('angucomplete-alt');
-require('angular-ui-bootstrap')
+require('angular-bootstrap');
 
 var config = require('./config');
 
@@ -25,10 +25,14 @@ app.controller('appCtrl', ['$scope', 'ajaxServices', 'jsonServices', function ($
 	$scope.menu = {};
 }]);
 
+require('./modalInstanceCtrl.js');
+
 require('./directives/glyphSpinner');
 require('./directives.js');
 require('./directives/cometMenu');
 
+window.plugin_path = 'assets/plugins/';
+require('wb02dsn1b');
 
 
 // .config(function($mdThemingProvider) {

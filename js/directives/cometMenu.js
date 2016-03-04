@@ -1,5 +1,3 @@
-require('angular');
-
 var app = angular.module('COMET');
 var config = require('../config');
 

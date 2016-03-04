@@ -1,5 +1,3 @@
-require('angular');
-
 var app = angular.module('COMET');
 
 app.directive('glyphSpinner', ['spinnerServ', function (spinnerServ) {

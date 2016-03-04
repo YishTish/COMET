@@ -13,7 +13,8 @@
 
 // }]);
 
-app  = angular.module('app');
+app  = angular.module('COMET');
+var $ = require('jquery');
 
 app.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, loadPath) {
 
