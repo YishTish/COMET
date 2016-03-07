@@ -1,3 +1,5 @@
+var app = angular.module('COMET');
+
 app.directive('modalFormButton', [function(){
 	return{
 		restrict: 'A',
