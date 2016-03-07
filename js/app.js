@@ -1,37 +1,36 @@
+// some external libs doesn't support node modules
 window.jQuery = window.$ = require('jquery');
+
+// required libs 
 require('angular');
-require('lodash');
 require('angular-modal-service');
 require('angucomplete-alt');
-require('angular-bootstrap');
+require('angular-ui-bootstrap');
+require('lodash');
 
+// configuration file
 var config = require('./config');
 
+// initialize the anglur
 var app = angular.module('COMET', ['angularModalService', "angucomplete-alt", 'ui.bootstrap']);
 
+// add services
 require('./services.js');
 require('./services/spinner');
 
+// add controllers
+require('./controllers/appCtrl');
+require('./controllers/modalInstanceCtrl.js');
 
-app.controller('appCtrl', ['$scope', 'ajaxServices', 'jsonServices', function ($scope, ajaxServices, jsonServices) {
-
-	var curForm = "WRX2002";
-	var resId = "12404";
-	var url = "/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+curForm+"&STAGE=REQUEST&COMETSID="+self.sessionId+"&ID="+resId;
-
-	$scope.loadPath = url;
-	
-
-	$scope.menu = {};
-}]);
-
-require('./modalInstanceCtrl.js');
-
+// add derictives
 require('./directives/glyphSpinner');
 require('./directives.js');
 require('./directives/cometMenu');
 
+
+// this variable should be set before loading the plugin
 window.plugin_path = 'assets/plugins/';
+// load bootstarp template
 require('wb02dsn1b');
 
 

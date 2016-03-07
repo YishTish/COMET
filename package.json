@@ -5,7 +5,10 @@
   "main": "gulpfile.js",
   "dependencies": {
     "angucomplete-alt": "^2.2.0",
-    "angular": "^1.5.0"
+    "angular": "^1.5.0",
+    "angular-modal-service": "^0.6.10",
+    "angular-ui-bootstrap": "^1.2.4",
+    "jquery": "^2.2.1"
   },
   "devDependencies": {
     "bower-resolve": "^2.2.1",
