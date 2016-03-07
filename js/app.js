@@ -1,16 +1,37 @@
-var app = angular.module('COMET', ['angularModalService', "angucomplete-alt" ,'angularSpinners', 'ui.bootstrap']);
+// some external libs doesn't support node modules
+window.jQuery = window.$ = require('jquery');
 
-app.controller('appCtrl', ['$scope', 'ajaxServices', 'jsonServices', function ($scope, ajaxServices, jsonServices) {
+// required libs 
+require('angular');
+require('angular-modal-service');
+require('angucomplete-alt');
+require('angular-ui-bootstrap');
+require('lodash');
 
-	var curForm = "WRX2002";
-	var resId = "12404";
-	var url = "/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+curForm+"&STAGE=REQUEST&COMETSID="+self.sessionId+"&ID="+resId;
+// configuration file
+var config = require('./config');
 
-	$scope.loadPath = url;
-	
+// initialize the anglur
+var app = angular.module('COMET', ['angularModalService', "angucomplete-alt", 'ui.bootstrap']);
 
-	$scope.menu = {};
-}]);
+// add services
+require('./services.js');
+require('./services/spinner');
+
+// add controllers
+require('./controllers/appCtrl');
+require('./controllers/modalInstanceCtrl.js');
+
+// add derictives
+require('./directives/glyphSpinner');
+require('./directives.js');
+require('./directives/cometMenu');
+
+
+// this variable should be set before loading the plugin
+window.plugin_path = 'assets/plugins/';
+// load bootstarp template
+require('wb02dsn1b');
 
 
 // .config(function($mdThemingProvider) {

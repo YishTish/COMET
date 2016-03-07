@@ -1,10 +1,13 @@
+var app = angular.module('COMET');
+var config = require('../config');
+
 app.directive('cometMenu', ['jsonServices','$filter', 'ajaxServices', 'cometServices', 'menuServices',
 function(jsonServices, $filter, ajaxServices, cometServices, menuServices ) {
 	return {
 		restrict: 'AE',
 		scope: {},
-		controller: ['$scope', 'spinnerService', 'formService',
-		function($scope, spinnerService, formService, elem){
+		controller: ['$scope', 'formService',
+		function($scope, formService, elem){
 			var self = this;
 			self.currentTopic = {};
 			self.urlPrefix = config.base_url+":"+config.port;

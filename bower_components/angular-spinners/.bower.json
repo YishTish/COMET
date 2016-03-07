@@ -24,6 +24,5 @@
   },
   "_source": "git://github.com/codetunnel/angular-spinners.git",
   "_target": "~3.0.4",
-  "_originalSource": "angular-spinners",
-  "_direct": true
+  "_originalSource": "angular-spinners"
 }

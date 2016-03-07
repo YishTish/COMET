@@ -1,13 +1,13 @@
 <html lang='en' ng-app='COMET'>
 	<head>
-<link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
 		<!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.css" /> -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic" />
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
@@ -18,91 +18,56 @@
 
 
 
-            <!-- SMARTY BOOTSTRAP TEMPLATES SCRIPTS -->
-            <link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
-            <link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+        <!-- SMARTY BOOTSTRAP TEMPLATES SCRIPTS -->
+        <link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
 
-            <link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
-            <link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
 
 		<link rel="stylesheet" href="css/style.css" />
 
 		<meta name="viewport" content="initial-scale=1">
 	</head>
-	<body class="smoothscroll enable-animation" style="padding-top:0px" ng-controller="appCtrl">
-	<toast></toast>
+    <body class="smoothscroll enable-animation" style="padding-top:0px" ng-controller="appCtrl">
+	   <toast></toast>
 	
-	<!-- <md-toolbar layout="row">
-      <div class="md-toolbar-tools">
-        <h1>{{title}}</h1>
-      </div>
-	</md-toolbar>  -->
-<div id="wrapper">
-    <div id="header" class="sticky clearfix" comet-menu>
-	</div>
-    
-	<div class="container">
-    	<div class="row">
-    		<div class="col-md-1"></div>
-    		<div class="col-md-10">
-    			<comet-form load-path="loadPath" form-title="formTitle"></comet-form>
-    		</div>
-    		<div class="col-md-1"></div>
-    	</div>
-    </div>
-</div>
-    	<script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Latest compiled and minified CSS -->
-	
-	<!-- Optional theme -->
-		<!--<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css"> -->
-	
-	<!-- Angular Material Dependencies -->
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-
-
-    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-    <script src="bower_components/angular-aria/angular-aria.min.js"></script>
-	<script src="bower_components/angular-messages/angular-messages.min.js"></script>
-    <script src="bower_components/is_js/is.min.js"></script>
-	<!-- Lodash -->
-	<script src="bower_components/lodash/lodash.js"></script>
-
-	<!-- angular modalLoaded -->
-	<script src="bower_components/angular-modal-service/dst/angular-modal-service.min.js"></script>
-
-	<!-- Angular Spinner -->
-	<script src="bower_components/angular-spinners/dist/angular-spinners.min.js"></script>
-
-	<!-- angular autocomplete -->
-	<script src="bower_components/angucomplete-alt/angucomplete-alt.js"></script>
-	
-
-<!--   <script src="bower_components/angular-mega-menu/src/js/angular-mega-menu.js"></script> -->
-
-    <script src="js/config.js"></script>
-	<script src="js/app.js"></script>
-    <script src="js/services.js"></script>
-    <script src="js/directives.js"></script>
-    <script src="js/directives/cometMenu.js"></script>
-    <script src="js/modalInstanceCtrl.js"></script>
-  
-
-
-    <script type="text/javascript">var plugin_path = 'assets/plugins/';</script>
+    	<!-- <md-toolbar layout="row">
+          <div class="md-toolbar-tools">
+            <h1>{{title}}</h1>
+          </div>
+    	</md-toolbar>  -->
+        <div id="wrapper">
+            <div id="header" class="sticky clearfix" comet-menu></div>
             
-    <script type="text/javascript" src="assets/js/scripts.js"></script>
-        
-            <!-- STYLESWITCHER - REMOVE -->
-    <script type="text/javascript" src="assets/plugins/smoothscroll.js"></script>
+        	<div class="container">
+            	<div class="row">
+            		<div class="col-md-1"></div>
+            		<div class="col-md-10">
+            			<comet-form load-path="loadPath" form-title="formTitle"></comet-form>
+            		</div>
+            		<div class="col-md-1"></div>
+            	</div>
+            </div>
+        </div>
 
+        <script src="build/bundle.js"></script>
 
-    <!-- End of Wrap-Bootstrap integration -->
-    <glyph-spinner></glyph-spinner>
-</section>
-  </body>
-
-<spinner class="spinner" name="saveSpinner" img-src="img/spinner.gif">Loading...</spinner>
-	</body>
+        <!-- Latest compiled and minified CSS -->
+    	
+    	<!-- Optional theme -->
+    		<!--<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css"> -->
+    	
+    	<!-- Angular Material Dependencies -->
+    <!--
+        <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+    	<script src="bower_components/angular-messages/angular-messages.min.js"></script>
+        <script src="bower_components/is_js/is.min.js"></script>
+    -->
+        <!--<script src="bower_components/angular-mega-menu/src/js/angular-mega-menu.js"></script>-->
+            
+        <!-- End of Wrap-Bootstrap integration -->
+        <glyph-spinner></glyph-spinner>
+    </body>
 </html>
