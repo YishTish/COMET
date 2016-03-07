@@ -1,13 +1,15 @@
 var app = angular.module('COMET');
 
-app.directive('submitButton', [function(){
+
+
+app.directive('hideEmpty', [function(){
 	return{
 		restrict: 'A',
 		require: '^cometForm',
 		link: function(scope, elem, attr, formCtrl){
-			elem.bind('click', function(){
-				elem.toggleClass('active');
-			});
+			if(attr.optionsCount==0){
+				elem.parent().hide();
+			}
 		}
 	}
-}]);
+}])

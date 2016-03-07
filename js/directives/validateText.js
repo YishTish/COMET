@@ -1,3 +1,5 @@
+var app = angular.module('COMET');
+
 app.directive('validateText', ['ajaxServices', 'jsonServices', 'afterFieldServices', function (ajaxServices, jsonServices, afterFieldServices) {
 	return {
 		restrict: 'A',

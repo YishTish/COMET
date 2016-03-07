@@ -1,3 +1,6 @@
+var app = angular.module('COMET');
+
+
 app.directive('cometCheckbox', ['jsonServices', 'ajaxServices','afterFieldServices', function(jsonServices, ajaxServices,afterFieldServices){
 	return{
 		restrict: 'A',
@@ -8,5 +11,5 @@ app.directive('cometCheckbox', ['jsonServices', 'ajaxServices','afterFieldServic
 				afterFieldServices.sendAfterFieldRequest(formCtrl.formData, formCtrl.dataMap, attr.name, numericVal, attr.afterTextValidation, attr.afterTextParams);
 			});
 		}
-	}
+	};
 }]);

@@ -15,7 +15,13 @@ var config = require('./config');
 var app = angular.module('COMET', ['angularModalService', "angucomplete-alt", 'ui.bootstrap']);
 
 // add services
-require('./services.js');
+require('./services/jsonServices');
+require('./services/ajaxServices');
+require('./services/cometServices');
+require('./services/autoCompleteServices');
+require('./services/afterFieldServices');
+require('./services/menuServices');
+require('./services/formService');
 require('./services/spinner');
 
 // add controllers
@@ -24,7 +30,14 @@ require('./controllers/modalInstanceCtrl.js');
 
 // add derictives
 require('./directives/glyphSpinner');
-require('./directives.js');
+require('./directives/cometForm');
+require('./directives/cometField');
+require('./directives/showErrors');
+require('./directives/validateText');
+require('./directives/cometCheckbox');
+require('./directives/modalFormButton');
+require('./directives/submitButton');
+require('./directives/hideEmpty');
 require('./directives/cometMenu');
 
 
