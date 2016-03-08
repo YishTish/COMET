@@ -15,7 +15,7 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', '$uibModal
 			self.element = undefined;
 			self.formScope = undefined;
 			self.submitVal = "Send Form";
-			require: 'form';
+//			require: 'form';
 			self.sessionId ="";
 			self.errorMessage="";
 			self.urlPrefix = config.base_url+":"+config.port;
@@ -26,10 +26,10 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', '$uibModal
 					return [];
 				}
 				return self.formData.fields;
-			}
+			};
 			self.hasError = function(){
 				return self.errorMessage!="";
-			}
+			};
 
 			self.sendForm = function(){
 			};
@@ -50,7 +50,7 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', '$uibModal
 				if(elementToValidate.ServerValidation){
 					afterFieldServices.sendAfterFieldRequest(self.formData, self.dataMap, elementToValidate.id, elementToValidate.value, elementToValidate.ServerValidation, elementToValidate.ServerValidationParameters);
 				}
-			}
+			};
 
 			self.loadModalForm = function (modalForm, modalFormParameters){
 				var modalUrl = "/comet.icsp?MGWLPN=iCOMET&COMETSID="+self.sessionId+"&COMETMode=JS&SERVICE=DATAFORM&STAGE=REQUEST&MODE=0&\
@@ -74,7 +74,7 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', '$uibModal
 			     	afterFieldServices.handleAfterFieldResponse(modalRes, self.formData, self.dataMap);
 					self.modalLoaded = false;
 			  	});
-			}
+			};
 
 
 
@@ -110,7 +110,7 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 
 			self.getDateField = function(fieldVal){
 				return Date(fieldVal);
-			}
+			};
 
 			self.initForm = function initForm(){
 				self.formScope = self.element.find('form').scope();
@@ -159,7 +159,7 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 					var curForm = "WRX2002";
 					var resId = "12404";
 					var url = "/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+curForm+"&STAGE=REQUEST&COMETSID="+self.sessionId+"&ID="+resId;
-					menuServices.updateMenu(res.menu);
+					//menuServices.updateMenu(res.menu);
 					self.loadNextForm(url);
 					return;
 				}
@@ -245,7 +245,7 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 				ctrl.modalLoaded = true;
 			}
 		}
-	} // close return from first line of directive
+	}; // close return from first line of directive
 }])
 
 .directive('cometField',[ '$compile','ajaxServices', function( $compile, ajaxServices ){
@@ -263,7 +263,7 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 
 			element.bind('keyup', function(){
 				//console.log(form)
-			})
+			});
 			
 
 		};
@@ -275,7 +275,7 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 		},
 		link: linker,
 		require: '?testForm',
-	}
+	};
 }])
 
 .directive('showErrors', ['$timeout', function ($timeout) {
@@ -301,7 +301,7 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 
 			scope.$on('hide-empty', function(){
 				console.log(element);
-			})
+			});
 			
 
 			
@@ -329,7 +329,7 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 				}
 				console.log(fieldId + " is enabled");
 				return "false";
-			}
+			};
 		}],
 		
 		link: function (scope, element, attr, formCtrl) {
@@ -382,7 +382,7 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 				afterFieldServices.sendAfterFieldRequest(formCtrl.formData, formCtrl.dataMap, attr.name, numericVal, attr.afterTextValidation, attr.afterTextParams);
 			});
 		}
-	}
+	};
 }])
 
 .directive('modalFormButton', [function(){
@@ -391,10 +391,10 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 		require: '^cometForm',
 		link: function(scope, elem, attr, formCtrl){
 			elem.bind('click', function(){
-				formCtrl.loadModalForm(attr.modalForm, attr.modalFormParams)
+				formCtrl.loadModalForm(attr.modalForm, attr.modalFormParams);
 			});
 		}
-	}
+	};
 }])
 
 .directive('submitButton', [function(){
@@ -406,7 +406,7 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 				elem.toggleClass('active');
 			});
 		}
-	}
+	};
 }])
 
 

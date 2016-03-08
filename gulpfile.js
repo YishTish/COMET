@@ -43,7 +43,7 @@ function curlGet(req, res, callback){
   console.log(queryString);
   queryString = encodeURI(queryString);
   var options = {
-    host: '75.99.167.66',
+    host: 'lintechhq.com',
     method: 'GET',
     path: queryString,
     port: "3757"
