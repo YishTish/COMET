@@ -41,6 +41,8 @@ require('./directives/submitButton');
 require('./directives/hideEmpty');
 require('./directives/cometMenu');
 
+require('./plugins/form.masked/jquery.maskedinput');
+
 
 // this variable should be set before loading the plugin
 window.plugin_path = 'assets/plugins/';
