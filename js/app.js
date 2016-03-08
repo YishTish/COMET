@@ -1,7 +1,7 @@
 // some external libs doesn't support node modules
 window.jQuery = window.$ = require('jquery');
 
-// required libs 
+// required libs
 require('angular');
 require('angular-modal-service');
 require('angucomplete-alt');
@@ -12,7 +12,8 @@ require('lodash');
 var config = require('./config');
 
 // initialize the anglur
-var app = angular.module('COMET', ['angularModalService', "angucomplete-alt", 'ui.bootstrap']);
+var app = angular.module('COMET', ['angularModalService', "angucomplete-alt",
+        'ui.bootstrap']);
 
 // add services
 require('./services/jsonServices');
@@ -26,7 +27,7 @@ require('./services/spinner');
 
 // add controllers
 require('./controllers/appCtrl');
-require('./controllers/modalInstanceCtrl.js');
+require('./controllers/modalInstanceCtrl');
 
 // add derictives
 require('./directives/glyphSpinner');

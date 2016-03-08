@@ -18,14 +18,14 @@ var sourcemaps = require('gulp-sourcemaps');
 gulp.task('browserify', function() {
   var b = browserify({
     entries: './js/app.js',
-    debug: true 
+    debug: true
   });
 
   var stream = b.bundle()
       .pipe(source('bundle.js')) // gives streaming vinyl file object
       .pipe(buffer())
       .pipe(sourcemaps.init({loadMaps: true}))
-      .pipe(uglify()) 
+      .pipe(uglify())
       .pipe(sourcemaps.write('./'))
       .pipe(gulp.dest('./build'));
 
@@ -33,7 +33,7 @@ gulp.task('browserify', function() {
 });
 
 gulp.task('default', ['browserify'], function () {
-  
+
   console.log('Gulp and running lintech_software!');
   startExpress();
   startLivereload();
@@ -48,7 +48,7 @@ var EXPRESS_ROOT = __dirname;
 var LIVERELOAD_PORT = 35729;
 
 function startExpress() {
- 
+
   var express = require('express');
   var app = express();
   app.use(require('connect-livereload')());
@@ -94,7 +94,7 @@ function curlGet(req, res, callback){
     })
 
   });
-  serverResponse.end();       
+  serverResponse.end();
     serverResponse.on('error',function(e){
       console.error(e);
     });
@@ -108,13 +108,13 @@ function startLivereload() {
 
 
 function notifyLiveReload(event){
-	var fileName = require('path').relative(EXPRESS_ROOT, event.path);
+    var fileName = require('path').relative(EXPRESS_ROOT, event.path);
 
-	console.log(event);
+    console.log(event);
 
-	lr.changed({
-		body: { 
-			files: [fileName]
-		}
-	});
+    lr.changed({
+        body: {
+            files: [fileName]
+        }
+    });
 }
