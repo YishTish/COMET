@@ -1,0 +1,36 @@
+{
+  "name": "COMET",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Ivan Parmaclii <ivan.parmaclii19@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/YishTish/COMET",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-aria": "~1.4.3",
+    "angular-bootstrap": "~0.14.3",
+    "Yamm3": "yamm3#~1.1.0",
+    "angular-material": "~0.10.0",
+    "angular-messages": "~1.4.3",
+    "angular-modal-service": "~0.6.9",
+    "angular-spinners": "~3.0.4",
+    "angular": "~1.4.8",
+    "bootstrap": "~3.3.6",
+    "is_js": "~0.7.6",
+    "lodash": "~3.10.1",
+    "ngtoast": "~1.5.5",
+    "jquery": "^2.2.1",
+    "angucomplete-alt": "^2.2.0"
+  }
+}
