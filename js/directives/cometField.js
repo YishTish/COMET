@@ -1,3 +1,6 @@
+var app = angular.module('COMET');
+
+
 app.directive('cometField',[ '$compile','ajaxServices', function( $compile, ajaxServices ){
 	var getTemplate = function(type){
 			return 'tpl/'+type+'.tpl.html';
@@ -26,4 +29,4 @@ app.directive('cometField',[ '$compile','ajaxServices', function( $compile, ajax
 		link: linker,
 		require: '?testForm',
 	}
-}]);
+}])

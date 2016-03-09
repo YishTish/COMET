@@ -1,3 +1,5 @@
+var app = angular.module('COMET');
+
 app.directive('submitButton', [function(){
 	return{
 		restrict: 'A',
