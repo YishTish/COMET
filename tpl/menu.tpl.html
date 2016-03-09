@@ -17,7 +17,7 @@
                                         <div class="" ng-repeat="column in category.layoutColumns">
                                             <ul class="list-unstyled" ng-if="column.length > 0">
                                                 <li ng-repeat="row in column">
-                                                    <a ng-if="category.groups.indexOf(row) == -1" href="#">{{ row.label }}</a>
+                                                    <a ng-if="category.groups.indexOf(row) == -1" href="#" ng-click="reloadForm(row)">{{ row.label }}</a>
                                                     <span ng-if="category.groups.indexOf(row) !== -1" >{{ row.title }}</span>
 
                                                 </li>

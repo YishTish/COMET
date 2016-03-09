@@ -193,7 +193,6 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 				self.formData = jsonServices.parseJson(serverData);
 				console.log(self.formData);
 				self.dataMap = jsonServices.mapJson(serverData);
-				setTimeout(function(){init();}, 300);
 			};
 
 			self.reset = function() {
@@ -229,6 +228,7 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 			$scope.$watch(function() {
 				return formService.currentForm;
 			}, function (curForm) {
+				console.log(curForm);
 				var url = "/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+
 				curForm + "&STAGE=REQUEST&COMETSID=" + self.sessionId;
 				self.loadNextForm(url);

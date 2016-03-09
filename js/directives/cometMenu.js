@@ -15,12 +15,10 @@ function(jsonServices, $filter, ajaxServices, cometServices, menuServices ) {
 			self.formTitle = "COMET Login"
 			self.menuData = []; 
 
-			/*
+			
 			$scope.reloadForm = function (item) {
-				console.log(item.label);
 				formService.updateForm(item.request);
 			}
-			*/
 			
 			$scope.$watch(function() {
 				return menuServices.data;
