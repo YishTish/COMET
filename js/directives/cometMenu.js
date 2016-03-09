@@ -17,6 +17,7 @@ function(jsonServices, $filter, ajaxServices, cometServices, menuServices ) {
 
 			
 			$scope.reloadForm = function (item) {
+				console.log(item);
 				formService.updateForm(item.request);
 			}
 			
