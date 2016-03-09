@@ -15,7 +15,7 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', '$uibModal
 			self.element = undefined;
 			self.formScope = undefined;
 			self.submitVal = "Send Form";
-			require: 'form';
+//			require: 'form';
 			self.sessionId ="";
 			self.errorMessage="";
 			self.urlPrefix = config.base_url+":"+config.port;
