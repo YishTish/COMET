@@ -40,6 +40,7 @@ require('./directives/modalFormButton');
 require('./directives/submitButton');
 require('./directives/hideEmpty');
 require('./directives/cometMenu');
+require('./directives/summaryScreen');
 
 require('./plugins/form.masked/jquery.maskedinput');
 

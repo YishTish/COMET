@@ -1,0 +1,15 @@
+<div>
+	<h3>{{ sumScrCtrl.summaryTitle }}</h3>
+	<table class="table table-hover">
+		<thead>
+		<tr>
+			<th ng-repeat="def in sumScrCtrl.definitions">{{ def.label }} </th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat="row in sumScrCtrl.sortedTable">
+			<td ng-repeat="key in row">{{ key }}</td>
+		</tr>
+		</tbody>
+	</table>
+</div>
