@@ -120,7 +120,6 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 			};
 
 			self.save = function() {
-				console.log("Save");
 				spinnerServ.show();
 				if(self.modalLoaded == true){
 					var queryString = jsonServices.buildQueryString(self.formData)+"&SERVICE=DATAFORM";
@@ -136,7 +135,6 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 					return;
 				}
 				var queryString = jsonServices.buildQueryString(self.formData);
-				console.log(self.urlPrefix);
 				ajaxServices.httpPromise(self.urlPrefix, queryString).then(function(res){
 					if(self.$modalInstance){
 						$modalInstance.close();
@@ -150,6 +148,7 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 			};
 
 			self.handleResponse = function(res){
+				console.log(res);
 				if (typeof res === "string") {
 					return;
 				}
@@ -178,8 +177,8 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 
 			self.loadNextForm = function(path){
 				spinnerServ.show();
-				ajaxServices.httpPromise(self.urlPrefix, path).then(function(res){
-				//ajaxServices.httpPromise("", "json_src/wrx2002.json").then(function(res){
+				//ajaxServices.httpPromise(self.urlPrefix, path).then(function(res){
+				ajaxServices.httpPromise("", "json_src/summary_screen.js").then(function(res){
 					self.handleResponse(res);
 					spinnerServ.hide();
 				});
