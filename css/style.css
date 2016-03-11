@@ -163,11 +163,16 @@ form.split-form {
 	font-weight: 200;
 	line-height: 1;
 }
+#topNav #topMain>li.mega-menu div.row div>ul>li>i{
+  display: block;
+  height: 22px;
+}
 #topNav #topMain>li.mega-menu div.row div>ul>li>span{
 	color: #CC4737;
 	font-size: 13px;
 	font-weight: 800;
 	padding: 0px 5px 0px 5px;
+  line-height: 22px;
 }
 #topNav #topMain>li.mega-menu div.row div>ul>li:first-child>span{
 	padding: 0px 5px 0px 5px;
