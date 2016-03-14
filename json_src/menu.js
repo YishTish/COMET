@@ -9,11 +9,13 @@
       "groups": [
         {
           "id": "",
-          "label": "",
+          "title": "",
           "row": "",
-          "column": "",
+          "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "1",
@@ -22,11 +24,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "APPMENU",
               "request": "COMET",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "2",
@@ -35,21 +40,26 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY1002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "3",
-          "label": "Resident Management",
+          "title": "Resident Management",
           "row": "3",
           "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "4",
@@ -58,11 +68,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT0001",
               "stage": "REQUEST",
-              "parameters": "&NEW=1"
+              "parameters": "&NEW=1",
+              "modal": "false"
             },
             {
               "id": "5",
@@ -71,11 +84,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT4002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "6",
@@ -84,11 +100,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0064",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "7",
@@ -97,11 +116,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT3004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "8",
@@ -110,11 +132,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT3007",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "9",
@@ -123,11 +148,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT3006",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "10",
@@ -136,21 +164,26 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT3005",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "11",
-          "label": "Demographic Reports",
+          "title": "Demographic Reports",
           "row": "16",
           "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "12",
@@ -159,11 +192,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL110"
+              "parameters": "&REPORT=ATDIL110",
+              "modal": "false"
             },
             {
               "id": "13",
@@ -172,11 +208,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL111"
+              "parameters": "&REPORT=ATDIL111",
+              "modal": "false"
             },
             {
               "id": "14",
@@ -185,11 +224,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL121"
+              "parameters": "&REPORT=ATDIL121",
+              "modal": "false"
             },
             {
               "id": "15",
@@ -198,11 +240,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL122"
+              "parameters": "&REPORT=ATDIL122",
+              "modal": "false"
             },
             {
               "id": "16",
@@ -211,11 +256,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATRIL030"
+              "parameters": "&REPORT=ATRIL030",
+              "modal": "false"
             },
             {
               "id": "17",
@@ -224,11 +272,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL142"
+              "parameters": "&REPORT=ATDIL142",
+              "modal": "false"
             },
             {
               "id": "18",
@@ -237,11 +288,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT8001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "19",
@@ -250,11 +304,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT8005",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "20",
@@ -263,11 +320,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATMDI111"
+              "parameters": "&REPORT=ATMDI111",
+              "modal": "false"
             },
             {
               "id": "21",
@@ -276,21 +336,26 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY3002",
               "stage": "REQUEST",
-              "parameters": "&VMODE=1"
+              "parameters": "&VMODE=1",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "22",
-          "label": "Information",
+          "title": "Information",
           "row": "3",
           "column": "2",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "23",
@@ -299,11 +364,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "24",
@@ -312,11 +380,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0011",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "25",
@@ -325,11 +396,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0013",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "26",
@@ -338,11 +412,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0051",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "27",
@@ -351,11 +428,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0061",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "28",
@@ -364,11 +444,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0021",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "29",
@@ -377,11 +460,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0071",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "30",
@@ -390,11 +476,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "31",
@@ -403,11 +492,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "32",
@@ -416,11 +508,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT1013",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "33",
@@ -429,21 +524,26 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0014",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "34",
-          "label": "Financial Coverage Reports",
+          "title": "Financial Coverage Reports",
           "row": "16",
           "column": "2",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "35",
@@ -452,11 +552,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATPDS152"
+              "parameters": "&REPORT=ATPDS152",
+              "modal": "false"
             },
             {
               "id": "36",
@@ -465,11 +568,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATPDS212"
+              "parameters": "&REPORT=ATPDS212",
+              "modal": "false"
             },
             {
               "id": "37",
@@ -478,11 +584,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL150"
+              "parameters": "&REPORT=ATDIL150",
+              "modal": "false"
             },
             {
               "id": "38",
@@ -491,11 +600,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL151"
+              "parameters": "&REPORT=ATDIL151",
+              "modal": "false"
             },
             {
               "id": "39",
@@ -504,11 +616,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL152"
+              "parameters": "&REPORT=ATDIL152",
+              "modal": "false"
             },
             {
               "id": "40",
@@ -517,11 +632,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL154"
+              "parameters": "&REPORT=ATDIL154",
+              "modal": "false"
             },
             {
               "id": "41",
@@ -530,11 +648,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL155"
+              "parameters": "&REPORT=ATDIL155",
+              "modal": "false"
             },
             {
               "id": "42",
@@ -543,11 +664,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT8006",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "43",
@@ -556,11 +680,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT3002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "44",
@@ -569,21 +696,26 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT8010",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "45",
-          "label": "Additional Information",
+          "title": "Additional Information",
           "row": "3",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "46",
@@ -592,11 +724,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "47",
@@ -605,11 +740,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "48",
@@ -618,11 +756,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1005",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "49",
@@ -631,11 +772,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1006",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "50",
@@ -644,11 +788,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1007",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "51",
@@ -657,11 +804,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1008",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "52",
@@ -670,11 +820,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1009",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "53",
@@ -683,11 +836,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1010",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "54",
@@ -696,11 +852,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1011",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "55",
@@ -709,21 +868,26 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1012",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "56",
-          "label": "Additional Reports",
+          "title": "Additional Reports",
           "row": "16",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "57",
@@ -732,11 +896,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL112"
+              "parameters": "&REPORT=ATDIL112",
+              "modal": "false"
             },
             {
               "id": "58",
@@ -745,11 +912,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL113"
+              "parameters": "&REPORT=ATDIL113",
+              "modal": "false"
             },
             {
               "id": "59",
@@ -758,11 +928,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL112"
+              "parameters": "&REPORT=ATDIL112",
+              "modal": "false"
             },
             {
               "id": "60",
@@ -771,11 +944,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL112"
+              "parameters": "&REPORT=ATDIL112",
+              "modal": "false"
             },
             {
               "id": "61",
@@ -784,11 +960,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL112"
+              "parameters": "&REPORT=ATDIL112",
+              "modal": "false"
             },
             {
               "id": "62",
@@ -797,11 +976,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL112"
+              "parameters": "&REPORT=ATDIL112",
+              "modal": "false"
             },
             {
               "id": "63",
@@ -810,21 +992,26 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT8009",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "64",
-          "label": "ICD Reports",
+          "title": "ICD Reports",
           "row": "27",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "65",
@@ -833,11 +1020,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL143"
+              "parameters": "&REPORT=ATDIL143",
+              "modal": "false"
             },
             {
               "id": "66",
@@ -846,11 +1036,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL901"
+              "parameters": "&REPORT=ATDIL901",
+              "modal": "false"
             },
             {
               "id": "67",
@@ -859,11 +1052,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL902"
+              "parameters": "&REPORT=ATDIL902",
+              "modal": "false"
             },
             {
               "id": "68",
@@ -872,21 +1068,26 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL903"
+              "parameters": "&REPORT=ATDIL903",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "69",
-          "label": "Census",
+          "title": "Census",
           "row": "3",
           "column": "4",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "70",
@@ -895,11 +1096,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0201",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "71",
@@ -908,11 +1112,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0201",
               "stage": "REQUEST",
-              "parameters": "&TRCASETY=OP"
+              "parameters": "&TRCASETY=OP",
+              "modal": "false"
             },
             {
               "id": "72",
@@ -921,11 +1128,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT2007",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "73",
@@ -934,11 +1144,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT4001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "74",
@@ -947,11 +1160,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT4003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "75",
@@ -960,11 +1176,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT4004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "76",
@@ -973,11 +1192,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT4005",
               "stage": "REQUEST",
-              "parameters": "&MODE=0"
+              "parameters": "&MODE=0",
+              "modal": "false"
             },
             {
               "id": "77",
@@ -986,11 +1208,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT4005",
               "stage": "REQUEST",
-              "parameters": "&MODE=1"
+              "parameters": "&MODE=1",
+              "modal": "false"
             },
             {
               "id": "78",
@@ -999,11 +1224,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT4005",
               "stage": "REQUEST",
-              "parameters": "&MODE=2"
+              "parameters": "&MODE=2",
+              "modal": "false"
             },
             {
               "id": "79",
@@ -1012,11 +1240,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0200",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "80",
@@ -1025,11 +1256,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT2008",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "81",
@@ -1038,21 +1272,26 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT4006",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "82",
-          "label": "Census Report",
+          "title": "Census Report",
           "row": "16",
           "column": "4",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "83",
@@ -1061,11 +1300,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATCEN005"
+              "parameters": "&REPORT=ATCEN005",
+              "modal": "false"
             },
             {
               "id": "84",
@@ -1074,11 +1316,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATCEN001"
+              "parameters": "&REPORT=ATCEN001",
+              "modal": "false"
             },
             {
               "id": "85",
@@ -1087,11 +1332,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT8002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "86",
@@ -1100,11 +1348,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATCEN002"
+              "parameters": "&REPORT=ATCEN002",
+              "modal": "false"
             },
             {
               "id": "87",
@@ -1113,11 +1364,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATTILIAD"
+              "parameters": "&REPORT=ATTILIAD",
+              "modal": "false"
             },
             {
               "id": "88",
@@ -1126,11 +1380,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATTILRAD"
+              "parameters": "&REPORT=ATTILRAD",
+              "modal": "false"
             },
             {
               "id": "89",
@@ -1139,11 +1396,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATTILRTB"
+              "parameters": "&REPORT=ATTILRTB",
+              "modal": "false"
             },
             {
               "id": "90",
@@ -1152,11 +1412,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATTILIHL"
+              "parameters": "&REPORT=ATTILIHL",
+              "modal": "false"
             },
             {
               "id": "91",
@@ -1165,11 +1428,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATTILLOC"
+              "parameters": "&REPORT=ATTILLOC",
+              "modal": "false"
             },
             {
               "id": "92",
@@ -1178,11 +1444,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATTILTRN"
+              "parameters": "&REPORT=ATTILTRN",
+              "modal": "false"
             },
             {
               "id": "93",
@@ -1191,11 +1460,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDAYHSP"
+              "parameters": "&REPORT=ATDAYHSP",
+              "modal": "false"
             },
             {
               "id": "94",
@@ -1204,11 +1476,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATTILPDI"
+              "parameters": "&REPORT=ATTILPDI",
+              "modal": "false"
             },
             {
               "id": "95",
@@ -1217,11 +1492,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATTILEXP"
+              "parameters": "&REPORT=ATTILEXP",
+              "modal": "false"
             },
             {
               "id": "96",
@@ -1230,11 +1508,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATTILDIS"
+              "parameters": "&REPORT=ATTILDIS",
+              "modal": "false"
             },
             {
               "id": "97",
@@ -1243,11 +1524,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATTILLOS"
+              "parameters": "&REPORT=ATTILLOS",
+              "modal": "false"
             },
             {
               "id": "98",
@@ -1256,11 +1540,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL143"
+              "parameters": "&REPORT=ATDIL143",
+              "modal": "false"
             },
             {
               "id": "99",
@@ -1269,11 +1556,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATCEN010"
+              "parameters": "&REPORT=ATCEN010",
+              "modal": "false"
             },
             {
               "id": "100",
@@ -1282,11 +1572,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT8003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "101",
@@ -1295,11 +1588,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT8004",
               "stage": "REQUEST",
-              "parameters": "&SEQ=1"
+              "parameters": "&SEQ=1",
+              "modal": "false"
             },
             {
               "id": "102",
@@ -1308,11 +1604,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATRIL123"
+              "parameters": "&REPORT=ATRIL123",
+              "modal": "false"
             },
             {
               "id": "103",
@@ -1321,11 +1620,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT8007",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "104",
@@ -1334,11 +1636,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT8008",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         }
@@ -1353,11 +1658,13 @@
       "groups": [
         {
           "id": "",
-          "label": "",
+          "title": "",
           "row": "",
-          "column": "",
+          "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "1",
@@ -1366,11 +1673,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "APPMENU",
               "request": "COMET",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "2",
@@ -1379,21 +1689,26 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY1002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "3",
-          "label": "Display",
+          "title": "Display",
           "row": "3",
           "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "4",
@@ -1402,11 +1717,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT4002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "5",
@@ -1415,11 +1733,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT4005",
               "stage": "REQUEST",
-              "parameters": "&MODE=0"
+              "parameters": "&MODE=0",
+              "modal": "false"
             },
             {
               "id": "6",
@@ -1428,11 +1749,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT4005",
               "stage": "REQUEST",
-              "parameters": "&MODE=2"
+              "parameters": "&MODE=2",
+              "modal": "false"
             },
             {
               "id": "7",
@@ -1441,30 +1765,37 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAS4003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "41",
-          "label": "Orders Management",
+          "title": "Orders Management",
           "row": "1",
           "column": "4",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": ""
         },
         {
           "id": "42",
-          "label": "Display",
+          "title": "Display",
           "row": "3",
           "column": "4",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "43",
@@ -1473,11 +1804,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WOM0021",
               "stage": "REQUEST",
-              "parameters": "&MODE=W"
+              "parameters": "&MODE=W",
+              "modal": "false"
             },
             {
               "id": "44",
@@ -1486,11 +1820,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPS4001",
               "stage": "REQUEST",
-              "parameters": "&MODE=D"
+              "parameters": "&MODE=D",
+              "modal": "false"
             },
             {
               "id": "45",
@@ -1499,11 +1836,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WOM0011",
               "stage": "REQUEST",
-              "parameters": "&MODE=All"
+              "parameters": "&MODE=All",
+              "modal": "false"
             },
             {
               "id": "46",
@@ -1512,21 +1852,26 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WPS0011",
               "stage": "REQUEST",
-              "parameters": "&MODE=All"
+              "parameters": "&MODE=All",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "47",
-          "label": "Add or Update",
+          "title": "Add or Update",
           "row": "9",
           "column": "4",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "48",
@@ -1535,11 +1880,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WOM0011",
               "stage": "REQUEST",
-              "parameters": "&MODE=Active"
+              "parameters": "&MODE=Active",
+              "modal": "false"
             },
             {
               "id": "49",
@@ -1548,11 +1896,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WPS0011",
               "stage": "REQUEST",
-              "parameters": "&MODE=Active"
+              "parameters": "&MODE=Active",
+              "modal": "false"
             },
             {
               "id": "50",
@@ -1561,11 +1912,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WOM0022",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "51",
@@ -1574,11 +1928,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPS0013",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "52",
@@ -1587,11 +1944,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPS0016",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "53",
@@ -1600,11 +1960,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "54",
@@ -1613,11 +1976,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1014",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "55",
@@ -1626,11 +1992,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WRX2001",
               "stage": "REQUEST",
-              "parameters": "&VIEW=All"
+              "parameters": "&VIEW=All",
+              "modal": "false"
             },
             {
               "id": "56",
@@ -1639,11 +2008,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WRX2011",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "57",
@@ -1652,11 +2024,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WRX2006",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "58",
@@ -1665,11 +2040,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WRX2013",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "59",
@@ -1678,11 +2056,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WRX2015",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "60",
@@ -1691,11 +2072,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WRX6003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "61",
@@ -1704,11 +2088,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WRX6008",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "62",
@@ -1717,11 +2104,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WRX2017",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "63",
@@ -1730,11 +2120,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WRX2021",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "64",
@@ -1743,11 +2136,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WRX2001",
               "stage": "REQUEST",
-              "parameters": "&VIEW=Active"
+              "parameters": "&VIEW=Active",
+              "modal": "false"
             },
             {
               "id": "65",
@@ -1756,21 +2152,26 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WRX2025",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "66",
-          "label": "Health Information",
+          "title": "Health Information",
           "row": "1",
           "column": "5",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "67",
@@ -1779,21 +2180,26 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "HTTP",
               "request": "HTTP",
               "stage": "REQUEST",
-              "parameters": "200.0.0.14"
+              "parameters": "200.0.0.14",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "68",
-          "label": "Display",
+          "title": "Display",
           "row": "3",
           "column": "5",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "69",
@@ -1802,11 +2208,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WMR4101",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "70",
@@ -1815,11 +2224,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WMR4001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "71",
@@ -1828,11 +2240,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR0023",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "72",
@@ -1841,21 +2256,26 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "73",
-          "label": "Add or Update",
+          "title": "Add or Update",
           "row": "9",
           "column": "5",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "74",
@@ -1864,11 +2284,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR0014",
               "stage": "REQUEST",
-              "parameters": "&TYPE=PN&MODE=1"
+              "parameters": "&TYPE=PN&MODE=1",
+              "modal": "false"
             },
             {
               "id": "75",
@@ -1877,11 +2300,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1009",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "76",
@@ -1890,11 +2316,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1007",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "77",
@@ -1903,21 +2332,26 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "78",
-          "label": "Meals II",
+          "title": "Meals II",
           "row": "14",
           "column": "5",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "79",
@@ -1926,11 +2360,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1019",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "80",
@@ -1939,11 +2376,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "81",
@@ -1952,11 +2392,14 @@
               "column": "5",
               "class": "",
               "icon": "fa-heartbeat",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "82",
@@ -1965,11 +2408,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1013",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "83",
@@ -1978,11 +2424,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1017",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "84",
@@ -1991,11 +2440,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1011",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "85",
@@ -2004,11 +2456,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1012",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "86",
@@ -2017,11 +2472,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1010",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "87",
@@ -2030,11 +2488,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1040",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "88",
@@ -2043,11 +2504,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR0014",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "89",
@@ -2056,30 +2520,37 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR0013",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "90",
-          "label": "Events Tracking",
+          "title": "Events Tracking",
           "row": "1",
           "column": "6",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": ""
         },
         {
           "id": "91",
-          "label": "Add or Update",
+          "title": "Add or Update",
           "row": "9",
           "column": "6",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "92",
@@ -2088,11 +2559,14 @@
               "column": "6",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR0017",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "93",
@@ -2101,11 +2575,14 @@
               "column": "6",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR2001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "94",
@@ -2114,11 +2591,14 @@
               "column": "6",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1006",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "95",
@@ -2127,11 +2607,14 @@
               "column": "6",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR2007",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "96",
@@ -2140,11 +2623,14 @@
               "column": "6",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR0023",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "97",
@@ -2153,11 +2639,14 @@
               "column": "6",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1021",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "98",
@@ -2166,11 +2655,14 @@
               "column": "6",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1023",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "99",
@@ -2179,11 +2671,14 @@
               "column": "6",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1025",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "100",
@@ -2192,11 +2687,14 @@
               "column": "6",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1029",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "101",
@@ -2205,11 +2703,14 @@
               "column": "6",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "102",
@@ -2218,21 +2719,26 @@
               "column": "6",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1027",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "8",
-          "label": "Add or Update",
+          "title": "Add or Update",
           "row": "9",
           "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "9",
@@ -2241,11 +2747,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "10",
@@ -2254,11 +2763,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0011",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "11",
@@ -2267,11 +2779,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1009",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "12",
@@ -2280,11 +2795,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT4006",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "13",
@@ -2293,11 +2811,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1005",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "14",
@@ -2306,11 +2827,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0071",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "15",
@@ -2319,39 +2843,48 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1010",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "16",
-          "label": "Assessments",
+          "title": "Assessments",
           "row": "1",
           "column": "2",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": ""
         },
         {
           "id": "17",
-          "label": "MDS Scheduling",
+          "title": "MDS Scheduling",
           "row": "2",
           "column": "2",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": ""
         },
         {
           "id": "18",
-          "label": "Display",
+          "title": "Display",
           "row": "3",
           "column": "2",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "19",
@@ -2360,11 +2893,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAS0024",
               "stage": "REQUEST",
-              "parameters": "&MODE=W"
+              "parameters": "&MODE=W",
+              "modal": "false"
             },
             {
               "id": "20",
@@ -2373,11 +2909,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAS4002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "21",
@@ -2386,11 +2925,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAS4001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "22",
@@ -2399,21 +2941,26 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAS4004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "23",
-          "label": "Add or Update",
+          "title": "Add or Update",
           "row": "9",
           "column": "2",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "24",
@@ -2422,11 +2969,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAS0001",
               "stage": "REQUEST",
-              "parameters": "&ACTION=Full"
+              "parameters": "&ACTION=Full",
+              "modal": "false"
             },
             {
               "id": "25",
@@ -2435,11 +2985,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAS0008",
               "stage": "REQUEST",
-              "parameters": "&FORMS=MDSRAP&ACTION=F"
+              "parameters": "&FORMS=MDSRAP&ACTION=F",
+              "modal": "false"
             },
             {
               "id": "26",
@@ -2448,11 +3001,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAS0008",
               "stage": "REQUEST",
-              "parameters": "&FORMS=MDSROSTER&ACTION=F"
+              "parameters": "&FORMS=MDSROSTER&ACTION=F",
+              "modal": "false"
             },
             {
               "id": "27",
@@ -2461,11 +3017,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAS0008",
               "stage": "REQUEST",
-              "parameters": "&ACTION=Full"
+              "parameters": "&ACTION=Full",
+              "modal": "false"
             },
             {
               "id": "28",
@@ -2474,11 +3033,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAS0008",
               "stage": "REQUEST",
-              "parameters": "&FORMS=CACNA;NSGND;NSGNA;CACPT;CACOT;CACST;PT-WLD&ACTION=F"
+              "parameters": "&FORMS=CACNA;NSGND;NSGNA;CACPT;CACOT;CACST;PT-WLD&ACTION=F",
+              "modal": "false"
             },
             {
               "id": "29",
@@ -2487,11 +3049,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAS0008",
               "stage": "REQUEST",
-              "parameters": "&FORMS=CRGUIDE;KARDEX-CON;NSGND&ACTION=F"
+              "parameters": "&FORMS=CRGUIDE;KARDEX-CON;NSGND&ACTION=F",
+              "modal": "false"
             },
             {
               "id": "30",
@@ -2500,30 +3065,37 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAS0008",
               "stage": "REQUEST",
-              "parameters": "&FORMS=BRADEN;NSGFA;NSGUPSRA;NSGRAE&ACTION=F"
+              "parameters": "&FORMS=BRADEN;NSGFA;NSGUPSRA;NSGRAE&ACTION=F",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "31",
-          "label": "Care Planning",
+          "title": "Care Planning",
           "row": "1",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": ""
         },
         {
           "id": "32",
-          "label": "Display",
+          "title": "Display",
           "row": "3",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "33",
@@ -2532,11 +3104,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WCP4002V",
               "stage": "REQUEST",
-              "parameters": "&MODE=DIRECT"
+              "parameters": "&MODE=DIRECT",
+              "modal": "false"
             },
             {
               "id": "34",
@@ -2545,11 +3120,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WCP4001",
               "stage": "REQUEST",
-              "parameters": "&MODE=M"
+              "parameters": "&MODE=M",
+              "modal": "false"
             },
             {
               "id": "35",
@@ -2558,21 +3136,26 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WCP4002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "36",
-          "label": "Add or Update",
+          "title": "Add or Update",
           "row": "9",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "37",
@@ -2581,11 +3164,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WCP0005",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "38",
@@ -2594,11 +3180,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WCP0001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "39",
@@ -2607,11 +3196,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WCP2001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "40",
@@ -2620,11 +3212,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WCP2002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         }
@@ -2639,11 +3234,13 @@
       "groups": [
         {
           "id": "",
-          "label": "",
+          "title": "",
           "row": "",
-          "column": "",
+          "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "1",
@@ -2652,11 +3249,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "APPMENU",
               "request": "COMET",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "2",
@@ -2665,21 +3265,26 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY1002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "3",
-          "label": "Resident Management",
+          "title": "Resident Management",
           "row": "3",
           "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "4",
@@ -2688,11 +3293,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT0001",
               "stage": "REQUEST",
-              "parameters": "&NEW=1"
+              "parameters": "&NEW=1",
+              "modal": "false"
             },
             {
               "id": "5",
@@ -2701,11 +3309,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT4002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "6",
@@ -2714,11 +3325,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0064",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "7",
@@ -2727,11 +3341,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT3004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "8",
@@ -2740,11 +3357,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT3007",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "9",
@@ -2753,11 +3373,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT3006",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "10",
@@ -2766,21 +3389,26 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT3005",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "11",
-          "label": "Demographic Reports",
+          "title": "Demographic Reports",
           "row": "16",
           "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "12",
@@ -2789,11 +3417,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL110"
+              "parameters": "&REPORT=ATDIL110",
+              "modal": "false"
             },
             {
               "id": "13",
@@ -2802,11 +3433,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL111"
+              "parameters": "&REPORT=ATDIL111",
+              "modal": "false"
             },
             {
               "id": "14",
@@ -2815,11 +3449,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL121"
+              "parameters": "&REPORT=ATDIL121",
+              "modal": "false"
             },
             {
               "id": "15",
@@ -2828,11 +3465,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL122"
+              "parameters": "&REPORT=ATDIL122",
+              "modal": "false"
             },
             {
               "id": "16",
@@ -2841,11 +3481,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATRIL030"
+              "parameters": "&REPORT=ATRIL030",
+              "modal": "false"
             },
             {
               "id": "17",
@@ -2854,11 +3497,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL142"
+              "parameters": "&REPORT=ATDIL142",
+              "modal": "false"
             },
             {
               "id": "18",
@@ -2867,11 +3513,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT8001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "19",
@@ -2880,11 +3529,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT8005",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "20",
@@ -2893,11 +3545,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATMDI111"
+              "parameters": "&REPORT=ATMDI111",
+              "modal": "false"
             },
             {
               "id": "21",
@@ -2906,21 +3561,26 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY3002",
               "stage": "REQUEST",
-              "parameters": "&VMODE=1"
+              "parameters": "&VMODE=1",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "22",
-          "label": "Information",
+          "title": "Information",
           "row": "3",
           "column": "2",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "23",
@@ -2929,11 +3589,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "24",
@@ -2942,11 +3605,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0011",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "25",
@@ -2955,11 +3621,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0013",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "26",
@@ -2968,11 +3637,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0051",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "27",
@@ -2981,11 +3653,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0061",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "28",
@@ -2994,11 +3669,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0021",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "29",
@@ -3007,11 +3685,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0071",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "30",
@@ -3020,11 +3701,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "31",
@@ -3033,11 +3717,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "32",
@@ -3046,11 +3733,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT1013",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "33",
@@ -3059,21 +3749,26 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0014",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "34",
-          "label": "Financial Coverage Reports",
+          "title": "Financial Coverage Reports",
           "row": "16",
           "column": "2",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "35",
@@ -3082,11 +3777,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATPDS152"
+              "parameters": "&REPORT=ATPDS152",
+              "modal": "false"
             },
             {
               "id": "36",
@@ -3095,11 +3793,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATPDS212"
+              "parameters": "&REPORT=ATPDS212",
+              "modal": "false"
             },
             {
               "id": "37",
@@ -3108,11 +3809,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL150"
+              "parameters": "&REPORT=ATDIL150",
+              "modal": "false"
             },
             {
               "id": "38",
@@ -3121,11 +3825,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL151"
+              "parameters": "&REPORT=ATDIL151",
+              "modal": "false"
             },
             {
               "id": "39",
@@ -3134,11 +3841,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL152"
+              "parameters": "&REPORT=ATDIL152",
+              "modal": "false"
             },
             {
               "id": "40",
@@ -3147,11 +3857,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL154"
+              "parameters": "&REPORT=ATDIL154",
+              "modal": "false"
             },
             {
               "id": "41",
@@ -3160,11 +3873,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL155"
+              "parameters": "&REPORT=ATDIL155",
+              "modal": "false"
             },
             {
               "id": "42",
@@ -3173,11 +3889,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT8006",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "43",
@@ -3186,11 +3905,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT3002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "44",
@@ -3199,21 +3921,26 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT8010",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "45",
-          "label": "Additional Information",
+          "title": "Additional Information",
           "row": "3",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "46",
@@ -3222,11 +3949,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "47",
@@ -3235,11 +3965,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "48",
@@ -3248,11 +3981,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1005",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "49",
@@ -3261,11 +3997,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1006",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "50",
@@ -3274,11 +4013,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1007",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "51",
@@ -3287,11 +4029,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1008",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "52",
@@ -3300,11 +4045,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1009",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "53",
@@ -3313,11 +4061,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1010",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "54",
@@ -3326,11 +4077,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1011",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "55",
@@ -3339,21 +4093,26 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1012",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "56",
-          "label": "Additional Reports",
+          "title": "Additional Reports",
           "row": "16",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "57",
@@ -3362,11 +4121,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL112"
+              "parameters": "&REPORT=ATDIL112",
+              "modal": "false"
             },
             {
               "id": "58",
@@ -3375,11 +4137,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL113"
+              "parameters": "&REPORT=ATDIL113",
+              "modal": "false"
             },
             {
               "id": "59",
@@ -3388,11 +4153,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL112"
+              "parameters": "&REPORT=ATDIL112",
+              "modal": "false"
             },
             {
               "id": "60",
@@ -3401,11 +4169,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL112"
+              "parameters": "&REPORT=ATDIL112",
+              "modal": "false"
             },
             {
               "id": "61",
@@ -3414,11 +4185,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL112"
+              "parameters": "&REPORT=ATDIL112",
+              "modal": "false"
             },
             {
               "id": "62",
@@ -3427,11 +4201,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL112"
+              "parameters": "&REPORT=ATDIL112",
+              "modal": "false"
             },
             {
               "id": "63",
@@ -3440,21 +4217,26 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT8009",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "64",
-          "label": "ICD Reports",
+          "title": "ICD Reports",
           "row": "27",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "65",
@@ -3463,11 +4245,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL143"
+              "parameters": "&REPORT=ATDIL143",
+              "modal": "false"
             },
             {
               "id": "66",
@@ -3476,11 +4261,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL901"
+              "parameters": "&REPORT=ATDIL901",
+              "modal": "false"
             },
             {
               "id": "67",
@@ -3489,11 +4277,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL902"
+              "parameters": "&REPORT=ATDIL902",
+              "modal": "false"
             },
             {
               "id": "68",
@@ -3502,21 +4293,26 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL903"
+              "parameters": "&REPORT=ATDIL903",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "69",
-          "label": "Census",
+          "title": "Census",
           "row": "3",
           "column": "4",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "70",
@@ -3525,11 +4321,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0201",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "71",
@@ -3538,11 +4337,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0201",
               "stage": "REQUEST",
-              "parameters": "&TRCASETY=OP"
+              "parameters": "&TRCASETY=OP",
+              "modal": "false"
             },
             {
               "id": "72",
@@ -3551,11 +4353,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT2007",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "73",
@@ -3564,11 +4369,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT4001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "74",
@@ -3577,11 +4385,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT4003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "75",
@@ -3590,11 +4401,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT4004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "76",
@@ -3603,11 +4417,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT4005",
               "stage": "REQUEST",
-              "parameters": "&MODE=0"
+              "parameters": "&MODE=0",
+              "modal": "false"
             },
             {
               "id": "77",
@@ -3616,11 +4433,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT4005",
               "stage": "REQUEST",
-              "parameters": "&MODE=1"
+              "parameters": "&MODE=1",
+              "modal": "false"
             },
             {
               "id": "78",
@@ -3629,11 +4449,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT4005",
               "stage": "REQUEST",
-              "parameters": "&MODE=2"
+              "parameters": "&MODE=2",
+              "modal": "false"
             },
             {
               "id": "79",
@@ -3642,11 +4465,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0200",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "80",
@@ -3655,11 +4481,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT2008",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "81",
@@ -3668,21 +4497,26 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT4006",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "82",
-          "label": "Census Report",
+          "title": "Census Report",
           "row": "16",
           "column": "4",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "83",
@@ -3691,11 +4525,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATCEN005"
+              "parameters": "&REPORT=ATCEN005",
+              "modal": "false"
             },
             {
               "id": "84",
@@ -3704,11 +4541,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATCEN001"
+              "parameters": "&REPORT=ATCEN001",
+              "modal": "false"
             },
             {
               "id": "85",
@@ -3717,11 +4557,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT8002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "86",
@@ -3730,11 +4573,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATCEN002"
+              "parameters": "&REPORT=ATCEN002",
+              "modal": "false"
             },
             {
               "id": "87",
@@ -3743,11 +4589,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATTILIAD"
+              "parameters": "&REPORT=ATTILIAD",
+              "modal": "false"
             },
             {
               "id": "88",
@@ -3756,11 +4605,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATTILRAD"
+              "parameters": "&REPORT=ATTILRAD",
+              "modal": "false"
             },
             {
               "id": "89",
@@ -3769,11 +4621,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATTILRTB"
+              "parameters": "&REPORT=ATTILRTB",
+              "modal": "false"
             },
             {
               "id": "90",
@@ -3782,11 +4637,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATTILIHL"
+              "parameters": "&REPORT=ATTILIHL",
+              "modal": "false"
             },
             {
               "id": "91",
@@ -3795,11 +4653,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATTILLOC"
+              "parameters": "&REPORT=ATTILLOC",
+              "modal": "false"
             },
             {
               "id": "92",
@@ -3808,11 +4669,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATTILTRN"
+              "parameters": "&REPORT=ATTILTRN",
+              "modal": "false"
             },
             {
               "id": "93",
@@ -3821,11 +4685,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDAYHSP"
+              "parameters": "&REPORT=ATDAYHSP",
+              "modal": "false"
             },
             {
               "id": "94",
@@ -3834,11 +4701,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATTILPDI"
+              "parameters": "&REPORT=ATTILPDI",
+              "modal": "false"
             },
             {
               "id": "95",
@@ -3847,11 +4717,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATTILEXP"
+              "parameters": "&REPORT=ATTILEXP",
+              "modal": "false"
             },
             {
               "id": "96",
@@ -3860,11 +4733,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATTILDIS"
+              "parameters": "&REPORT=ATTILDIS",
+              "modal": "false"
             },
             {
               "id": "97",
@@ -3873,11 +4749,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATTILLOS"
+              "parameters": "&REPORT=ATTILLOS",
+              "modal": "false"
             },
             {
               "id": "98",
@@ -3886,11 +4765,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATDIL143"
+              "parameters": "&REPORT=ATDIL143",
+              "modal": "false"
             },
             {
               "id": "99",
@@ -3899,11 +4781,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATCEN010"
+              "parameters": "&REPORT=ATCEN010",
+              "modal": "false"
             },
             {
               "id": "100",
@@ -3912,11 +4797,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT8003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "101",
@@ -3925,11 +4813,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT8004",
               "stage": "REQUEST",
-              "parameters": "&SEQ=1"
+              "parameters": "&SEQ=1",
+              "modal": "false"
             },
             {
               "id": "102",
@@ -3938,11 +4829,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ATRIL123"
+              "parameters": "&REPORT=ATRIL123",
+              "modal": "false"
             },
             {
               "id": "103",
@@ -3951,11 +4845,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT8007",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "104",
@@ -3964,11 +4861,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT8008",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         }
@@ -3976,18 +4876,20 @@
     },
     {
       "id": "CISCL001",
-      "title": "Electronic Medical Record",
+      "title": "Electronic Medical Records",
       "class": "",
       "icon": "",
       "columns": "6",
       "groups": [
         {
           "id": "",
-          "label": "",
+          "title": "",
           "row": "",
-          "column": "",
+          "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "1",
@@ -3996,11 +4898,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "APPMENU",
               "request": "COMET",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "2",
@@ -4009,21 +4914,26 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY1002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "3",
-          "label": "Display",
+          "title": "Display",
           "row": "3",
           "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "4",
@@ -4032,11 +4942,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT4002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "5",
@@ -4045,11 +4958,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT4005",
               "stage": "REQUEST",
-              "parameters": "&MODE=0"
+              "parameters": "&MODE=0",
+              "modal": "false"
             },
             {
               "id": "6",
@@ -4058,11 +4974,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT4005",
               "stage": "REQUEST",
-              "parameters": "&MODE=2"
+              "parameters": "&MODE=2",
+              "modal": "false"
             },
             {
               "id": "7",
@@ -4071,30 +4990,37 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAS4003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "41",
-          "label": "Orders Management",
+          "title": "Orders Management",
           "row": "1",
           "column": "4",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": ""
         },
         {
           "id": "42",
-          "label": "Display",
+          "title": "Display",
           "row": "3",
           "column": "4",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "43",
@@ -4103,11 +5029,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WOM0021",
               "stage": "REQUEST",
-              "parameters": "&MODE=W"
+              "parameters": "&MODE=W",
+              "modal": "false"
             },
             {
               "id": "44",
@@ -4116,11 +5045,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPS4001",
               "stage": "REQUEST",
-              "parameters": "&MODE=D"
+              "parameters": "&MODE=D",
+              "modal": "false"
             },
             {
               "id": "45",
@@ -4129,11 +5061,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WOM0011",
               "stage": "REQUEST",
-              "parameters": "&MODE=All"
+              "parameters": "&MODE=All",
+              "modal": "false"
             },
             {
               "id": "46",
@@ -4142,21 +5077,26 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WPS0011",
               "stage": "REQUEST",
-              "parameters": "&MODE=All"
+              "parameters": "&MODE=All",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "47",
-          "label": "Add or Update",
+          "title": "Add or Update",
           "row": "9",
           "column": "4",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "48",
@@ -4165,11 +5105,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WOM0011",
               "stage": "REQUEST",
-              "parameters": "&MODE=Active"
+              "parameters": "&MODE=Active",
+              "modal": "false"
             },
             {
               "id": "49",
@@ -4178,11 +5121,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WPS0011",
               "stage": "REQUEST",
-              "parameters": "&MODE=Active"
+              "parameters": "&MODE=Active",
+              "modal": "false"
             },
             {
               "id": "50",
@@ -4191,11 +5137,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WOM0022",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "51",
@@ -4204,11 +5153,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPS0013",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "52",
@@ -4217,11 +5169,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPS0016",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "53",
@@ -4230,11 +5185,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "54",
@@ -4243,11 +5201,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1014",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "55",
@@ -4256,11 +5217,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WRX2001",
               "stage": "REQUEST",
-              "parameters": "&VIEW=All"
+              "parameters": "&VIEW=All",
+              "modal": "false"
             },
             {
               "id": "56",
@@ -4269,11 +5233,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WRX2011",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "57",
@@ -4282,11 +5249,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WRX2006",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "58",
@@ -4295,11 +5265,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WRX2013",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "59",
@@ -4308,11 +5281,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WRX2015",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "60",
@@ -4321,11 +5297,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WRX6003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "61",
@@ -4334,11 +5313,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WRX6008",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "62",
@@ -4347,11 +5329,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WRX2017",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "63",
@@ -4360,11 +5345,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WRX2021",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "64",
@@ -4373,11 +5361,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WRX2001",
               "stage": "REQUEST",
-              "parameters": "&VIEW=Active"
+              "parameters": "&VIEW=Active",
+              "modal": "false"
             },
             {
               "id": "65",
@@ -4386,21 +5377,26 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WRX2025",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "66",
-          "label": "Health Information",
+          "title": "Health Information",
           "row": "1",
           "column": "5",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "67",
@@ -4409,21 +5405,26 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "HTTP",
               "request": "HTTP",
               "stage": "REQUEST",
-              "parameters": "200.0.0.14"
+              "parameters": "200.0.0.14",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "68",
-          "label": "Display",
+          "title": "Display",
           "row": "3",
           "column": "5",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "69",
@@ -4432,11 +5433,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WMR4101",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "70",
@@ -4445,11 +5449,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WMR4001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "71",
@@ -4458,11 +5465,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR0023",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "72",
@@ -4471,21 +5481,26 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "73",
-          "label": "Add or Update",
+          "title": "Add or Update",
           "row": "9",
           "column": "5",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "74",
@@ -4494,11 +5509,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR0014",
               "stage": "REQUEST",
-              "parameters": "&TYPE=PN&MODE=1"
+              "parameters": "&TYPE=PN&MODE=1",
+              "modal": "false"
             },
             {
               "id": "75",
@@ -4507,11 +5525,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1009",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "76",
@@ -4520,11 +5541,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1007",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "77",
@@ -4533,21 +5557,26 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "78",
-          "label": "Meals II",
+          "title": "Meals II",
           "row": "14",
           "column": "5",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "79",
@@ -4556,11 +5585,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1019",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "80",
@@ -4569,11 +5601,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "81",
@@ -4582,11 +5617,14 @@
               "column": "5",
               "class": "",
               "icon": "fa-heartbeat",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "82",
@@ -4595,11 +5633,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1013",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "83",
@@ -4608,11 +5649,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1017",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "84",
@@ -4621,11 +5665,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1011",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "85",
@@ -4634,11 +5681,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1012",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "86",
@@ -4647,11 +5697,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1010",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "87",
@@ -4660,11 +5713,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1040",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "88",
@@ -4673,11 +5729,14 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR0014",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "89",
@@ -4686,30 +5745,37 @@
               "column": "5",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR0013",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "90",
-          "label": "Events Tracking",
+          "title": "Events Tracking",
           "row": "1",
           "column": "6",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": ""
         },
         {
           "id": "91",
-          "label": "Add or Update",
+          "title": "Add or Update",
           "row": "9",
           "column": "6",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "92",
@@ -4718,11 +5784,14 @@
               "column": "6",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR0017",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "93",
@@ -4731,11 +5800,14 @@
               "column": "6",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR2001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "94",
@@ -4744,11 +5816,14 @@
               "column": "6",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1006",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "95",
@@ -4757,11 +5832,14 @@
               "column": "6",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR2007",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "96",
@@ -4770,11 +5848,14 @@
               "column": "6",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR0023",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "97",
@@ -4783,11 +5864,14 @@
               "column": "6",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1021",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "98",
@@ -4796,11 +5880,14 @@
               "column": "6",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1023",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "99",
@@ -4809,11 +5896,14 @@
               "column": "6",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1025",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "100",
@@ -4822,11 +5912,14 @@
               "column": "6",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1029",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "101",
@@ -4835,11 +5928,14 @@
               "column": "6",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "102",
@@ -4848,21 +5944,26 @@
               "column": "6",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1027",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "8",
-          "label": "Add or Update",
+          "title": "Add or Update",
           "row": "9",
           "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "9",
@@ -4871,11 +5972,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "10",
@@ -4884,11 +5988,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0011",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "11",
@@ -4897,11 +6004,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1009",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "12",
@@ -4910,11 +6020,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT4006",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "13",
@@ -4923,11 +6036,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1005",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "14",
@@ -4936,11 +6052,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT0071",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "15",
@@ -4949,39 +6068,48 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAT1010",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "16",
-          "label": "Assessments",
+          "title": "Assessments",
           "row": "1",
           "column": "2",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": ""
         },
         {
           "id": "17",
-          "label": "MDS Scheduling",
+          "title": "MDS Scheduling",
           "row": "2",
           "column": "2",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": ""
         },
         {
           "id": "18",
-          "label": "Display",
+          "title": "Display",
           "row": "3",
           "column": "2",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "19",
@@ -4990,11 +6118,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAS0024",
               "stage": "REQUEST",
-              "parameters": "&MODE=W"
+              "parameters": "&MODE=W",
+              "modal": "false"
             },
             {
               "id": "20",
@@ -5003,11 +6134,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAS4002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "21",
@@ -5016,11 +6150,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAS4001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "22",
@@ -5029,21 +6166,26 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAS4004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "23",
-          "label": "Add or Update",
+          "title": "Add or Update",
           "row": "9",
           "column": "2",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "24",
@@ -5052,11 +6194,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAS0001",
               "stage": "REQUEST",
-              "parameters": "&ACTION=Full"
+              "parameters": "&ACTION=Full",
+              "modal": "false"
             },
             {
               "id": "25",
@@ -5065,11 +6210,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAS0008",
               "stage": "REQUEST",
-              "parameters": "&FORMS=MDSRAP&ACTION=F"
+              "parameters": "&FORMS=MDSRAP&ACTION=F",
+              "modal": "false"
             },
             {
               "id": "26",
@@ -5078,11 +6226,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAS0008",
               "stage": "REQUEST",
-              "parameters": "&FORMS=MDSROSTER&ACTION=F"
+              "parameters": "&FORMS=MDSROSTER&ACTION=F",
+              "modal": "false"
             },
             {
               "id": "27",
@@ -5091,11 +6242,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAS0008",
               "stage": "REQUEST",
-              "parameters": "&ACTION=Full"
+              "parameters": "&ACTION=Full",
+              "modal": "false"
             },
             {
               "id": "28",
@@ -5104,11 +6258,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAS0008",
               "stage": "REQUEST",
-              "parameters": "&FORMS=CACNA;NSGND;NSGNA;CACPT;CACOT;CACST;PT-WLD&ACTION=F"
+              "parameters": "&FORMS=CACNA;NSGND;NSGNA;CACPT;CACOT;CACST;PT-WLD&ACTION=F",
+              "modal": "false"
             },
             {
               "id": "29",
@@ -5117,11 +6274,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAS0008",
               "stage": "REQUEST",
-              "parameters": "&FORMS=CRGUIDE;KARDEX-CON;NSGND&ACTION=F"
+              "parameters": "&FORMS=CRGUIDE;KARDEX-CON;NSGND&ACTION=F",
+              "modal": "false"
             },
             {
               "id": "30",
@@ -5130,30 +6290,37 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAS0008",
               "stage": "REQUEST",
-              "parameters": "&FORMS=BRADEN;NSGFA;NSGUPSRA;NSGRAE&ACTION=F"
+              "parameters": "&FORMS=BRADEN;NSGFA;NSGUPSRA;NSGRAE&ACTION=F",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "31",
-          "label": "Care Planning",
+          "title": "Care Planning",
           "row": "1",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": ""
         },
         {
           "id": "32",
-          "label": "Display",
+          "title": "Display",
           "row": "3",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "33",
@@ -5162,11 +6329,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WCP4002V",
               "stage": "REQUEST",
-              "parameters": "&MODE=DIRECT"
+              "parameters": "&MODE=DIRECT",
+              "modal": "false"
             },
             {
               "id": "34",
@@ -5175,11 +6345,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WCP4001",
               "stage": "REQUEST",
-              "parameters": "&MODE=M"
+              "parameters": "&MODE=M",
+              "modal": "false"
             },
             {
               "id": "35",
@@ -5188,21 +6361,26 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WCP4002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "36",
-          "label": "Add or Update",
+          "title": "Add or Update",
           "row": "9",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "37",
@@ -5211,11 +6389,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WCP0005",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "38",
@@ -5224,11 +6405,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WCP0001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "39",
@@ -5237,11 +6421,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WCP2001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "40",
@@ -5250,11 +6437,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WCP2002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         }
@@ -5269,11 +6459,13 @@
       "groups": [
         {
           "id": "",
-          "label": "",
+          "title": "",
           "row": "",
-          "column": "",
+          "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "1",
@@ -5282,11 +6474,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "APPMENU",
               "request": "COMET",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "2",
@@ -5295,21 +6490,26 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY1002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "3",
-          "label": "Point of Care",
+          "title": "Point of Care",
           "row": "3",
           "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "4",
@@ -5318,11 +6518,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1101",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "5",
@@ -5331,11 +6534,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1009",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "6",
@@ -5344,11 +6550,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1019",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "7",
@@ -5357,11 +6566,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "8",
@@ -5370,11 +6582,14 @@
               "column": "1",
               "class": "",
               "icon": "fa-heartbeat",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1013",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "9",
@@ -5383,11 +6598,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "10",
@@ -5396,11 +6614,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1023",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "11",
@@ -5409,11 +6630,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1007",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "12",
@@ -5422,11 +6646,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "13",
@@ -5435,11 +6662,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1017",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "14",
@@ -5448,11 +6678,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1025",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "15",
@@ -5461,11 +6694,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1029",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "16",
@@ -5474,11 +6710,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1031",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "17",
@@ -5487,11 +6726,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1033",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "18",
@@ -5500,11 +6742,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1035",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "19",
@@ -5513,11 +6758,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1037",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "20",
@@ -5526,11 +6774,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1011",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "21",
@@ -5539,11 +6790,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1012",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "22",
@@ -5552,11 +6806,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WMR1021",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "23",
@@ -5565,11 +6822,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "APPMENU",
               "request": "DEMNU001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "24",
@@ -5578,21 +6838,26 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY3002",
               "stage": "REQUEST",
-              "parameters": "&VMODE=1"
+              "parameters": "&VMODE=1",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "25",
-          "label": "Tracking Reports",
+          "title": "Tracking Reports",
           "row": "3",
           "column": "2",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "26",
@@ -5601,11 +6866,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRVT001"
+              "parameters": "&REPORT=MRVT001",
+              "modal": "false"
             },
             {
               "id": "27",
@@ -5614,11 +6882,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRIO003"
+              "parameters": "&REPORT=MRIO003",
+              "modal": "false"
             },
             {
               "id": "28",
@@ -5627,11 +6898,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRIO002"
+              "parameters": "&REPORT=MRIO002",
+              "modal": "false"
             },
             {
               "id": "29",
@@ -5640,11 +6914,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MROTD011"
+              "parameters": "&REPORT=MROTD011",
+              "modal": "false"
             },
             {
               "id": "30",
@@ -5653,11 +6930,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRBB001"
+              "parameters": "&REPORT=MRBB001",
+              "modal": "false"
             },
             {
               "id": "31",
@@ -5666,11 +6946,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRBB004"
+              "parameters": "&REPORT=MRBB004",
+              "modal": "false"
             },
             {
               "id": "32",
@@ -5679,11 +6962,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRHW001"
+              "parameters": "&REPORT=MRHW001",
+              "modal": "false"
             },
             {
               "id": "33",
@@ -5692,11 +6978,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MROTD001"
+              "parameters": "&REPORT=MROTD001",
+              "modal": "false"
             },
             {
               "id": "34",
@@ -5705,11 +6994,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRADL01"
+              "parameters": "&REPORT=MRADL01",
+              "modal": "false"
             },
             {
               "id": "35",
@@ -5718,11 +7010,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRADL02"
+              "parameters": "&REPORT=MRADL02",
+              "modal": "false"
             },
             {
               "id": "36",
@@ -5731,11 +7026,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRADL03"
+              "parameters": "&REPORT=MRADL03",
+              "modal": "false"
             },
             {
               "id": "37",
@@ -5744,11 +7042,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRMOOD1"
+              "parameters": "&REPORT=MRMOOD1",
+              "modal": "false"
             },
             {
               "id": "38",
@@ -5757,11 +7058,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRMOOD2"
+              "parameters": "&REPORT=MRMOOD2",
+              "modal": "false"
             },
             {
               "id": "39",
@@ -5770,11 +7074,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MROTD041"
+              "parameters": "&REPORT=MROTD041",
+              "modal": "false"
             },
             {
               "id": "40",
@@ -5783,11 +7090,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MROTD031"
+              "parameters": "&REPORT=MROTD031",
+              "modal": "false"
             },
             {
               "id": "41",
@@ -5796,21 +7106,26 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRPN001"
+              "parameters": "&REPORT=MRPN001",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "42",
-          "label": "Audit Reports",
+          "title": "Audit Reports",
           "row": "3",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "43",
@@ -5819,11 +7134,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0001"
+              "parameters": "&REPORT=MRA0001",
+              "modal": "false"
             },
             {
               "id": "44",
@@ -5832,11 +7150,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0002"
+              "parameters": "&REPORT=MRA0002",
+              "modal": "false"
             },
             {
               "id": "45",
@@ -5845,11 +7166,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0011"
+              "parameters": "&REPORT=MRA0011",
+              "modal": "false"
             },
             {
               "id": "46",
@@ -5858,11 +7182,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0031"
+              "parameters": "&REPORT=MRA0031",
+              "modal": "false"
             },
             {
               "id": "47",
@@ -5871,11 +7198,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0021"
+              "parameters": "&REPORT=MRA0021",
+              "modal": "false"
             },
             {
               "id": "48",
@@ -5884,11 +7214,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0041"
+              "parameters": "&REPORT=MRA0041",
+              "modal": "false"
             },
             {
               "id": "49",
@@ -5897,11 +7230,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0051"
+              "parameters": "&REPORT=MRA0051",
+              "modal": "false"
             },
             {
               "id": "50",
@@ -5910,11 +7246,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0052"
+              "parameters": "&REPORT=MRA0052",
+              "modal": "false"
             },
             {
               "id": "51",
@@ -5923,11 +7262,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0053"
+              "parameters": "&REPORT=MRA0053",
+              "modal": "false"
             },
             {
               "id": "52",
@@ -5936,11 +7278,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0061"
+              "parameters": "&REPORT=MRA0061",
+              "modal": "false"
             },
             {
               "id": "53",
@@ -5949,11 +7294,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0062"
+              "parameters": "&REPORT=MRA0062",
+              "modal": "false"
             },
             {
               "id": "54",
@@ -5962,11 +7310,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0071"
+              "parameters": "&REPORT=MRA0071",
+              "modal": "false"
             },
             {
               "id": "55",
@@ -5975,11 +7326,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0072"
+              "parameters": "&REPORT=MRA0072",
+              "modal": "false"
             },
             {
               "id": "56",
@@ -5988,11 +7342,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0073"
+              "parameters": "&REPORT=MRA0073",
+              "modal": "false"
             },
             {
               "id": "57",
@@ -6001,11 +7358,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0081"
+              "parameters": "&REPORT=MRA0081",
+              "modal": "false"
             },
             {
               "id": "58",
@@ -6014,11 +7374,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0082"
+              "parameters": "&REPORT=MRA0082",
+              "modal": "false"
             },
             {
               "id": "59",
@@ -6027,11 +7390,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0091"
+              "parameters": "&REPORT=MRA0091",
+              "modal": "false"
             },
             {
               "id": "60",
@@ -6040,11 +7406,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0101"
+              "parameters": "&REPORT=MRA0101",
+              "modal": "false"
             },
             {
               "id": "61",
@@ -6053,11 +7422,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0111"
+              "parameters": "&REPORT=MRA0111",
+              "modal": "false"
             },
             {
               "id": "62",
@@ -6066,11 +7438,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0121"
+              "parameters": "&REPORT=MRA0121",
+              "modal": "false"
             },
             {
               "id": "63",
@@ -6079,11 +7454,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0131"
+              "parameters": "&REPORT=MRA0131",
+              "modal": "false"
             },
             {
               "id": "64",
@@ -6092,11 +7470,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0141"
+              "parameters": "&REPORT=MRA0141",
+              "modal": "false"
             },
             {
               "id": "65",
@@ -6105,11 +7486,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0142"
+              "parameters": "&REPORT=MRA0142",
+              "modal": "false"
             },
             {
               "id": "66",
@@ -6118,11 +7502,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0143"
+              "parameters": "&REPORT=MRA0143",
+              "modal": "false"
             },
             {
               "id": "67",
@@ -6131,11 +7518,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0144"
+              "parameters": "&REPORT=MRA0144",
+              "modal": "false"
             },
             {
               "id": "68",
@@ -6144,11 +7534,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0151"
+              "parameters": "&REPORT=MRA0151",
+              "modal": "false"
             },
             {
               "id": "69",
@@ -6157,11 +7550,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0152"
+              "parameters": "&REPORT=MRA0152",
+              "modal": "false"
             },
             {
               "id": "70",
@@ -6170,11 +7566,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0161"
+              "parameters": "&REPORT=MRA0161",
+              "modal": "false"
             },
             {
               "id": "71",
@@ -6183,21 +7582,26 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRA0166"
+              "parameters": "&REPORT=MRA0166",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "72",
-          "label": "Clinical Diary Reports",
+          "title": "Clinical Diary Reports",
           "row": "3",
           "column": "4",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "73",
@@ -6206,11 +7610,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRCD001"
+              "parameters": "&REPORT=MRCD001",
+              "modal": "false"
             },
             {
               "id": "74",
@@ -6219,11 +7626,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRCD002"
+              "parameters": "&REPORT=MRCD002",
+              "modal": "false"
             },
             {
               "id": "75",
@@ -6232,11 +7642,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRCD003"
+              "parameters": "&REPORT=MRCD003",
+              "modal": "false"
             },
             {
               "id": "76",
@@ -6245,11 +7658,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRCD004"
+              "parameters": "&REPORT=MRCD004",
+              "modal": "false"
             },
             {
               "id": "77",
@@ -6258,11 +7674,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRCD011"
+              "parameters": "&REPORT=MRCD011",
+              "modal": "false"
             },
             {
               "id": "78",
@@ -6271,11 +7690,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRCD012"
+              "parameters": "&REPORT=MRCD012",
+              "modal": "false"
             },
             {
               "id": "79",
@@ -6284,11 +7706,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRCD013"
+              "parameters": "&REPORT=MRCD013",
+              "modal": "false"
             },
             {
               "id": "80",
@@ -6297,11 +7722,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRCD015"
+              "parameters": "&REPORT=MRCD015",
+              "modal": "false"
             },
             {
               "id": "81",
@@ -6310,11 +7738,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRCD021"
+              "parameters": "&REPORT=MRCD021",
+              "modal": "false"
             },
             {
               "id": "82",
@@ -6323,11 +7754,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRCD022"
+              "parameters": "&REPORT=MRCD022",
+              "modal": "false"
             },
             {
               "id": "83",
@@ -6336,11 +7770,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRCD023"
+              "parameters": "&REPORT=MRCD023",
+              "modal": "false"
             },
             {
               "id": "84",
@@ -6349,11 +7786,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRCD024"
+              "parameters": "&REPORT=MRCD024",
+              "modal": "false"
             },
             {
               "id": "85",
@@ -6362,11 +7802,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=MRCD031"
+              "parameters": "&REPORT=MRCD031",
+              "modal": "false"
             }
           ]
         }
@@ -6381,11 +7824,13 @@
       "groups": [
         {
           "id": "",
-          "label": "",
+          "title": "",
           "row": "",
-          "column": "",
+          "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "1",
@@ -6394,11 +7839,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "APPMENU",
               "request": "COMET",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "2",
@@ -6407,21 +7855,26 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY1002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "3",
-          "label": "Patient Trust",
+          "title": "Patient Trust",
           "row": "4",
           "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "4",
@@ -6430,11 +7883,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPT0002D",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "5",
@@ -6443,11 +7899,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPT3001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "6",
@@ -6456,11 +7915,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPT0001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "7",
@@ -6469,11 +7931,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPT0003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "8",
@@ -6482,11 +7947,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPT0004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "9",
@@ -6495,11 +7963,14 @@
               "column": "1",
               "class": "",
               "icon": "",
-              "disabled": "false",
+              "badge": "",
+              "badgeClass": "",
+              "disabled": "true",
               "service": "DATAFORM",
               "request": "WCH0010",
               "stage": "REQUEST",
-              "parameters": "&MOD=PT"
+              "parameters": "&MOD=PT",
+              "modal": "false"
             },
             {
               "id": "10",
@@ -6508,11 +7979,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WCH1002S",
               "stage": "REQUEST",
-              "parameters": "&MOD=PT"
+              "parameters": "&MOD=PT",
+              "modal": "false"
             },
             {
               "id": "11",
@@ -6521,11 +7995,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WCH0013",
               "stage": "REQUEST",
-              "parameters": "&MOD=PT"
+              "parameters": "&MOD=PT",
+              "modal": "false"
             },
             {
               "id": "12",
@@ -6534,11 +8011,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPT0103",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "13",
@@ -6547,11 +8027,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPT3006",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "14",
@@ -6560,11 +8043,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WPT3002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "15",
@@ -6573,11 +8059,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPT3003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "16",
@@ -6586,11 +8075,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPT3011",
               "stage": "REQUEST",
-              "parameters": "&NOCR=0"
+              "parameters": "&NOCR=0",
+              "modal": "false"
             },
             {
               "id": "17",
@@ -6599,11 +8091,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPT3011",
               "stage": "REQUEST",
-              "parameters": "&NOCR=1"
+              "parameters": "&NOCR=1",
+              "modal": "false"
             },
             {
               "id": "18",
@@ -6612,11 +8107,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPT3012",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "19",
@@ -6625,11 +8123,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPT4001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "20",
@@ -6638,30 +8139,37 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WCH1002S",
               "stage": "REQUEST",
-              "parameters": "&MOD=PT"
+              "parameters": "&MOD=PT",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "65",
-          "label": "Monthly Income Billing",
+          "title": "Monthly Income Billing",
           "row": "9",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": ""
         },
         {
           "id": "66",
-          "label": "Insurance Billing",
+          "title": "Insurance Billing",
           "row": "10",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "67",
@@ -6670,11 +8178,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBL6004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "68",
@@ -6683,11 +8194,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBL0218",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "69",
@@ -6696,11 +8210,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBL0201",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "70",
@@ -6709,11 +8226,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBL0401",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "71",
@@ -6722,11 +8242,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBL0403",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "72",
@@ -6735,11 +8258,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WBL0404",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "73",
@@ -6748,11 +8274,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBL0212",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "74",
@@ -6761,11 +8290,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBL6001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "75",
@@ -6774,11 +8306,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBL4001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "76",
@@ -6787,11 +8322,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAT3001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "77",
@@ -6800,11 +8338,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBL0305",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "78",
@@ -6813,11 +8354,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBL0214",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "79",
@@ -6826,11 +8370,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBL0307",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "80",
@@ -6839,11 +8386,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBL2003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "81",
@@ -6852,11 +8402,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBL4003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "82",
@@ -6865,11 +8418,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBL3001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "83",
@@ -6878,11 +8434,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBL3004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "84",
@@ -6891,11 +8450,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBL0221",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "85",
@@ -6904,21 +8466,26 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBL0224",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "86",
-          "label": "Reports",
+          "title": "Reports",
           "row": "31",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "87",
@@ -6927,11 +8494,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=BLSU002&RUNMODE=1"
+              "parameters": "&REPORT=BLSU002&RUNMODE=1",
+              "modal": "false"
             },
             {
               "id": "88",
@@ -6940,11 +8510,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=BLSU001&RUNMODE=1"
+              "parameters": "&REPORT=BLSU001&RUNMODE=1",
+              "modal": "false"
             },
             {
               "id": "89",
@@ -6953,11 +8526,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=BLCHRP01"
+              "parameters": "&REPORT=BLCHRP01",
+              "modal": "false"
             },
             {
               "id": "90",
@@ -6966,11 +8542,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=BLCGER03"
+              "parameters": "&REPORT=BLCGER03",
+              "modal": "false"
             },
             {
               "id": "91",
@@ -6979,11 +8558,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=BLCC002"
+              "parameters": "&REPORT=BLCC002",
+              "modal": "false"
             },
             {
               "id": "92",
@@ -6992,11 +8574,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=BLCGER02"
+              "parameters": "&REPORT=BLCGER02",
+              "modal": "false"
             },
             {
               "id": "93",
@@ -7005,11 +8590,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=BLRCRP01"
+              "parameters": "&REPORT=BLRCRP01",
+              "modal": "false"
             },
             {
               "id": "94",
@@ -7018,11 +8606,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBL0308",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "95",
@@ -7031,11 +8622,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=BLCGER04"
+              "parameters": "&REPORT=BLCGER04",
+              "modal": "false"
             },
             {
               "id": "96",
@@ -7044,11 +8638,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=CLVL001"
+              "parameters": "&REPORT=CLVL001",
+              "modal": "false"
             },
             {
               "id": "97",
@@ -7057,11 +8654,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=BLRR0010"
+              "parameters": "&REPORT=BLRR0010",
+              "modal": "false"
             },
             {
               "id": "98",
@@ -7070,11 +8670,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=BLCM0001"
+              "parameters": "&REPORT=BLCM0001",
+              "modal": "false"
             },
             {
               "id": "99",
@@ -7083,11 +8686,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=BLHFER01"
+              "parameters": "&REPORT=BLHFER01",
+              "modal": "false"
             },
             {
               "id": "100",
@@ -7096,11 +8702,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=BLCGER01"
+              "parameters": "&REPORT=BLCGER01",
+              "modal": "false"
             },
             {
               "id": "101",
@@ -7109,21 +8718,26 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=BLCL021"
+              "parameters": "&REPORT=BLCL021",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "102",
-          "label": "Accounts Receivable",
+          "title": "Accounts Receivable",
           "row": "4",
           "column": "4",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "103",
@@ -7132,11 +8746,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAR0012D",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "104",
@@ -7145,11 +8762,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAR0172",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "105",
@@ -7158,11 +8778,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAR0011",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "106",
@@ -7171,11 +8794,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAR0105",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "107",
@@ -7184,11 +8810,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAR0103",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "108",
@@ -7197,11 +8826,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAR0025",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "109",
@@ -7210,11 +8842,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAR0023",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "110",
@@ -7223,11 +8858,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAR0106",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "111",
@@ -7236,11 +8874,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAR0014",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "112",
@@ -7249,11 +8890,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAR4002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "113",
@@ -7262,11 +8906,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAR4001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "114",
@@ -7275,11 +8922,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAR0031",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "115",
@@ -7288,11 +8938,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAR6001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "116",
@@ -7301,11 +8954,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAR3001",
               "stage": "REQUEST",
-              "parameters": "&PROCESS=P&RAFORM=835"
+              "parameters": "&PROCESS=P&RAFORM=835",
+              "modal": "false"
             },
             {
               "id": "117",
@@ -7314,11 +8970,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAR3001",
               "stage": "REQUEST",
-              "parameters": "&PROCESS=C&RAFORM=835"
+              "parameters": "&PROCESS=C&RAFORM=835",
+              "modal": "false"
             },
             {
               "id": "118",
@@ -7327,11 +8986,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAR3002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "119",
@@ -7340,11 +9002,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBL2001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "120",
@@ -7353,11 +9018,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBL3003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "121",
@@ -7366,11 +9034,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAR3003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "122",
@@ -7379,21 +9050,26 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAR0015",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "123",
-          "label": "Reports",
+          "title": "Reports",
           "row": "25",
           "column": "4",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "124",
@@ -7402,11 +9078,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ARTR005"
+              "parameters": "&REPORT=ARTR005",
+              "modal": "false"
             },
             {
               "id": "125",
@@ -7415,11 +9094,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ARPL004"
+              "parameters": "&REPORT=ARPL004",
+              "modal": "false"
             },
             {
               "id": "126",
@@ -7428,11 +9110,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ARCI001"
+              "parameters": "&REPORT=ARCI001",
+              "modal": "false"
             },
             {
               "id": "127",
@@ -7441,11 +9126,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ARCP001"
+              "parameters": "&REPORT=ARCP001",
+              "modal": "false"
             },
             {
               "id": "128",
@@ -7454,11 +9142,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ARGD001"
+              "parameters": "&REPORT=ARGD001",
+              "modal": "false"
             },
             {
               "id": "129",
@@ -7467,11 +9158,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ARNT001"
+              "parameters": "&REPORT=ARNT001",
+              "modal": "false"
             },
             {
               "id": "130",
@@ -7480,21 +9174,26 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAR0172",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "21",
-          "label": "Reports",
+          "title": "Reports",
           "row": "23",
           "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "22",
@@ -7503,11 +9202,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=PTTR001"
+              "parameters": "&REPORT=PTTR001",
+              "modal": "false"
             },
             {
               "id": "23",
@@ -7516,11 +9218,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=PTTR002"
+              "parameters": "&REPORT=PTTR002",
+              "modal": "false"
             },
             {
               "id": "24",
@@ -7529,11 +9234,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=PTTR003"
+              "parameters": "&REPORT=PTTR003",
+              "modal": "false"
             },
             {
               "id": "25",
@@ -7542,11 +9250,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=PTMB001"
+              "parameters": "&REPORT=PTMB001",
+              "modal": "false"
             },
             {
               "id": "26",
@@ -7555,11 +9266,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPT8001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "27",
@@ -7568,11 +9282,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=CHCK003"
+              "parameters": "&REPORT=CHCK003",
+              "modal": "false"
             },
             {
               "id": "28",
@@ -7581,11 +9298,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=PTRT001"
+              "parameters": "&REPORT=PTRT001",
+              "modal": "false"
             },
             {
               "id": "29",
@@ -7594,11 +9314,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAP8002",
               "stage": "REQUEST",
-              "parameters": "&MOD=PT"
+              "parameters": "&MOD=PT",
+              "modal": "false"
             },
             {
               "id": "30",
@@ -7607,21 +9330,26 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY3002",
               "stage": "REQUEST",
-              "parameters": "&VMODE=1"
+              "parameters": "&VMODE=1",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "31",
-          "label": "Ancillaries",
+          "title": "Ancillaries",
           "row": "4",
           "column": "2",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "32",
@@ -7630,11 +9358,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAC0002D",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "33",
@@ -7643,11 +9374,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAC0001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "34",
@@ -7656,11 +9390,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAC0003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "35",
@@ -7669,11 +9406,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAC0004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "36",
@@ -7682,11 +9422,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAC0005",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "37",
@@ -7695,11 +9438,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAC0102",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "38",
@@ -7708,11 +9454,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAC4001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "39",
@@ -7721,11 +9470,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAC3001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "40",
@@ -7734,11 +9486,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAC6004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "41",
@@ -7747,11 +9502,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAC7001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "42",
@@ -7760,11 +9518,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAC2001",
               "stage": "REQUEST",
-              "parameters": "&MOD=0"
+              "parameters": "&MOD=0",
+              "modal": "false"
             },
             {
               "id": "43",
@@ -7773,11 +9534,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAC2001",
               "stage": "REQUEST",
-              "parameters": "&MOD=1"
+              "parameters": "&MOD=1",
+              "modal": "false"
             },
             {
               "id": "44",
@@ -7786,11 +9550,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAC0031",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "45",
@@ -7799,11 +9566,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAC3004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "46",
@@ -7812,11 +9582,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAC4002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "47",
@@ -7825,21 +9598,26 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAC3005",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "48",
-          "label": "Reports",
+          "title": "Reports",
           "row": "23",
           "column": "2",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "49",
@@ -7848,11 +9626,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ACTR0001"
+              "parameters": "&REPORT=ACTR0001",
+              "modal": "false"
             },
             {
               "id": "50",
@@ -7861,11 +9642,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ACTR0007"
+              "parameters": "&REPORT=ACTR0007",
+              "modal": "false"
             },
             {
               "id": "51",
@@ -7874,11 +9658,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ACTR0021"
+              "parameters": "&REPORT=ACTR0021",
+              "modal": "false"
             },
             {
               "id": "52",
@@ -7887,11 +9674,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ACTR0024"
+              "parameters": "&REPORT=ACTR0024",
+              "modal": "false"
             },
             {
               "id": "53",
@@ -7900,11 +9690,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ACASD001"
+              "parameters": "&REPORT=ACASD001",
+              "modal": "false"
             },
             {
               "id": "54",
@@ -7913,11 +9706,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=ACASD002"
+              "parameters": "&REPORT=ACASD002",
+              "modal": "false"
             },
             {
               "id": "55",
@@ -7926,11 +9722,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAC8001",
               "stage": "REQUEST",
-              "parameters": "&MODE=1"
+              "parameters": "&MODE=1",
+              "modal": "false"
             },
             {
               "id": "56",
@@ -7939,11 +9738,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAC8001",
               "stage": "REQUEST",
-              "parameters": "&MODE=2"
+              "parameters": "&MODE=2",
+              "modal": "false"
             },
             {
               "id": "57",
@@ -7952,11 +9754,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAC8001",
               "stage": "REQUEST",
-              "parameters": "&MODE=3"
+              "parameters": "&MODE=3",
+              "modal": "false"
             },
             {
               "id": "58",
@@ -7965,11 +9770,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAC8002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "59",
@@ -7978,57 +9786,70 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAC8002",
               "stage": "REQUEST",
-              "parameters": "&MODE=1"
+              "parameters": "&MODE=1",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "60",
-          "label": "Billing",
+          "title": "Billing",
           "row": "4",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": ""
         },
         {
           "id": "61",
-          "label": "Medicaid Billing",
+          "title": "Medicaid Billing",
           "row": "5",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": ""
         },
         {
           "id": "62",
-          "label": "Medicare A Billing",
+          "title": "Medicare A Billing",
           "row": "6",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": ""
         },
         {
           "id": "63",
-          "label": "Private Billing",
+          "title": "Private Billing",
           "row": "7",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": ""
         },
         {
           "id": "64",
-          "label": "Medicare B Billing",
+          "title": "Medicare B Billing",
           "row": "8",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": ""
         }
       ]
@@ -8042,11 +9863,13 @@
       "groups": [
         {
           "id": "",
-          "label": "",
+          "title": "",
           "row": "",
-          "column": "",
+          "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "1",
@@ -8055,11 +9878,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "APPMENU",
               "request": "COMET",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "2",
@@ -8068,21 +9894,26 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPY0001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "3",
-          "label": "Human Resources",
+          "title": "Human Resources",
           "row": "3",
           "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "4",
@@ -8091,11 +9922,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WHR0011",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "5",
@@ -8104,11 +9938,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WHR0014",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "6",
@@ -8117,11 +9954,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WHR0017",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "7",
@@ -8130,11 +9970,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WHR0111",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "8",
@@ -8143,11 +9986,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WHR0112",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "9",
@@ -8156,11 +10002,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WHR0113",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "10",
@@ -8169,11 +10018,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WHR0114",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "11",
@@ -8182,11 +10034,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WHR0123",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "12",
@@ -8195,11 +10050,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WHR0124",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "13",
@@ -8208,11 +10066,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WHR0115",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "14",
@@ -8221,11 +10082,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WHR1301",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "15",
@@ -8234,11 +10098,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WHR1303",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "16",
@@ -8247,11 +10114,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WHR0117",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "17",
@@ -8260,11 +10130,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WHR3006",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "18",
@@ -8273,21 +10146,26 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WHR3007",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "19",
-          "label": "Reports",
+          "title": "Reports",
           "row": "20",
           "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "20",
@@ -8296,11 +10174,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=HREMP001"
+              "parameters": "&REPORT=HREMP001",
+              "modal": "false"
             },
             {
               "id": "21",
@@ -8309,11 +10190,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=HREMP004"
+              "parameters": "&REPORT=HREMP004",
+              "modal": "false"
             },
             {
               "id": "22",
@@ -8322,11 +10206,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=HREMP012"
+              "parameters": "&REPORT=HREMP012",
+              "modal": "false"
             },
             {
               "id": "23",
@@ -8335,11 +10222,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=HREMP018"
+              "parameters": "&REPORT=HREMP018",
+              "modal": "false"
             },
             {
               "id": "24",
@@ -8348,21 +10238,26 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPY1001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "25",
-          "label": "Payroll Master ",
+          "title": "Payroll Master ",
           "row": "3",
           "column": "2",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "26",
@@ -8371,11 +10266,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WPY0111",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "27",
@@ -8384,11 +10282,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WPY0112",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "28",
@@ -8397,11 +10298,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WPY0114",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "29",
@@ -8410,11 +10314,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WPY0113",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "30",
@@ -8423,11 +10330,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WPY0116",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "31",
@@ -8436,11 +10346,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WPY0115",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "32",
@@ -8449,11 +10362,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WPY0117",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "33",
@@ -8462,11 +10378,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPY3009",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "34",
@@ -8475,21 +10394,26 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WCH0024",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "35",
-          "label": "Reports",
+          "title": "Reports",
           "row": "20",
           "column": "2",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "36",
@@ -8498,11 +10422,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=PYEMP001"
+              "parameters": "&REPORT=PYEMP001",
+              "modal": "false"
             },
             {
               "id": "37",
@@ -8511,11 +10438,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=PYEMP011"
+              "parameters": "&REPORT=PYEMP011",
+              "modal": "false"
             },
             {
               "id": "38",
@@ -8524,11 +10454,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=PYEMP021"
+              "parameters": "&REPORT=PYEMP021",
+              "modal": "false"
             },
             {
               "id": "39",
@@ -8537,11 +10470,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=PYEMP012"
+              "parameters": "&REPORT=PYEMP012",
+              "modal": "false"
             },
             {
               "id": "40",
@@ -8550,21 +10486,26 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WPY8001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "41",
-          "label": "Assessments and Workflow",
+          "title": "Assessments and Workflow",
           "row": "30",
           "column": "2",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "42",
@@ -8573,11 +10514,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WHR3001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "43",
@@ -8586,11 +10530,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WAS0008",
               "stage": "REQUEST",
-              "parameters": "&EMP=1"
+              "parameters": "&EMP=1",
+              "modal": "false"
             },
             {
               "id": "44",
@@ -8599,11 +10546,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPY3101",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "45",
@@ -8612,11 +10562,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WHR3005",
               "stage": "REQUEST",
-              "parameters": "&ONLYCHK=0"
+              "parameters": "&ONLYCHK=0",
+              "modal": "false"
             },
             {
               "id": "46",
@@ -8625,21 +10578,26 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY3002",
               "stage": "REQUEST",
-              "parameters": "&VMODE=1"
+              "parameters": "&VMODE=1",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "47",
-          "label": "Payroll Processing",
+          "title": "Payroll Processing",
           "row": "3",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "48",
@@ -8648,11 +10606,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPY3003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "49",
@@ -8661,11 +10622,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPY0021",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "50",
@@ -8674,11 +10638,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPY0021",
               "stage": "REQUEST",
-              "parameters": "&SHORTVER=1"
+              "parameters": "&SHORTVER=1",
+              "modal": "false"
             },
             {
               "id": "51",
@@ -8687,11 +10654,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPY0029",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "52",
@@ -8700,11 +10670,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPY0031",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "53",
@@ -8713,11 +10686,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WPY0035",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "54",
@@ -8726,11 +10702,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WCH0010",
               "stage": "REQUEST",
-              "parameters": "&MOD=PY"
+              "parameters": "&MOD=PY",
+              "modal": "false"
             },
             {
               "id": "55",
@@ -8739,11 +10718,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WCH1002S",
               "stage": "REQUEST",
-              "parameters": "&MOD=PY"
+              "parameters": "&MOD=PY",
+              "modal": "false"
             },
             {
               "id": "56",
@@ -8752,11 +10734,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WCH0020",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "57",
@@ -8765,11 +10750,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WCH0023",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "58",
@@ -8778,11 +10766,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WCH1003",
               "stage": "REQUEST",
-              "parameters": "&PRINTED=0"
+              "parameters": "&PRINTED=0",
+              "modal": "false"
             },
             {
               "id": "59",
@@ -8791,11 +10782,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WCH1003",
               "stage": "REQUEST",
-              "parameters": "&PRINTED=1"
+              "parameters": "&PRINTED=1",
+              "modal": "false"
             },
             {
               "id": "60",
@@ -8804,11 +10798,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPY3004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "61",
@@ -8817,21 +10814,26 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPY0022",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "62",
-          "label": "Reports",
+          "title": "Reports",
           "row": "20",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "63",
@@ -8840,11 +10842,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=PYRUN001"
+              "parameters": "&REPORT=PYRUN001",
+              "modal": "false"
             },
             {
               "id": "64",
@@ -8853,11 +10858,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=PYMAS001"
+              "parameters": "&REPORT=PYMAS001",
+              "modal": "false"
             },
             {
               "id": "65",
@@ -8866,11 +10874,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=PYMAS011"
+              "parameters": "&REPORT=PYMAS011",
+              "modal": "false"
             },
             {
               "id": "66",
@@ -8879,11 +10890,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=PYMAS021"
+              "parameters": "&REPORT=PYMAS021",
+              "modal": "false"
             },
             {
               "id": "67",
@@ -8892,11 +10906,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=PYMAS012"
+              "parameters": "&REPORT=PYMAS012",
+              "modal": "false"
             },
             {
               "id": "68",
@@ -8905,11 +10922,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=PYLAA032"
+              "parameters": "&REPORT=PYLAA032",
+              "modal": "false"
             },
             {
               "id": "69",
@@ -8918,11 +10938,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=PYTCA001"
+              "parameters": "&REPORT=PYTCA001",
+              "modal": "false"
             },
             {
               "id": "70",
@@ -8931,11 +10954,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=PYDDS001"
+              "parameters": "&REPORT=PYDDS001",
+              "modal": "false"
             },
             {
               "id": "71",
@@ -8944,21 +10970,26 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPY8002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "72",
-          "label": "Quarterly and Annual Reports",
+          "title": "Quarterly and Annual Reports",
           "row": "30",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "73",
@@ -8967,11 +10998,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=PYQTR021"
+              "parameters": "&REPORT=PYQTR021",
+              "modal": "false"
             },
             {
               "id": "74",
@@ -8980,11 +11014,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=PYQTR022"
+              "parameters": "&REPORT=PYQTR022",
+              "modal": "false"
             },
             {
               "id": "75",
@@ -8993,11 +11030,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=PYQTR023"
+              "parameters": "&REPORT=PYQTR023",
+              "modal": "false"
             },
             {
               "id": "76",
@@ -9006,11 +11046,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPY8003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "77",
@@ -9019,11 +11062,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=PYYTD001"
+              "parameters": "&REPORT=PYYTD001",
+              "modal": "false"
             },
             {
               "id": "78",
@@ -9032,11 +11078,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPY8005",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "79",
@@ -9045,21 +11094,26 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPY8004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "80",
-          "label": "Payroll Queries",
+          "title": "Payroll Queries",
           "row": "3",
           "column": "4",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "81",
@@ -9068,11 +11122,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPY4001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "82",
@@ -9081,11 +11138,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPY4002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "83",
@@ -9094,11 +11154,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPY4003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "84",
@@ -9107,11 +11170,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPY4004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "85",
@@ -9120,11 +11186,14 @@
               "column": "4",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WPY4101",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         }
@@ -9139,11 +11208,13 @@
       "groups": [
         {
           "id": "",
-          "label": "",
+          "title": "",
           "row": "",
-          "column": "",
+          "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "1",
@@ -9152,21 +11223,26 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "APPMENU",
               "request": "COMET",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "2",
-          "label": "Accounts Payable",
+          "title": "Accounts Payable",
           "row": "3",
           "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "3",
@@ -9175,11 +11251,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAP0014D",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "4",
@@ -9188,11 +11267,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=APINV011"
+              "parameters": "&REPORT=APINV011",
+              "modal": "false"
             },
             {
               "id": "5",
@@ -9201,11 +11283,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAP0013",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "6",
@@ -9214,11 +11299,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAP3011",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "7",
@@ -9227,11 +11315,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAP3021",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "8",
@@ -9240,11 +11331,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAP3022",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "9",
@@ -9253,11 +11347,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAP0032",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "10",
@@ -9266,11 +11363,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAP3001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "11",
@@ -9279,11 +11379,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAP0024",
               "stage": "REQUEST",
-              "parameters": "&MODE=EDIT"
+              "parameters": "&MODE=EDIT",
+              "modal": "false"
             },
             {
               "id": "12",
@@ -9292,11 +11395,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAP3014",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "13",
@@ -9305,11 +11411,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WCH0010",
               "stage": "REQUEST",
-              "parameters": "&MOD=AP"
+              "parameters": "&MOD=AP",
+              "modal": "false"
             },
             {
               "id": "14",
@@ -9318,11 +11427,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WCH1002S",
               "stage": "REQUEST",
-              "parameters": "&MOD=AP"
+              "parameters": "&MOD=AP",
+              "modal": "false"
             },
             {
               "id": "15",
@@ -9331,11 +11443,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WCH0013",
               "stage": "REQUEST",
-              "parameters": "&MOD=AP"
+              "parameters": "&MOD=AP",
+              "modal": "false"
             },
             {
               "id": "16",
@@ -9344,11 +11459,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAP0024",
               "stage": "REQUEST",
-              "parameters": "&MODE=VERIFY"
+              "parameters": "&MODE=VERIFY",
+              "modal": "false"
             },
             {
               "id": "17",
@@ -9357,11 +11475,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAP0023",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "18",
@@ -9370,11 +11491,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WCH0016",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "19",
@@ -9383,11 +11507,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WCH0018",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "20",
@@ -9396,11 +11523,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WCH1001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "21",
@@ -9409,11 +11539,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WCH0025",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "22",
@@ -9422,21 +11555,26 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAP3013",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "23",
-          "label": "Queries",
+          "title": "Queries",
           "row": "30",
           "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "24",
@@ -9445,11 +11583,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAP4004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "25",
@@ -9458,21 +11599,26 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAP4005",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "26",
-          "label": "Reports",
+          "title": "Reports",
           "row": "40",
           "column": "1",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "27",
@@ -9481,11 +11627,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=APVE001"
+              "parameters": "&REPORT=APVE001",
+              "modal": "false"
             },
             {
               "id": "28",
@@ -9494,11 +11643,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=APINV011"
+              "parameters": "&REPORT=APINV011",
+              "modal": "false"
             },
             {
               "id": "29",
@@ -9507,11 +11659,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=CHCK001"
+              "parameters": "&REPORT=CHCK001",
+              "modal": "false"
             },
             {
               "id": "30",
@@ -9520,11 +11675,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAP8001",
               "stage": "REQUEST",
-              "parameters": "&REPORT=AP03803"
+              "parameters": "&REPORT=AP03803",
+              "modal": "false"
             },
             {
               "id": "31",
@@ -9533,11 +11691,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WAP8002",
               "stage": "REQUEST",
-              "parameters": "&MOD=AP"
+              "parameters": "&MOD=AP",
+              "modal": "false"
             },
             {
               "id": "32",
@@ -9546,11 +11707,14 @@
               "column": "1",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WCH9001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "33",
@@ -9559,21 +11723,26 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY3002",
               "stage": "REQUEST",
-              "parameters": "&VMODE=1"
+              "parameters": "&VMODE=1",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "34",
-          "label": "General Ledger",
+          "title": "General Ledger",
           "row": "3",
           "column": "2",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "35",
@@ -9582,11 +11751,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WGL1001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "36",
@@ -9595,11 +11767,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WGL0024",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "37",
@@ -9608,11 +11783,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY3009",
               "stage": "REQUEST",
-              "parameters": "&ROUTINE=GL35"
+              "parameters": "&ROUTINE=GL35",
+              "modal": "false"
             },
             {
               "id": "38",
@@ -9621,11 +11799,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WGL0022",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "39",
@@ -9634,11 +11815,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WGL3002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "40",
@@ -9647,11 +11831,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WGL3001",
               "stage": "REQUEST",
-              "parameters": "&SLCODE=BL"
+              "parameters": "&SLCODE=BL",
+              "modal": "false"
             },
             {
               "id": "41",
@@ -9660,11 +11847,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WGL3001",
               "stage": "REQUEST",
-              "parameters": "&SLCODE=AR"
+              "parameters": "&SLCODE=AR",
+              "modal": "false"
             },
             {
               "id": "42",
@@ -9673,11 +11863,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WGL3001",
               "stage": "REQUEST",
-              "parameters": "&SLCODE=PT"
+              "parameters": "&SLCODE=PT",
+              "modal": "false"
             },
             {
               "id": "43",
@@ -9686,11 +11879,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WGL3007",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "44",
@@ -9699,11 +11895,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WGL1002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "45",
@@ -9712,11 +11911,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WGL1003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "46",
@@ -9725,11 +11927,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WGL3011",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "47",
@@ -9738,11 +11943,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WGL3004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "48",
@@ -9751,11 +11959,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WGL3003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "49",
@@ -9764,11 +11975,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WGL3008",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "50",
@@ -9777,11 +11991,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WGL3009",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "51",
@@ -9790,11 +12007,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WGL3005",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "52",
@@ -9803,11 +12023,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY3003",
               "stage": "REQUEST",
-              "parameters": "&TABNUM=8001"
+              "parameters": "&TABNUM=8001",
+              "modal": "false"
             },
             {
               "id": "53",
@@ -9816,11 +12039,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBU6004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "54",
@@ -9829,11 +12055,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY3003",
               "stage": "REQUEST",
-              "parameters": "&TABNUM=8008"
+              "parameters": "&TABNUM=8008",
+              "modal": "false"
             },
             {
               "id": "55",
@@ -9842,11 +12071,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBU6001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "56",
@@ -9855,21 +12087,26 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WGL3012",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "57",
-          "label": "Queries",
+          "title": "Queries",
           "row": "30",
           "column": "2",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "58",
@@ -9878,11 +12115,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WGL4001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "59",
@@ -9891,21 +12131,26 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WGL4002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "60",
-          "label": "Reports",
+          "title": "Reports",
           "row": "40",
           "column": "2",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "61",
@@ -9914,11 +12159,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WGL8002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "62",
@@ -9927,11 +12175,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WGL8001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "63",
@@ -9940,11 +12191,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WGL8003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "64",
@@ -9953,11 +12207,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=GLMEAP01"
+              "parameters": "&REPORT=GLMEAP01",
+              "modal": "false"
             },
             {
               "id": "65",
@@ -9966,11 +12223,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=GLBAT001"
+              "parameters": "&REPORT=GLBAT001",
+              "modal": "false"
             },
             {
               "id": "66",
@@ -9979,11 +12239,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=GLJELT01"
+              "parameters": "&REPORT=GLJELT01",
+              "modal": "false"
             },
             {
               "id": "67",
@@ -9992,11 +12255,14 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WGL8004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "68",
@@ -10005,21 +12271,26 @@
               "column": "2",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=GLTBAL01"
+              "parameters": "&REPORT=GLTBAL01",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "69",
-          "label": "Budget",
+          "title": "Budget",
           "row": "3",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "70",
@@ -10028,11 +12299,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBU1001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "71",
@@ -10041,11 +12315,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "true",
               "service": "DATAFORM",
               "request": "WBU1002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "72",
@@ -10054,11 +12331,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBU1003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "73",
@@ -10067,11 +12347,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBU1005",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "74",
@@ -10080,11 +12363,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBU1006",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "75",
@@ -10093,11 +12379,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBU1012",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "76",
@@ -10106,11 +12395,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBU1013",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "77",
@@ -10119,11 +12411,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBU1008",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "78",
@@ -10132,11 +12427,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBU3001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "79",
@@ -10145,11 +12443,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBU3002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "80",
@@ -10158,11 +12459,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBU6008",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "81",
@@ -10171,21 +12475,26 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBU6006",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "82",
-          "label": "Queries",
+          "title": "Queries",
           "row": "30",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "83",
@@ -10194,11 +12503,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBU4002",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "84",
@@ -10207,11 +12519,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBU4003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "85",
@@ -10220,11 +12535,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBU4004",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "86",
@@ -10233,11 +12551,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBU4005",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "87",
@@ -10246,11 +12567,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBU4006",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "88",
@@ -10259,21 +12583,26 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBU4007",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         },
         {
           "id": "89",
-          "label": "Reports",
+          "title": "Reports",
           "row": "40",
           "column": "3",
           "class": "",
           "icon": "",
+          "badge": "",
+          "badgeClass": "",
           "items": [
             {
               "id": "90",
@@ -10282,11 +12611,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBU8001",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             },
             {
               "id": "91",
@@ -10295,11 +12627,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=BUDAUD01"
+              "parameters": "&REPORT=BUDAUD01",
+              "modal": "false"
             },
             {
               "id": "92",
@@ -10308,11 +12643,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WSY0036",
               "stage": "REQUEST",
-              "parameters": "&REPORT=BUALOC03"
+              "parameters": "&REPORT=BUALOC03",
+              "modal": "false"
             },
             {
               "id": "93",
@@ -10321,11 +12659,14 @@
               "column": "3",
               "class": "",
               "icon": "",
+              "badge": "",
+              "badgeClass": "",
               "disabled": "false",
               "service": "DATAFORM",
               "request": "WBU8003",
               "stage": "REQUEST",
-              "parameters": ""
+              "parameters": "",
+              "modal": "false"
             }
           ]
         }
