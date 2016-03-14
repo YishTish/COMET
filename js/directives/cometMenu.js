@@ -15,22 +15,33 @@ function(jsonServices, $filter, ajaxServices, cometServices, menuServices ) {
 			self.formTitle = "COMET Login"
 			self.menuData = []; 
 
-			
+			/*
+			 */
 			$scope.reloadForm = function (item) {
-				console.log(item);
+
+				console.log(item.label);
 				formService.updateForm(item.request);
 			}
-			
 			$scope.$watch(function() {
 				return menuServices.data;
 			}, function (newValue, oldValue) {
 				self.menuData = newValue;
 			});
 
-			self.getMenuData = function(data) {
+			/*
+			self.getMenuData = function(callback){
+				ajaxServices.httpPromise("","json_src/menu.js").then(function(response){
+					self.menuData = response.menu;
+					if (typeof(callback) === "function") {
+						callback(response.menu);
+					}
+				});
+			};
+			self.getMenuData(function (data) {
 				menuServices.updateMenu(data);
 				self.menuData = menuServices.data;
-			};
+			});
+			 */
 		}], //close controller
 
 		controllerAs: 'menuCtrl',

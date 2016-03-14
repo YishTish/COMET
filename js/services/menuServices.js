@@ -7,16 +7,18 @@ app.factory('menuServices', [function () {
 
 	menu.updateMenu = function (data) {
 		/*
+
 		// save 'divideRatio' in data for each category
 		calculateDivideRatio(data);
 		// save 'layoutColumns' in data for each category
 		generateLayout(data);
+
 		*/
 
-		generateLayoutStockColums(data);
+		generateLayoutStockColumns(data);
 
 		menu.data = data;
-	}
+	};
 
 	function calculateDivideRatio(data) {
 		data.forEach(function(category, index) {
@@ -30,7 +32,7 @@ app.factory('menuServices', [function () {
 				// add group items
 				items += group.items.length;
 			});
-			// an average value of dividing items into colums
+			// an average value of dividing items into columns
 			category.divideRatio = ~~(Math.sqrt(items) + 1); 
 		}); 
 	}
@@ -74,7 +76,7 @@ app.factory('menuServices', [function () {
 		});
 	}
 
-	function generateLayoutStockColums(data) {
+	function generateLayoutStockColumns(data) {
 		data.forEach(function(category) {
 			var list = [];
 			for (var i = 0; i < +category.columns; i++) list[i] = [];
@@ -84,12 +86,12 @@ app.factory('menuServices', [function () {
 
 					// add group to the column
 					list[+group.column - 1].push(group);
-					
+
 					// add each item of the group to the column
 					group.items.forEach(function (item) {
 						list[+group.column - 1].push(item);
 					});
-				};	
+				}
 			});
 
 			category.layoutColumns = list;
@@ -97,4 +99,4 @@ app.factory('menuServices', [function () {
 	}
 
 	return menu;
-}])
+}]);

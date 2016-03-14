@@ -18,7 +18,7 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', '$uibModal
 			self.element = undefined;
 			self.formScope = undefined;
 			self.submitVal = "Send Form";
-			require: 'form';
+			//require: 'form';
 			self.sessionId ="";
 			self.errorMessage="";
 			self.urlPrefix = config.base_url+":"+config.port;
@@ -29,10 +29,10 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', '$uibModal
 					return [];
 				}
 				return self.formData.fields;
-			}
+			};
 			self.hasError = function(){
 				return self.errorMessage!="";
-			}
+			};
 
 			self.sendForm = function(){
 			};
@@ -53,7 +53,7 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', '$uibModal
 				if(elementToValidate.ServerValidation){
 					afterFieldServices.sendAfterFieldRequest(self.formData, self.dataMap, elementToValidate.id, elementToValidate.value, elementToValidate.ServerValidation, elementToValidate.ServerValidationParameters);
 				}
-			}
+			};
 
 			self.loadModalForm = function (modalForm, modalFormParameters){
 				var modalUrl = "/comet.icsp?MGWLPN=iCOMET&COMETSID="+self.sessionId+"&COMETMode=JS&SERVICE=DATAFORM&STAGE=REQUEST&MODE=0&\
@@ -77,7 +77,7 @@ app.directive('cometForm', ['jsonServices','$filter', 'ajaxServices', '$uibModal
 			     	afterFieldServices.handleAfterFieldResponse(modalRes, self.formData, self.dataMap);
 					self.modalLoaded = false;
 			  	});
-			}
+			};
 
 
 
@@ -113,7 +113,7 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 
 			self.getDateField = function(fieldVal){
 				return Date(fieldVal);
-			}
+			};
 
 			self.initForm = function initForm(){
 				self.formScope = self.element.find('form').scope();
@@ -136,7 +136,6 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 					return;
 				}
 				var queryString = jsonServices.buildQueryString(self.formData);
-				console.log(self.urlPrefix);
 				ajaxServices.httpPromise(self.urlPrefix, queryString).then(function(res){
 					if(self.$modalInstance){
 						$modalInstance.close();
@@ -193,6 +192,7 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 				self.formData = jsonServices.parseJson(serverData);
 				console.log(self.formData);
 				self.dataMap = jsonServices.mapJson(serverData);
+				setTimeout(function () { Init(); }, 300);
 			};
 
 			self.reset = function() {
@@ -228,7 +228,6 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 			$scope.$watch(function() {
 				return formService.currentForm;
 			}, function (curForm) {
-				console.log(curForm);
 				var url = "/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+
 				curForm + "&STAGE=REQUEST&COMETSID=" + self.sessionId;
 				self.loadNextForm(url);
@@ -249,5 +248,5 @@ FORMCODE="+self.currentForm+"&FIELD="+fieldId+"&SCRLN=undefined&REQUEST="+reques
 				ctrl.modalLoaded = true;
 			}
 		}
-	} // close return from first line of directive
+	};// close return from first line of directive
 }]);
