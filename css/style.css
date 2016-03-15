@@ -21,12 +21,12 @@
 	flex-direction: column;
 	flex-wrap: wrap;
 	/*max-height: 600;
-	padding: 0 5% 5% 0; 
+	padding: 0 5% 5% 0;
 	list-style: none;
 }
 */
 .item{
-	
+
 }
 
 .item-hidden{
@@ -72,14 +72,14 @@ h1.page-title{
 
 form.split-form {
   /*  -webkit-column-count: 2; /* Chrome, Safari, Opera */
-  /*  -webkit-column-gap: 6px; 
+  /*  -webkit-column-gap: 6px;
     -webkit-column-rule-style: dotted;
     -webkit-column-rule-width: 1px;
     -webkit-column-rule-color: gray;
     width: 75%;
     padding: 12%;
     -moz-column-count: 2; /* Firefox */
-    -moz-column-gap: 25px; 
+    -moz-column-gap: 25px;
     -moz-column-rule-style: solid;
     column-count: 2;
     column-gap: 25px;
@@ -103,7 +103,7 @@ form.split-form {
     color: #671010;
 }
 
-.form-group, 
+.form-group,
 .form-group label,
 .form-group input {
     /*float: left;
@@ -163,12 +163,16 @@ form.split-form {
 	font-weight: 200;
 	line-height: 1;
 }
-
+#topNav #topMain>li.mega-menu div.row div>ul>li>i{
+  display: block;
+  height: 22px;
+}
 #topNav #topMain>li.mega-menu div.row div>ul>li>span{
 	color: #CC4737;
 	font-size: 13px;
 	font-weight: 800;
-	padding: 15px 5px 0px 5px;
+	padding: 0px 5px 0px 5px;
+  line-height: 22px;
 }
 #topNav #topMain>li.mega-menu div.row div>ul>li:first-child>span{
 	padding: 0px 5px 0px 5px;

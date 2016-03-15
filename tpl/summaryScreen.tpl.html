@@ -1,14 +1,17 @@
-<div>
-	<h3>{{ sumScrCtrl.summaryTitle }}</h3>
+<div class="table-responsive">
 	<table class="table table-hover">
 		<thead>
 		<tr>
-			<th ng-repeat="def in sumScrCtrl.definitions">{{ def.label }} </th>
+			<th ng-repeat="def in sumScrCtrl.definitions" ng-if="def.type != 'hidden' ">{{ def.label }} </th>
 		</tr>
 		</thead>
 		<tbody>
-		<tr ng-repeat="row in sumScrCtrl.sortedTable">
-			<td ng-repeat="key in row">{{ key }}</td>
+		<tr ng-repeat="row in sumScrCtrl.sortedTable" ng-init="rowIndex = $index">
+			<td ng-repeat="key in row">
+				<!-- <a href="javascript:void(0);" ng-if="key.type=='link'">{{ key.text }}</a> -->
+				<button type="button" class="btn btn-link" ng-if="key.type=='link'" ng-click="sumScrCtrl.loadForm(key.key, rowIndex)">{{ key.text }}</button>
+				<span ng-if="key.type=='text'"> {{ key.text }} </span>
+			</td>
 		</tr>
 		</tbody>
 	</table>

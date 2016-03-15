@@ -48,36 +48,69 @@ app.directive('summaryScreen', ['jsonServices','$filter', 'ajaxServices', '$uibM
 				self.sessionId = serverData.session[0].COMETSID;
 				self.currentForm = serverData.form[0].id;
 				self.summaryTitle = serverData.form[0].title;
-				self.sortedTable = sortData(self.definitions, self.tableData);
+				self.sortedDef = {};
+				self.definitions.forEach(function(def){
+				//	if(def.type != "hidden"){
+						self.sortedDef[def.field] = def;
+				//	}
+				});
+				self.sortedTable = sortData();
+
 			};
 
 			//definitions are displayed as a sequential list. Therefore, their index will be used as the index for the data below
-			sortData = function(definitions, data){
+			sortData = function(data){
 				//sortedData is an array of all the data we will present. An array of array of Strings
 				var sortedData = {};
-				//keysArr is the key from the definitions - this is the index for the table
-				var keysArr = [];
-				//Run thrhough the definitions, and create an array of keys for the table
-				definitions.forEach(function(def){
-					keysArr.push(def.field);
-				});
-
-				data.forEach(function(row, index){
+				//Run through the data array received from server and create an array of items that will be used in the front-end
+				self.tableData.forEach(function(row, index){
 					var rowArr = {};
-					keysArr.forEach(function(def, key){
-						if(row[def]== "&nbsp;"){
-							rowArr[key]="";
-						}
-						else{
-							rowArr[key] = row[def];
-						}
+					//split the lines into columns based on the definition keys asigned above
+					angular.forEach(self.sortedDef, function(item, idx){
+							var displayText = row[item.field];
+							if(displayText == "&nbsp;"){
+								displayText = "";
+							}
+							rowArr[idx] = {
+								text: displayText,
+								type: item.type,
+								key: item.field
+							}
 					});
+					
 					sortedData[index] =rowArr;
 				});
 				console.log(sortedData);
 				return sortedData;
 
 			}
+
+			self.loadForm = function(itemKey, itemIndex){
+
+				var keydef = self.sortedDef[itemKey];
+				var rowData = self.tableData[itemIndex];
+
+				var url = self.serverData.session[0].COMETURL+
+						"&REQUEST="+keydef.linkRequest+
+						"&SERVICE="+keydef.linkService+
+						"&STAGE="+keydef.linkStage;
+
+				var paramsArray = keydef.linkParams.split(";");
+				var concatinatedParams = "";
+				paramsArray.forEach(function(param){
+					if(param.length > 0) {
+						concatinatedParams +="&"+param+"="+rowData[param];
+					}
+				});
+				url += concatinatedParams;
+				console.log(keydef);
+				console.log(rowData);
+				console.log(url);
+				ajaxServices.httpPromise(self.urlPrefix, url).then(function(res){
+					console.log(res);
+					cometServices.routeJson(res);
+				});
+			};
 
 		
 
@@ -87,16 +120,9 @@ app.directive('summaryScreen', ['jsonServices','$filter', 'ajaxServices', '$uibM
 
 			};
 
-
-			self.loadSummary(self.loadPath);
-
-			// $scope.$watch(function() {
-			// 	return formService.currentForm;
-			// }, function (curForm) {
-			// 	var url = "/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+
-			// 	curForm + "&STAGE=REQUEST&COMETSID=" + self.sessionId;
-			// 	self.loadNextForm(url);
-			// });
+			$scope.$on("jsonLoaded:Summary", function(event, data){
+				self.handleSummary(data);
+			})
 
 
 		}], //close controller

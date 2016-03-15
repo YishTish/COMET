@@ -37,7 +37,7 @@ gulp.task('default', ['browserify'], function () {
   console.log('Gulp and running lintech_software!');
   startExpress();
   startLivereload();
-  gulp.watch(['*.html', 'js/**/*.js', 'css/*.css', 'tpl/*.html'], notifyLiveReload);
+  gulp.watch(['*.html', 'build/*.js', 'css/*.css', 'tpl/*.html'], notifyLiveReload);
   gulp.watch(['js/**/*.js'], ['browserify']);
 });
 

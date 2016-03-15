@@ -22,7 +22,7 @@ require('./services/cometServices');
 require('./services/autoCompleteServices');
 require('./services/afterFieldServices');
 require('./services/menuServices');
-require('./services/formService');
+//require('./services/routingService');
 require('./services/spinner');
 
 // add controllers
@@ -41,8 +41,6 @@ require('./directives/submitButton');
 require('./directives/hideEmpty');
 require('./directives/cometMenu');
 require('./directives/summaryScreen');
-
-require('./plugins/form.masked/jquery.maskedinput');
 
 
 // this variable should be set before loading the plugin

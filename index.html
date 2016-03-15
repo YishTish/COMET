@@ -19,17 +19,20 @@
 
 
         <!-- SMARTY BOOTSTRAP TEMPLATES SCRIPTS -->
+
         <link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
-        <link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
 
         <link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
 
+        <link href="assets/css/color_scheme/green.css" rel="stylesheet" type="text/css" id="color_scheme" />
+
         <link rel="stylesheet" href="css/style.css" />
+
 
         <meta name="viewport" content="initial-scale=1">
     </head>
-    <body class="smoothscroll enable-animation" style="padding-top:0px" ng-controller="appCtrl">
+    <body class="smoothscroll enable-animation" style="padding-top:0px" ng-controller="appCtrl as mainCtrl">
         <toast></toast>
 
         <!-- <md-toolbar layout="row">
@@ -42,10 +45,24 @@
 
             <div class="container">
                 <div class="row">
-                <div class="col-md-1"></div>
+                    <div class="col-md-1"></div>
                     <div class="col-md-10">
-                        <comet-form load-path="loadPath" form-title="formTitle"></comet-form>
-                        <summary-screen></summary-screen>
+                        <div class="heading-title heading-border heading-color">
+                            <h3> <span>{{ mainCtrl.pageTitle }}</span> </h3>
+                        </div>
+                       <!-- <div class="panel panel-default">
+                            <div class="panel-heading panel-heading-transparent">
+                                <h3 class="panel-title bold">{{ mainCtrl.pageTitle }}</h3>
+                            </div>
+                        </div> -->
+                        <div class="panel-body">
+                            <p> Session Id: {{ mainCtrl.sessionId }}</p>
+                            <div class="alert alert-danger" id="formError" ng-show="formCtrl.hasError()" role="alert">{{ mainCtrl.errorMessage }} </div>
+                            <comet-form ng-show="mainCtrl.pageType=='DataForm'" load-path="loadPath" form-title="formTitle"></comet-form>
+                            <summary-screen ng-show="mainCtrl.pageType=='Summary'"></summary-screen>
+                            <p> type: {{ mainCtrl.pageType }}</p>
+
+                        </div>
                     </div>
                     <div class="col-md-1"></div>
                 </div>

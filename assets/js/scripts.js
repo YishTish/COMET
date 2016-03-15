@@ -38,6 +38,7 @@
 
 	/* Init */
 	jQuery(window).ready(function () {
+		window.Init = Init;
 		jQuery.browserDetect();
 
 		// Load Bootstrap JS
