@@ -120,68 +120,55 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 			};
 
 			self.save = function() {
-				spinnerServ.show();
+				var queryString = jsonServices.buildQueryString(self.formData);
 				if(self.modalLoaded == true){
-					var queryString = jsonServices.buildQueryString(self.formData)+"&SERVICE=DATAFORM";
-					ajaxServices.httpPromise(self.urlPrefix, queryString).then(function(response){
+					cometServices.processCall(queryString + "&SERVICE=DATAFORM", function(response){
 						if(response.error){
 							self.errorMessage =  response.error;
 						}
 						else{
 							self.closeFunction({res: response});
 						}
-						spinnerServ.hide();
 					});
 					return;
 				}
-				var queryString = jsonServices.buildQueryString(self.formData);
-				ajaxServices.httpPromise(self.urlPrefix, queryString).then(function(res){
+				cometServices.processCall(queryString, function(res){
 					if(self.$modalInstance){
 						$modalInstance.close();
 					}
-					else{
-						cometServices.routeJson(res);
-					}
-					spinnerServ.hide();
 				});
-
 			};
 
-			self.handleResponse = function(res){
-				if (typeof res === "string") {
-					return;
-				}
-				if(res.error){
-					self.errorMessage = res.error;
-				}
-				else{
-					self.errorMessage = "";
-				}
-				if(res.menu){
-					var curForm = "WRX2002";
-					var resId = "12404";
-					var url = "/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+curForm+"&STAGE=REQUEST&COMETSID="+self.sessionId+"&ID="+resId;
-					menuServices.updateMenu(res.menu);
-					self.loadNextForm(url);
-					return;
-				}
+			// self.handleResponse = function(res){
+			// 	if (typeof res === "string") {
+			// 		return;
+			// 	}
+			// 	if(res.error){
+			// 		self.errorMessage = res.error;
+			// 	}
+			// 	else{
+			// 		self.errorMessage = "";
+			// 	}
+			// 	if(res.menu){
+			// 		var curForm = "WRX2002";
+			// 		var resId = "12404";
+			// 		var url = "/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+curForm+"&STAGE=REQUEST&COMETSID="+self.sessionId+"&ID="+resId;
+			// 		menuServices.updateMenu(res.menu);
+			// 		self.loadNextForm(url);
+			// 		return;
+			// 	}
 				
-				if(res.instructions){
-					self.loadNextForm(res.instructions[0].COMETMainLocation);
-				}
-				else{
-					self.serverData = res;
-					self.setupForm();
-				}
-			};
+			// 	if(res.instructions){
+			// 		self.loadNextForm(res.instructions[0].COMETMainLocation);
+			// 	}
+			// 	else{
+			// 		self.serverData = res;
+			// 		self.setupForm();
+			// 	}
+			// };
 
 			self.loadNextForm = function(path){
-				spinnerServ.show();
-				ajaxServices.httpPromise(self.urlPrefix, path).then(function(res){
-				//ajaxServices.httpPromise("", "json_src/summary_screen.js").then(function(res){
-					cometServices.routeJson(res);
-					spinnerServ.hide();
-				});
+				cometServices.processCall(path);
 			};
 
 			self.setupForm = function(){

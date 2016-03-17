@@ -1,9 +1,11 @@
 var app = angular.module('COMET');
 var config = require('../config');
 
-app.factory('cometServices', ['$rootScope','jsonServices',
-	function ($rootScope, jsonServices) {
-	return {
+app.factory('cometServices', ['$rootScope','jsonServices', 'ajaxServices', 'spinnerServ',
+	function ($rootScope, jsonServices, ajaxServices, spinnerServ) {
+
+	var serviceMethods = {
+		self: this,
 		getUrlPrefix: function(){
 			return config.base_url+":"+config.port;
 		},
@@ -42,17 +44,50 @@ app.factory('cometServices', ['$rootScope','jsonServices',
 		},
 
 		routeJson: function(jsonData){
-			var broadcastPrefix = "jsonLoaded:";
-			if(jsonData.form){
-				console.log(broadcastPrefix+jsonData.form[0].type);
-				$rootScope.$broadcast(broadcastPrefix+jsonData.form[0].type, jsonData);
-				$rootScope.$broadcast("valChanged:pageData", jsonData.form[0]);
+			var sessionId, pageTitle, pageType;
+
+			if (typeof jsonData === "string") {
+				return;
 			}
-			else if(jsonData.menu){
-				$rootScope.$broadcast(broadcastPrefix+"menu", jsonData);
+			if(jsonData.error){
+				$rootScope.$broadcast("valChanged:errorMessage", jsonData.error);
+			}
+			if(jsonData.session){
+				sessionId = jsonData.session[0].COMETSID;
+			}
+			if(jsonData.instructions){
+				serviceMethods.processCall(jsonData.instructions[0].COMETMainLocation);
+			}
+			if(jsonData.form){
+				pageTitle = jsonData.form[0].title;
+				pageType = jsonData.form[0].type;
+
+				$rootScope.$broadcast("jsonLoaded:"+jsonData.form[0].type, jsonData);
+				$rootScope.$broadcast("valChanged:pageData", {
+																'type': pageType,
+																'title': pageTitle,
+																'sessionId': sessionId
+															});
+			}
+			if(jsonData.menu){
+				$rootScope.$broadcast("jsonLoaded:menu", jsonData);
 			}
 		},
 
+		processCall: function(path, callback){
+			spinnerServ.show();
+			//var route = this.routeJson;
+			ajaxServices.httpPromise(this.getUrlPrefix(), path).then(function(res){	
+				serviceMethods.routeJson(res);
+				spinnerServ.hide();
+				if(callback != undefined){
+					callback(res);
+				}
+			});
+		}
 
-	}
+
+	};
+
+	return serviceMethods;
 }]);

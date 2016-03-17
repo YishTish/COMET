@@ -35,12 +35,7 @@ app.directive('summaryScreen', ['jsonServices','$filter', 'ajaxServices', '$uibM
 			};
 
 			self.loadSummary = function(path){
-				spinnerServ.show();
-				//ajaxServices.httpPromise(self.urlPrefix, path).then(function(res){
-				ajaxServices.httpPromise("", "json_src/summary_screen.js").then(function(res){
-					self.handleSummary(res);
-					spinnerServ.hide();
-				});
+				cometServices.processCall(path);
 			};
 
 			self.setupScreen = function(){
@@ -106,10 +101,7 @@ app.directive('summaryScreen', ['jsonServices','$filter', 'ajaxServices', '$uibM
 				console.log(keydef);
 				console.log(rowData);
 				console.log(url);
-				ajaxServices.httpPromise(self.urlPrefix, url).then(function(res){
-					console.log(res);
-					cometServices.routeJson(res);
-				});
+				cometServices.processCall(url);
 			};
 
 		

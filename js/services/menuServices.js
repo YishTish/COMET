@@ -6,9 +6,8 @@ app.factory('menuServices', [function () {
 	};
 
 	menu.updateMenu = function (data) {
-		
-		generateLayoutStockColumns(data);
 		menu.data = data;
+		generateLayoutStockColumns();
 	};
 
 	function calculateDivideRatio(data) {
@@ -67,8 +66,8 @@ app.factory('menuServices', [function () {
 		});
 	}
 
-	function generateLayoutStockColumns(data) {
-		console.log(data);
+	function generateLayoutStockColumns() {
+		data = menu.data;
 		data.forEach(function(category) {
 			var list = [];
 			for (var i = 0; i < +category.columns; i++) list[i] = [];
