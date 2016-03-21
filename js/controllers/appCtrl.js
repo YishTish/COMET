@@ -18,37 +18,6 @@ app.controller('appCtrl', ['$scope', 'ajaxServices', 'jsonServices','spinnerServ
 
 
 		self.loadPath = self.url;
-		
-
-
-		//Go through the response page received for page-related data, before sending it to be routed and managed by specific directives/controllers
-		// self.handleResponse = function(res){
-		// 			if (typeof res === "string") {
-		// 				return;
-		// 			}
-		// 			if(res.error){
-		// 				self.errorMessage = res.error;
-		// 			}
-		// 			if(res.session){
-		// 				self.sessionId = res.session[0].COMETSID;
-		// 			}
-		// 			if(res.menu){
-		// 				var curForm = "WRX2002";
-		// 				var resId = "12404";
-		// 				var url = "/comet.icsp?MGWLPN=iCOMET&COMETMode=JS&SERVICE=DATAFORM&REQUEST="+curForm+"&STAGE=REQUEST&COMETSID="+self.sessionId+"&ID="+resId;
-		// 				//menuServices.updateMenu(res.menu);
-		// 				self.loadServerData(url);
-		// 				//return;
-		// 			}
-		// 			if(res.instructions){
-		// 				self.loadServerData(res.instructions[0].COMETMainLocation);
-		// 			}
-		// 			if(res.form){
-		// 				self.pageTitle = res.form[0].title;
-		// 				self.pageType = res.form[0].type;
-		// 			}
-		// 			cometServices.routeJson(res);
-		// 		};
 
 		self.loadServerData = function(path){
 			console.log("Loading path: " + path);
@@ -75,4 +44,9 @@ app.controller('appCtrl', ['$scope', 'ajaxServices', 'jsonServices','spinnerServ
 		});
 
 		self.loadServerData(self.loadPath);
+
+
+		//Development only: load static menu file
+	    //cometServices.processCall("/json_src/summary_screen.js");
+
 }]);

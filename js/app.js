@@ -6,14 +6,15 @@ require('angular');
 require('angular-modal-service');
 require('angucomplete-alt');
 require('angular-ui-bootstrap');
+require('angular-bootstrap-contextmenu')
 require('lodash');
 
 // configuration file
 var config = require('./config');
 
 // initialize the anglur
-var app = angular.module('COMET', ['angularModalService', "angucomplete-alt",
-        'ui.bootstrap']);
+var app = angular.module('COMET', ['angularModalService', "angucomplete-alt", 
+        'ui.bootstrap', "ui.bootstrap.contextMenu"]);
 
 // add services
 require('./services/jsonServices');

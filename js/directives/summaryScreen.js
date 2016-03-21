@@ -17,6 +17,9 @@ app.directive('summaryScreen', ['jsonServices','$filter', 'ajaxServices', '$uibM
 			self.urlPrefix = config.base_url+":"+config.port;
 			self.modalLoaded = false;
 
+			self.sortedDef = {};
+			self.sortedMenuOptions = {};
+
 			
 			self.handleSummary = function(summary){
 				console.log(summary);
@@ -31,7 +34,6 @@ app.directive('summaryScreen', ['jsonServices','$filter', 'ajaxServices', '$uibM
 				self.definitions = summary.columnDefs;
 				self.tableData = summary.data;
 				self.setupScreen();
-				
 			};
 
 			self.loadSummary = function(path){
@@ -43,15 +45,17 @@ app.directive('summaryScreen', ['jsonServices','$filter', 'ajaxServices', '$uibM
 				self.sessionId = serverData.session[0].COMETSID;
 				self.currentForm = serverData.form[0].id;
 				self.summaryTitle = serverData.form[0].title;
-				self.sortedDef = {};
+				
 				self.definitions.forEach(function(def){
 				//	if(def.type != "hidden"){
 						self.sortedDef[def.field] = def;
 				//	}
 				});
 				self.sortedTable = sortData();
+				self.setupMenuOptions();
 
 			};
+
 
 			//definitions are displayed as a sequential list. Therefore, their index will be used as the index for the data below
 			sortData = function(data){
@@ -75,10 +79,49 @@ app.directive('summaryScreen', ['jsonServices','$filter', 'ajaxServices', '$uibM
 					
 					sortedData[index] =rowArr;
 				});
-				console.log(sortedData);
 				return sortedData;
 
-			}
+			};
+
+			self.setupMenuOptions = function(){
+				menuOptions = self.serverData.menuOptions;
+				menuOptions.forEach(function(option){
+					self.sortedMenuOptions[option.id] = option;
+				});
+				self.tableData.forEach(function(line){
+					var optionsArray = new Array();
+
+					if(line.lineOptions){
+						var lineOptions = line.lineOptions.list;
+						lineOptions.forEach(function(option){
+							optionsArray.push(option);
+						});
+						line.optionsArray = optionsArray;
+						line.menuOptions = [];
+						line.optionsArray.forEach(function(option){
+							var optionEnabled = true;
+							if(option[0] == "-"){
+								optionEnabled = false;
+								option = option.substring(1, option.length);
+							}
+							var menuOptionDef = self.sortedMenuOptions[option];
+							var menuItem = [ 
+												menuOptionDef.header, 
+												function(){
+													console.log(menuOptionDef.url+line.lineOptions.params);
+													return cometServices.processCall(menuOptionDef.url+line.lineOptions.params)
+												},
+												function($itemScope, $event){
+													return optionEnabled;
+												}
+							];
+							line.menuOptions.push(menuItem);
+						});
+					}
+					
+				});
+				console.log(self.tableData[5].menuOptions);
+			};
 
 			self.loadForm = function(itemKey, itemIndex){
 
@@ -135,9 +178,10 @@ app.directive('summaryScreen', ['jsonServices','$filter', 'ajaxServices', '$uibM
 }]);
 
 app.directive('sumScrRow', [
-	function(){
+	function($compile){
 		return{
-		restrict: 'E',
-		template: "<td>This is me</td>",
+		restrict: 'A',
+		link: function(scope, elem, attr){
+			},
 		}
 	}])

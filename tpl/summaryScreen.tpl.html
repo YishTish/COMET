@@ -6,7 +6,7 @@
 		</tr>
 		</thead>
 		<tbody>
-		<tr ng-repeat="row in sumScrCtrl.sortedTable" ng-init="rowIndex = $index">
+		<tr ng-repeat="row in sumScrCtrl.sortedTable" ng-init="rowIndex = $index"  context-menu="sumScrCtrl.tableData[rowIndex].menuOptions">
 			<td ng-repeat="key in row">
 				<!-- <a href="javascript:void(0);" ng-if="key.type=='link'">{{ key.text }}</a> -->
 				<button type="button" class="btn btn-link" ng-if="key.type=='link'" ng-click="sumScrCtrl.loadForm(key.key, rowIndex)">{{ key.text }}</button>

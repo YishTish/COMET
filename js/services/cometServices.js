@@ -51,6 +51,8 @@ app.factory('cometServices', ['$rootScope','jsonServices', 'ajaxServices', 'spin
 			}
 			if(jsonData.error){
 				$rootScope.$broadcast("valChanged:errorMessage", jsonData.error);
+				console.log(jsonData.error);
+				//return;
 			}
 			if(jsonData.session){
 				sessionId = jsonData.session[0].COMETSID;
