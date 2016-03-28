@@ -2,16 +2,28 @@
 	<table class="table table-hover">
 		<thead>
 		<tr>
+			<th></th>
 			<th ng-repeat="def in sumScrCtrl.definitions" ng-if="def.type != 'hidden' ">{{ def.label }} </th>
 		</tr>
 		</thead>
 		<tbody>
 		<tr ng-repeat="row in sumScrCtrl.sortedTable" ng-init="rowIndex = $index"  context-menu="sumScrCtrl.tableData[rowIndex].menuOptions">
+			<td style="vertical-align:middle">
+				<div class="dropdown" ng-if="sumScrCtrl.tableData[rowIndex].menuOptions">
+					<a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" id="dropdown_{{rowIndex}}"><i class="fa fa-ellipsis-v"></i></a>
+					<ul class="dropdown-menu" aria-labelledby="dropdown_{{rowIndex}}">
+						<li ng-repeat="optionItem in sumScrCtrl.tableData[rowIndex].menuOptions" ng-class="{disabled: !optionItem[2]()}">
+						<a href="#" ng-click="optionItem[1]()">{{ optionItem[0] }}</a>
+						</li>
+					</ul>
+				</div>
+			</td>
 			<td ng-repeat="key in row">
 				<!-- <a href="javascript:void(0);" ng-if="key.type=='link'">{{ key.text }}</a> -->
 				<button type="button" class="btn btn-link" ng-if="key.type=='link'" ng-click="sumScrCtrl.loadForm(key.key, rowIndex)">{{ key.text }}</button>
 				<span ng-if="key.type=='text'"> {{ key.text }} </span>
 			</td>
+
 		</tr>
 		</tbody>
 	</table>
