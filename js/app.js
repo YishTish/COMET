@@ -6,8 +6,9 @@ require('angular');
 require('angular-modal-service');
 require('angucomplete-alt');
 require('angular-ui-bootstrap');
-require('angular-bootstrap-contextmenu')
+require('angular-bootstrap-contextmenu');
 require('lodash');
+
 
 // configuration file
 var config = require('./config');
@@ -42,6 +43,8 @@ require('./directives/submitButton');
 require('./directives/hideEmpty');
 require('./directives/cometMenu');
 require('./directives/summaryScreen');
+require('./directives/cometFooter');
+require('./directives/scrollingArea');
 
 
 // this variable should be set before loading the plugin

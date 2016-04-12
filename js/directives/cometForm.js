@@ -180,7 +180,7 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 				self.formData = jsonServices.parseJson(serverData);
 				console.log(self.formData);
 				self.dataMap = jsonServices.mapJson(serverData);
-				setTimeout(function () { Init(); }, 300);
+				//setTimeout(function () { Init(); }, 300);
 			};
 
 			self.reset = function() {

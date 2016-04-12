@@ -1,0 +1,26 @@
+<div class="table-responsive">
+	<table class="table table-hover">
+		<thead>
+		<tr>
+			<th></th>
+			<th ng-repeat="def in scrlAreaCtrl.definitions" ng-if="def.type != 'hidden' ">{{ def.label }} </th>
+		</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="row in scrlAreaCtrl.sortedTable" id="{{$index}}" ng-init="rowIndex = $index">
+				<td><i class="fa fa-trash" ng-show="row.deleteable" ng-click="scrlAreaCtrl.deleteRow(rowIndex)" id="trash-{{rowIndex}}"></i></td>
+				<td ng-repeat="column in scrlAreaCtrl.definitions">
+					<input type="text" ng-if="column.type=='text'" ng-model="row[column.id].value" ng-disabled="scrlAreaCtrl.isDisabled(row[column.id])" update-row="{{ rowIndex }}">
+					<input type="hidden" ng-if="column.type=='hidden'" ng-model="row[column.id].value" ng-disabled="scrlAreaCtrl.isDisabled(row[column.id])">
+					<select ng-if="column.type=='select'" name="{{ row[column.id].value }}" ng-disabled="scrlAreaCtrl.isDisabled(row[column.id])">
+						<option ng-repeat="opt in row[column.id].options" ng-model="opt.value">{{ opt.description}}</option>
+					</select>
+					<input type="checkbox" ng-if="column.type=='checkbox'" ng-model="row[column.id].value" ng-disabled="scrlAreaCtrl.isDisabled(row[column.id])">
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div>
+		<button class="btn btn-success btn-block margin-30" ng-click="scrlAreaCtrl.save()">Save Changes</button>
+	</div>
+</div>

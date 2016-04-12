@@ -60,8 +60,8 @@
                             <div class="alert alert-danger" id="formError" ng-show="formCtrl.hasError()" role="alert">{{ mainCtrl.errorMessage }} </div>
                             <comet-form ng-show="mainCtrl.pageType=='DataForm'" load-path="loadPath" form-title="formTitle"></comet-form>
                             <summary-screen ng-show="mainCtrl.pageType=='Summary'"></summary-screen>
+                            <scrolling-area ng-show="mainCtrl.pageType=='ScrollingArea'"></scrolling-area>
                             <p> type: {{ mainCtrl.pageType }}</p>
-
                         </div>
                     </div>
                     <div class="col-md-1"></div>
@@ -87,5 +87,6 @@
 
         <!-- End of Wrap-Bootstrap integration -->
         <glyph-spinner></glyph-spinner>
+        <comet-footer></comet-footer>
     </body>
 </html>

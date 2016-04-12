@@ -31,6 +31,12 @@
     "lodash": "~3.10.1",
     "ngtoast": "~1.5.5",
     "jquery": "^2.2.1",
-    "angucomplete-alt": "^2.2.0"
+    "angucomplete-alt": "^2.2.0",
+    "angular-dialog-service": "~5.3.0",
+    "nsPopover": "~0.6.8"
+  },
+  "resolutions": {
+    "angular": "^1.5.0",
+    "angular-sanitize": "^1.5.0"
   }
 }

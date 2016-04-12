@@ -40,6 +40,14 @@ function(jsonServices, $filter, ajaxServices, cometServices, menuServices) {
 				});
 			};
 
+			self.sendCleanRequest = function(){
+				var url = self.loadPath + "&COMETSID="+config.sessionId+
+										  "&SERVICE=CLEANVAR"
+				cometServices.processCall(url, function(res){
+					self.loadedItem = true;
+				});
+			}
+
 			var remote = true;
 
 			// get remote menu json
@@ -48,17 +56,6 @@ function(jsonServices, $filter, ajaxServices, cometServices, menuServices) {
 			}, function (newValue, oldValue) {
 				self.menuData = newValue;
 			});
-
-			// get local menu json, for debug purpose,
-			// do not forget to update menu.js to current version
-			// } else {
-
-			// 	self.getLocalMenuData(function (data) {
-			// 		menuServices.updateMenu(data);
-			// 		self.menuData = menuServices.data;
-			// 	});
-
-			// }
 
 			$scope.$on("jsonLoaded:menu", function(event, data){
 				console.log(data);
@@ -85,7 +82,7 @@ function(jsonServices, $filter, ajaxServices, cometServices, menuServices) {
 	} // close return from first line of directive
 }]);
 
-app.directive('menuDisplay', [function($scpoe){
+app.directive('menuDisplay', ['ajaxServices', function($scpoe, ajaxServices){
 	return {
 		restrict: 'A',
 		require: '^cometMenu',
@@ -93,6 +90,7 @@ app.directive('menuDisplay', [function($scpoe){
 			//This piece of code is a hack to make the menu dissapear after the click,
 			//and be available for the next time the menu is hovered over.
 			elem.bind('click', function(event){
+				//cometMenu.sendCleanRequest();
 				elem.hide();
 				var intID = setInterval(function(){
 					if(cometMenu.loadedItem === true){

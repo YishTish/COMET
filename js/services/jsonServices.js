@@ -16,16 +16,18 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 							if(field.Format!=undefined){
 							switch(field.Format.toLowerCase()){
 								case "date":
+									var d;
 									if(field.value == undefined || field.value == ""){
-										field.value = new Date();
+										d = new Date();
 									}
 									else{
-										field.value = new Date(field.value);
+										d = new Date(field.value);
 									}
+									field.value = (d.getMonth()+1)+"/"+d.getDate()+"/"+d.getFullYear();
 									field.type = "date";
 									break;
 								case "time":
-									if(field.value=""){
+									if(field.value==""){
 									//	field.value = "00:00:00";
 									}
 									field.type = "time";

@@ -64,6 +64,7 @@ app.factory('cometServices', ['$rootScope','jsonServices', 'ajaxServices', 'spin
 				pageTitle = jsonData.form[0].title;
 				pageType = jsonData.form[0].type;
 
+				console.log("jsonLoaded:"+jsonData.form[0].type);
 				$rootScope.$broadcast("jsonLoaded:"+jsonData.form[0].type, jsonData);
 				$rootScope.$broadcast("valChanged:pageData", {
 																'type': pageType,
@@ -73,6 +74,10 @@ app.factory('cometServices', ['$rootScope','jsonServices', 'ajaxServices', 'spin
 			}
 			if(jsonData.menu){
 				$rootScope.$broadcast("jsonLoaded:menu", jsonData);
+			}
+			if(jsonData.buttons){
+				console.log("Buttons");
+				$rootScope.$broadcast("jsonLoaded:buttons", jsonData.buttons);
 			}
 		},
 

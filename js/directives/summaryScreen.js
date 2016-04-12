@@ -120,7 +120,6 @@ app.directive('summaryScreen', ['jsonServices','$filter', 'ajaxServices', '$uibM
 					}
 					
 				});
-				console.log(self.tableData[5].menuOptions);
 			};
 
 			self.loadForm = function(itemKey, itemIndex){

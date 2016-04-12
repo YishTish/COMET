@@ -7,6 +7,7 @@
     "angucomplete-alt": "^2.2.0",
     "angular": "^1.5.0",
     "angular-modal-service": "^0.6.10",
+    "angular-strap": "^2.3.8",
     "angular-ui-bootstrap": "^1.2.4",
     "jquery": "^2.2.1"
   },
