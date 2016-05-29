@@ -43,10 +43,10 @@ app.controller('appCtrl', ['$scope', 'ajaxServices', 'jsonServices','spinnerServ
 			self.errorMessage = data;
 		});
 
-		//self.loadServerData(self.loadPath);
+		self.loadServerData(self.loadPath);
 
 
 		//Development only: load static menu file
-	    cometServices.processCall("/json_src/scrolling_area.js");
+	    //cometServices.processCall("/json_src/scrolling_area.js");
 
 }]);

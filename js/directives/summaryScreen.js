@@ -51,14 +51,14 @@ app.directive('summaryScreen', ['jsonServices','$filter', 'ajaxServices', '$uibM
 						self.sortedDef[def.field] = def;
 				//	}
 				});
-				self.sortedTable = sortData();
+				self.sortedTable = self.sortData();
 				self.setupMenuOptions();
 
 			};
 
 
 			//definitions are displayed as a sequential list. Therefore, their index will be used as the index for the data below
-			sortData = function(data){
+			self.sortData = function(data){
 				//sortedData is an array of all the data we will present. An array of array of Strings
 				var sortedData = {};
 				//Run through the data array received from server and create an array of items that will be used in the front-end
