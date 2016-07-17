@@ -84,7 +84,6 @@
 							</div>
 
 							<div ng-if="field.type=='textarea'" >
-									<label>{{field.label}}</label>
 									<textarea  id="{{::field.id}}" name="{{field.id}}" ng-model="field.value" class="form-control" after-text-validation="{{:: field.ServerValidation }}" after-text-params="{{::field.ServerValidationParameters }}" ></textarea>
 							</div>
 
