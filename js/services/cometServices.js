@@ -39,6 +39,7 @@ app.factory('cometServices', ['$rootScope','jsonServices', 'ajaxServices', 'spin
 					}
 					queryString += "^"+dataArr[element]+"="+elementStringValue;
 				}
+				debugger;
 			}
 			return queryString;
 		},
@@ -85,6 +86,7 @@ app.factory('cometServices', ['$rootScope','jsonServices', 'ajaxServices', 'spin
 			spinnerServ.show();
 			//var route = this.routeJson;
 			ajaxServices.httpPromise(this.getUrlPrefix(), path).then(function(res){	
+				console.log(res);
 				serviceMethods.routeJson(res);
 				spinnerServ.hide();
 				if(callback != undefined){

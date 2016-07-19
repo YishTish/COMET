@@ -71,7 +71,7 @@ app.directive('summaryScreen', ['jsonServices','$filter', 'ajaxServices', '$uibM
 								displayText = "";
 							}
 							rowArr[idx] = {
-								text: displayText,
+								text: displayText.trim(),
 								type: item.type,
 								key: item.field
 							}
@@ -132,10 +132,13 @@ app.directive('summaryScreen', ['jsonServices','$filter', 'ajaxServices', '$uibM
 						"&SERVICE="+keydef.linkService+
 						"&STAGE="+keydef.linkStage;
 
+
 				var paramsArray = keydef.linkParams.split(";");
+				console.log(paramsArray);
 				var concatinatedParams = "";
 				paramsArray.forEach(function(param){
 					if(param.length > 0) {
+						console.log("_"+rowData[param]+"_");
 						concatinatedParams +="&"+param+"="+rowData[param];
 					}
 				});

@@ -110,14 +110,14 @@
   "data": [
     {
       "OMORMTP": "Add",
-      "OMORMCD": "&nbsp;",
-      "OMENDT": "&nbsp;",
-      "OMENSFQ": "&nbsp;",
-      "OMENRVW": "&nbsp;",
-      "OMENSTS": "&nbsp;",
-      "OMENLCP": "&nbsp;",
-      "RENEWAL": "&nbsp;",
-      "OMENTMN": "&nbsp;"
+      "OMORMCD": " ",
+      "OMENDT": " ",
+      "OMENSFQ": " ",
+      "OMENRVW": " ",
+      "OMENSTS": " ",
+      "OMENLCP": " ",
+      "RENEWAL": " ",
+      "OMENTMN": " "
     },
     {
       "OMORMTP": "NU",

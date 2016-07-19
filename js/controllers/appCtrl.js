@@ -47,6 +47,6 @@ app.controller('appCtrl', ['$scope', 'ajaxServices', 'jsonServices','spinnerServ
 
 
 		//Development only: load static menu file
-	    //cometServices.processCall("/json_src/scrolling_area.js");
+	    //cometServices.processCall("/json_src/summary_screen.js");
 
 }]);
