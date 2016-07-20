@@ -120,6 +120,7 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 			};
 
 			self.save = function() {
+				console.log(self.formData);
 				var queryString = jsonServices.buildQueryString(self.formData);
 				if(self.modalLoaded == true){
 					cometServices.processCall(queryString + "&SERVICE=DATAFORM", function(response){
@@ -132,6 +133,7 @@ FORMCODE="+self.currentForm+"&REQUEST="+modalForm+"&DATA=^";
 					});
 					return;
 				}
+				console.log(queryString);
 				cometServices.processCall(queryString, function(res){
 					if(self.$modalInstance){
 						$modalInstance.close();

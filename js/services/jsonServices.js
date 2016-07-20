@@ -83,11 +83,15 @@ app.factory('jsonServices', [ '$http' , function ($http) {
 				queryString += "&REQUEST="+formData.form[0].id;
 				for(row in formData.fields){
 					for(field in formData.fields[row]){
-						if(angular.isObject(formData.fields[row][field]))
+						console.log(formData.fields[row][field]);
+						if(angular.isObject(formData.fields[row][field])){
 							queryString += "&"+formData.fields[row][field].id+"="+formData.fields[row][field].value;
+							console.log(queryString);
+						}
+
 					}
 				}
-				queryString +="&STAGE=SAVE"
+				queryString +="&STAGE=SAVE";
 				return encodeURI(queryString);
 			}
 	};

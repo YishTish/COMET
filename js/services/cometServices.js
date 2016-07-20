@@ -83,6 +83,8 @@ app.factory('cometServices', ['$rootScope','jsonServices', 'ajaxServices', 'spin
 		},
 
 		processCall: function(path, callback){
+			console.log(path);
+			//return;
 			spinnerServ.show();
 			//var route = this.routeJson;
 			ajaxServices.httpPromise(this.getUrlPrefix(), path).then(function(res){	

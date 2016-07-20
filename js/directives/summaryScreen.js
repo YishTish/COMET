@@ -152,7 +152,6 @@ app.directive('summaryScreen', ['jsonServices','$filter', 'ajaxServices', '$uibM
 		
 
 			self.buildRequestQueryString = function(fieldsStr){
-				console.log(self.dataMap);
 				return cometServices.buildRequestQueryString(fieldStr, self.formData, self.dataMap);
 
 			};

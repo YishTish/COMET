@@ -24,7 +24,8 @@ function(jsonServices, $filter, ajaxServices, cometServices, menuServices) {
 				var url = self.loadPath + "&COMETSID="+config.sessionId+
 										  "&SERVICE="+item.service+
 										  "&REQUEST="+item.request+
-										  "&STAGE="+item.stage;
+										  "&STAGE="+item.stage+
+										  "&"+item.parameters;
 				cometServices.processCall(url, function(res){
 					self.loadedItem = true;
 				});

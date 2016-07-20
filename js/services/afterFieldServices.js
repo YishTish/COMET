@@ -5,11 +5,13 @@ app.factory('afterFieldServices', ['cometServices', 'jsonServices', 'ajaxService
 		handleAfterFieldResponse: function(responseJson, formData, dataMap){
 			fields = responseJson.fields;
 			for(field in fields){
+				//console.log(fields[field]);
 				if( dataMap[fields[field].id] == undefined){
 					console.log("An unrecognized attribute was received: "+fields[field].id + "("+fields[field].value+")");
 				}
 				else{
 					fieldToChange = jsonServices.getDataValue(formData, dataMap[fields[field].id]);
+					console.log(fieldToChange.type, fields[field].value);
 					switch(fieldToChange.type){
 						case "number":
 							fields[field].value = parseInt(fields[field].value);
@@ -25,7 +27,22 @@ app.factory('afterFieldServices', ['cometServices', 'jsonServices', 'ajaxService
 							fields[field].value = inputDate;
 					}
 					for(attr in fields[field]){
-						fieldToChange[attr] = fields[field][attr];
+						console.log(fieldToChange[attr]);
+						if(fieldToChange.type=="select"){
+							var tempSelect = [{
+								text: "testText",
+								description: "testValue"
+							},
+							{
+								text: "textTest",
+								description: "valueTest"
+
+							}];
+							fieldToChange[attr] = tempSelect;
+						}
+						else
+							fieldToChange[attr] = fields[field][attr];
+						console.log(fieldToChange[attr]);
 						if(attr == "disabled"){
 							toDisable = fields[field][attr] == "true" ? true : false
 								document.querySelector("#"+fields[field].id).disabled=toDisable;					
