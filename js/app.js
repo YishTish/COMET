@@ -8,6 +8,7 @@ require('angucomplete-alt');
 require('angular-ui-bootstrap');
 require('angular-bootstrap-contextmenu');
 require('lodash');
+//require('angu-fixed-header-table');
 
 
 // configuration file
@@ -15,7 +16,7 @@ var config = require('./config');
 
 // initialize the anglur
 var app = angular.module('COMET', ['angularModalService', "angucomplete-alt", 
-        'ui.bootstrap', "ui.bootstrap.contextMenu"]);
+        'ui.bootstrap', "ui.bootstrap.contextMenu", "anguFixedHeaderTable"]);
 
 // add services
 require('./services/jsonServices');

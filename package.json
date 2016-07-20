@@ -9,7 +9,8 @@
     "angular-modal-service": "^0.6.10",
     "angular-strap": "^2.3.8",
     "angular-ui-bootstrap": "^1.2.4",
-    "jquery": "^2.2.1"
+    "jquery": "^2.2.1",
+    "angu-fixed-header-table": "^1.2.0"
   },
   "devDependencies": {
     "bower-resolve": "^2.2.1",
